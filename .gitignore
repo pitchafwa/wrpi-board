@@ -67,3 +67,6 @@ wrpi_score.py
 wrpi_refit.py
 __pycache__/
 *.pyc
+
+# icon working file (regenerate: python make_icons.py <source.png>)
+dashboard/icons/icon-master.png
