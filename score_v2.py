@@ -71,6 +71,33 @@ h = d[d.era == "historical"].copy()
 h["actual_fantasy_pctl"] = h["top35"].rank(pct=True)
 d = d.merge(h[["Player", "Year", "actual_fantasy_pctl"]], on=["Player", "Year"], how="left")
 
+# ---- profile similarity: nearest neighbours over model inputs + outputs ----
+SIM_IN  = ["best_dom", "breakout_age", "nfl_entry_age", "final_ppa", "explosion_p",
+           "best_yds", "n_seasons_30", "ras", "height", "weight", "recruit_stars", "log_pick"]
+SIM_OUT = ["wrpi_pre", "wrpi_post", "tb_score", "diamond_score"]
+_S = d.copy()
+_S["log_pick"] = np.log(_S["pick"].clip(1, 300))
+_S["breakout_age"] = pd.to_numeric(_S["breakout_age"], errors="coerce").clip(upper=26)
+M = pd.DataFrame(index=_S.index)
+for c in SIM_IN + SIM_OUT:
+    v = pd.to_numeric(_S[c], errors="coerce")
+    v = v.fillna(v.median())
+    z = (v - v.mean()) / (v.std() + 1e-9)
+    M[c] = z * (1.0 if c in SIM_IN else 0.6)          # profile-weighted
+Marr = M.values
+players = _S["Player"].values; years = _S["Year"].values
+fant = _S["actual_fantasy_pctl"].values
+sims = []
+for i in range(len(Marr)):
+    dist = np.sqrt(((Marr - Marr[i]) ** 2).sum(1))
+    order = np.argsort(dist)
+    top = [j for j in order if j != i][:6]
+    scale = np.median(dist[dist > 0])
+    sims.append([{"p": str(players[j]), "y": int(years[j]),
+                  "sim": round(float(100 * np.exp(-dist[j] / scale)), 0),
+                  "fant": (None if pd.isna(fant[j]) else round(float(fant[j]), 3))} for j in top])
+d["similar"] = sims
+
 # standardized tiebreaker-feature values per row (so the UI can show per-feature edges)
 tbz = {}
 for fcol in tb["feats"]:
@@ -83,7 +110,7 @@ COLS = ["Player", "Year", "era", "tier", "wrpi_post", "wrpi_pre", "raw_post", "r
         "tb_score", "diamond_score", "is_diamond", "is_star_pre", "is_star_post",
         "actual_fantasy_pctl", "actual_pctl_post", "pick", "nfl_entry_age", "breakout_age",
         "best_dom", "final_ppa", "explosion_p", "best_yds", "alpha", "recruit_stars",
-        "n_seasons_30", "comp_post", "comp_pre", "tbz"]
+        "n_seasons_30", "comp_post", "comp_pre", "tbz", "similar"]
 out = {
     "generated": pd.Timestamp.utcnow().isoformat(timespec="minutes"),
     "model": {
