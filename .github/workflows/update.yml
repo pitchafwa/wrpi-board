@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: wrpi-update
@@ -48,9 +46,4 @@ jobs:
           git commit -m "chore: refresh WRPI board ($(date -u +%Y-%m-%d))" || echo "no changes"
           git push
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dashboard
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      # deploy.yml handles Pages on the resulting push to dashboard/**
