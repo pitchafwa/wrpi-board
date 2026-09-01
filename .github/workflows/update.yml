@@ -1,0 +1,56 @@
+name: Update WRPI board
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"        # Mondays 08:00 UTC (bump to daily Jan–May by hand if you want)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: wrpi-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CFBD_KEY: ${{ secrets.CFBD_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pandas numpy scipy
+
+      - name: Refresh raw feeds
+        run: python fetch_sources.py
+
+      - name: Rebuild college production (CollegeFootballData)
+        run: python build_cfbd.py
+
+      - name: Rebuild prospect pool
+        run: python build_pool.py
+
+      - name: Score & regenerate board
+        run: python score.py
+
+      - name: Commit refreshed outputs
+        run: |
+          git config user.name  "wrpi-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add dashboard/scores.json data/wrpi_database.csv data/pool_2023_2025.csv data/cfbd_raw/player_search.json
+          git commit -m "chore: refresh WRPI board ($(date -u +%Y-%m-%d))" || echo "no changes"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+      - id: deployment
+        uses: actions/deploy-pages@v4

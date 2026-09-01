@@ -1,0 +1,11 @@
+# raw feeds — refreshed every run by fetch_sources.py / build_cfbd.py
+data/combine.csv
+data/draft_picks.csv
+data/players.csv
+data/combine_pro_day.csv
+data/cfbd_player_seasons.csv
+data/cfbd_raw/receiving_*.json
+data/cfbd_raw/rushing_*.json
+__pycache__/
+*.pyc
+.venv/

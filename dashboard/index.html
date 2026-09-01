@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WRPI Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+<style>
+  :root{
+    --paper:#f3f5f7; --surface:#fff; --surface-2:#eef1f4;
+    --ink:#171d24; --ink-soft:#55606c; --ink-faint:#8a939d;
+    --line:#dde2e8; --line-strong:#c6cdd5; --accent:#a9741f;
+    --good:#2f7d5d; --warn:#b1472f; --t-hi:#2f7d5d; --t-mid:#a9741f; --t-lo:#8a939d;
+  }
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --paper:#0f1318; --surface:#171d24; --surface-2:#1e252d;
+    --ink:#e2e6ea; --ink-soft:#97a2ad; --ink-faint:#6c7680;
+    --line:#2a323b; --line-strong:#39434e; --accent:#d69a3f;
+    --good:#4ea883; --warn:#d3694c; --t-hi:#4ea883; --t-mid:#d69a3f; --t-lo:#6c7680;
+  }}
+  :root[data-theme="dark"]{
+    --paper:#0f1318; --surface:#171d24; --surface-2:#1e252d;
+    --ink:#e2e6ea; --ink-soft:#97a2ad; --ink-faint:#6c7680;
+    --line:#2a323b; --line-strong:#39434e; --accent:#d69a3f;
+    --good:#4ea883; --warn:#d3694c; --t-hi:#4ea883; --t-mid:#d69a3f; --t-lo:#6c7680;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1220px;margin:0 auto;padding:2rem clamp(.7rem,3vw,2rem) 4rem;}
+  h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 .15rem;}
+  .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:1.4rem;max-width:60ch;}
+  a{color:var(--accent);}
+
+  .statbar{display:flex;flex-wrap:wrap;gap:1.3rem 2rem;padding:1rem 1.2rem;background:var(--surface);
+    border:1px solid var(--line);border-radius:10px;margin-bottom:.8rem;font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--ink-soft);}
+  .statbar b{display:block;font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1.1rem;color:var(--ink);letter-spacing:-.01em;}
+  .drift{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding:.65rem 1.2rem;border:1px solid var(--line);
+    border-radius:10px;background:var(--surface);margin-bottom:1.2rem;font-size:.8rem;color:var(--ink-soft);}
+  .drift .lbl{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:.74rem;padding:.18rem .5rem;border-radius:5px;border:1px solid var(--line-strong);}
+  .chip.ok{color:var(--good);border-color:color-mix(in srgb,var(--good) 45%,transparent);}
+  .chip.bad{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,transparent);}
+
+  .controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.5rem;align-items:center;}
+  .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;}
+  .seg button{border:0;background:var(--surface);color:var(--ink-soft);padding:.42rem .75rem;font:inherit;font-size:.8rem;cursor:pointer;}
+  .seg button+button{border-left:1px solid var(--line);}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:600;}
+  input[type=search]{flex:1;min-width:150px;padding:.42rem .7rem;border:1px solid var(--line-strong);border-radius:8px;
+    background:var(--surface);color:var(--ink);font:inherit;font-size:.84rem;}
+  .legend{font-size:.78rem;color:var(--ink-faint);margin:.1rem 0 1rem;line-height:1.6;}
+  .legend b{color:var(--ink-soft);font-weight:600;}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);}
+  table{border-collapse:collapse;width:100%;font-size:.84rem;}
+  th,td{padding:.55rem .65rem;text-align:right;white-space:nowrap;border-top:1px solid var(--line);}
+  th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left;}
+  thead th{position:sticky;top:0;background:var(--surface-2);border-top:0;font-family:"IBM Plex Mono",monospace;
+    font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;cursor:pointer;user-select:none;}
+  thead th.sorted::after{content:" ▾";color:var(--accent);}
+  thead th.sorted.asc::after{content:" ▴";}
+  tbody tr{cursor:pointer;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+  .tier{display:inline-block;min-width:1.5rem;text-align:center;font-family:"IBM Plex Mono",monospace;font-weight:500;
+    padding:.08rem .3rem;border-radius:4px;font-size:.76rem;}
+  .bar{position:relative;height:6px;background:var(--surface-2);border-radius:99px;min-width:56px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:.35rem;}
+  .bar>span{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--accent);}
+  .bar>i{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--good);}
+  .tag{font-family:"IBM Plex Mono",monospace;font-size:.66rem;border-radius:4px;padding:.03rem .3rem;}
+  .tag.part{color:var(--warn);border:1px solid color-mix(in srgb,var(--warn) 40%,transparent);}
+  .delta.pos{color:var(--good);} .delta.neg{color:var(--warn);}
+  .detail td{background:var(--surface-2);border-top:0;white-space:normal;}
+  .comps{display:flex;flex-wrap:wrap;gap:.45rem;padding:.35rem 0;}
+  .comp{font-family:"IBM Plex Mono",monospace;font-size:.74rem;padding:.22rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--surface);}
+  .comp b{color:var(--accent);}
+  .note{font-size:.78rem;color:var(--ink-faint);margin-top:.25rem;}
+  h2{font-family:"Zilla Slab",serif;font-size:1.1rem;margin:2.2rem 0 .5rem;}
+  .unscored .row{display:flex;gap:.6rem;padding:.32rem 0;border-top:1px solid var(--line);font-size:.84rem;color:var(--ink-soft);}
+  .unscored .row:first-child{border-top:0;}
+  footer{margin-top:2.6rem;padding-top:1.1rem;border-top:1px solid var(--line);font-family:"IBM Plex Mono",monospace;
+    font-size:.74rem;color:var(--ink-faint);line-height:1.7;}
+  .err{padding:2rem;text-align:center;color:var(--warn);font-family:"IBM Plex Mono",monospace;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>WRPI Board</h1>
+  <div class="sub">Wide Receiver Prospect Indicator — a production-and-age draft model reverse-engineered
+    from the 2010–2022 “Prospect Success Indicator”, re-fit and frozen. Percentiles are ranked against
+    the 2014–2022 reference class.</div>
+
+  <div class="statbar" id="statbar"></div>
+  <div class="drift" id="drift"></div>
+
+  <div class="controls">
+    <div class="seg" id="segEra">
+      <button data-v="prediction" aria-pressed="true">2023–25 predictions</button>
+      <button data-v="historical">2015–22 vs actual</button>
+      <button data-v="all">All</button>
+    </div>
+    <div class="seg" id="segMode">
+      <button data-v="post" aria-pressed="true">Post-draft</button>
+      <button data-v="pre">Pre-draft</button>
+      <button data-v="whatif">What-if ceiling</button>
+    </div>
+    <input type="search" id="q" placeholder="filter by name…" />
+  </div>
+  <div class="legend" id="legend"></div>
+
+  <div class="tablewrap"><table id="tbl">
+    <thead><tr id="hrow"></tr></thead>
+    <tbody id="body"></tbody>
+  </table></div>
+
+  <h2>Flagged — not scored <span id="unN"></span></h2>
+  <div class="unscored" id="unscored"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+let DATA=null, era='prediction', mode='post', q='', sort={k:'_pct',asc:false}, open=new Set();
+const pctKey = ()=> mode==='pre'?'pctl_pre': mode==='whatif'?'pctl_post_whatif':'pctl_post';
+const tierColor = t => t>=8?'var(--t-hi)': t>=5?'var(--t-mid)':'var(--t-lo)';
+
+function cols(){
+  const c=[
+    {k:'Player',t:'Player',s:'str'},
+    {k:'Year',t:'Class',s:'num'},
+    {k:'_tier',t:'Tier',s:'num'},
+    {k:'_pct',t:'WRPI %ile',s:'num'},
+  ];
+  if(era==='historical') c.push({k:'_delta',t:'vs actual PSI',s:'num',fmt:v=>{
+    const s=(v>=0?'+':'')+(v*100).toFixed(0); return `<span class="delta ${v>=0?'pos':'neg'}">${s}</span>`;}});
+  c.push(
+    {k:'alpha_f',t:'Alpha',s:'num',fmt:v=>v?'✓':'—'},
+    {k:'bo_age',t:'Breakout',s:'num',fmt:v=>v>=90?'never':v.toFixed(1)},
+    {k:'nfl_age',t:'NFL age',s:'num',fmt:v=>v.toFixed(1)},
+    {k:'dom',t:'Dominator',s:'num',fmt:v=>(v*100).toFixed(0)+'%'},
+    {k:'swrm_hits',t:'SWRM',s:'num',fmt:(v,r)=>v+' / '+r.swrm_tested},
+    {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
+  );
+  return c;
+}
+function view(){
+  let r = DATA.scored.filter(d=> era==='all' || d.era===era);
+  r = r.map(d=>{
+    const p=d[pctKey()];
+    return {...d, _pct:p, _tier:Math.max(1,Math.ceil(p*10)),
+      _delta: d.actual_pctl_post!=null ? (d.pctl_post - d.actual_pctl_post) : null};
+  });
+  if(q) r=r.filter(d=>d.Player.toLowerCase().includes(q));
+  const C=cols().find(c=>c.k===sort.k)||{s:'num'};
+  r.sort((a,b)=>{let x=a[sort.k],y=b[sort.k];
+    if(x==null)return 1; if(y==null)return -1;
+    return C.s==='str'?(sort.asc?String(x).localeCompare(y):String(y).localeCompare(x)):(sort.asc?x-y:y-x);});
+  return r;
+}
+function render(){
+  const C=cols();
+  document.getElementById('hrow').innerHTML=C.map(c=>`<th data-k="${c.k}" class="${sort.k===c.k?'sorted '+(sort.asc?'asc':''):''}">${c.t}</th>`).join('');
+  document.querySelectorAll('#hrow th').forEach(th=>th.onclick=()=>{
+    const k=th.dataset.k; sort=sort.k===k?{k,asc:!sort.asc}:{k,asc:k==='Player'}; render();});
+  const b=document.getElementById('body'); b.innerHTML='';
+  view().forEach(d=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=C.map(c=>{
+      if(c.k==='Player') return `<td>${d.Player}${d.partial_testing?' <span class="tag part">partial test</span>':''}</td>`;
+      if(c.k==='_tier') return `<td class="num"><span class="tier" style="background:color-mix(in srgb,${tierColor(d._tier)} 18%,transparent);color:${tierColor(d._tier)}">${d._tier}</span></td>`;
+      if(c.k==='_pct'){
+        const ceil = d.pctl_post_whatif>d.pctl_post && mode!=='whatif' && mode!=='pre';
+        return `<td class="num">${(d._pct*100).toFixed(1)}<span class="bar"><span style="width:${(d._pct*100).toFixed(0)}%"></span>${ceil?`<i style="left:${(d.pctl_post_whatif*100).toFixed(0)}%"></i>`:''}</span></td>`;
+      }
+      const v=d[c.k];
+      return `<td class="num">${c.fmt?c.fmt(v,d):v}</td>`;
+    }).join('');
+    tr.onclick=()=>{open.has(d.Player+d.Year)?open.delete(d.Player+d.Year):open.add(d.Player+d.Year);render();};
+    b.appendChild(tr);
+    if(open.has(d.Player+d.Year)){
+      const dr=document.createElement('tr'); dr.className='detail';
+      const comps=Object.entries(d.components).map(([k,v])=>`<span class="comp">${k} <b>${v}</b></span>`).join('');
+      const raw=(mode==='pre'?d.raw_pre:d.raw_post).toFixed(1);
+      dr.innerHTML=`<td colspan="${C.length}"><div class="comps">${comps}<span class="comp">= raw <b>${raw}</b></span></div>
+        <div class="note">match: ${d.col_match} · ${d.n_col_seasons} college seasons · pre-draft ${(d.pctl_pre*100).toFixed(0)} %ile
+        ${d.pctl_post_whatif>d.pctl_post?` · <b style="color:var(--good)">what-if ceiling ${(d.pctl_post_whatif*100).toFixed(0)}</b> (if the ${d.swrm_tested<8?(8-d.swrm_tested)+' skipped drills':'—'} were all passes)`:''}
+        ${d.actual_pctl_post!=null?` · actual PSI ${(d.actual_pctl_post*100).toFixed(0)} %ile`:''}</div></td>`;
+      b.appendChild(dr);
+    }
+  });
+}
+function boot(){
+  const m=DATA.model,v=DATA.validation;
+  document.getElementById('statbar').innerHTML=`
+    <div><b>${DATA.scored.length}</b>WR scored · ${DATA.unscored.length} flagged</div>
+    <div><b>${(v.spearman_post).toFixed(2)}</b>rank match vs real PSI (n=${v.n})</div>
+    <div><b>${m.cv_spearman_post}</b>post-draft CV Spearman</div>
+    <div><b>${m.reference_n}</b>players in ${m.reference_years[0]}–${m.reference_years[1]} reference</div>
+    <div><b>+${m.detrend_slope}/yr</b>era detrend (anchor ${m.detrend_anchor})</div>`;
+  const dm=DATA.drift_monitor;
+  document.getElementById('drift').innerHTML=`<span class="lbl">drift monitor</span>
+    <span style="color:var(--ink-faint)">expected band ${dm.band[0]}–${dm.band[1]}</span>`+
+    Object.entries(dm.by_class).map(([y,x])=>`<span class="chip ${x.in_band?'ok':'bad'}">${y}: ${x.mean_detrended_post} ${x.in_band?'ok':'OUT'}</span>`).join('')+
+    `<span style="flex-basis:100%;color:var(--ink-faint);font-size:.74rem">${dm.note}</span>`;
+  document.getElementById('unN').textContent=`(${DATA.unscored.length})`;
+  document.getElementById('unscored').innerHTML=DATA.unscored.map(u=>
+    `<div class="row"><span style="flex:1">${u.Player}</span><span>${u.Year}</span>
+     <span style="color:var(--warn)">${u.reason}</span><span style="color:var(--ink-faint)">${u.drafted?'drafted':'UDFA'}</span></div>`).join('');
+  document.getElementById('foot').innerHTML=`updated ${DATA.generated.replace('T',' ')} UTC ·
+    model frozen on the ${m.reference_years[0]}–${m.reference_years[1]} fit (differential evolution, 5-fold CV) ·
+    inputs: nflverse + array-carpenter/nfl-draft-data + CollegeFootballData ·
+    <a href="https://github.com/pitchafwa/wrpi-board">source</a>`;
+  ['segEra','segMode'].forEach(id=>document.getElementById(id).querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+    document.getElementById(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));
+    btn.setAttribute('aria-pressed','true');
+    if(id==='segEra') era=btn.dataset.v; else mode=btn.dataset.v;
+    render(); setLegend();
+  }));
+  document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();render();};
+  setLegend(); render();
+}
+function setLegend(){
+  const parts=[
+    `<b>Tier</b> = decile (10 = top). <b>WRPI %ile</b> ranks the raw score against the 365-player 2014–22 reference; 100 = higher than every reference player.`,
+    `<b>partial test</b> = ran fewer than 5 of the 8 combine/pro-day drills. Skipped drills count as <b>misses</b> in the main score (prospects skip drills they expect to test poorly in); the green tick on the bar is the <b>what-if ceiling</b> — where they'd rank if every skipped drill were a pass.`,
+  ];
+  if(era==='historical') parts.push(`<b>vs actual PSI</b> = WRPI percentile minus the real PSI percentile for that player (validation).`);
+  document.getElementById('legend').innerHTML=parts.join(' ');
+}
+fetch('scores.json').then(r=>r.json()).then(d=>{DATA=d;boot();})
+  .catch(e=>document.body.innerHTML=`<div class="err">Could not load scores.json — serve this folder over HTTP<br>(<code>python -m http.server</code> in the dashboard directory), not file://<br><br>${e}</div>`);
+</script>
+</body>
+</html>
