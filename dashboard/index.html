@@ -90,18 +90,20 @@
 <body>
 <div class="wrap">
   <h1>WRPI Board</h1>
-  <div class="sub">Wide Receiver Prospect Indicator — a production-and-age draft model reverse-engineered
-    from the 2010–2022 “Prospect Success Indicator”, re-fit and frozen. Percentiles are ranked against
-    the 2014–2022 reference class.</div>
+  <div class="sub">Wide Receiver Prospect Indicator — one production-and-age draft model, reverse-engineered
+    from the 2010–2022 “Prospect Success Indicator” and frozen. Every class 2015–2026 is scored the same
+    way and ranked against the 2014–2022 reference. Where a player has an original PSI grade it’s shown
+    alongside.</div>
 
   <div class="statbar" id="statbar"></div>
   <div class="drift" id="drift"></div>
 
   <div class="controls">
-    <div class="seg" id="segEra">
-      <button data-v="prediction" aria-pressed="true">2023–25 predictions</button>
-      <button data-v="historical">2015–22 vs actual</button>
-      <button data-v="all">All</button>
+    <div class="seg" id="segCls">
+      <button data-v="all" aria-pressed="true">All classes</button>
+      <button data-v="2026">2026</button><button data-v="2025">2025</button>
+      <button data-v="2024">2024</button><button data-v="2023">2023</button>
+      <button data-v="hist">2015–22</button>
     </div>
     <div class="seg" id="segMode">
       <button data-v="post" aria-pressed="true">Post-draft</button>
@@ -124,35 +126,48 @@
 </div>
 
 <script>
-let DATA=null, era='prediction', mode='post', q='', sort={k:'_pct',asc:false}, open=new Set();
+let DATA=null, cls='all', mode='post', q='', sort={k:'_pct',asc:false}, open=new Set();
 const pctKey = ()=> mode==='pre'?'pctl_pre': mode==='whatif'?'pctl_post_whatif':'pctl_post';
 const tierColor = t => t>=8?'var(--t-hi)': t>=5?'var(--t-mid)':'var(--t-lo)';
 
+const TIPS={
+  Player:'WR prospect. “partial test” = ran fewer than 5 of the 8 combine/pro-day drills.',
+  Class:'Draft class (year).',
+  Tier:'Decile of the WRPI percentile. 10 = top 10%, 1 = bottom 10%.',
+  'WRPI %ile':'Percentile of the era-detrended raw score vs the 365-player 2014–22 reference. 100 = above every reference player. Green tick on the bar = what-if ceiling.',
+  'Actual PSI':'The player’s percentile in the original 2010–22 PSI database, where one exists. Blank for 2023+ (PSI is defunct).',
+  Alpha:'Was the prospect his college team’s #1 receiver by yards in at least one season? Benchmark: 51 of 54 historical top-24 NFL WRs were. ✓ = yes.',
+  Breakout:'Age at the midpoint of his first college season with a ≥20% dominator rating. Benchmark: under 20 is exceptional; “never” = no qualifying season.',
+  'NFL age':'Age on Jan 1 of the draft year. Benchmark: elite WRs almost always enter before 22; the penalty is ~8 pts per year older, from age 24 down.',
+  Dominator:'Best college season’s share of team receiving (yards + TD). Benchmark bands: ≥35% = potential #1, 20–35% = mid, <20% = red flag.',
+  SWRM:'Successful WR Measurements — combine/pro-day drills passed / attempted, of 8 (lbs-per-inch, hand size, height, 40, vertical, broad, shuttle, 3-cone). Benchmark: historical top-24 WRs hit ~7 of 8. Unrun drills count as misses in the main score.',
+  Pick:'Overall draft slot. “UDFA” = undrafted. Post-draft score adds ~40 pts for a top-5 pick down to ~0 for late Day 3.',
+};
+
 function cols(){
-  const c=[
+  return [
     {k:'Player',t:'Player',s:'str'},
     {k:'Year',t:'Class',s:'num'},
     {k:'_tier',t:'Tier',s:'num'},
     {k:'_pct',t:'WRPI %ile',s:'num'},
-  ];
-  if(era==='historical') c.push({k:'_delta',t:'vs actual PSI',s:'num',fmt:v=>{
-    const s=(v>=0?'+':'')+(v*100).toFixed(0); return `<span class="delta ${v>=0?'pos':'neg'}">${s}</span>`;}});
-  c.push(
+    {k:'actual_pctl_post',t:'Actual PSI',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
     {k:'alpha_f',t:'Alpha',s:'num',fmt:v=>v?'✓':'—'},
     {k:'bo_age',t:'Breakout',s:'num',fmt:v=>v>=90?'never':v.toFixed(1)},
     {k:'nfl_age',t:'NFL age',s:'num',fmt:v=>v.toFixed(1)},
     {k:'dom',t:'Dominator',s:'num',fmt:v=>(v*100).toFixed(0)+'%'},
     {k:'swrm_hits',t:'SWRM',s:'num',fmt:(v,r)=>v+' / '+r.swrm_tested},
     {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
-  );
-  return c;
+  ];
+}
+function inCls(d){
+  if(cls==='all') return true;
+  if(cls==='hist') return d.Year<=2022;
+  return String(d.Year)===cls;
 }
 function view(){
-  let r = DATA.scored.filter(d=> era==='all' || d.era===era);
-  r = r.map(d=>{
+  let r = DATA.scored.filter(inCls).map(d=>{
     const p=d[pctKey()];
-    return {...d, _pct:p, _tier:Math.max(1,Math.ceil(p*10)),
-      _delta: d.actual_pctl_post!=null ? (d.pctl_post - d.actual_pctl_post) : null};
+    return {...d, _pct:p, _tier:Math.max(1,Math.ceil(p*10))};
   });
   if(q) r=r.filter(d=>d.Player.toLowerCase().includes(q));
   const C=cols().find(c=>c.k===sort.k)||{s:'num'};
@@ -163,7 +178,7 @@ function view(){
 }
 function render(){
   const C=cols();
-  document.getElementById('hrow').innerHTML=C.map(c=>`<th data-k="${c.k}" class="${sort.k===c.k?'sorted '+(sort.asc?'asc':''):''}">${c.t}</th>`).join('');
+  document.getElementById('hrow').innerHTML=C.map(c=>`<th data-k="${c.k}" title="${(TIPS[c.t]||'').replace(/"/g,'&quot;')}" class="${sort.k===c.k?'sorted '+(sort.asc?'asc':''):''}">${c.t}</th>`).join('');
   document.querySelectorAll('#hrow th').forEach(th=>th.onclick=()=>{
     const k=th.dataset.k; sort=sort.k===k?{k,asc:!sort.asc}:{k,asc:k==='Player'}; render();});
   const b=document.getElementById('body'); b.innerHTML='';
@@ -214,24 +229,20 @@ function boot(){
     model frozen on the ${m.reference_years[0]}–${m.reference_years[1]} fit (differential evolution, 5-fold CV) ·
     inputs: nflverse + array-carpenter/nfl-draft-data + CollegeFootballData ·
     <a href="https://github.com/pitchafwa/wrpi-board">source</a>`;
-  ['segEra','segMode'].forEach(id=>document.getElementById(id).querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+  ['segCls','segMode'].forEach(id=>document.getElementById(id).querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
     document.getElementById(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));
     btn.setAttribute('aria-pressed','true');
-    if(id==='segEra') era=btn.dataset.v; else mode=btn.dataset.v;
-    render(); setLegend();
+    if(id==='segCls') cls=btn.dataset.v; else mode=btn.dataset.v;
+    render();
   }));
   document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();render();};
   setLegend(); render();
 }
 function setLegend(){
-  const parts=[
-    `<b>Tier</b> = decile (10 = top). <b>WRPI %ile</b> ranks the raw score against the 365-player 2014–22 reference; 100 = higher than every reference player.`,
-    `<b>partial test</b> = ran fewer than 5 of the 8 combine/pro-day drills. Skipped drills count as <b>misses</b> in the main score (prospects skip drills they expect to test poorly in); the green tick on the bar is the <b>what-if ceiling</b> — where they'd rank if every skipped drill were a pass.`,
-  ];
-  if(era==='historical') parts.push(`<b>vs actual PSI</b> = WRPI percentile minus the real PSI percentile for that player (validation).`);
-  document.getElementById('legend').innerHTML=parts.join(' ');
+  document.getElementById('legend').innerHTML=
+    `Hover any column header for its meaning and benchmark. <b>partial test</b> = ran fewer than 5 of the 8 combine/pro-day drills; skipped drills count as <b>misses</b> in the main score (prospects skip drills they expect to test poorly in). The green tick on the WRPI bar is the <b>what-if ceiling</b> — where the player would rank if every skipped drill were a pass.`;
 }
-fetch('scores.json').then(r=>r.json()).then(d=>{DATA=d;boot();})
+fetch('scores.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{DATA=d;boot();})
   .catch(e=>document.body.innerHTML=`<div class="err">Could not load scores.json — serve this folder over HTTP<br>(<code>python -m http.server</code> in the dashboard directory), not file://<br><br>${e}</div>`);
 </script>
 </body>

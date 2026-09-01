@@ -1,152 +1,204 @@
-key,Year,Player,draft_pick,college,nfl_team,athlete_id,src_draft,src_combine,src_proday,drafted
-adonai mitchell,2024,Adonai Mitchell,52.0,Texas,IND,4597500.0,1,1,1,True
-ainias smith,2024,Ainias Smith,152.0,Texas A&M,PHI,4428532.0,1,1,1,True
-andrei iosivas,2023,Andrei Iosivas,206.0,Princeton,CIN,,1,1,1,True
-andrew armstrong,2025,Andrew Armstrong,,Arkansas,,5093923.0,0,1,1,False
-anthony gould,2024,Anthony Gould,142.0,Oregon St.,IND,4429684.0,1,1,1,True
-antoine green,2023,Antoine Green,219.0,North Carolina,DET,4373266.0,1,1,1,True
-antwane wells,2025,Antwane Wells Jr.,,Mississippi,,4696062.0,0,1,1,False
-arian smith,2025,Arian Smith,110.0,Georgia,NYJ,4429105.0,1,1,1,True
-at perry,2023,A.T. Perry,195.0,Wake Forest,NOR,4362019.0,1,1,1,True
-beaux collins,2025,Beaux Collins,,Notre Dame,,4431210.0,0,1,1,False
-brenden rice,2024,Brenden Rice,225.0,USC,LAC,4686781.0,1,1,1,True
-brian thomas,2024,Brian Thomas,23.0,LSU,JAX,4432773.0,1,1,1,True
-bru mccoy,2025,Bru McCoy,,Tennessee,,4426337.0,0,1,1,False
-bryce fordwheaton,2023,Bryce Ford-Wheaton,,West Virginia,,,0,1,1,False
-bub means,2024,Bub Means,170.0,Pittsburgh,NOR,4427985.0,1,1,1,True
-casey washington,2024,Casey Washington,187.0,Illinois,ATL,,1,0,0,True
-cedric tillman,2023,Cedric Tillman,74.0,Tennessee,CLE,4369863.0,1,1,1,True
-charlie jones,2023,Charlie Jones,131.0,Purdue,CIN,4257188.0,1,1,1,True
-chimere dike,2025,Chimere Dike,103.0,Florida,TEN,4431268.0,1,1,1,True
-cj johnson,2023,CJ Johnson,,East Carolina,,,0,1,1,False
-cleveland harris,2025,Cleveland Harris,55.0,Mississippi,,,0,1,0,False
-colton dowell,2023,Colton Dowell,228.0,UT Martin,TEN,,1,0,0,True
-cornelius johnson,2024,Cornelius Johnson,253.0,Michigan,LAC,4426479.0,1,1,1,True
-daniel jackson,2025,Daniel Jackson,,Minnesota,,4430875.0,0,1,1,False
-daquan felton,2025,Da'Quan Felton,,Virginia Tech,,4575348.0,0,1,1,False
-demario douglas,2023,DeMario Douglas,210.0,Liberty,NWE,4427095.0,1,1,1,True
-derius davis,2023,Derius Davis,125.0,TCU,LAC,4362477.0,1,1,1,True
-devaughn vele,2024,Devaughn Vele,235.0,Utah,DEN,4569559.0,1,1,1,True
-devontez walker,2024,Devontez Walker,113.0,North Carolina,BAL,4696882.0,1,1,1,True
-dominic lovett,2025,Dominic Lovett,244.0,Georgia,DET,4596439.0,1,1,1,True
-dontay demus,2023,Dontay Demus Jr.,,Maryland,,4372039.0,0,1,1,False
-dontayvion wicks,2023,Dontayvion Wicks,159.0,Virginia,GNB,4428850.0,1,1,1,True
-donte thornton,2025,Dont'e Thornton,108.0,Tennessee,LVR,4432775.0,1,1,1,True
-efton chism,2024,Efton Chism III,,Eastern Washington,,4695193.0,0,0,1,False
-elic ayomanor,2025,Elic Ayomanor,136.0,Stanford,TEN,4883647.0,1,1,1,True
-elijah higgins,2023,Elijah Higgins,197.0,Stanford,MIA,4426844.0,1,1,1,True
-elijhah badger,2025,Elijhah Badger,,Florida,,4429184.0,0,1,1,False
-emeka egbuka,2025,Emeka Egbuka,19.0,Ohio St.,TAM,4567750.0,1,1,1,True
-grant dubose,2023,Grant Dubose,256.0,Charlotte,GNB,4879650.0,1,1,1,True
-isaac teslaa,2025,Isaac TeSlaa,70.0,Arkansas,DET,5123663.0,1,1,1,True
-isaiah bond,2025,Isaiah Bond,,Texas,,4808839.0,0,1,1,False
-isaiah neyor,2025,Isaiah Neyor,,Nebraska,,4428116.0,0,1,1,False
-isaiah williams,2024,Isaiah Williams,,Illinois,,4569371.0,0,1,1,False
-jack bech,2025,Jack Bech,58.0,TCU,LVR,4603186.0,1,1,1,True
-jackson meeks,2024,Jackson Meeks,,Syracuse,,4602788.0,0,0,1,False
-jacob copeland,2023,Jacob Copeland,,Maryland,,4360233.0,0,1,1,False
-jacob cowing,2024,Jacob Cowing,135.0,Arizona,SFO,4575665.0,1,1,1,True
-jacolby george,2025,Jacolby George,,Miami,,4567784.0,0,1,1,False
-jacorey brooks,2025,Ja'Corey Brooks,,Louisville,,4431506.0,0,1,1,False
-jadon haselwood,2023,Jadon Haselwood,,Arkansas,,4426370.0,0,1,1,False
-jake bobo,2023,Jake Bobo,,UCLA,,,0,1,0,False
-jalen brooks,2023,Jalen Brooks,244.0,South Carolina,DAL,4692835.0,1,1,1,True
-jalen coker,2024,Jalen Coker,,Holy Cross,,4695883.0,0,1,1,False
-jalen mcmillan,2024,Jalen McMillan,92.0,Washington,TAM,4430834.0,1,1,1,True
-jalen morenocropper,2023,Jalen Moreno-Cropper,,Fresno St.,,5100930.0,0,1,1,False
-jalen royals,2025,Jalen Royals,133.0,Utah St.,KAN,5082630.0,1,1,1,True
-jalen wayne,2023,Jalen Wayne,,South Alabama,,4249426.0,0,1,1,False
-jalin hyatt,2023,Jalin Hyatt,73.0,Tennessee,NYG,4692590.0,1,1,1,True
-jalynn polk,2024,Ja'Lynn Polk,37.0,Washington,NWE,4430637.0,1,1,1,True
-jamari thrash,2024,Jamari Thrash,156.0,Louisville,CLE,4428678.0,1,1,1,True
-jaray jenkins,2023,Jaray Jenkins,,LSU,,4362650.0,0,1,1,False
-jason brownlee,2023,Jason Brownlee,,Southern Mississippi,,4689988.0,0,1,1,False
-javon baker,2024,Javon Baker,110.0,Central Florida,NWE,4692022.0,1,1,1,True
-jaxon smithnjigba,2023,Jaxon Smith-Njigba,20.0,Ohio St.,SEA,4430878.0,1,1,1,True
-jayden higgins,2025,Jayden Higgins,34.0,Iowa St.,HOU,4877706.0,1,1,1,True
-jayden reed,2023,Jayden Reed,50.0,Michigan St.,GNB,4362249.0,1,1,1,True
-jaylin lane,2025,Jaylin Lane,128.0,Virginia Tech,WAS,4602667.0,1,0,1,True
-jaylin noel,2025,Jaylin Noel,79.0,Iowa St.,HOU,4586312.0,1,1,1,True
-jermaine burton,2024,Jermaine Burton,80.0,Alabama,CIN,4429033.0,1,1,1,True
-jhaquan jackson,2024,Jha'Quan Jackson,182.0,Tulane,TEN,4427575.0,1,1,1,True
-jimmy horn,2025,Jimmy Horn,208.0,Colorado,CAR,4708486.0,1,1,1,True
-johnny wilson,2024,Johnny Wilson,185.0,Florida St.,PHI,4686104.0,1,1,1,True
-jonathan mingo,2023,Jonathan Mingo,39.0,Mississippi,CAR,4426485.0,1,1,1,True
-jordan addison,2023,Jordan Addison,23.0,USC,MIN,4429205.0,1,1,1,True
-jordan watkins,2025,Jordan Watkins,138.0,Mississippi,SFO,4431466.0,1,1,1,True
-jordan whittington,2024,Jordan Whittington,213.0,Texas,LAR,4569382.0,1,1,1,True
-joseph ngata,2023,Joseph Ngata,,Clemson,,4426426.0,0,1,1,False
-josh downs,2023,Josh Downs,79.0,North Carolina,IND,4688813.0,1,1,1,True
-josh kelly,2025,Josh Kelly,,Texas Tech,,4575558.0,0,1,1,False
-joshua lane,2025,Joshua Lane,128.0,Virginia Tech,,,0,1,0,False
-julian fleming,2024,Julian Fleming,,Penn State,,4430800.0,0,0,1,False
-junior bergen,2024,Junior Bergen,,Montana,,4887918.0,0,0,1,False
-junior bergen,2025,Junior Bergen,252.0,Montana,SFO,,1,0,0,True
-justin shorter,2023,Justin Shorter,150.0,Florida,BUF,4361426.0,1,1,1,True
-kaden prather,2025,Kaden Prather,240.0,Maryland,BUF,4431509.0,1,1,1,True
-kayshon boutte,2023,Kayshon Boutte,187.0,LSU,NWE,4429022.0,1,1,1,True
-keandre lambertsmith,2025,KeAndre Lambert-Smith,158.0,Auburn,LAC,4430870.0,1,1,1,True
-kearis jackson,2023,Kearis Jackson,,Georgia,,4361778.0,0,1,1,False
-keon coleman,2024,Keon Coleman,33.0,Florida St.,BUF,4635008.0,1,1,1,True
-kobe hudson,2025,Kobe Hudson,,Central Florida,,4429056.0,0,1,1,False
-konata mumpfield,2025,Konata Mumpfield,242.0,Pittsburgh,LAR,4710855.0,1,1,1,True
-kyle williams,2025,Kyle Williams,69.0,Washington St.,NWE,4613202.0,1,1,1,True
-kyren lacy,2024,Kyren Lacy,,LSU,,4431219.0,0,0,1,False
-ladd mcconkey,2024,Ladd McConkey,34.0,Georgia,LAC,4612826.0,1,1,1,True
-lajohntay wester,2025,LaJohntay Wester,203.0,Colorado,BAL,4690143.0,1,1,1,True
-lideatrick griffin,2024,Lideatrick Griffin,,Mississippi St.,,4429153.0,0,1,1,False
-luke mccaffrey,2024,Luke McCaffrey,100.0,Rice,WAS,4426948.0,1,1,1,True
-luther burden,2025,Luther Burden,39.0,Missouri,CHI,4685278.0,1,1,1,True
-malachi corley,2024,Malachi Corley,65.0,Western Kentucky,NYJ,4613104.0,1,1,1,True
-malik heath,2023,Malik Heath,,Mississippi,,4689334.0,0,1,1,False
-malik knowles,2023,Malik Knowles,,Kansas St.,,4373077.0,0,1,1,False
-malik nabers,2024,Malik Nabers,6.0,LSU,NYG,4595348.0,1,1,1,True
-malik washington,2024,Malik Washington,184.0,Virginia,MIA,4569603.0,1,1,1,True
-marcus rosemyjacksaint,2024,Marcus Rosemy-Jacksaint,,Georgia,,4695252.0,0,1,1,False
-marvin harrison,2024,Marvin Harrison Jr.,4.0,Ohio St.,ARI,4432708.0,1,1,1,True
-marvin mims,2023,Marvin Mims,63.0,Oklahoma,DEN,4686472.0,1,1,1,True
-matt landers,2023,Matt Landers,,Arkansas,,4259550.0,0,1,1,False
-matthew golden,2025,Matthew Golden,23.0,Texas,GNB,4701936.0,1,1,1,True
-michael jefferson,2023,Michael Jefferson,,Louisiana,,4366535.0,0,1,1,False
-michael wilson,2023,Michael Wilson,94.0,Stanford,ARI,4360761.0,1,1,1,True
-mitchell tinsley,2023,Mitchell Tinsley,,Penn St.,,4690070.0,0,1,1,False
-nathaniel dell,2023,Nathaniel Dell,69.0,Houston,,4366031.0,0,1,1,False
-nick nash,2025,Nick Nash,,San Jose St.,,4570242.0,0,1,1,False
-parker washington,2023,Parker Washington,185.0,Penn St.,JAX,4432620.0,1,1,1,True
-pat bryant,2025,Pat Bryant,74.0,Illinois,DEN,4600981.0,1,1,1,True
-puka nacua,2023,Puka Nacua,177.0,BYU,LAR,4426515.0,1,1,1,True
-quentin johnston,2023,Quentin Johnston,21.0,TCU,LAC,4429025.0,1,1,1,True
-rakim jarrett,2023,Rakim Jarrett,,Maryland,,4429006.0,0,1,1,False
-rashee rice,2023,Rashee Rice,55.0,SMU,KAN,4428331.0,1,1,1,True
-ricky pearsall,2024,Ricky Pearsall,31.0,Florida,SFO,4428209.0,1,1,1,True
-ricky white,2025,Ricky White,238.0,UNLV,SEA,4431479.0,1,1,1,True
-roc taylor,2025,Roc Taylor,,Memphis,,4431597.0,0,1,1,False
-roman wilson,2024,Roman Wilson,84.0,Michigan,PIT,4431492.0,1,1,1,True
-rome odunze,2024,Rome Odunze,9.0,Washington,CHI,4431299.0,1,1,1,True
-ronnie bell,2023,Ronnie Bell,253.0,Michigan,SFO,4372063.0,1,1,1,True
-ryan flournoy,2024,Ryan Flournoy,216.0,SE Missouri St.,DAL,5083754.0,1,1,1,True
-sam brown,2025,Sam Brown Jr.,,Miami,,4587977.0,0,1,1,False
-savion williams,2025,Savion Williams,87.0,TCU,GNB,4431487.0,1,1,1,True
-tahj washington,2024,Tahj Washington,241.0,USC,MIA,4567506.0,1,1,1,True
-tai felton,2025,Tai Felton,102.0,Maryland,MIN,4565185.0,1,1,1,True
-tank dell,2023,Tank Dell,69.0,Houston,HOU,,1,0,0,True
-tayvion robinson,2024,Tayvion Robinson,,Kentucky,,4428367.0,0,1,1,False
-tejhaun palmer,2024,Tejhaun Palmer,191.0,Ala-Birmingham,ARI,,1,0,0,True
-tetairoa mcmillan,2025,Tetairoa McMillan,8.0,Arizona,CAR,4685472.0,1,1,1,True
-tez johnson,2025,Tez Johnson,235.0,Oregon,TAM,4608810.0,1,1,1,True
-theo wease,2025,Theo Wease,,Missouri,,4426535.0,0,1,1,False
-tory horton,2025,Tory Horton,166.0,Colorado St.,SEA,4597703.0,1,1,1,True
-traeshon holden,2025,Traeshon Holden,,Oregon,,4429172.0,0,1,1,False
-travis hunter,2025,Travis Hunter,2.0,Colorado,JAX,,1,0,0,True
-tre harris,2025,Tre Harris,55.0,Mississippi,LAC,4686612.0,1,0,1,True
-tre tucker,2023,Tre Tucker,100.0,Cincinnati,LVR,4428718.0,1,1,1,True
-trey palmer,2023,Trey Palmer,191.0,Nebraska,TAM,4426407.0,1,1,1,True
-troy franklin,2024,Troy Franklin,102.0,Oregon,DEN,4431280.0,1,1,1,True
-tyler scott,2023,Tyler Scott,133.0,Cincinnati,CHI,4565908.0,1,1,1,True
-will sheppard,2025,Will Sheppard,,Colorado,,4608679.0,0,0,1,False
-xavier hutchinson,2023,Xavier Hutchinson,205.0,Iowa St.,HOU,4686422.0,1,1,1,True
-xavier legette,2024,Xavier Legette,32.0,South Carolina,CAR,4430034.0,1,1,1,True
-xavier restrepo,2025,Xavier Restrepo,,Miami,,4431353.0,0,1,1,False
-xavier weaver,2024,Xavier Weaver,,Colorado,,4428811.0,0,1,1,False
-xavier worthy,2024,Xavier Worthy,28.0,Texas,KAN,4683062.0,1,1,1,True
-zay flowers,2023,Zay Flowers,22.0,Boston Col.,BAL,4429615.0,1,1,1,True
+_g,key,Year,Player,draft_pick,college,nfl_team,athlete_id,src_draft,src_combine,src_proday,drafted
+2023|arkansas|haselwood,jadon haselwood,2023,Jadon Haselwood,,Arkansas,,4426370.0,0,1,1,False
+2023|arkansas|landers,matt landers,2023,Matt Landers,,Arkansas,,4259550.0,0,1,1,False
+2023|bostoncol|flowers,zay flowers,2023,Zay Flowers,22.0,Boston Col.,BAL,4429615.0,1,1,1,True
+2023|byu|nacua,puka nacua,2023,Puka Nacua,177.0,BYU,LAR,4426515.0,1,1,1,True
+2023|charlotte|dubose,grant dubose,2023,Grant Dubose,256.0,Charlotte,GNB,4879650.0,1,1,1,True
+2023|cincinnati|scott,tyler scott,2023,Tyler Scott,133.0,Cincinnati,CHI,4565908.0,1,1,1,True
+2023|cincinnati|tucker,tre tucker,2023,Tre Tucker,100.0,Cincinnati,LVR,4428718.0,1,1,1,True
+2023|clemson|ngata,joseph ngata,2023,Joseph Ngata,,Clemson,,4426426.0,0,1,1,False
+2023|eastcarolina|johnson,cj johnson,2023,CJ Johnson,,East Carolina,,,0,1,1,False
+2023|florida|shorter,justin shorter,2023,Justin Shorter,150.0,Florida,BUF,4361426.0,1,1,1,True
+2023|fresno|morenocropper,jalen morenocropper,2023,Jalen Moreno-Cropper,,Fresno St.,,5100930.0,0,1,1,False
+2023|georgia|jackson,kearis jackson,2023,Kearis Jackson,,Georgia,,4361778.0,0,1,1,False
+2023|houston|dell,nathaniel dell,2023,Tank Dell,69.0,Houston,HOU,4366031.0,1,1,1,True
+2023|iowa|hutchinson,xavier hutchinson,2023,Xavier Hutchinson,205.0,Iowa St.,HOU,4686422.0,1,1,1,True
+2023|kansas|knowles,malik knowles,2023,Malik Knowles,,Kansas St.,,4373077.0,0,1,1,False
+2023|liberty|douglas,demario douglas,2023,DeMario Douglas,210.0,Liberty,NWE,4427095.0,1,1,1,True
+2023|louisiana|jefferson,michael jefferson,2023,Michael Jefferson,,Louisiana,,4366535.0,0,1,1,False
+2023|lsu|boutte,kayshon boutte,2023,Kayshon Boutte,187.0,LSU,NWE,4429022.0,1,1,1,True
+2023|lsu|jenkins,jaray jenkins,2023,Jaray Jenkins,,LSU,,4362650.0,0,1,1,False
+2023|maryland|copeland,jacob copeland,2023,Jacob Copeland,,Maryland,,4360233.0,0,1,1,False
+2023|maryland|demus,dontay demus,2023,Dontay Demus Jr.,,Maryland,,4372039.0,0,1,1,False
+2023|maryland|jarrett,rakim jarrett,2023,Rakim Jarrett,,Maryland,,4429006.0,0,1,1,False
+2023|michigan|bell,ronnie bell,2023,Ronnie Bell,253.0,Michigan,SFO,4372063.0,1,1,1,True
+2023|michigan|reed,jayden reed,2023,Jayden Reed,50.0,Michigan St.,GNB,4362249.0,1,1,1,True
+2023|mississippi|heath,malik heath,2023,Malik Heath,,Mississippi,,4689334.0,0,1,1,False
+2023|mississippi|mingo,jonathan mingo,2023,Jonathan Mingo,39.0,Mississippi,CAR,4426485.0,1,1,1,True
+2023|nebraska|palmer,trey palmer,2023,Trey Palmer,191.0,Nebraska,TAM,4426407.0,1,1,1,True
+2023|northcarolina|downs,josh downs,2023,Josh Downs,79.0,North Carolina,IND,4688813.0,1,1,1,True
+2023|northcarolina|green,antoine green,2023,Antoine Green,219.0,North Carolina,DET,4373266.0,1,1,1,True
+2023|ohio|smithnjigba,jaxon smithnjigba,2023,Jaxon Smith-Njigba,20.0,Ohio St.,SEA,4430878.0,1,1,1,True
+2023|oklahoma|mims,marvin mims,2023,Marvin Mims,63.0,Oklahoma,DEN,4686472.0,1,1,1,True
+2023|penn|tinsley,mitchell tinsley,2023,Mitchell Tinsley,,Penn St.,,4690070.0,0,1,1,False
+2023|penn|washington,parker washington,2023,Parker Washington,185.0,Penn St.,JAX,4432620.0,1,1,1,True
+2023|princeton|iosivas,andrei iosivas,2023,Andrei Iosivas,206.0,Princeton,CIN,,1,1,1,True
+2023|purdue|jones,charlie jones,2023,Charlie Jones,131.0,Purdue,CIN,4257188.0,1,1,1,True
+2023|smu|rice,rashee rice,2023,Rashee Rice,55.0,SMU,KAN,4428331.0,1,1,1,True
+2023|southalabama|wayne,jalen wayne,2023,Jalen Wayne,,South Alabama,,4249426.0,0,1,1,False
+2023|southcarolina|brooks,jalen brooks,2023,Jalen Brooks,244.0,South Carolina,DAL,4692835.0,1,1,1,True
+2023|southernmississippi|brownlee,jason brownlee,2023,Jason Brownlee,,Southern Mississippi,,4689988.0,0,1,1,False
+2023|stanford|higgins,elijah higgins,2023,Elijah Higgins,197.0,Stanford,MIA,4426844.0,1,1,1,True
+2023|stanford|wilson,michael wilson,2023,Michael Wilson,94.0,Stanford,ARI,4360761.0,1,1,1,True
+2023|tcu|davis,derius davis,2023,Derius Davis,125.0,TCU,LAC,4362477.0,1,1,1,True
+2023|tcu|johnston,quentin johnston,2023,Quentin Johnston,21.0,TCU,LAC,4429025.0,1,1,1,True
+2023|tennessee|hyatt,jalin hyatt,2023,Jalin Hyatt,73.0,Tennessee,NYG,4692590.0,1,1,1,True
+2023|tennessee|tillman,cedric tillman,2023,Cedric Tillman,74.0,Tennessee,CLE,4369863.0,1,1,1,True
+2023|ucla|bobo,jake bobo,2023,Jake Bobo,,UCLA,,,0,1,0,False
+2023|usc|addison,jordan addison,2023,Jordan Addison,23.0,USC,MIN,4429205.0,1,1,1,True
+2023|utmartin|dowell,colton dowell,2023,Colton Dowell,228.0,UT Martin,TEN,,1,0,0,True
+2023|virginia|wicks,dontayvion wicks,2023,Dontayvion Wicks,159.0,Virginia,GNB,4428850.0,1,1,1,True
+2023|wakeforest|perry,at perry,2023,A.T. Perry,195.0,Wake Forest,NOR,4362019.0,1,1,1,True
+2023|westvirginia|fordwheaton,bryce fordwheaton,2023,Bryce Ford-Wheaton,,West Virginia,,,0,1,1,False
+2024|alabama|burton,jermaine burton,2024,Jermaine Burton,80.0,Alabama,CIN,4429033.0,1,1,1,True
+2024|alabirmingham|palmer,tejhaun palmer,2024,Tejhaun Palmer,191.0,Ala-Birmingham,ARI,,1,0,0,True
+2024|arizona|cowing,jacob cowing,2024,Jacob Cowing,135.0,Arizona,SFO,4575665.0,1,1,1,True
+2024|centralflorida|baker,javon baker,2024,Javon Baker,110.0,Central Florida,NWE,4692022.0,1,1,1,True
+2024|colorado|weaver,xavier weaver,2024,Xavier Weaver,,Colorado,,4428811.0,0,1,1,False
+2024|easternwashington|chism,efton chism,2024,Efton Chism III,,Eastern Washington,,4695193.0,0,0,1,False
+2024|florida|coleman,keon coleman,2024,Keon Coleman,33.0,Florida St.,BUF,4635008.0,1,1,1,True
+2024|florida|pearsall,ricky pearsall,2024,Ricky Pearsall,31.0,Florida,SFO,4428209.0,1,1,1,True
+2024|florida|wilson,johnny wilson,2024,Johnny Wilson,185.0,Florida St.,PHI,4686104.0,1,1,1,True
+2024|georgia|mcconkey,ladd mcconkey,2024,Ladd McConkey,34.0,Georgia,LAC,4612826.0,1,1,1,True
+2024|georgia|rosemyjacksaint,marcus rosemyjacksaint,2024,Marcus Rosemy-Jacksaint,,Georgia,,4695252.0,0,1,1,False
+2024|holycross|coker,jalen coker,2024,Jalen Coker,,Holy Cross,,4695883.0,0,1,1,False
+2024|illinois|washington,casey washington,2024,Casey Washington,187.0,Illinois,ATL,,1,0,0,True
+2024|illinois|williams,isaiah williams,2024,Isaiah Williams,,Illinois,,4569371.0,0,1,1,False
+2024|kentucky|robinson,tayvion robinson,2024,Tayvion Robinson,,Kentucky,,4428367.0,0,1,1,False
+2024|louisville|thrash,jamari thrash,2024,Jamari Thrash,156.0,Louisville,CLE,4428678.0,1,1,1,True
+2024|lsu|lacy,kyren lacy,2024,Kyren Lacy,,LSU,,4431219.0,0,0,1,False
+2024|lsu|nabers,malik nabers,2024,Malik Nabers,6.0,LSU,NYG,4595348.0,1,1,1,True
+2024|lsu|thomas,brian thomas,2024,Brian Thomas,23.0,LSU,JAX,4432773.0,1,1,1,True
+2024|michigan|johnson,cornelius johnson,2024,Cornelius Johnson,253.0,Michigan,LAC,4426479.0,1,1,1,True
+2024|michigan|wilson,roman wilson,2024,Roman Wilson,84.0,Michigan,PIT,4431492.0,1,1,1,True
+2024|mississippi|griffin,lideatrick griffin,2024,Lideatrick Griffin,,Mississippi St.,,4429153.0,0,1,1,False
+2024|montana|bergen,junior bergen,2024,Junior Bergen,,Montana,,4887918.0,0,0,1,False
+2024|northcarolina|walker,devontez walker,2024,Devontez Walker,113.0,North Carolina,BAL,4696882.0,1,1,1,True
+2024|ohio|harrison,marvin harrison,2024,Marvin Harrison Jr.,4.0,Ohio St.,ARI,4432708.0,1,1,1,True
+2024|oregon|franklin,troy franklin,2024,Troy Franklin,102.0,Oregon,DEN,4431280.0,1,1,1,True
+2024|oregon|gould,anthony gould,2024,Anthony Gould,142.0,Oregon St.,IND,4429684.0,1,1,1,True
+2024|penn|fleming,julian fleming,2024,Julian Fleming,,Penn State,,4430800.0,0,0,1,False
+2024|pittsburgh|means,bub means,2024,Bub Means,170.0,Pittsburgh,NOR,4427985.0,1,1,1,True
+2024|rice|mccaffrey,luke mccaffrey,2024,Luke McCaffrey,100.0,Rice,WAS,4426948.0,1,1,1,True
+2024|semissouri|flournoy,ryan flournoy,2024,Ryan Flournoy,216.0,SE Missouri St.,DAL,5083754.0,1,1,1,True
+2024|southcarolina|legette,xavier legette,2024,Xavier Legette,32.0,South Carolina,CAR,4430034.0,1,1,1,True
+2024|syracuse|meeks,jackson meeks,2024,Jackson Meeks,,Syracuse,,4602788.0,0,0,1,False
+2024|texasam|smith,ainias smith,2024,Ainias Smith,152.0,Texas A&M,PHI,4428532.0,1,1,1,True
+2024|texas|mitchell,adonai mitchell,2024,Adonai Mitchell,52.0,Texas,IND,4597500.0,1,1,1,True
+2024|texas|whittington,jordan whittington,2024,Jordan Whittington,213.0,Texas,LAR,4569382.0,1,1,1,True
+2024|texas|worthy,xavier worthy,2024,Xavier Worthy,28.0,Texas,KAN,4683062.0,1,1,1,True
+2024|tulane|jackson,jhaquan jackson,2024,Jha'Quan Jackson,182.0,Tulane,TEN,4427575.0,1,1,1,True
+2024|usc|rice,brenden rice,2024,Brenden Rice,225.0,USC,LAC,4686781.0,1,1,1,True
+2024|usc|washington,tahj washington,2024,Tahj Washington,241.0,USC,MIA,4567506.0,1,1,1,True
+2024|utah|vele,devaughn vele,2024,Devaughn Vele,235.0,Utah,DEN,4569559.0,1,1,1,True
+2024|virginia|washington,malik washington,2024,Malik Washington,184.0,Virginia,MIA,4569603.0,1,1,1,True
+2024|washington|mcmillan,jalen mcmillan,2024,Jalen McMillan,92.0,Washington,TAM,4430834.0,1,1,1,True
+2024|washington|odunze,rome odunze,2024,Rome Odunze,9.0,Washington,CHI,4431299.0,1,1,1,True
+2024|washington|polk,jalynn polk,2024,Ja'Lynn Polk,37.0,Washington,NWE,4430637.0,1,1,1,True
+2024|westernkentucky|corley,malachi corley,2024,Malachi Corley,65.0,Western Kentucky,NYJ,4613104.0,1,1,1,True
+2025|arizona|mcmillan,tetairoa mcmillan,2025,Tetairoa McMillan,8.0,Arizona,CAR,4685472.0,1,1,1,True
+2025|arkansas|armstrong,andrew armstrong,2025,Andrew Armstrong,,Arkansas,,5093923.0,0,1,1,False
+2025|arkansas|teslaa,isaac teslaa,2025,Isaac TeSlaa,70.0,Arkansas,DET,5123663.0,1,1,1,True
+2025|auburn|lambertsmith,keandre lambertsmith,2025,KeAndre Lambert-Smith,158.0,Auburn,LAC,4430870.0,1,1,1,True
+2025|centralflorida|hudson,kobe hudson,2025,Kobe Hudson,,Central Florida,,4429056.0,0,1,1,False
+2025|colorado|horn,jimmy horn,2025,Jimmy Horn,208.0,Colorado,CAR,4708486.0,1,1,1,True
+2025|colorado|horton,tory horton,2025,Tory Horton,166.0,Colorado St.,SEA,4597703.0,1,1,1,True
+2025|colorado|hunter,travis hunter,2025,Travis Hunter,2.0,Colorado,JAX,,1,0,0,True
+2025|colorado|sheppard,will sheppard,2025,Will Sheppard,,Colorado,,4608679.0,0,0,1,False
+2025|colorado|wester,lajohntay wester,2025,LaJohntay Wester,203.0,Colorado,BAL,4690143.0,1,1,1,True
+2025|florida|badger,elijhah badger,2025,Elijhah Badger,,Florida,,4429184.0,0,1,1,False
+2025|florida|dike,chimere dike,2025,Chimere Dike,103.0,Florida,TEN,4431268.0,1,1,1,True
+2025|georgia|lovett,dominic lovett,2025,Dominic Lovett,244.0,Georgia,DET,4596439.0,1,1,1,True
+2025|georgia|smith,arian smith,2025,Arian Smith,110.0,Georgia,NYJ,4429105.0,1,1,1,True
+2025|illinois|bryant,pat bryant,2025,Pat Bryant,74.0,Illinois,DEN,4600981.0,1,1,1,True
+2025|iowa|higgins,jayden higgins,2025,Jayden Higgins,34.0,Iowa St.,HOU,4877706.0,1,1,1,True
+2025|iowa|noel,jaylin noel,2025,Jaylin Noel,79.0,Iowa St.,HOU,4586312.0,1,1,1,True
+2025|louisville|brooks,jacorey brooks,2025,Ja'Corey Brooks,,Louisville,,4431506.0,0,1,1,False
+2025|maryland|felton,tai felton,2025,Tai Felton,102.0,Maryland,MIN,4565185.0,1,1,1,True
+2025|maryland|prather,kaden prather,2025,Kaden Prather,240.0,Maryland,BUF,4431509.0,1,1,1,True
+2025|memphis|taylor,roc taylor,2025,Roc Taylor,,Memphis,,4431597.0,0,1,1,False
+2025|miami|brown,sam brown,2025,Sam Brown Jr.,,Miami,,4587977.0,0,1,1,False
+2025|miami|george,jacolby george,2025,Jacolby George,,Miami,,4567784.0,0,1,1,False
+2025|miami|restrepo,xavier restrepo,2025,Xavier Restrepo,,Miami,,4431353.0,0,1,1,False
+2025|minnesota|jackson,daniel jackson,2025,Daniel Jackson,,Minnesota,,4430875.0,0,1,1,False
+2025|mississippi|harris,tre harris,2025,Tre Harris,55.0,Mississippi,LAC,4686612.0,1,1,1,True
+2025|mississippi|watkins,jordan watkins,2025,Jordan Watkins,138.0,Mississippi,SFO,4431466.0,1,1,1,True
+2025|mississippi|wells,antwane wells,2025,Antwane Wells Jr.,,Mississippi,,4696062.0,0,1,1,False
+2025|missouri|burden,luther burden,2025,Luther Burden,39.0,Missouri,CHI,4685278.0,1,1,1,True
+2025|missouri|wease,theo wease,2025,Theo Wease,,Missouri,,4426535.0,0,1,1,False
+2025|montana|bergen,junior bergen,2025,Junior Bergen,252.0,Montana,SFO,,1,0,0,True
+2025|nebraska|neyor,isaiah neyor,2025,Isaiah Neyor,,Nebraska,,4428116.0,0,1,1,False
+2025|notredame|collins,beaux collins,2025,Beaux Collins,,Notre Dame,,4431210.0,0,1,1,False
+2025|ohio|egbuka,emeka egbuka,2025,Emeka Egbuka,19.0,Ohio St.,TAM,4567750.0,1,1,1,True
+2025|oregon|holden,traeshon holden,2025,Traeshon Holden,,Oregon,,4429172.0,0,1,1,False
+2025|oregon|johnson,tez johnson,2025,Tez Johnson,235.0,Oregon,TAM,4608810.0,1,1,1,True
+2025|pittsburgh|mumpfield,konata mumpfield,2025,Konata Mumpfield,242.0,Pittsburgh,LAR,4710855.0,1,1,1,True
+2025|sanjose|nash,nick nash,2025,Nick Nash,,San Jose St.,,4570242.0,0,1,1,False
+2025|stanford|ayomanor,elic ayomanor,2025,Elic Ayomanor,136.0,Stanford,TEN,4883647.0,1,1,1,True
+2025|tcu|bech,jack bech,2025,Jack Bech,58.0,TCU,LVR,4603186.0,1,1,1,True
+2025|tcu|williams,savion williams,2025,Savion Williams,87.0,TCU,GNB,4431487.0,1,1,1,True
+2025|tennessee|mccoy,bru mccoy,2025,Bru McCoy,,Tennessee,,4426337.0,0,1,1,False
+2025|tennessee|thornton,donte thornton,2025,Dont'e Thornton,108.0,Tennessee,LVR,4432775.0,1,1,1,True
+2025|texastech|kelly,josh kelly,2025,Josh Kelly,,Texas Tech,,4575558.0,0,1,1,False
+2025|texas|bond,isaiah bond,2025,Isaiah Bond,,Texas,,4808839.0,0,1,1,False
+2025|texas|golden,matthew golden,2025,Matthew Golden,23.0,Texas,GNB,4701936.0,1,1,1,True
+2025|unlv|white,ricky white,2025,Ricky White,238.0,UNLV,SEA,4431479.0,1,1,1,True
+2025|utah|royals,jalen royals,2025,Jalen Royals,133.0,Utah St.,KAN,5082630.0,1,1,1,True
+2025|virginiatech|felton,daquan felton,2025,Da'Quan Felton,,Virginia Tech,,4575348.0,0,1,1,False
+2025|virginiatech|lane,jaylin lane,2025,Jaylin Lane,128.0,Virginia Tech,WAS,4602667.0,1,1,1,True
+2025|washington|williams,kyle williams,2025,Kyle Williams,69.0,Washington St.,NWE,4613202.0,1,1,1,True
+2026|alabama|bernard,germie bernard,2026,Germie Bernard,47.0,Alabama,PIT,4685261.0,1,1,1,True
+2026|arizona|tyson,jordyn tyson,2026,Jordyn Tyson,8.0,Arizona St.,NOR,4880281.0,1,1,1,True
+2026|baylor|cameron,josh cameron,2026,Josh Cameron,191.0,Baylor,JAX,4879194.0,1,1,1,True
+2026|bostoncol|bond,lewis bond,2026,Lewis Bond,204.0,Boston Col.,HOU,,1,0,0,True
+2026|byu|roberts,chase roberts,2026,Chase Roberts,,BYU,,4714388.0,0,1,1,False
+2026|cincinnati|allen,cyrus allen,2026,Cyrus Allen,176.0,Cincinnati,KAN,,1,0,1,True
+2026|cincinnati|caldwell,jeff caldwell,2026,Jeff Caldwell,,Cincinnati,,4885466.0,0,1,1,False
+2026|clemson|williams,antonio williams,2026,Antonio Williams,71.0,Clemson,WAS,5081432.0,1,1,1,True
+2026|connecticut|bell,skyler bell,2026,Skyler Bell,125.0,Connecticut,BUF,4683153.0,1,1,1,True
+2026|eastcarolina|smith,anthony smith,2026,Anthony Smith,218.0,East Carolina,DAL,,1,0,0,True
+2026|florida|sturdivant,j michael sturdivant,2026,J. Michael Sturdivant,,Florida,,4635009.0,0,1,1,False
+2026|georgiatech|rivers,eric rivers,2026,Eric Rivers,,Georgia Tech,,4713277.0,0,1,1,False
+2026|georgia|bell,dillon bell,2026,Dillon Bell,,Georgia,,4712579.0,0,1,1,False
+2026|georgia|branch,zachariah branch,2026,Zachariah Branch,79.0,Georgia,ATL,4870612.0,1,1,1,True
+2026|georgia|hurst,ted hurst,2026,Ted Hurst,84.0,Georgia St.,TAM,5220680.0,1,1,1,True
+2026|georgia|young,colbie young,2026,Colbie Young,140.0,Georgia,CIN,5092508.0,1,1,1,True
+2026|incarnateword|walthall,jalen walthall,2026,Jalen Walthall,,Incarnate Word,,4875788.0,0,1,1,False
+2026|indiana|cooper,omar cooper,2026,Omar Cooper Jr.,30.0,Indiana,NYJ,4723820.0,1,1,1,True
+2026|indiana|sarratt,elijah sarratt,2026,Elijah Sarratt,115.0,Indiana,BAL,5088338.0,1,1,1,True
+2026|iowa|wetjen,kaden wetjen,2026,Kaden Wetjen,121.0,Iowa,PIT,5081338.0,1,1,1,True
+2026|johncarroll|montgomery,tyren montgomery,2026,Tyren Montgomery,,John Carroll University,,,0,0,1,False
+2026|kansas|henderson,emmanuel henderson,2026,Emmanuel Henderson Jr.,199.0,Kansas,SEA,4685381.0,1,1,1,True
+2026|kentucky|law,kendrick law,2026,Kendrick Law,168.0,Kentucky,DET,4685441.0,1,1,1,True
+2026|louisville|bell,chris bell,2026,Chris Bell,94.0,Louisville,MIA,4869961.0,1,1,1,True
+2026|louisville|lacy,caullin lacy,2026,Caullin Lacy,,Louisville,,4430185.0,0,1,1,False
+2026|lsu|anderson,aaron anderson,2026,Aaron Anderson,,LSU,,4691138.0,0,1,1,False
+2026|lsu|brown,barion brown,2026,Barion Brown,190.0,LSU,NOR,4698597.0,1,1,1,True
+2026|lsu|hilton,chris hilton,2026,Chris Hilton,,LSU,,4431334.0,0,1,1,False
+2026|lsu|thomas,zavion thomas,2026,Zavion Thomas,89.0,LSU,CHI,4869748.0,1,1,1,True
+2026|miamifl|daniels,cj daniels,2026,CJ Daniels,197.0,Miami (FL),LAR,4605951.0,1,1,1,True
+2026|michigan|mcculley,donaven mcculley,2026,Donaven McCulley,,Michigan,,4596347.0,0,1,1,False
+2026|mississippi|stribling,dezhaun stribling,2026,De'Zhaun Stribling,33.0,Mississippi,SFO,4710714.0,1,1,1,True
+2026|mississippi|thompson,brenen thompson,2026,Brenen Thompson,105.0,Mississippi St.,LAC,4685553.0,1,1,1,True
+2026|mississippi|wallace,harrison wallace,2026,Harrison Wallace,,Mississippi,,4699354.0,0,1,1,False
+2026|missouri|coleman,kevin coleman,2026,Kevin Coleman Jr.,177.0,Missouri,MIA,4685307.0,1,1,1,True
+2026|nebraska|key,dane key,2026,Dane Key,,Nebraska,,,0,0,1,False
+2026|northdakota|lance,bryce lance,2026,Bryce Lance,136.0,North Dakota St.,NOR,4879276.0,1,1,1,True
+2026|notredame|fields,malachi fields,2026,Malachi Fields,74.0,Notre Dame,NYG,4682648.0,1,1,1,True
+2026|ohio|tate,carnell tate,2026,Carnell Tate,4.0,Ohio St.,TEN,4871023.0,1,1,1,True
+2026|oklahoma|burks,deion burks,2026,Deion Burks,254.0,Oklahoma,IND,4683151.0,1,1,1,True
+2026|oregon|benson,malik benson,2026,Malik Benson,195.0,Oregon,LVR,5150247.0,1,1,1,True
+2026|penn|pena,trebor pena,2026,Trebor Pena,,Penn State,,,0,0,1,False
+2026|penn|ross,devonte ross,2026,Devonte Ross,,Penn State,,,0,0,1,False
+2026|rutgers|sheffield,dt sheffield,2026,DT Sheffield,,Rutgers,,,0,0,1,False
+2026|smu|hudson,jordan hudson,2026,Jordan Hudson,,SMU,,4685409.0,0,1,1,False
+2026|stanford|williams,cj williams,2026,CJ Williams,203.0,Stanford,JAX,,1,0,0,True
+2026|tcu|mcalister,eric mcalister,2026,Eric McAlister,,TCU,,4602185.0,0,1,1,False
+2026|tennessee|brazzell,chris brazzell,2026,Chris Brazzell II,83.0,Tennessee,CAR,5091739.0,1,1,1,True
+2026|texasam|concepcion,kc concepcion,2026,KC Concepcion,24.0,Texas A&M,CLE,4870653.0,1,1,1,True
+2026|texastech|douglas,caleb douglas,2026,Caleb Douglas,75.0,Texas Tech,MIA,4869645.0,1,1,1,True
+2026|texastech|virgil,reggie virgil,2026,Reggie Virgil,143.0,Texas Tech,ARI,4869132.0,1,1,1,True
+2026|usc|lane,jakobi lane,2026,Ja'Kobi Lane,80.0,USC,BAL,4870847.0,1,1,1,True
+2026|usc|lemon,makai lemon,2026,Makai Lemon,20.0,USC,PHI,4870795.0,1,1,1,True
+2026|washington|boston,denzel boston,2026,Denzel Boston,39.0,Washington,CLE,4832800.0,1,1,1,True
+2026|wisconsin|anthony,vinny anthony,2026,Vinny Anthony II,,Wisconsin,,4869816.0,0,1,1,False
