@@ -4,7 +4,7 @@ import warnings; warnings.filterwarnings("ignore")
 import os, json, time, datetime, urllib.request
 import pandas as pd
 
-KEY = os.environ["CFBD_KEY"]
+KEY = os.environ["CFBD_KEY"].strip()
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
 def get(path, cache):

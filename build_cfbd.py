@@ -4,7 +4,7 @@ Requires env var CFBD_KEY (free key: https://collegefootballdata.com/key)."""
 import urllib.request, json, os, time, datetime
 import pandas as pd, numpy as np
 
-KEY = os.environ["CFBD_KEY"]
+KEY = os.environ["CFBD_KEY"].strip()
 LAST_YEAR = datetime.date.today().year
 os.makedirs("data/cfbd_raw", exist_ok=True)
 

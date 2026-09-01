@@ -14,6 +14,8 @@ echo "::group::CollegeFootballData feeds"
 python build_cfbd.py        || echo "WARNING: build_cfbd.py failed - using cached raw JSON"
 python build_cfbd_extra.py  || echo "WARNING: build_cfbd_extra.py failed - using cached raw JSON"
 python build_cfbd_extra2.py || echo "WARNING: build_cfbd_extra2.py failed - using cached raw JSON"
+# hard-stop if the core college table is missing entirely (no cache + API down)
+test -s data/cfbd_player_seasons.csv || { echo "FATAL: data/cfbd_player_seasons.csv not produced"; exit 1; }
 echo "::endgroup::"
 
 echo "::group::WRPI build + score"
