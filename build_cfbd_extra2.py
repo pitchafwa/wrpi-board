@@ -1,9 +1,9 @@
 """CFBD wave 2: return usage, team recruiting rank, college QB quality, transfer portal."""
 import warnings; warnings.filterwarnings("ignore")
-import os, json, time, urllib.request
+import os, json, time, datetime, urllib.request
 import pandas as pd
 
-KEY = os.environ.get("CFBD_KEY", "5x8zLVHFDJbBmVYC5xyik1/InQXnpQsS9CzZCyoDf8h4gmsS3OVRyUWcvVP2xUA8")
+KEY = os.environ["CFBD_KEY"]
 def get(path, cache):
     fn = f"data/cfbd_raw/{cache}.json"
     if os.path.exists(fn): return json.load(open(fn))
@@ -21,7 +21,7 @@ def flat_season(rows):
                           values="stat", aggfunc="first").reset_index()
 
 ret, rec_t, qb, portal = [], [], [], []
-for yr in range(2011, 2026):
+for yr in range(2011, datetime.date.today().year + 1):
     for cat in ("kickReturns", "puntReturns"):
         w = flat_season(get(f"/stats/player/season?year={yr}&category={cat}", f"{cat}_{yr}"))
         if len(w): w["kind"] = cat; ret.append(w)

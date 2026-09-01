@@ -1,0 +1,9 @@
+{
+  "_comment": "NFL Draft day-1 dates (US/Eastern). The scheduled pipeline reads this to self-schedule: daily runs for [draft_day, draft_day + 10], weekly during the Jan-1 -> draft-day ramp, monthly otherwise. The NFL publishes dates ~2 years out; add the next one each August (it's on the refit-review checklist). If the upcoming year is missing, the pipeline falls back to 'last Thursday of April'.",
+  "2023": "2023-04-27",
+  "2024": "2024-04-25",
+  "2025": "2025-04-24",
+  "2026": "2026-04-23",
+  "2027": "2027-04-29",
+  "2028": "2028-04-27"
+}

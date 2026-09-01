@@ -132,8 +132,22 @@ COLS = ["Player", "Year", "era", "tier", "wrpi_post", "wrpi_pre", "raw_post", "r
         "actual_fantasy_pctl", "actual_pctl_post", "pick", "nfl_entry_age", "breakout_age",
         "best_dom", "final_ppa", "explosion_p", "best_yds", "alpha", "recruit_stars",
         "n_seasons_30", "comp_post", "comp_pre", "tbz", "similar"]
+# ---- provisional flag: is the newest class's draft capital real yet? ----
+import datetime
+_cur = int(d.Year.max())
+_prov = {"class": _cur, "provisional": False, "draft_date": None}
+try:
+    _dd = json.load(open("data/draft_dates.json"))
+    _dt = _dd.get(str(_cur))
+    if _dt:
+        _prov["draft_date"] = _dt
+        _prov["provisional"] = datetime.date.today() < datetime.date.fromisoformat(_dt)
+except Exception:
+    pass
+
 out = {
     "generated": pd.Timestamp.utcnow().isoformat(timespec="minutes"),
+    "draft_status": _prov,
     "model": {
         "target": "best-3-of-first-5 seasons PPR PPG",
         "post_cv_spearman": 0.644, "pre_cv_spearman": 0.504,

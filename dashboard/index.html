@@ -26,6 +26,9 @@
   a{color:var(--accent)}
   .statbar{display:flex;flex-wrap:wrap;gap:1.1rem 1.9rem;padding:1rem 1.2rem;background:var(--surface);
     border:1px solid var(--line);border-radius:10px;margin-bottom:1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--ink-soft)}
+  .banner{padding:.7rem 1rem;border-radius:9px;margin-bottom:1.1rem;font-size:.82rem;line-height:1.5;
+    background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);color:var(--ink-soft)}
+  .banner b{color:var(--accent)}
   .statbar b{display:block;font:600 1.1rem/1 "IBM Plex Sans",sans-serif;color:var(--ink);letter-spacing:-.01em}
 
   .h2h{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin-bottom:1.6rem}
@@ -139,6 +142,7 @@
 
   <div id="aboutPane" style="display:none"></div>
   <div id="boardPane">
+  <div class="banner" id="provBanner" style="display:none"></div>
   <div class="statbar" id="statbar"></div>
 
   <div class="h2h" id="h2hBox">
@@ -321,7 +325,7 @@ const CFG={
    d.actual_fantasy_pctl!=null?['Actual fantasy',(d.actual_fantasy_pctl*100).toFixed(0)+' %ile']:null],
   detailNote:d=>`post-draft raw ${d.raw_post.toFixed(1)} (${(d.rbpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.rbpi_pre*100).toFixed(0)} %ile)`
    +(d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':'')
-   +(d.is_udfa?' · <span style="color:var(--ink-faint)">UDFA supplement</span>':'')
+   +(d.is_udfa?` · <span style="color:var(--ink-faint)">${d.udfa_type==='projected'?'projected — went undrafted':'UDFA (logged NFL touches)'}</span>`:'')
    +(d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:''),
   statbar:m=>`
    <div><b>${D.scored.length}</b>RB · 2015–2026 <span style="opacity:.7">(${m.n_udfa} UDFA)</span></div>
@@ -490,6 +494,13 @@ function boot(){
  const m=D.model;
  hTitle.textContent=C().title;
  hSub.innerHTML=C().sub;
+ const ds=D.draft_status;
+ if(ds && ds.provisional){
+  const dt=ds.draft_date?new Date(ds.draft_date+'T12:00:00').toLocaleDateString(undefined,{month:'long',day:'numeric'}):null;
+  provBanner.style.display='block';
+  provBanner.innerHTML=`<b>${ds.class} class — projected draft picks.</b> The NFL draft hasn't happened yet`
+   +(dt?` (${dt})`:'')+`, so the <b>post-draft</b> ${C().name} for ${ds.class} prospects is running on mock draft position and will change once real picks land. The <b>pre-draft</b> score is complete.`;
+ } else { provBanner.style.display='none'; }
  statbar.innerHTML=C().statbar(m);
  h2hBox.style.display=C().hasH2H?'block':'none';
  h2hEye.textContent=`Head-to-head — which rookie ${C().posN}?`;

@@ -1,4 +1,4 @@
-# raw feeds — refreshed by the pipeline, never committed
+# ---- raw feeds: refreshed every pipeline run, never committed ----
 data/combine.csv
 data/draft_picks.csv
 data/players.csv
@@ -24,15 +24,32 @@ data/cfbd_portal.csv
 data/market.csv
 data/nfl_eff.csv
 data/landing.csv
-data/pool_2023_2025.csv
-data/historical_2015_2022.csv
 data/scores_2023_2025.csv
+
+# ---- regenerated intermediates: deterministic from the raw feeds, not committed ----
+data/features_v2.csv
+data/features_v3.csv
+data/nfl_outcomes.csv
 data/wrpi_v2_pre.npy
 data/wrpi_v2_post.npy
-data/features_v2.csv
+rbpi/data/*.csv
+rbpi/data/*.npy
+rbpi/out/rbpi_scores.json
+
+# ---- old PSI reconstruction artifacts ----
 data/psi_*.json
 data/psi_reconstructed_scores.csv
-# exploratory
+
+# ---- committed on purpose (frozen inputs / summary tables), listed for clarity ----
+# data/historical_2015_2022.csv   frozen: the 2015-2022 training-class list
+# data/pool_2023_2025.csv         which prospects exist in the immature classes
+# data/draft_dates.json           NFL draft dates, self-scheduling
+# data/.last_pipeline_run         last successful scheduled run
+# data/wrpi_database.csv          WR summary table (audit trail)
+# rbpi/out/rbpi_database.csv      RB summary table (audit trail)
+# rbpi/data/*.json                frozen RBPI params + diamond index
+
+# ---- exploratory / superseded scripts ----
 model_search_v*.py
 model_matrix*.py
 experiment*.py
@@ -43,7 +60,6 @@ fit.py
 fit2.py
 fit3.py
 build_features4.py
-build_pool.py
 score.py
 wrpi_score.py
 wrpi_refit.py

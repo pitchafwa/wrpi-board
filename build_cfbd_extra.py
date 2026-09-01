@@ -1,10 +1,10 @@
 """Pull the extra CFBD feeds for v2 features: HS recruiting rankings, SP+ team
 ratings, player PPA (efficiency), player usage share. Cached per year."""
 import warnings; warnings.filterwarnings("ignore")
-import os, json, time, urllib.request
+import os, json, time, datetime, urllib.request
 import pandas as pd
 
-KEY = os.environ.get("CFBD_KEY", "5x8zLVHFDJbBmVYC5xyik1/InQXnpQsS9CzZCyoDf8h4gmsS3OVRyUWcvVP2xUA8")
+KEY = os.environ["CFBD_KEY"]
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
 def get(path, cache):
@@ -21,7 +21,7 @@ def get(path, cache):
     return d
 
 recruit, spp, ppa, usage = [], [], [], []
-for yr in range(2011, 2026):
+for yr in range(2011, datetime.date.today().year + 1):
     r = get(f"/recruiting/players?year={yr}&classification=HighSchool", f"recruit_{yr}")
     for x in r:
         if (x.get("position") or "") in ("WR", "PRO", "APB", "ATH"):

@@ -1,7 +1,11 @@
-"""Assemble the WR prospect pool (drafted OR combine-invited OR pro-day-charted)."""
+"""Assemble the WR prospect pool (drafted OR combine-invited OR pro-day-charted)
+for the not-yet-mature classes. Runs in the scheduled pipeline, so YEARS extends
+itself: from 2023 through next calendar year (covers the upcoming class the
+moment nflverse posts its projected picks / combine invites)."""
+import datetime
 import pandas as pd, re, unicodedata
 
-YEARS = [2023, 2024, 2025, 2026]
+YEARS = list(range(2023, datetime.date.today().year + 2))
 
 # known name variants: NFL sources vs college sources use different names
 NAME_ALIAS = {

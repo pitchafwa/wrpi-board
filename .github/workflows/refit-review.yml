@@ -1,0 +1,79 @@
+name: Annual refit review
+
+on:
+  schedule:
+    - cron: "0 12 20 8 *"        # Aug 20, 12:00 UTC, once a year
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: refit-review
+  cancel-in-progress: false
+
+jobs:
+  refit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      CFBD_KEY: ${{ secrets.CFBD_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet "pandas==2.2.*" "numpy==1.26.*" "scipy==1.13.*" scikit-learn
+
+      - name: Cache CFBD raw JSON
+        uses: actions/cache@v4
+        with:
+          path: data/cfbd_raw
+          key: cfbd-raw-${{ github.run_id }}
+          restore-keys: cfbd-raw-
+
+      - name: Refresh all data (so the training window includes the newly-mature class)
+        run: bash run_pipeline.sh
+
+      - name: Refit on the extended window
+        run: |
+          python fit_wrpi_v2.py            # -> data/wrpi_v2_{pre,post}.npy
+          python rbpi/fit_rbpi.py          # -> rbpi/data/rbpi_v1_{pre,post}.npy (post is the keeper)
+          python rbpi/fit_rbpi_pre2.py     # -> rbpi/data/rbpi_v1_pre.npy (overwrites with the tightened pre)
+
+      - name: Compare frozen vs refit
+        run: python refit_compare.py
+
+      - name: Open PR + Issue with the new params
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          YEAR=$(date -u +%Y)
+          BR="refit-$YEAR"
+          git config user.name  "board-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$BR"
+          # write refit npy -> committed json param files
+          python - <<'PY'
+          import json, numpy as np
+          for src, dst in [("data/wrpi_v2_pre.npy",  "data/wrpi_v2_params_pre.json"),
+                           ("data/wrpi_v2_post.npy", "data/wrpi_v2_params_post.json"),
+                           ("rbpi/data/rbpi_v1_pre.npy",  "rbpi/data/rbpi_v1_params_pre.json"),
+                           ("rbpi/data/rbpi_v1_post.npy", "rbpi/data/rbpi_v1_params_post.json")]:
+              try:
+                  json.dump({"params": np.load(src).tolist()}, open(dst, "w"), indent=1)
+                  print("updated", dst)
+              except FileNotFoundError:
+                  print("skip (no refit output):", src)
+          PY
+          git add data/wrpi_v2_params_*.json rbpi/data/rbpi_v1_params_*.json
+          git commit -m "refit $YEAR: new model params (review before merge)" || { echo "no param changes"; exit 0; }
+          git push -u origin "$BR"
+          gh pr create --draft --base main --head "$BR" \
+            --title "Annual refit $YEAR — review before merge" \
+            --body-file refit_report.md
+          gh issue create \
+            --title "Annual refit review — $YEAR" \
+            --body "$(printf 'Refit ran on the extended training window. Review the draft PR for branch `%s`.\n\n---\n\n' "$BR"; cat refit_report.md)"

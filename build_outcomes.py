@@ -32,7 +32,11 @@ def block(sub, nyr):
                 total=float(sub["ppr"].sum()), games=int(sub["g"].sum()), seasons=len(sub))
 
 rows = []
-pool = pd.read_csv("data/wrpi_database.csv")[["Player", "Year"]].drop_duplicates()
+# pool = every prospect in the current feature table (run build_features_v3.py first)
+try:
+    pool = pd.read_csv("data/features_v3.csv")[["Player", "Year"]].drop_duplicates()
+except FileNotFoundError:
+    pool = pd.read_csv("data/wrpi_database.csv")[["Player", "Year"]].drop_duplicates()
 for _, p in pool.iterrows():
     yr, k = int(p["Year"]), norm(p["Player"])
     car = s[(s["key"] == k) & (s["season"] >= yr) & (s["season"] <= yr + 5)]

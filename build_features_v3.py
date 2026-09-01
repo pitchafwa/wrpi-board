@@ -15,7 +15,9 @@ def C(*v):
         if pd.notna(x): return x
     return np.nan
 
-f4 = pd.read_csv("../PSI-reverse-engineering/data/features4.csv").loc[:, lambda x: ~x.columns.duplicated()]
+# historical (2015-2022) WR list — the mature training classes. Frozen; lives in
+# the repo as data/historical_2015_2022.csv (was ../PSI-reverse-engineering/... in dev).
+f4 = pd.read_csv("data/historical_2015_2022.csv")[["Player", "Year"]]
 hist = f4[f4.Year.between(2015, 2022)][["Player", "Year"]]
 pool = pd.read_csv("data/pool_2023_2025.csv")[["Player", "Year", "athlete_id", "college", "draft_pick"]].rename(
     columns={"athlete_id": "aid", "draft_pick": "pick_pool"})

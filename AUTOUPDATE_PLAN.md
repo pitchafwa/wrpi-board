@@ -1,4 +1,15 @@
-# Auto-update & stable future use — plan for review
+# Auto-update & stable future use
+
+**Status: IMPLEMENTED 2026-09-01** (below is the plan as built). Files:
+`.github/workflows/update.yml`, `.github/workflows/refit-review.yml`,
+`run_pipeline.sh`, `should_run.py`, `fetch_weekly.py`, `data/draft_dates.json`,
+`refit_compare.py`, and the RB pipeline relocated into `rbpi/`. The board JSON is
+committed by the scheduled job; `deploy.yml` publishes. Nothing runs on a real
+schedule until the first cron fires — trigger `update.yml` manually
+(`workflow_dispatch`, `force: true`) to smoke-test end to end.
+
+---
+
 
 Goal: a board at `pitchafwa.github.io/wrpi-board` (WR + RB tabs) that stays current
 on its own for 2027 and beyond, is most fresh in the run-up to the NFL draft and

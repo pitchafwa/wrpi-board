@@ -1,10 +1,11 @@
 """Pull CFBD season player stats, build per-player-season receiving production +
 team totals + College Dominator Rating (yards-share & TD-share).
 Requires env var CFBD_KEY (free key: https://collegefootballdata.com/key)."""
-import urllib.request, json, os, time
+import urllib.request, json, os, time, datetime
 import pandas as pd, numpy as np
 
 KEY = os.environ["CFBD_KEY"]
+LAST_YEAR = datetime.date.today().year
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
 def get(path):
@@ -30,7 +31,7 @@ def wide(rows, cat):
     return w
 
 rec_all, rush_all = [], []
-for yr in range(2004, 2027):
+for yr in range(2004, LAST_YEAR + 1):
     rw = wide(cached(yr,'receiving'), 'receiving')
     rec_all.append(rw)
     try:
