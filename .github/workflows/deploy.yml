@@ -4,9 +4,13 @@ on:
   push:
     branches: [main]
     paths: ["dashboard/**", ".github/workflows/deploy.yml"]
+  workflow_run:
+    workflows: ["Update board"]     # the scheduled refresh pushes with GITHUB_TOKEN,
+    types: [completed]              # which does NOT fire `on: push` -- catch it here
   workflow_dispatch: {}
 
 permissions:
+  contents: read
   pages: write
   id-token: write
 
@@ -17,11 +21,14 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
