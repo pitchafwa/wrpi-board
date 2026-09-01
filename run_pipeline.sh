@@ -10,12 +10,11 @@ python fetch_sources.py
 step "fetch_weekly.py"
 python fetch_weekly.py
 
-step "seed data/cfbd_raw/ if the Actions cache missed"
-if [ ! -d data/cfbd_raw ] || [ -z "$(ls -A data/cfbd_raw 2>/dev/null)" ]; then
-  mkdir -p data && tar xzf data/cfbd_raw.tgz -C data && echo "unpacked snapshot"
-else
-  echo "cache present"
-fi
+step "seed data/cfbd_raw/ from the committed snapshot (fills gaps; a warm cache keeps its fresher files)"
+mkdir -p data/cfbd_raw
+before=$(ls data/cfbd_raw | wc -l)
+tar xzf data/cfbd_raw.tgz -C data --skip-old-files
+echo "cfbd_raw: $before cached files before, $(ls data/cfbd_raw | wc -l) after seed"
 step "build_cfbd.py"
 python build_cfbd.py        || echo "WARNING: build_cfbd.py failed - using cached raw JSON"
 step "build_cfbd_extra.py"

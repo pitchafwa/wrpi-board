@@ -26,7 +26,8 @@ for yr in range(2011, last_college_season() + 1):
         rec_t.append({"year": yr, "team": x.get("team"), "rec_rank": x.get("rank"), "rec_points": x.get("points")})
     qw = flat_season(get(f"/stats/player/season?year={yr}&category=passing", f"passing_{yr}"))
     if len(qw): qb.append(qw)
-    for x in get(f"/player/portal?year={yr}", f"portal_{yr}"):
+    portal_rows = get(f"/player/portal?year={yr}", f"portal_{yr}") if yr >= 2021 else []  # CFBD portal data starts 2021
+    for x in portal_rows:
         portal.append({"year": yr, "name": f"{x.get('firstName','')} {x.get('lastName','')}".strip(),
                        "pos": x.get("position"), "origin": x.get("origin"), "dest": x.get("destination"),
                        "stars": x.get("stars"), "rating": x.get("rating")})
