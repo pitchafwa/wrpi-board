@@ -103,11 +103,14 @@
     tbody tr{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:.6rem;padding:.5rem .7rem}
     tbody tr:hover{background:var(--surface)}
     tbody tr.detail{border-top:0;border-radius:0 0 10px 10px;margin-top:-.6rem}
-    td{border:0;text-align:left !important;padding:.18rem 0;display:flex;justify-content:space-between;gap:1rem;font-size:.86rem}
-    td:first-child{font-family:"Zilla Slab",serif;font-size:1.02rem;font-weight:500;padding-bottom:.35rem;border-bottom:1px solid var(--line);margin-bottom:.3rem}
+    td{border:0;text-align:left !important;padding:.18rem 0;display:flex;justify-content:space-between;gap:1rem;font-size:.9rem}
+    td:first-child{font-family:"Zilla Slab",serif;font-size:1.05rem;font-weight:500;padding-bottom:.35rem;border-bottom:1px solid var(--line);margin-bottom:.3rem}
     td:first-child::before{content:none}
+    /* keep only Player (1), Class (2), WRPI (4) on the card; rest live in the expanded view */
+    tbody tr:not(.detail) td:nth-child(3),
+    tbody tr:not(.detail) td:nth-child(n+5){display:none}
     td::before{content:attr(data-label);font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);align-self:center}
-    td.num{font-size:.86rem}
+    td.num{font-size:.9rem}
     .wr{gap:.5rem}
     .detail td{display:block}.detail td::before{content:none}
   }
@@ -241,7 +244,18 @@ function render(){
        o=`<span class="o" style="background:color-mix(in srgb,${t} 18%,transparent);color:${t}">fant ${(s.fant*100).toFixed(0)}</span>`;}
      return `<span class="s">${s.p} <span style="color:var(--ink-faint)">'${String(s.y).slice(2)}</span> <span class="m">${s.sim.toFixed(0)}</span>${o}</span>`;
    }).join('');
-   dr.innerHTML=`<td colspan="${C.length}"><div class="comps">${comps}<span class="comp">= raw <b>${(score==='pre'?d.raw_pre:d.raw_post).toFixed(1)}</b></span></div>
+   const prof=[
+     ['Tier',d.tier],['Pick',d.pick>=260?'UDFA':d.pick],
+     ['Dominator',d.best_dom==null?'—':(d.best_dom*100).toFixed(0)+'%'],
+     ['Best yds',d.best_yds==null?'—':Math.round(d.best_yds)],
+     ['Efficiency',d.final_ppa==null?'—':d.final_ppa.toFixed(2)],
+     ['Entry age',d.nfl_entry_age==null?'—':d.nfl_entry_age.toFixed(1)],
+     ['Explosion',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
+     ['H2H',d.tb_score.toFixed(2)],['Diamond',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
+     d.actual_fantasy_pctl!=null?['Actual fantasy',(d.actual_fantasy_pctl*100).toFixed(0)+' %ile']:null,
+   ].filter(Boolean).map(([k,v])=>`<span class="comp">${k} <b>${v}</b></span>`).join('');
+   dr.innerHTML=`<td colspan="${C.length}"><div class="comps">${prof}</div>
+     <div class="comps">${comps}<span class="comp">= raw <b>${(score==='pre'?d.raw_pre:d.raw_post).toFixed(1)}</b></span></div>
      <div class="note">post-draft raw ${d.raw_post.toFixed(1)} (${(d.wrpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.wrpi_pre*100).toFixed(0)} %ile) · H2H ${d.tb_score.toFixed(2)}
      ${d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':''}
      ${d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:''}

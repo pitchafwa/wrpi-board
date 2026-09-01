@@ -73,7 +73,7 @@ d = d.merge(h[["Player", "Year", "actual_fantasy_pctl"]], on=["Player", "Year"],
 
 # ---- profile similarity: nearest neighbours over model inputs + outputs ----
 SIM_IN  = ["best_dom", "breakout_age", "nfl_entry_age", "final_ppa", "explosion_p",
-           "best_yds", "n_seasons_30", "ras", "height", "weight", "recruit_stars", "log_pick"]
+           "best_yds", "n_seasons_30", "ras", "height", "weight", "recruit_stars"]
 SIM_OUT = ["wrpi_pre", "wrpi_post", "tb_score", "diamond_score"]
 _S = d.copy()
 _S["log_pick"] = np.log(_S["pick"].clip(1, 300))
