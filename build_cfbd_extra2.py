@@ -2,7 +2,7 @@
 import warnings; warnings.filterwarnings("ignore")
 import os, json, datetime
 import pandas as pd
-from cfbd_get import cached
+from cfbd_get import cached, last_college_season
 
 def get(path, cache):
     try:
@@ -18,7 +18,7 @@ def flat_season(rows):
                           values="stat", aggfunc="first").reset_index()
 
 ret, rec_t, qb, portal = [], [], [], []
-for yr in range(2011, datetime.date.today().year + 1):
+for yr in range(2011, last_college_season() + 1):
     for cat in ("kickReturns", "puntReturns"):
         w = flat_season(get(f"/stats/player/season?year={yr}&category={cat}", f"{cat}_{yr}"))
         if len(w): w["kind"] = cat; ret.append(w)

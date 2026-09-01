@@ -3,7 +3,7 @@ ratings, player PPA (efficiency), player usage share. Cached per year."""
 import warnings; warnings.filterwarnings("ignore")
 import os, json, datetime
 import pandas as pd
-from cfbd_get import cached
+from cfbd_get import cached, last_college_season
 
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
@@ -14,7 +14,7 @@ def get(path, cache):
         print("  !", cache, repr(e)[:80]); return []
 
 recruit, spp, ppa, usage = [], [], [], []
-for yr in range(2011, datetime.date.today().year + 1):
+for yr in range(2011, last_college_season() + 1):
     r = get(f"/recruiting/players?year={yr}&classification=HighSchool", f"recruit_{yr}")
     for x in r:
         if (x.get("position") or "") in ("WR", "PRO", "APB", "ATH"):

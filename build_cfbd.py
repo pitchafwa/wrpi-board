@@ -5,7 +5,8 @@ import json, os, datetime
 import pandas as pd, numpy as np
 from cfbd_get import cached as _cached
 
-LAST_YEAR = datetime.date.today().year
+from cfbd_get import last_college_season
+LAST_YEAR = last_college_season()
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
 def cached(year, cat):

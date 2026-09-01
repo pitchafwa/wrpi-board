@@ -1,6 +1,7 @@
 """Shared CollegeFootballData fetch: retries transient failures, never caches an
-empty/failed response, longer timeout. Used by build_cfbd*.py."""
-import json, os, time, urllib.request, urllib.error
+empty/failed response, fails fast when the API is unreachable. Used by
+build_cfbd*.py."""
+import datetime, json, os, time, urllib.request, urllib.error
 
 KEY = os.environ.get("CFBD_KEY", "").strip()   # only needed when a live fetch happens
 os.makedirs("data/cfbd_raw", exist_ok=True)
@@ -8,9 +9,19 @@ os.makedirs("data/cfbd_raw", exist_ok=True)
 _TRANSIENT = (500, 502, 503, 504, 429)
 
 
-def fetch(path, tries=4):
-    """GET a CFBD endpoint, decoded JSON. Retries 5xx/429/timeout with backoff.
-    Raises after the last try (callers decide whether that's fatal)."""
+def last_college_season(today=None):
+    """The newest CFB season worth pulling. Before October the current season has
+    only ~4 weeks of games -- not enough for prospect eval, and pulling a season
+    the API barely has data for is what makes runs hang. So: current year from
+    October on, otherwise last year."""
+    d = today or datetime.date.today()
+    return d.year if d.month >= 10 else d.year - 1
+
+
+def fetch(path, tries=3):
+    """GET a CFBD endpoint, decoded JSON. Retries 5xx/429/timeout, then raises
+    (callers decide whether that's fatal). Kept short so a hanging endpoint
+    can't stall the whole run: ~35s x 3 with 4s/8s backoff, ~90s worst case."""
     if not KEY:
         raise RuntimeError("CFBD_KEY not set and the requested data is not cached")
     last = None
@@ -19,7 +30,7 @@ def fetch(path, tries=4):
                                      headers={"Authorization": "Bearer " + KEY,
                                               "User-Agent": "Mozilla/5.0"})
         try:
-            return json.loads(urllib.request.urlopen(req, timeout=120).read())
+            return json.loads(urllib.request.urlopen(req, timeout=35).read())
         except urllib.error.HTTPError as e:
             last = e
             if e.code not in _TRANSIENT:
@@ -27,7 +38,7 @@ def fetch(path, tries=4):
         except Exception as e:                       # timeout, conn reset, ...
             last = e
         if i < tries - 1:
-            time.sleep(2 ** i * 3)                    # 3s, 6s, 12s
+            time.sleep(4 * (i + 1))                   # 4s, 8s
     raise last
 
 
