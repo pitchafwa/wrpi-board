@@ -97,22 +97,27 @@
     #segCls{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
     #segCls button{border-left:1px solid var(--line);border-top:1px solid var(--line)}
     input[type=search]{min-width:0;flex-basis:100%;order:1}
-    .tablewrap{border:0;background:transparent;overflow:visible}
-    table,tbody,tr,td{display:block;width:100%}
-    thead{display:none}
-    tbody tr{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:.6rem;padding:.5rem .7rem}
-    tbody tr:hover{background:var(--surface)}
-    tbody tr.detail{border-top:0;border-radius:0 0 10px 10px;margin-top:-.6rem}
-    td{border:0;text-align:left !important;padding:.18rem 0;display:flex;justify-content:space-between;gap:1rem;font-size:.9rem}
-    td:first-child{font-family:"Zilla Slab",serif;font-size:1.05rem;font-weight:500;padding-bottom:.35rem;border-bottom:1px solid var(--line);margin-bottom:.3rem}
-    td:first-child::before{content:none}
+    #boardPane .tablewrap{border:0;background:transparent;overflow:visible}
+    #boardPane table,#boardPane tbody,#boardPane tr,#boardPane td{display:block;width:100%}
+    #boardPane thead{display:none}
+    #boardPane tbody tr{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:.6rem;padding:.5rem .7rem}
+    #boardPane tbody tr:hover{background:var(--surface)}
+    #boardPane tbody tr.detail{border-top:0;border-radius:0 0 10px 10px;margin-top:-.6rem}
+    #boardPane td{border:0;text-align:left !important;padding:.18rem 0;display:flex;justify-content:space-between;gap:1rem;font-size:.9rem}
+    #boardPane td:first-child{display:block;font-family:"Zilla Slab",serif;font-size:1.05rem;font-weight:500;padding-bottom:.35rem;border-bottom:1px solid var(--line);margin-bottom:.3rem}
+    #boardPane td:first-child::before{content:none}
+    .ic{margin-left:.35rem}
     /* keep only Player (1), Class (2), WRPI (4) on the card; rest live in the expanded view */
-    tbody tr:not(.detail) td:nth-child(3),
-    tbody tr:not(.detail) td:nth-child(n+5){display:none}
-    td::before{content:attr(data-label);font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);align-self:center}
-    td.num{font-size:.9rem}
+    #boardPane tbody tr:not(.detail) td:nth-child(3),
+    #boardPane tbody tr:not(.detail) td:nth-child(n+5){display:none}
+    #boardPane td::before{content:attr(data-label);font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);align-self:center}
+    #boardPane td.num{font-size:.9rem}
     .wr{gap:.5rem}
-    .detail td{display:block}.detail td::before{content:none}
+    #boardPane .detail td{display:block}#boardPane .detail td::before{content:none}
+    /* About: keep tables as real (small, scrollable) tables */
+    #aboutPane table{display:block;overflow-x:auto;font-size:.8rem;white-space:nowrap}
+    #aboutPane h2{font-size:1.05rem;margin:1.4rem 0 .4rem}
+    #aboutPane div{font-size:.88rem !important}
   }
 </style>
 </head>

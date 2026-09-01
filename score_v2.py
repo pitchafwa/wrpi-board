@@ -66,12 +66,14 @@ _rel = pd.to_numeric(d.get("reliable_dom"), errors="coerce").fillna(0)
 _noage = d["nfl_entry_age"].isna()
 def _lcr(r):
     x = []
-    if r["_nd"] < 4:  x.append("only %d of 8 athletic tests" % int(r["_nd"]))
-    if r["_rel"] == 0: x.append("no reliable college dominator (thin CFBD team data)")
+    if r["_rel"] == 0: x.append("no reliable college production data (thin CFBD team-season)")
     if r["_noage"]:   x.append("no verified birth date")
+    if r["_nd"] == 0: x.append("no athletic testing at all")
     return "; ".join(x)
 d["_nd"], d["_rel"], d["_noage"] = _nd, _rel, _noage
-d["low_conf"] = ((_nd < 4) | (_rel == 0) | _noage).astype(int)
+# only flag when a CORE input is missing — combine no-shows alone don't count
+# (athletic testing is a small share of WRPI)
+d["low_conf"] = ((_rel == 0) | _noage | (_nd == 0)).astype(int)
 d["low_conf_reason"] = d.apply(_lcr, axis=1)
 d = d.drop(columns=["_nd", "_rel", "_noage"])
 
