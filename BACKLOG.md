@@ -23,6 +23,15 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
   pick). A proper analyst projection (4for4-style) might, but no free historical
   source found. Revisit if a historical dataset surfaces or we replicate the
   methodology with FA/cuts/retirement transactions.
+- **Consensus big board / "beat the board"** — BACKTESTED 2026-09, NEGATIVE.
+  ESPN pre-draft board (grade + overall rank, 2015-2021, n=193) as a proxy for
+  analyst consensus. Board rank alone (Spearman +0.50) is a weaker anchor than the
+  actual draft pick (+0.61); the reach residual `pick - board_rank` has partial
+  corr -0.03 vs outcome; adding board rank/grade/reach to the pick-anchored
+  residual moves CV by +0.001. Structural, not a data issue — the real draft
+  already contains the board plus private team info. Don't ship. Revisit only if a
+  true multi-analyst consensus surfaces AND we find a pre-draft (picks-unknown) use
+  for it.
 
 ## Board features
 
