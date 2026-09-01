@@ -123,23 +123,26 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>WRPI Board</h1>
-  <div class="sub">Wide Receiver Prospect Indicator, fitted to actual fantasy production (best 3 of a
-    player's first 5 seasons, PPR points per game). <b>Post-draft</b> is the topline and tracks draft
-    capital by design. <b>Pre-draft</b> is the pre-NFL-draft talent read. <span class="legend"><b class="dia">◆</b> diamond in the rough,
-    <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span></div>
+  <h1 id="hTitle">WRPI Board</h1>
+  <div class="sub" id="hSub"></div>
 
-  <div class="seg" id="segView" style="margin-bottom:1rem">
-    <button data-v="board" aria-pressed="true">Board</button>
-    <button data-v="about">How it works</button>
+  <div class="controls" style="margin-bottom:1rem">
+    <div class="seg" id="segPos">
+      <button data-v="wr" aria-pressed="true">Wide receivers</button>
+      <button data-v="rb">Running backs</button>
+    </div>
+    <div class="seg" id="segView">
+      <button data-v="board" aria-pressed="true">Board</button>
+      <button data-v="about">How it works</button>
+    </div>
   </div>
 
   <div id="aboutPane" style="display:none"></div>
   <div id="boardPane">
   <div class="statbar" id="statbar"></div>
 
-  <div class="h2h">
-    <div class="eye">Head-to-head — which rookie WR?</div>
+  <div class="h2h" id="h2hBox">
+    <div class="eye" id="h2hEye">Head-to-head — which rookie WR?</div>
     <div class="row">
       <input id="pA" list="plist" placeholder="type player A…" autocomplete="off" />
       <span class="vs">vs</span>
@@ -182,65 +185,236 @@
 </div>
 
 <script>
-let D=null, cls=new Set(['all']), score='post', flag='none', q='', sort={k:'_raw',asc:false}, open=new Set();
+let D=null, pos='wr', DATA={}, cls=new Set(['all']), score='post', flag='none', q='', sort={k:'_raw',asc:false}, open=new Set();
 const sig=x=>1/(1+Math.exp(-x));
 const tierColor=t=>t>=8?'var(--t-hi)':t>=5?'var(--t-mid)':'var(--t-lo)';
 const key=x=>x.Player+'|'+x.Year;
+const pctF=v=>v==null?'—':(v*100).toFixed(0)+'%';
 const lastName=n=>{const t=n.replace(/\s+(Jr\.?|Sr\.?|II|III|IV|V)$/i,'').trim().split(' ');return t[t.length-1];};
-const TIPS={
- Player:'WR prospect. ◆ = diamond-in-the-rough flag (drafted after round 2, strong underlying profile). ★ = above the 95th-percentile star-potential line for the score shown.',
- Class:'Draft class.',
- Tier:'Decile of the post-draft WRPI percentile (10 = top).',
- WRPI:'Raw WRPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
- H2H:'Head-to-head tiebreaker score. Higher = the model favors this player against a similarly-drafted WR. Also drives the tool above.',
- Dia:'Diamond index — for WRs drafted after round 2, a weighted blend of the indicators that separate the future assets. Top quartile has hit ~15× the bottom.',
- Actual:'2015–22 only: actual fantasy-production percentile (best 3 of first 5 seasons, PPR PPG). Blank for 2023+.',
- Pick:'Overall draft slot. UDFA = undrafted.',
- Dom:'Best college season share of team receiving (yards + TD).',
- Eff:'Final college-season efficiency — CFBD PPA (points added per play).',
- Age:'Age on Jan 1 of the draft year. Younger is better.',
- Expl:'Athletic explosion percentile (vertical + broad + speed score).'};
-function cols(){return [
- {k:'Player',t:'Player',s:'str'},
- {k:'Year',t:'Class',s:'num'},
- {k:'tier',t:'Tier',s:'num'},
- {k:'_raw',t:'WRPI',s:'num'},
- {k:'diamond_score',t:'Dia',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
- {k:'tb_score',t:'H2H',s:'num',fmt:v=>v.toFixed(2)},
- {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
- {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
- {k:'best_dom',t:'Dom',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)+'%'},
- {k:'best_yds',t:'Yds',s:'num',fmt:v=>v==null?'—':Math.round(v)},
- {k:'final_ppa',t:'Eff',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
- {k:'nfl_entry_age',t:'Age',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
- {k:'explosion_p',t:'Expl',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)},
-];}
+const CFG={
+ wr:{
+  file:'scores.json', name:'WRPI', label:'wide receivers', posN:'WR', hasH2H:true, mkey:'wrpi', starPct:'95th',
+  title:'WRPI Board',
+  sub:`Wide Receiver Prospect Indicator, fitted to actual fantasy production (best 3 of a player's first 5 seasons, PPR points per game). <b>Post-draft</b> is the topline and tracks draft capital by design. <b>Pre-draft</b> is the pre-NFL-draft talent read. <span class="legend"><b class="dia">◆</b> diamond in the rough, <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span>`,
+  tips:{
+   Player:'WR prospect. ◆ = diamond-in-the-rough flag (drafted after round 2, strong underlying profile). ★ = above the 95th-percentile star-potential line for the score shown.',
+   Class:'Draft class.', Tier:'Decile of the post-draft WRPI percentile (10 = top).',
+   WRPI:'Raw WRPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
+   H2H:'Head-to-head tiebreaker score. Higher = the model favors this player against a similarly-drafted WR. Also drives the tool above.',
+   Dia:'Diamond index — for WRs drafted after round 2, a weighted blend of the indicators that separate the future assets. Top quartile has hit ~15× the bottom.',
+   Actual:'2015–22 only: actual fantasy-production percentile (best 3 of first 5 seasons, PPR PPG). Blank for 2023+.',
+   Pick:'Overall draft slot. UDFA = undrafted.', Dom:'Best college season share of team receiving (yards + TD).',
+   Eff:'Final college-season efficiency — CFBD PPA (points added per play).',
+   Age:'Age on Jan 1 of the draft year. Younger is better.', Expl:'Athletic explosion percentile (vertical + broad + speed score).'},
+  cols:()=>[
+   {k:'Player',t:'Player',s:'str'},{k:'Year',t:'Class',s:'num'},{k:'tier',t:'Tier',s:'num'},
+   {k:'_raw',t:'WRPI',s:'num'},
+   {k:'diamond_score',t:'Dia',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
+   {k:'tb_score',t:'H2H',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
+   {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
+   {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
+   {k:'best_dom',t:'Dom',s:'num',fmt:pctF},
+   {k:'best_yds',t:'Yds',s:'num',fmt:v=>v==null?'—':Math.round(v)},
+   {k:'final_ppa',t:'Eff',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
+   {k:'nfl_entry_age',t:'Age',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
+   {k:'explosion_p',t:'Expl',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)}],
+  profRows:d=>[
+   ['Tier',d.tier],['Pick',d.pick>=260?'UDFA':d.pick],
+   ['Dominator',pctF(d.best_dom)],['Best yds',d.best_yds==null?'—':Math.round(d.best_yds)],
+   ['Efficiency',d.final_ppa==null?'—':d.final_ppa.toFixed(2)],
+   ['Entry age',d.nfl_entry_age==null?'—':d.nfl_entry_age.toFixed(1)],
+   ['Explosion',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
+   d.tb_score!=null?['H2H',d.tb_score.toFixed(2)]:null,
+   ['Diamond',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
+   d.actual_fantasy_pctl!=null?['Actual fantasy',(d.actual_fantasy_pctl*100).toFixed(0)+' %ile']:null],
+  detailNote:d=>`post-draft raw ${d.raw_post.toFixed(1)} (${(d.wrpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.wrpi_pre*100).toFixed(0)} %ile)`
+   +(d.tb_score!=null?` · H2H ${d.tb_score.toFixed(2)}`:'')
+   +(d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':'')
+   +(d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:'')
+   +(d.actual_pctl_post!=null?` · original PSI ${(d.actual_pctl_post*100).toFixed(0)}`:''),
+  statbar:m=>`
+   <div><b>${D.scored.length}</b>WR · 2015–2026</div>
+   <div><b>${m.post_cv_spearman}</b>post-draft CV Spearman <span style="opacity:.7">(pick ${m.pick_alone_spearman})</span></div>
+   <div><b>${m.pre_cv_spearman}</b>pre-draft CV Spearman</div>
+   <div><b>${(m.tiebreaker_loco_acc*100).toFixed(0)}%</b>head-to-head accuracy <span style="opacity:.7">(≤${m.tiebreaker_gap} picks apart)</span></div>
+   <div><b>${m.diamond.lift5}×</b>diamond-flag hit lift <span style="opacity:.7">(late-round base ${(m.diamond.base_rate*100).toFixed(0)}%)</span></div>`,
+  legend:s=>`Hover any header for its meaning. <b>WRPI</b> shows the raw score with its percentile.
+   <b class="st">★</b> = ${s==='pre'?'pre':'post'}-draft WRPI at or above the 95th percentile — the line where star signal
+   becomes real (${s==='pre'?'33% of these posted a WR1 season, 67% at least solid':'~64% at least solid'}).
+   <b class="dia">◆</b> = drafted after round 2 but with a diamond-in-the-rough profile (multiple dominant college seasons,
+   big plays, early declare, full athletic workout). <b>H2H</b> is the head-to-head tiebreaker — use it and the tool above
+   when choosing between two rookies drafted close together.`,
+  about:(m,cal)=>`
+   <h2>What WRPI is</h2>
+   <p>A model of wide-receiver <b>fantasy</b> production, fitted to the target
+   <b>best-3-of-first-5-seasons PPR points per game</b> (career-ish dynasty value). Every input is
+   knowable before a prospect plays an NFL snap.</p>
+   <h2>The three numbers</h2>
+   <p><b>Post-draft WRPI</b> (the topline) — a draft-capital curve plus a small college-efficiency
+   term. It tracks the NFL draft by design and matches it in accuracy
+   (cross-validated rank correlation ${m.post_cv_spearman} vs draft pick alone ${m.pick_alone_spearman}).
+   Its job is the honest baseline, not to beat consensus.</p>
+   <p><b>Pre-draft WRPI</b> — production volume + college efficiency + athletic explosion + entry age,
+   no draft capital. The pre-NFL-draft talent read (CV ${m.pre_cv_spearman}).</p>
+   <p><b>H2H tiebreaker</b> — a separate model trained only on pairs of receivers drafted within
+   ${m.tiebreaker_gap} picks of each other. It picks the better one
+   ${(m.tiebreaker_loco_acc*100).toFixed(0)}% of the time (vs 50% = follow draft order). Use it for
+   head-to-head rookie-draft decisions; that's where the model adds value over consensus.</p>
+   <h2>The flags</h2>
+   <p><b class="st">★</b> star-potential — at or above the 95th percentile of the score shown. Historically
+   ~a third of 95th-percentile pre-draft prospects posted a genuine WR1 season, two-thirds were at least solid.</p>
+   <p><b class="dia">◆</b> diamond in the rough — drafted after round 2 but with a profile that says
+   "should have gone higher": multiple 30%+ college dominator seasons, big plays, an early declare,
+   a full athletic workout. The top quartile of that index has hit ~${m.diamond.lift5}× the
+   late-round base rate (${(m.diamond.base_rate*100).toFixed(0)}%).</p>
+   <p><b style="color:var(--warn)">⚠</b> low-confidence — key inputs came in thin (few athletic tests,
+   no reliable college dominator from partial data, or no verified birth date). Read the score with more salt.</p>
+   <h2>Calibration — how the tiers have actually performed</h2>
+   <p>Historical prospects (2015–2022), by WRPI decile. "Became startable" = posted at least one
+   ~WR2 fantasy season (≥13 PPR PPG) in their first three years.</p>
+   ${calTbl(cal.post,'Post-draft')}${calTbl(cal.pre,'Pre-draft')}
+   <p style="color:var(--ink-faint)">Signal concentrates in tiers 8–10; below that the score is
+   roughly flat — the model isn't pretending to separate the bottom two thirds of a class that mostly doesn't produce.</p>
+   <h2>Data</h2>
+   <p>nflverse (draft, combine, weekly fantasy through the 2025 season) · array-carpenter/nfl-draft-data
+   (combine + pro-day, hand size) · CollegeFootballData (college receiving, efficiency/PPA, usage,
+   SP+ ratings, recruiting, returns) · FantasyPros dynasty consensus (2021+). Reference class for
+   percentiles: ${m.reference_n} players, ${m.reference_years[0]}–${m.reference_years[1]}.</p>
+   <p><a href="https://github.com/pitchafwa/wrpi-board">Source & methodology on GitHub</a>.</p>`
+ },
+ rb:{
+  file:'rbpi_scores.json', name:'RBPI', label:'running backs', posN:'RB', hasH2H:false, mkey:'rbpi', starPct:'90th',
+  title:'RBPI Board',
+  sub:`Running Back Prospect Indicator, fitted to actual fantasy production (best 2 of a player's first 3 seasons, PPR points per game — RBs peak early). <b>Post-draft</b> is the topline; it beats draft capital alone. <b>Pre-draft</b> is the pre-NFL-draft talent read (a coarse tier — RB production is opportunity-gated). <span class="legend"><b class="dia">◆</b> diamond in the rough, <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span>`,
+  tips:{
+   Player:'RB prospect. ◆ = diamond-in-the-rough flag (drafted outside round 1, or undrafted, with a strong profile). ★ = above the 90th-percentile star-potential line for the score shown.',
+   Class:'Draft class.', Tier:'Decile of the post-draft RBPI percentile (10 = top).',
+   RBPI:'Raw RBPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
+   Dia:'Diamond index — for RBs drafted outside round 1 (incl. undrafted), a weighted blend of the indicators that separate the future assets. Top quartile has hit ~2× the rest; LOCO precision@5 0.53 vs 0.25 base.',
+   Actual:'2015–23 only: actual fantasy-production percentile (best 2 of first 3 seasons, PPR PPG). Blank for 2024+.',
+   Pick:'Overall draft slot. UDFA = undrafted (kept if they later logged real NFL touches).',
+   Dom:'Best college season scrimmage dominator — share of team rushing + receiving yards & TDs.',
+   'Rec%':'Best college season receiving-yard share of the team — the 3-down / pass-catching archetype tell.',
+   'Car%':'Best college season share of team carries — bell-cow vs committee.',
+   YPC:'Career college yards per carry.',
+   Age:'Age at the NFL draft. Younger is better (RB shelf life is short).', Expl:'Athletic explosion percentile (vertical + broad + speed score).'},
+  cols:()=>[
+   {k:'Player',t:'Player',s:'str'},{k:'Year',t:'Class',s:'num'},{k:'tier',t:'Tier',s:'num'},
+   {k:'_raw',t:'RBPI',s:'num'},
+   {k:'diamond_score',t:'Dia',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
+   {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
+   {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
+   {k:'best_dom',t:'Dom',s:'num',fmt:pctF},
+   {k:'best_rec_ydshare',t:'Rec%',s:'num',fmt:pctF},
+   {k:'best_rush_share',t:'Car%',s:'num',fmt:pctF},
+   {k:'career_ypc',t:'YPC',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
+   {k:'nfl_entry_age',t:'Age',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
+   {k:'explosion_p',t:'Expl',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)}],
+  profRows:d=>[
+   ['Tier',d.tier],['Pick',d.pick>=260?'UDFA':d.pick],
+   ['Scrim dominator',pctF(d.best_dom)],['Rec-yd share',pctF(d.best_rec_ydshare)],
+   ['Carry share',pctF(d.best_rush_share)],['Career YPC',d.career_ypc==null?'—':d.career_ypc.toFixed(1)],
+   ['College PPA',d.avg_ppa==null?'—':d.avg_ppa.toFixed(2)],
+   ['Entry age',d.nfl_entry_age==null?'—':d.nfl_entry_age.toFixed(1)],
+   ['Explosion',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
+   ['Diamond',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
+   d.actual_fantasy_pctl!=null?['Actual fantasy',(d.actual_fantasy_pctl*100).toFixed(0)+' %ile']:null],
+  detailNote:d=>`post-draft raw ${d.raw_post.toFixed(1)} (${(d.rbpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.rbpi_pre*100).toFixed(0)} %ile)`
+   +(d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':'')
+   +(d.is_udfa?' · <span style="color:var(--ink-faint)">UDFA supplement</span>':'')
+   +(d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:''),
+  statbar:m=>`
+   <div><b>${D.scored.length}</b>RB · 2015–2026 <span style="opacity:.7">(${m.n_udfa} UDFA)</span></div>
+   <div><b>${m.post_cv_spearman}</b>post-draft CV Spearman <span style="opacity:.7">(pick ${m.pick_alone_spearman})</span></div>
+   <div><b>${m.pre_cv_spearman}</b>pre-draft CV Spearman</div>
+   <div><b>${m.diamond.lift5}×</b>diamond-flag hit lift <span style="opacity:.7">(late base ${(m.diamond.base_rate*100).toFixed(0)}%, P@5 ${(m.diamond.prec5*100).toFixed(0)}%)</span></div>
+   <div><b>${(m.star_pctl*100).toFixed(0)}th</b>star line <span style="opacity:.7">(pctl of the shown score)</span></div>`,
+  legend:s=>`Hover any header for its meaning. <b>RBPI</b> shows the raw score with its percentile.
+   <b class="st">★</b> = ${s==='pre'?'pre':'post'}-draft RBPI at or above the 90th percentile — where the league-winner
+   signal turns on (${s==='pre'?'57% posted a startable season vs 38% just below':'73% posted a startable season vs 39% just below'}).
+   <b class="dia">◆</b> = drafted outside round 1 (or undrafted) but with a diamond-in-the-rough profile
+   (early declare, strong YPC + TD rate, bell-cow carry share, athletic explosion). Post-draft RBPI is the
+   number to use for post-NFL-draft rookie drafts.`,
+  about:(m,cal)=>`
+   <h2>What RBPI is</h2>
+   <p>A model of running-back <b>fantasy</b> production, fitted to the target
+   <b>best-2-of-first-3-seasons PPR points per game</b>. It's front-loaded on purpose — RBs peak around
+   age 24–25 and fall off a cliff near 27, so early production is what wins dynasty. Every input is
+   knowable before a prospect plays an NFL snap.</p>
+   <h2>The two numbers</h2>
+   <p><b>Post-draft RBPI</b> (the topline) — a draft-capital curve plus receiving-role, efficiency and
+   dominator terms. Cross-validated rank correlation <b>${m.post_cv_spearman}</b> vs draft pick alone
+   ${m.pick_alone_spearman}: it actually <b>edges out draft capital</b>, because a back's college
+   receiving-yard share predicts opportunity beyond where he was drafted. This is the number to use for
+   post-NFL-draft rookie drafts.</p>
+   <p><b>Pre-draft RBPI</b> — college scrimmage dominator + receiving role + athletic explosion + age,
+   no draft capital. CV <b>${m.pre_cv_spearman}</b> — honestly modest, and that's the right answer for
+   RB: production is opportunity-gated, so a pure talent read has a low ceiling. Treat it as a coarse
+   tier, not a precise rank.</p>
+   <p>No head-to-head tiebreaker for RB yet — it's on the backlog.</p>
+   <h2>The flags</h2>
+   <p><b class="st">★</b> star-potential — at or above the <b>90th</b> percentile of the score shown
+   (RB has fewer elite fantasy seasons than WR, so the line sits lower than WRPI's 95th). Post-draft:
+   73% of players above it posted a startable season, vs 39% just below.</p>
+   <p><b class="dia">◆</b> diamond in the rough — drafted <b>outside round 1</b> (or undrafted) but with a
+   profile that says the fantasy points are coming anyway: an early declare, strong college YPC and TD
+   rate, a bell-cow carry share, athletic explosion. The cutoff is round 1 because Day-1 RBs already hit
+   ~71% on draft capital alone — the useful question is who among everyone else still produces. Top
+   quartile of the index has hit ~${m.diamond.lift5}× the rest (LOCO precision@5
+   ${(m.diamond.prec5*100).toFixed(0)}% vs ${(m.diamond.base_rate*100).toFixed(0)}% base). Catches
+   Kamara, Hunt, D. Johnson, A. Jones, James Robinson, Kyren Williams, Achane.</p>
+   <p><b style="color:var(--warn)">⚠</b> low-confidence — key inputs came in thin (no athletic testing,
+   no reliable college dominator from partial data, or no verified birth date). Small-school backs
+   (e.g. D-II) can't be matched to college data at all and land here.</p>
+   <h2>Calibration — how the tiers have actually performed</h2>
+   <p>Historical prospects (2015–2023), by RBPI decile. "Became startable" = posted at least one
+   ~RB2 fantasy season (≥14 PPR PPG) in their first three or four years.</p>
+   ${calTbl(cal.post,'Post-draft')}${calTbl(cal.pre,'Pre-draft')}
+   <p style="color:var(--ink-faint)">Discrimination concentrates in the top two deciles; below that the
+   score is roughly flat.</p>
+   <h2>The pool</h2>
+   <p>Every drafted RB 2015–2026, plus a supplement of ${m.n_udfa} undrafted RBs who went on to log real
+   NFL touches (Ekeler, James Robinson, Lindsay, Warren…) — RB is the position where undrafted hits
+   actually happen, so leaving them out would blind the diamond flag.</p>
+   <h2>Data</h2>
+   <p>nflverse (draft, combine, weekly fantasy through the 2025 season) · CollegeFootballData (college
+   rushing + receiving, efficiency/PPA, usage, SP+ ratings, recruiting) · array-carpenter/nfl-draft-data
+   (combine + pro-day). Reference class for percentiles: ${m.reference_n} players,
+   ${m.reference_years[0]}–${m.reference_years[1]}.</p>
+   <p><a href="https://github.com/pitchafwa/wrpi-board">Source & methodology on GitHub</a>.</p>`
+ }
+};
+function C(){return CFG[pos];}
+function calTbl(rows,label){return `<table style="width:auto;margin:.4rem 0 1rem"><thead><tr>
+  <th style="text-align:left">${label} tier</th><th>became startable</th><th>avg outcome %ile</th><th>n</th></tr></thead><tbody>${
+  rows.slice().reverse().map(r=>`<tr><td style="text-align:left">${r._t}</td><td class="num">${(r.hit_rate*100).toFixed(0)}%</td><td class="num">${(r.avg_outcome_pctl*100).toFixed(0)}</td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table>`;}
 function inCls(d){ if(cls.has('all'))return true; return cls.has(String(d.Year)); }
 function view(){
+ const mk=C().mkey;
  let r=D.scored.filter(inCls).map(d=>({...d,
-   _s: score==='pre'?d.wrpi_pre:d.wrpi_post,
-   _raw: score==='pre'?d.raw_pre:d.raw_post,
-   _star: score==='pre'?d.is_star_pre:d.is_star_post}));
+   _s: d[mk+'_'+score],
+   _raw: d['raw_'+score],
+   _star: d['is_star_'+score]}));
  if(q) r=r.filter(d=>d.Player.toLowerCase().includes(q));
  if(flag==='star') r=r.filter(d=>d._star);
  if(flag==='diamond') r=r.filter(d=>d.is_diamond);
- const C=cols().find(c=>c.k===sort.k)||{s:'num'};
+ const cc=C().cols().find(c=>c.k===sort.k)||{s:'num'};
  r.sort((a,b)=>{let x=a[sort.k],y=b[sort.k]; if(x==null)return 1; if(y==null)return -1;
-  return C.s==='str'?(sort.asc?String(x).localeCompare(y):String(y).localeCompare(x)):(sort.asc?x-y:y-x);});
+  return cc.s==='str'?(sort.asc?String(x).localeCompare(y):String(y).localeCompare(x)):(sort.asc?x-y:y-x);});
  return r;
 }
 function render(){
- const C=cols();
- hrow.innerHTML=C.map(c=>`<th data-k="${c.k}" title="${(TIPS[c.t]||'').replace(/"/g,'&quot;')}" class="${sort.k===c.k?'sorted '+(sort.asc?'asc':''):''}">${c.t}</th>`).join('');
+ const CO=C().cols(), TIPS=C().tips;
+ hrow.innerHTML=CO.map(c=>`<th data-k="${c.k}" title="${(TIPS[c.t]||'').replace(/"/g,'&quot;')}" class="${sort.k===c.k?'sorted '+(sort.asc?'asc':''):''}">${c.t}</th>`).join('');
  hrow.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sort=sort.k===k?{k,asc:!sort.asc}:{k,asc:k==='Player'};render();});
  body.innerHTML='';
  view().forEach(d=>{
   const tr=document.createElement('tr');
-  tr.innerHTML=C.map(c=>{
+  tr.innerHTML=CO.map(c=>{
    const L=` data-label="${c.t}"`;
    if(c.k==='Player'){
      const icons=(d.is_diamond?`<span class="ic" style="color:var(--diamond)" title="diamond in the rough">◆</span>`:'')
-                +(d._star?`<span class="ic" style="color:var(--star)" title="star-potential profile (95th pctl)">★</span>`:'')
+                +(d._star?`<span class="ic" style="color:var(--star)" title="star-potential profile (${C().starPct} pctl)">★</span>`:'')
                 +(d.low_conf?`<span class="ic" style="color:var(--warn)" title="low-confidence profile — ${(d.low_conf_reason||'').replace(/"/g,'&quot;')}">⚠</span>`:'');
      return `<td${L}>${d.Player}${icons}</td>`;}
    if(c.k==='tier') return `<td class="num"${L}><span class="tier" style="background:color-mix(in srgb,${tierColor(d.tier)} 18%,transparent);color:${tierColor(d.tier)}">${d.tier}</span></td>`;
@@ -258,22 +432,10 @@ function render(){
        o=`<span class="o" style="background:color-mix(in srgb,${t} 18%,transparent);color:${t}">fant ${(s.fant*100).toFixed(0)}</span>`;}
      return `<span class="s">${s.p} <span style="color:var(--ink-faint)">'${String(s.y).slice(2)}</span> <span class="m">${s.sim.toFixed(0)}</span>${o}</span>`;
    }).join('');
-   const prof=[
-     ['Tier',d.tier],['Pick',d.pick>=260?'UDFA':d.pick],
-     ['Dominator',d.best_dom==null?'—':(d.best_dom*100).toFixed(0)+'%'],
-     ['Best yds',d.best_yds==null?'—':Math.round(d.best_yds)],
-     ['Efficiency',d.final_ppa==null?'—':d.final_ppa.toFixed(2)],
-     ['Entry age',d.nfl_entry_age==null?'—':d.nfl_entry_age.toFixed(1)],
-     ['Explosion',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
-     ['H2H',d.tb_score.toFixed(2)],['Diamond',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
-     d.actual_fantasy_pctl!=null?['Actual fantasy',(d.actual_fantasy_pctl*100).toFixed(0)+' %ile']:null,
-   ].filter(Boolean).map(([k,v])=>`<span class="comp">${k} <b>${v}</b></span>`).join('');
-   dr.innerHTML=`<td colspan="${C.length}"><div class="comps">${prof}</div>
+   const prof=C().profRows(d).filter(Boolean).map(([k,v])=>`<span class="comp">${k} <b>${v}</b></span>`).join('');
+   dr.innerHTML=`<td colspan="${CO.length}"><div class="comps">${prof}</div>
      <div class="comps">${comps}<span class="comp">= raw <b>${(score==='pre'?d.raw_pre:d.raw_post).toFixed(1)}</b></span></div>
-     <div class="note">post-draft raw ${d.raw_post.toFixed(1)} (${(d.wrpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.wrpi_pre*100).toFixed(0)} %ile) · H2H ${d.tb_score.toFixed(2)}
-     ${d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':''}
-     ${d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:''}
-     ${d.actual_pctl_post!=null?` · original PSI ${(d.actual_pctl_post*100).toFixed(0)}`:''}</div>
+     <div class="note">${C().detailNote(d)}</div>
      <div class="simwrap"><div class="lbl">closest profiles (similarity 0–100 · fant = their actual fantasy %ile)</div><div class="sim">${simHtml||'<span style="color:var(--ink-faint)">—</span>'}</div></div></td>`;
    body.appendChild(dr);
   }
@@ -289,7 +451,7 @@ function findPlayer(txt){
 }
 function h2h(){
  const a=findPlayer(pA.value), b=findPlayer(pB.value), R=document.getElementById('h2hResult');
- if(!a||!b||key(a)===key(b)){R.style.display='none';return;}
+ if(!a||!b||key(a)===key(b)||a.tb_score==null){R.style.display='none';return;}
  R.style.display='block';
  const pa=sig(a.tb_score-b.tb_score), pct=Math.round(pa*100);
  barA.style.width=pct+'%'; barB.style.width=(100-pct)+'%';
@@ -322,65 +484,18 @@ function h2h(){
  }).join('') || '<div class="e" style="color:var(--ink-faint)">profiles look even on the tiebreaker inputs</div>';
 }
 function renderAbout(){
- const m=D.model, cal=D.calibration;
- const tbl=(rows,label)=>`<table style="width:auto;margin:.4rem 0 1rem"><thead><tr>
-   <th style="text-align:left">${label} tier</th><th>became startable</th><th>avg outcome %ile</th><th>n</th></tr></thead><tbody>${
-   rows.slice().reverse().map(r=>`<tr><td style="text-align:left">${r._t}</td><td class="num">${(r.hit_rate*100).toFixed(0)}%</td><td class="num">${(r.avg_outcome_pctl*100).toFixed(0)}</td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table>`;
- aboutPane.innerHTML=`
-  <div style="max-width:70ch;font-size:.92rem;line-height:1.65;color:var(--ink-soft)">
-   <h2>What WRPI is</h2>
-   <p>A model of wide-receiver <b>fantasy</b> production, fitted to the target
-   <b>best-3-of-first-5-seasons PPR points per game</b> (career-ish dynasty value). Every input is
-   knowable before a prospect plays an NFL snap.</p>
-   <h2>The three numbers</h2>
-   <p><b>Post-draft WRPI</b> (the topline) — a draft-capital curve plus a small college-efficiency
-   term. It tracks the NFL draft by design and matches it in accuracy
-   (cross-validated rank correlation ${m.post_cv_spearman} vs draft pick alone ${m.pick_alone_spearman}).
-   Its job is the honest baseline, not to beat consensus.</p>
-   <p><b>Pre-draft WRPI</b> — production volume + college efficiency + athletic explosion + entry age,
-   no draft capital. The pre-NFL-draft talent read (CV ${m.pre_cv_spearman}).</p>
-   <p><b>H2H tiebreaker</b> — a separate model trained only on pairs of receivers drafted within
-   ${m.tiebreaker_gap} picks of each other. It picks the better one
-   ${(m.tiebreaker_loco_acc*100).toFixed(0)}% of the time (vs 50% = follow draft order). Use it for
-   head-to-head rookie-draft decisions; that's where the model adds value over consensus.</p>
-   <h2>The flags</h2>
-   <p><b class="st">★</b> star-potential — at or above the 95th percentile of the score shown. Historically
-   ${'~a third of 95th-percentile pre-draft prospects posted a genuine WR1 season, two-thirds were at least solid.'}</p>
-   <p><b class="dia">◆</b> diamond in the rough — drafted after round 2 but with a profile that says
-   "should have gone higher": multiple 30%+ college dominator seasons, big plays, an early declare,
-   a full athletic workout. The top quartile of that index has hit ~${m.diamond.lift5}× the
-   late-round base rate (${(m.diamond.base_rate*100).toFixed(0)}%).</p>
-   <p><b style="color:var(--warn)">⚠</b> low-confidence — key inputs came in thin (few athletic tests,
-   no reliable college dominator from partial data, or no verified birth date). Read the score with
-   more salt.</p>
-   <h2>Calibration — how the tiers have actually performed</h2>
-   <p>Historical prospects (2015–2022), by WRPI decile. "Became startable" = posted at least one
-   ~WR2 fantasy season (≥13 PPR PPG) in their first three years.</p>
-   ${tbl(cal.post,'Post-draft')}
-   ${tbl(cal.pre,'Pre-draft')}
-   <p style="color:var(--ink-faint)">Signal concentrates in tiers 8–10; below that the score is
-   roughly flat. That's expected — it means the model isn't pretending to separate the bottom two
-   thirds of a draft class that mostly doesn't produce.</p>
-   <h2>Data</h2>
-   <p>nflverse (draft, combine, weekly fantasy through the ${'2025'} season) · array-carpenter/nfl-draft-data
-   (combine + pro-day, hand size) · CollegeFootballData (college receiving, efficiency/PPA, usage,
-   SP+ ratings, recruiting, returns) · FantasyPros dynasty consensus (2021+). Reference class for
-   percentiles: ${m.reference_n} players, ${m.reference_years[0]}–${m.reference_years[1]}.</p>
-   <p><a href="https://github.com/pitchafwa/wrpi-board">Source & methodology on GitHub</a>.</p>
-  </div>`;
+ aboutPane.innerHTML=`<div style="max-width:70ch;font-size:.92rem;line-height:1.65;color:var(--ink-soft)">${C().about(D.model,D.calibration)}</div>`;
 }
 function boot(){
  const m=D.model;
- statbar.innerHTML=`
-  <div><b>${D.scored.length}</b>WR · 2015–2026</div>
-  <div><b>${m.post_cv_spearman}</b>post-draft CV Spearman <span style="opacity:.7">(pick ${m.pick_alone_spearman})</span></div>
-  <div><b>${m.pre_cv_spearman}</b>pre-draft CV Spearman</div>
-  <div><b>${(m.tiebreaker_loco_acc*100).toFixed(0)}%</b>head-to-head accuracy <span style="opacity:.7">(≤${m.tiebreaker_gap} picks apart)</span></div>
-  <div><b>${m.diamond.lift5}×</b>diamond-flag hit lift <span style="opacity:.7">(late-round base ${(m.diamond.base_rate*100).toFixed(0)}%)</span></div>`;
+ hTitle.textContent=C().title;
+ hSub.innerHTML=C().sub;
+ statbar.innerHTML=C().statbar(m);
+ h2hBox.style.display=C().hasH2H?'block':'none';
+ h2hEye.textContent=`Head-to-head — which rookie ${C().posN}?`;
  plist.innerHTML=D.scored.slice().sort((a,b)=>a.Player.localeCompare(b.Player)||b.Year-a.Year)
    .map(x=>`<option value="${x.Player} (${x.Year})">`).join('');
  pA.oninput=pB.oninput=h2h;
- // year multi-select: click sets one; ctrl/meta-click toggles
  segCls.querySelectorAll('button').forEach(btn=>btn.onclick=e=>{
   const v=btn.dataset.v;
   if(v==='all'){ cls=new Set(['all']); }
@@ -408,16 +523,23 @@ function boot(){
  });
  setLegend(); render();
 }
-function setLegend(){
- legend.innerHTML=`Hover any header for its meaning. <b>WRPI</b> shows the raw score with its percentile.
- <b class="st">★</b> = ${score==='pre'?'pre':'post'}-draft WRPI at or above the 95th percentile — the line where star signal
- becomes real (${score==='pre'?'33% of these posted a WR1 season, 67% at least solid':'~64% at least solid'}).
- <b class="dia">◆</b> = drafted after round 2 but with a diamond-in-the-rough profile (multiple dominant college seasons,
- big plays, early declare, full athletic workout). <b>H2H</b> is the head-to-head tiebreaker — use it and the tool above
- when choosing between two rookies drafted close together.`;
+function setLegend(){ legend.innerHTML=C().legend(score); }
+function loadPos(p){
+ pos=p;
+ segPos.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.v===p?'true':'false'));
+ cls=new Set(['all']); score='post'; flag='none'; q=''; open=new Set(); sort={k:'_raw',asc:false};
+ document.getElementById('q').value='';
+ segScore.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.v==='post'?'true':'false'));
+ segFlag.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.v==='none'?'true':'false'));
+ segView.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.v==='board'?'true':'false'));
+ aboutPane.style.display='none'; boardPane.style.display='block';
+ const go=d=>{DATA[p]=d;D=d;boot();};
+ if(DATA[p]) return go(DATA[p]);
+ fetch(CFG[p].file,{cache:'no-store'}).then(r=>r.json()).then(go)
+  .catch(e=>document.body.innerHTML=`<div class="err">Could not load ${CFG[p].file} — serve over HTTP (python -m http.server), not file://<br><br>${e}</div>`);
 }
-fetch('scores.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;boot();})
- .catch(e=>document.body.innerHTML=`<div class="err">Could not load scores.json — serve over HTTP (python -m http.server), not file://<br><br>${e}</div>`);
+segPos.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{ if(btn.dataset.v!==pos) loadPos(btn.dataset.v); });
+loadPos('wr');
 </script>
 </body>
 </html>
