@@ -49,8 +49,22 @@ rows = []
 for _, p in P.iterrows():
     k, yr = p.key, int(p.Year)
     o = {"Player": p.Player, "Year": yr}
-    pcR = py(comb, k, yr, "season"); plR = py(pl, k, yr, "draft_year"); drR = py(dr, k, yr, "season")
+    pcR = py(comb, k, yr, "season")
+    # draft pick: EXACT class year only (avoid same-name players from other decades)
+    _de = dr[(dr.key == k) & (dr.season == yr) & (dr.position.isin(["WR", "TE", "RB"]))]
+    drR = _de.iloc[0] if len(_de) else None
+    # birthdate: player whose rookie/draft year matches this class (+-1); reject namesakes
+    _pc = pl[pl.key == k].copy()
+    if len(_pc):
+        _yy = _pc["draft_year"].fillna(_pc["rookie_season"])
+        _pc["_score"] = (_yy - yr).abs()
+        _pc = _pc[_pc._score <= 1]
+    plR = _pc.sort_values("_score").iloc[0] if len(_pc) else None
     bd = pd.to_datetime(G(plR, "birth_date"), errors="coerce")
+    if pd.notna(bd):
+        _age = (pd.Timestamp(yr, 1, 1) - bd).days / 365.25
+        if not (18.0 <= _age <= 26.5):        # implausible rookie age -> treat as unknown
+            bd = pd.NaT
     college = C(p.get("college"), G(plR, "college_name"), G(drR, "college"))
     rcc = rc[rc.key == k]; rr = rcc.iloc[(rcc.Year - yr).abs().values.argsort()].iloc[0] if len(rcc) else None
     def M(a, b): return C(G(rr, a), G(pcR, b))
@@ -73,7 +87,7 @@ for _, p in P.iterrows():
     o["elite_agility"] = int(pd.notna(cone) and cone <= 6.9)
     o["big_bodied"] = int(pd.notna(ht) and pd.notna(wt) and ht >= 74 and wt >= 210)
 
-    pick = C(p.get("pick_pool"), G(drR, "pick"), G(pcR, "draft_ovr"), G(plR, "draft_pick"))
+    pick = C(p.get("pick_pool"), G(drR, "pick"))     # exact class-year sources only
     o["pick"] = float(pick) if pd.notna(pick) else 270.0
     o["undrafted"] = int(o["pick"] >= 260); o["log_pick"] = np.log(min(o["pick"], 300))
     o["round"] = float(G(drR, "round")) if pd.notna(G(drR, "round")) else (8.0 if o["undrafted"] else np.nan)
@@ -87,8 +101,20 @@ for _, p in P.iterrows():
     cc = cf[cf.playerId == cid].sort_values("season") if cid is not None else pd.DataFrame()
     o["has_college"] = int(len(cc) > 0)
     if len(cc):
-        o["best_dom"] = cc.dominator.max(); o["final_dom"] = cc.iloc[-1].dominator; o["first_dom"] = cc.iloc[0].dominator
-        o["best_ydshare"] = cc.yd_share.max(); o["final_ydshare"] = cc.iloc[-1].yd_share
+        # dominator is only trustworthy when CFBD has a full team-season (partial
+        # small-school seasons blow the denominator up). Mask + cap at a real ceiling.
+        DOM_CAP = 0.58
+        rel = cc[cc.team_rec_yds >= 900].copy()
+        rel["dominator"] = rel["dominator"].clip(upper=DOM_CAP)
+        rel["yd_share"] = rel["yd_share"].clip(upper=DOM_CAP + 0.05)
+        o["reliable_dom"] = int(len(rel) > 0)
+        if len(rel):
+            o["best_dom"] = rel.dominator.max(); o["final_dom"] = rel.iloc[-1].dominator
+            o["first_dom"] = rel.iloc[0].dominator
+            o["best_ydshare"] = rel.yd_share.max(); o["final_ydshare"] = rel.iloc[-1].yd_share
+        # else: leave best_dom/etc unset (NaN) — no trustworthy CFBD team-season
+        cc = cc.assign(dominator=cc.dominator.clip(upper=DOM_CAP))   # downstream (breakout) uses capped col
+        cc.loc[cc.team_rec_yds < 900, "dominator"] = np.nan          # don't breakout off a fragment
         o["career_yds"] = cc.rec_yds.sum(); o["best_yds"] = cc.rec_yds.max()
         o["career_rec"] = cc.rec.sum(); o["career_ypr"] = cc.rec_yds.sum() / max(cc.rec.sum(), 1)
         o["best_long"] = cc.LONG.max(); o["td_rate"] = cc.rec_td.sum() / max(cc.rec.sum(), 1)
@@ -108,12 +134,19 @@ for _, p in P.iterrows():
             o["dom_age20"] = float(cc2[cc2.age <= 20.5].dominator.max()) if (cc2.age <= 20.5).any() else 0.0
             o["age_final_season"] = float(cc2.age.max())
             o["early_declare"] = int(o["n_seasons"] <= 3 and cc2.age.max() < 21.8)
-        pw = ppa[ppa.key == k]
+        # PPA / usage / returns: join by resolved CFBD id, restricted to the player's
+        # actual college years+teams (name-only joins pulled in different people)
+        col_seasons = set(cc.season.astype(int)); col_teams = set(cc.team)
+        pw = ppa[(ppa.athleteId == cid) & ppa.year.isin(col_seasons) & ppa.team.isin(col_teams)]
+        if len(pw) == 0:
+            pw = ppa[ppa.athleteId == cid]
         if len(pw):
             o["best_ppa"] = float(pw.avg_ppa.max()); o["final_ppa"] = float(pw.sort_values("year").iloc[-1].avg_ppa)
             o["avg_ppa"] = float(pw.avg_ppa.mean())
             if "avg_ppa_pass" in pw: o["best_ppa_pass"] = float(pw.avg_ppa_pass.max())
-        uw = usg[usg.key == k]
+        uw = usg[(usg.athleteId == cid) & usg.year.isin(col_seasons) & usg.team.isin(col_teams)]
+        if len(uw) == 0:
+            uw = usg[usg.athleteId == cid]
         if len(uw):
             o["best_usage"] = float(uw.usage_overall.max()); o["final_usage"] = float(uw.sort_values("year").iloc[-1].usage_overall)
         bsn = cc.loc[cc.rec_yds.idxmax()]
@@ -133,8 +166,10 @@ for _, p in P.iterrows():
             q1 = qs.loc[qs.YDS.idxmax()]
             o["col_qb_ypa"] = float(G(q1, "YPA")); o["col_qb_td"] = float(G(q1, "TD"))
             o["col_qb_drafted"] = int(norm(q1.player) in dr_all_keys)
-        # return usage
-        rw = ret[ret.key == k]
+        # return usage (join by CFBD id)
+        rw = ret[(ret.playerId == cid) & ret.season.isin(col_seasons)]
+        if len(rw) == 0:
+            rw = ret[(ret.key == k) & ret.team.isin(col_teams)]
         if len(rw):
             o["ret_yds"] = float(rw.YDS.sum()); o["ret_td"] = float(rw.TD.sum())
             o["ret_avg"] = float(rw.YDS.sum() / max(rw.NO.sum(), 1)); o["was_returner"] = 1

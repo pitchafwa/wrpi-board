@@ -88,8 +88,8 @@ out = {
     "generated": pd.Timestamp.utcnow().isoformat(timespec="minutes"),
     "model": {
         "target": "best-3-of-first-5 seasons PPR PPG",
-        "post_cv_spearman": 0.655, "pre_cv_spearman": 0.481,
-        "pick_alone_spearman": 0.648,
+        "post_cv_spearman": 0.642, "pre_cv_spearman": 0.493,
+        "pick_alone_spearman": 0.650,
         "tiebreaker_loco_acc": round(tb["loco_acc"], 3), "tiebreaker_gap": tb["gap"],
         "reference_years": [2015, 2020], "reference_n": int(len(ref_pool)),
         "star_pctl": STAR_PCTL,

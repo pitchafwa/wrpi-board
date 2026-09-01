@@ -35,8 +35,10 @@
   .h2h .vs{font-family:"IBM Plex Mono",monospace;color:var(--ink-faint);font-size:.8rem}
   .h2h .result{margin-top:1rem;display:none}
   .probbar{height:30px;border-radius:8px;overflow:hidden;display:flex;font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500}
-  .probbar .a{background:color-mix(in srgb,var(--good) 32%,transparent);color:var(--ink);display:flex;align-items:center;padding:0 .6rem;white-space:nowrap}
-  .probbar .b{background:color-mix(in srgb,var(--warn) 32%,transparent);color:var(--ink);display:flex;align-items:center;justify-content:flex-end;padding:0 .6rem;margin-left:auto;white-space:nowrap}
+  .probbar .a,.probbar .b{color:var(--ink);display:flex;align-items:center;padding:0 .6rem;white-space:nowrap;overflow:hidden;transition:width .25s}
+  .probbar .b{justify-content:flex-end}
+  .probbar .win{background:color-mix(in srgb,var(--good) 34%,transparent)}
+  .probbar .lose{background:color-mix(in srgb,var(--warn) 30%,transparent)}
   .edges{display:grid;grid-template-columns:1fr 1fr;gap:.25rem 1.4rem;margin-top:.8rem;font-size:.8rem}
   .edges .e{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;gap:.6rem}
   .edges .e b{white-space:nowrap}
@@ -62,12 +64,12 @@
   tbody tr{cursor:pointer} tbody tr:hover{background:var(--surface-2)}
   td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
   .tier{display:inline-block;min-width:1.5rem;text-align:center;font-family:"IBM Plex Mono",monospace;font-weight:500;padding:.08rem .3rem;border-radius:4px;font-size:.76rem}
-  .wr{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+  .wr{display:inline-flex;align-items:center;gap:.4rem;justify-content:flex-end}
   .wr .n{font-family:"IBM Plex Mono",monospace;font-weight:500}
-  .wr .b{position:relative;height:4px;width:64px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+  .wr .b{position:relative;height:5px;width:44px;background:var(--surface-2);border-radius:99px;overflow:hidden}
   .wr .b>span{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:99px}
-  .wr .p{font-size:.66rem;color:var(--ink-faint);font-family:"IBM Plex Mono",monospace}
-  .ic{margin-left:.3rem;font-size:.85rem}
+  .wr .p{font-size:.66rem;color:var(--ink-faint);font-family:"IBM Plex Mono",monospace;width:1.6rem;text-align:left}
+  .ic{margin-left:.25rem;font-size:.82rem}
   .detail td{background:var(--surface-2);border-top:0;white-space:normal}
   .comps{display:flex;flex-wrap:wrap;gap:.4rem;padding:.3rem 0}
   .comp{font-family:"IBM Plex Mono",monospace;font-size:.73rem;padding:.2rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
@@ -117,6 +119,11 @@
       <button data-v="post" aria-pressed="true">Post-draft</button>
       <button data-v="pre">Pre-draft</button>
     </div>
+    <div class="seg" id="segFlag">
+      <button data-v="none" aria-pressed="true">All</button>
+      <button data-v="star" style="color:var(--star)">★ stars</button>
+      <button data-v="diamond" style="color:var(--diamond)">◆ diamonds</button>
+    </div>
   </div>
   <div class="legend" id="legend"></div>
 
@@ -125,10 +132,11 @@
 </div>
 
 <script>
-let D=null, cls=new Set(['all']), score='post', q='', sort={k:'_s',asc:false}, open=new Set();
+let D=null, cls=new Set(['all']), score='post', flag='none', q='', sort={k:'_s',asc:false}, open=new Set();
 const sig=x=>1/(1+Math.exp(-x));
 const tierColor=t=>t>=8?'var(--t-hi)':t>=5?'var(--t-mid)':'var(--t-lo)';
 const key=x=>x.Player+'|'+x.Year;
+const lastName=n=>{const t=n.replace(/\s+(Jr\.?|Sr\.?|II|III|IV|V)$/i,'').trim().split(' ');return t[t.length-1];};
 const TIPS={
  Player:'WR prospect. ◆ = diamond-in-the-rough flag (drafted after round 2, strong underlying profile). ★ = above the 95th-percentile star-potential line for the score shown.',
  Class:'Draft class.',
@@ -152,6 +160,7 @@ function cols(){return [
  {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
  {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
  {k:'best_dom',t:'Dom',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)+'%'},
+ {k:'best_yds',t:'Yds',s:'num',fmt:v=>v==null?'—':Math.round(v)},
  {k:'final_ppa',t:'Eff',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
  {k:'nfl_entry_age',t:'Age',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
  {k:'explosion_p',t:'Expl',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)},
@@ -163,6 +172,8 @@ function view(){
    _raw: score==='pre'?d.raw_pre:d.raw_post,
    _star: score==='pre'?d.is_star_pre:d.is_star_post}));
  if(q) r=r.filter(d=>d.Player.toLowerCase().includes(q));
+ if(flag==='star') r=r.filter(d=>d._star);
+ if(flag==='diamond') r=r.filter(d=>d.is_diamond);
  const C=cols().find(c=>c.k===sort.k)||{s:'num'};
  r.sort((a,b)=>{let x=a[sort.k],y=b[sort.k]; if(x==null)return 1; if(y==null)return -1;
   return C.s==='str'?(sort.asc?String(x).localeCompare(y):String(y).localeCompare(x)):(sort.asc?x-y:y-x);});
@@ -182,7 +193,7 @@ function render(){
                 +(d._star?`<span class="ic" style="color:var(--star)" title="star-potential profile (95th pctl)">★</span>`:'');
      return `<td>${d.Player}${icons}</td>`;}
    if(c.k==='tier') return `<td class="num"><span class="tier" style="background:color-mix(in srgb,${tierColor(d.tier)} 18%,transparent);color:${tierColor(d.tier)}">${d.tier}</span></td>`;
-   if(c.k==='_s') return `<td class="num"><span class="wr"><span class="n">${d._raw.toFixed(1)}</span><span class="b"><span style="width:${(d._s*100).toFixed(0)}%"></span></span><span class="p">${(d._s*100).toFixed(0)}%ile</span></span></td>`;
+   if(c.k==='_s') return `<td class="num"><span class="wr"><span class="n">${d._raw.toFixed(1)}</span><span class="b"><span style="width:${(d._s*100).toFixed(0)}%"></span></span><span class="p">${(d._s*100).toFixed(0)}</span></span></td>`;
    const v=d[c.k]; return `<td class="num">${c.fmt?c.fmt(v,d):v}</td>`;
   }).join('');
   tr.onclick=()=>{const id=key(d);open.has(id)?open.delete(id):open.add(id);render();};
@@ -211,10 +222,12 @@ function h2h(){
  const a=findPlayer(pA.value), b=findPlayer(pB.value), R=document.getElementById('h2hResult');
  if(!a||!b||key(a)===key(b)){R.style.display='none';return;}
  R.style.display='block';
- const pa=sig(a.tb_score-b.tb_score);
- barA.style.width=(pa*100)+'%';
- barA.textContent=`${a.Player} (${a.Year}) ${(pa*100).toFixed(0)}%`;
- barB.textContent=`${(100-pa*100).toFixed(0)}% ${b.Player} (${b.Year})`;
+ const pa=sig(a.tb_score-b.tb_score), pct=Math.round(pa*100);
+ barA.style.width=pct+'%'; barB.style.width=(100-pct)+'%';
+ barA.className = pa>=0.5 ? 'a win' : 'a lose';
+ barB.className = pa>=0.5 ? 'b lose' : 'b win';
+ barA.textContent=`${lastName(a.Player)} ${pct}%`;
+ barB.textContent=`${100-pct}% ${lastName(b.Player)}`;
  const g=Math.abs(a.pick-b.pick);
  document.getElementById('h2hNote').textContent =
   `Model favours ${pa>=.5?a.Player:b.Player} (${(Math.max(pa,1-pa)*100).toFixed(0)}%). `+
@@ -236,7 +249,7 @@ function h2h(){
  }).filter(x=>Math.abs(x.d)>0.04).sort((x,y)=>Math.abs(y.d)-Math.abs(x.d)).slice(0,8);
  document.getElementById('h2hEdges').innerHTML = contrib.map(x=>{
   const who=x.d>0?a.Player:b.Player;
-  return `<div class="e"><span>${LAB[x.f]||x.f}</span><b style="color:${x.d>0?'var(--good)':'var(--warn)'}">${who.split(' ').slice(-1)[0]}</b></div>`;
+  return `<div class="e"><span>${LAB[x.f]||x.f}</span><b style="color:${x.d>0?'var(--good)':'var(--warn)'}">${lastName(who)}</b></div>`;
  }).join('') || '<div class="e" style="color:var(--ink-faint)">profiles look even on the tiebreaker inputs</div>';
 }
 function boot(){
@@ -262,6 +275,10 @@ function boot(){
  segScore.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
   segScore.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
   btn.setAttribute('aria-pressed','true'); score=btn.dataset.v; render(); setLegend();
+ });
+ segFlag.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+  segFlag.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true'); flag=btn.dataset.v; render();
  });
  document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();render();};
  setLegend(); render();
