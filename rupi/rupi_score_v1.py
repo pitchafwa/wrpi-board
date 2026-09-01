@@ -1,4 +1,4 @@
-"""RBPI v1 — frozen scoring functions, fitted to actual fantasy production
+"""RUPI v1 — frozen scoring functions, fitted to actual fantasy production
 (best-2-of-first-3 PPR PPG, front-loaded for RB shelf life). Post-draft is the
 topline; pre-draft is the pre-NFL-draft talent read."""
 import numpy as np

@@ -8,8 +8,8 @@ import warnings; warnings.filterwarnings("ignore")
 import json, numpy as np, pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-F = pd.read_csv("rbpi/data/features_rb_all.csv")
-O = pd.read_csv("rbpi/data/rb_outcomes_all.csv").drop(columns=["pick"])
+F = pd.read_csv("rupi/data/features_rb_all.csv")
+O = pd.read_csv("rupi/data/rb_outcomes_all.csv").drop(columns=["pick"])
 d = F.merge(O, on=["Player", "Year"])
 d = d[(d.has_college == 1) & d.nfl_entry_age.notna() & (d.win3_full == 1)].reset_index(drop=True)
 d["best_ppg"] = d[["best3", "best4"]].max(axis=1)
@@ -99,5 +99,5 @@ json.dump({"ind": IND, "w": {k: float(v) for k, v in w.items()},
            "median": {k: float(med[k]) for k in IND},
            "cut_pick": CUT, "flag_threshold": FLAG,
            "loco_prec5": float(P[5]), "base_rate": float(base), "lift5": float(P[5] / base)},
-          open("rbpi/data/rbpi_diamond.json", "w"), indent=1)
-print(f"\nflag threshold (80th pctl of late pool dscore) = {FLAG:.2f} -> saved data/rbpi_diamond.json")
+          open("rupi/data/rupi_diamond.json", "w"), indent=1)
+print(f"\nflag threshold (80th pctl of late pool dscore) = {FLAG:.2f} -> saved data/rupi_diamond.json")

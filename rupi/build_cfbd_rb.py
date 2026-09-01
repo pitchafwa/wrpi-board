@@ -6,7 +6,7 @@ import json, os
 import pandas as pd, numpy as np
 
 RAW = "data/cfbd_raw"
-OUT = "rbpi/data"
+OUT = "rupi/data"
 os.makedirs(OUT, exist_ok=True)
 
 def wide(cat, year):

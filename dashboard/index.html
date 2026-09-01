@@ -294,13 +294,13 @@ const CFG={
    <p><a href="https://github.com/pitchafwa/wrpi-board">Source & methodology on GitHub</a>.</p>`
  },
  rb:{
-  file:'rbpi_scores.json', name:'RBPI', label:'running backs', posN:'RB', hasH2H:false, mkey:'rbpi', starPct:'90th',
-  title:'RBPI Board',
-  sub:`Running Back Prospect Indicator, fitted to actual fantasy production (best 2 of a player's first 3 seasons, PPR points per game — RBs peak early). <b>Post-draft</b> is the topline; it beats draft capital alone. <b>Pre-draft</b> is the pre-NFL-draft talent read (a coarse tier — RB production is opportunity-gated). <span class="legend"><b class="dia">◆</b> diamond in the rough, <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span>`,
+  file:'rupi_scores.json', name:'RUPI', label:'running backs', posN:'RB', hasH2H:false, mkey:'rupi', starPct:'90th',
+  title:'RUPI Board',
+  sub:`<b>RU</b>nning-back <b>P</b>rospect <b>I</b>ndicator — the sibling to WRPI, fitted to actual fantasy production (best 2 of a player's first 3 seasons, PPR points per game — RBs peak early). <b>Post-draft</b> is the topline; it beats draft capital alone. <b>Pre-draft</b> is the pre-NFL-draft talent read (a coarse tier — RB production is opportunity-gated). <span class="legend"><b class="dia">◆</b> diamond in the rough, <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span>`,
   tips:{
    Player:'RB prospect. ◆ = diamond-in-the-rough flag (drafted outside round 1, or undrafted, with a strong profile). ★ = above the 90th-percentile star-potential line for the score shown.',
-   Class:'Draft class.', Tier:'Decile of the post-draft RBPI percentile (10 = top).',
-   RBPI:'Raw RBPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
+   Class:'Draft class.', Tier:'Decile of the post-draft RUPI percentile (10 = top).',
+   RUPI:'Raw RUPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
    Dia:'Diamond index — for RBs drafted outside round 1 (incl. undrafted), a weighted blend of the indicators that separate the future assets. Top quartile has hit ~2× the rest; LOCO precision@5 0.53 vs 0.25 base.',
    Actual:'2015–23 only: actual fantasy-production percentile (best 2 of first 3 seasons, PPR PPG). Blank for 2024+.',
    Pick:'Overall draft slot. UDFA = undrafted (kept if they later logged real NFL touches).',
@@ -311,7 +311,7 @@ const CFG={
    Age:'Age at the NFL draft. Younger is better (RB shelf life is short).', Expl:'Athletic explosion percentile (vertical + broad + speed score).'},
   cols:()=>[
    {k:'Player',t:'Player',s:'str'},{k:'Year',t:'Class',s:'num'},{k:'tier',t:'Tier',s:'num'},
-   {k:'_raw',t:'RBPI',s:'num'},
+   {k:'_raw',t:'RUPI',s:'num'},
    {k:'diamond_score',t:'Dia',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
    {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
    {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
@@ -330,7 +330,7 @@ const CFG={
    ['Explosion',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
    ['Diamond',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
    d.actual_fantasy_pctl!=null?['Actual fantasy',(d.actual_fantasy_pctl*100).toFixed(0)+' %ile']:null],
-  detailNote:d=>`post-draft raw ${d.raw_post.toFixed(1)} (${(d.rbpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.rbpi_pre*100).toFixed(0)} %ile)`
+  detailNote:d=>`post-draft raw ${d.raw_post.toFixed(1)} (${(d.rupi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.rupi_pre*100).toFixed(0)} %ile)`
    +(d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':'')
    +(d.is_udfa?` · <span style="color:var(--ink-faint)">${d.udfa_type==='projected'?'projected — went undrafted':'UDFA (logged NFL touches)'}</span>`:'')
    +(d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:''),
@@ -340,25 +340,26 @@ const CFG={
    <div><b>${m.pre_cv_spearman}</b>pre-draft CV Spearman</div>
    <div><b>${m.diamond.lift5}×</b>diamond-flag hit lift <span style="opacity:.7">(late base ${(m.diamond.base_rate*100).toFixed(0)}%, P@5 ${(m.diamond.prec5*100).toFixed(0)}%)</span></div>
    <div><b>${(m.star_pctl*100).toFixed(0)}th</b>star line <span style="opacity:.7">(pctl of the shown score)</span></div>`,
-  legend:s=>`Hover any header for its meaning. <b>RBPI</b> shows the raw score with its percentile.
-   <b class="st">★</b> = ${s==='pre'?'pre':'post'}-draft RBPI at or above the 90th percentile — where the league-winner
+  legend:s=>`Hover any header for its meaning. <b>RUPI</b> shows the raw score with its percentile.
+   <b class="st">★</b> = ${s==='pre'?'pre':'post'}-draft RUPI at or above the 90th percentile — where the league-winner
    signal turns on (${s==='pre'?'57% posted a startable season vs 38% just below':'73% posted a startable season vs 39% just below'}).
    <b class="dia">◆</b> = drafted outside round 1 (or undrafted) but with a diamond-in-the-rough profile
-   (early declare, strong YPC + TD rate, bell-cow carry share, athletic explosion). Post-draft RBPI is the
+   (early declare, strong YPC + TD rate, bell-cow carry share, athletic explosion). Post-draft RUPI is the
    number to use for post-NFL-draft rookie drafts.`,
   about:(m,cal)=>`
-   <h2>What RBPI is</h2>
-   <p>A model of running-back <b>fantasy</b> production, fitted to the target
+   <h2>What RUPI is</h2>
+   <p><b>RU</b>nning-back <b>P</b>rospect <b>I</b>ndicator — WRPI's counterpart for the other
+   volume position. A model of running-back <b>fantasy</b> production, fitted to the target
    <b>best-2-of-first-3-seasons PPR points per game</b>. It's front-loaded on purpose — RBs peak around
    age 24–25 and fall off a cliff near 27, so early production is what wins dynasty. Every input is
    knowable before a prospect plays an NFL snap.</p>
    <h2>The two numbers</h2>
-   <p><b>Post-draft RBPI</b> (the topline) — a draft-capital curve plus receiving-role, efficiency and
+   <p><b>Post-draft RUPI</b> (the topline) — a draft-capital curve plus receiving-role, efficiency and
    dominator terms. Cross-validated rank correlation <b>${m.post_cv_spearman}</b> vs draft pick alone
    ${m.pick_alone_spearman}: it actually <b>edges out draft capital</b>, because a back's college
    receiving-yard share predicts opportunity beyond where he was drafted. This is the number to use for
    post-NFL-draft rookie drafts.</p>
-   <p><b>Pre-draft RBPI</b> — college scrimmage dominator + receiving role + athletic explosion + age,
+   <p><b>Pre-draft RUPI</b> — college scrimmage dominator + receiving role + athletic explosion + age,
    no draft capital. CV <b>${m.pre_cv_spearman}</b> — honestly modest, and that's the right answer for
    RB: production is opportunity-gated, so a pure talent read has a low ceiling. Treat it as a coarse
    tier, not a precise rank.</p>
@@ -378,7 +379,7 @@ const CFG={
    no reliable college dominator from partial data, or no verified birth date). Small-school backs
    (e.g. D-II) can't be matched to college data at all and land here.</p>
    <h2>Calibration — how the tiers have actually performed</h2>
-   <p>Historical prospects (2015–2023), by RBPI decile. "Became startable" = posted at least one
+   <p>Historical prospects (2015–2023), by RUPI decile. "Became startable" = posted at least one
    ~RB2 fantasy season (≥14 PPR PPG) in their first three or four years.</p>
    ${calTbl(cal.post,'Post-draft')}${calTbl(cal.pre,'Pre-draft')}
    <p style="color:var(--ink-faint)">Discrimination concentrates in the top two deciles; below that the

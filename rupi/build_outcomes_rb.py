@@ -11,7 +11,7 @@ def norm(n):
     return re.sub(r"\s+", " ", n).strip()
 
 WB = ""
-OUT = "rbpi/data"
+OUT = "rupi/data"
 
 w = pd.read_csv(WB + "data/nfl_weekly.csv", low_memory=False)
 w = w[(w.season_type == "REG") & (w.position == "RB")].copy()

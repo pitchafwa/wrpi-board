@@ -13,7 +13,7 @@ import numpy as np, pandas as pd
 from rb_feature_lib import norm, Sources, build_row
 
 WB = "data/"
-RD = "rbpi/data/"
+RD = "rupi/data/"
 FIRST_CLASS = 2023
 
 comb = pd.read_csv(WB + "combine.csv")

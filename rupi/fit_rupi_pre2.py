@@ -1,4 +1,4 @@
-"""Pre-draft RBPI refit with saner/tighter bounds -- v1's pre-draft fit produced
+"""Pre-draft RUPI refit with saner/tighter bounds -- v1's pre-draft fit produced
 a couple of spike-overfit terms (breakout-age threshold 18.3 w/ cap 20.8; an
 inactive entry-age slope; an efficiency cap that dominated despite the research
 saying RB efficiency translates weakly). Tighten every component cap to a
@@ -9,8 +9,8 @@ import numpy as np, pandas as pd
 from scipy.stats import spearmanr
 from scipy.optimize import differential_evolution
 
-F = pd.read_csv("rbpi/data/features_rb.csv")
-O = pd.read_csv("rbpi/data/rb_outcomes.csv").drop(columns=["pick"])
+F = pd.read_csv("rupi/data/features_rb.csv")
+O = pd.read_csv("rupi/data/rb_outcomes.csv").drop(columns=["pick"])
 g = F.merge(O, on=["Player", "Year"])
 g = g[(g.has_college == 1) & g.nfl_entry_age.notna() & (g.win3_full == 1)].reset_index(drop=True)
 T = "rb_top34"
@@ -66,7 +66,7 @@ for c in sorted(set(yr)):
     rho = spearmanr(score(rr.x, te), te[T]).correlation
     outs.append(rho); print(f"  fold {c}: {rho:+.3f}", flush=True)
 cv = float(np.mean(outs))
-print(f"\n==== RBPI v1.1 PRE-DRAFT ====  in-sample {-r.fun:.3f}  LOCO-CV {cv:.3f}")
+print(f"\n==== RUPI v1.1 PRE-DRAFT ====  in-sample {-r.fun:.3f}  LOCO-CV {cv:.3f}")
 print(f"  NFL entry age ...... min({p[1]:.1f}*({p[0]:.1f}-age), {p[2]:.1f})")
 print(f"  Breakout age ....... min({p[4]:.1f}*({p[3]:.1f}-age), {p[5]:.1f})")
 print(f"  College dominator .. min({p[6]:.1f}*share, {p[7]:.1f})")
@@ -74,5 +74,5 @@ print(f"  Receiving role ..... min({p[8]:.1f}*share, {p[9]:.1f})")
 print(f"  Efficiency ......... min({p[10]:.1f}*(z+2), {p[11]:.1f})")
 print(f"  Athletic explosion  min({p[12]:.1f}*pctl, {p[13]:.1f})")
 print(f"  Production volume .. min({p[14]:.1f}*(yds/1000), {p[15]:.1f})")
-np.save("rbpi/data/rbpi_v1_pre.npy", p)
-print("\nsaved data/rbpi_v1_pre.npy (overwrote v1 pre)")
+np.save("rupi/data/rupi_v1_pre.npy", p)
+print("\nsaved data/rupi_v1_pre.npy (overwrote v1 pre)")

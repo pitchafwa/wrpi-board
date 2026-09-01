@@ -1,4 +1,4 @@
-# RBPI v1 — model card (running back prospect indicator)
+# RUPI v1 — model card (running back prospect indicator)
 
 Companion to RESEARCH.md. Fills in once fits land.
 
@@ -23,12 +23,12 @@ Companion to RESEARCH.md. Fills in once fits land.
 - Entry age from PFR draft-day age (audited integer field) primary; birthdate
   fallback with an 18-27 sanity gate.
 
-## Pre-draft RBPI  (talent read, no draft capital)
+## Pre-draft RUPI  (talent read, no draft capital)
 - **in-sample 0.565, LOCO-CV 0.426** (Spearman). Honestly modest — and that's the
   correct answer for RB: the position is opportunity-gated, so a pure pre-NFL
   talent read has a low ceiling (pre-draft WRPI was 0.50; RB lands lower by
   design, not by error). High fold variance (0.11 the 2019 class, 0.69 the 2021).
-  Middle of the range is compressed (cap saturation) — treat pre-draft RBPI as a
+  Middle of the range is compressed (cap saturation) — treat pre-draft RUPI as a
   coarse talent tier, not a precise rank.
 - Component weights (v1.1, after tightening bounds to kill spike-overfit terms):
   - College dominator .... min(27.8*share, 3.2)      [scrimmage share]
@@ -43,7 +43,7 @@ Companion to RESEARCH.md. Fills in once fits land.
   (pre .95, pick 105, .94). Also over-rates a few small-school UDFAs (Josh Adams,
   Jaret Patterson) — the pre-model's built-in noise.
 
-## Post-draft RBPI  (topline — use this one)
+## Post-draft RUPI  (topline — use this one)
 - **in-sample 0.737, LOCO-CV 0.714** vs **draft pick alone 0.682**. Beats capital
   by a hair and is stable across folds (.57–.84). This is the number for
   post-NFL-draft dynasty rookie drafts.

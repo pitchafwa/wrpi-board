@@ -12,7 +12,7 @@ import numpy as np, pandas as pd
 from rb_feature_lib import norm, Sources, build_row, add_athletic_percentiles
 
 WB = "data/"
-RD = "rbpi/data/"
+RD = "rupi/data/"
 
 pl = pd.read_csv(WB + "players.csv", low_memory=False)
 udfa = pl[(pl.position == "RB") & pl.draft_round.isna() & pl.rookie_season.between(2015, 2026)].copy()

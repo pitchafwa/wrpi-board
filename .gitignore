@@ -34,9 +34,9 @@ data/features_v3.csv
 data/nfl_outcomes.csv
 data/wrpi_v2_pre.npy
 data/wrpi_v2_post.npy
-rbpi/data/*.csv
-rbpi/data/*.npy
-rbpi/out/rbpi_scores.json
+rupi/data/*.csv
+rupi/data/*.npy
+rupi/out/rupi_scores.json
 
 # ---- old PSI reconstruction artifacts ----
 data/psi_*.json
@@ -48,8 +48,8 @@ data/psi_reconstructed_scores.csv
 # data/draft_dates.json           NFL draft dates, self-scheduling
 # data/.last_pipeline_run         last successful scheduled run
 # data/wrpi_database.csv          WR summary table (audit trail)
-# rbpi/out/rbpi_database.csv      RB summary table (audit trail)
-# rbpi/data/*.json                frozen RBPI params + diamond index
+# rupi/out/rupi_database.csv      RB summary table (audit trail)
+# rupi/data/*.json                frozen RUPI params + diamond index
 
 # ---- exploratory / superseded scripts ----
 model_search_v*.py

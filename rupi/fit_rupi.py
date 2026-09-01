@@ -1,4 +1,4 @@
-"""Fit RBPI v1 as an interpretable additive model (mirrors WRPI v2's structure),
+"""Fit RUPI v1 as an interpretable additive model (mirrors WRPI v2's structure),
 to actual fantasy production. Target = rb_top34 (best-2-of-first-3 PPR PPG,
 front-loaded for RB shelf life -- see RESEARCH.md). Pre-draft + post-draft,
 LOCO-CV by draft class. Adds a RECEIVING-ROLE component that WR didn't need
@@ -9,8 +9,8 @@ import json, numpy as np, pandas as pd
 from scipy.stats import spearmanr
 from scipy.optimize import differential_evolution
 
-F = pd.read_csv("rbpi/data/features_rb.csv")
-O = pd.read_csv("rbpi/data/rb_outcomes.csv").drop(columns=["pick"])
+F = pd.read_csv("rupi/data/features_rb.csv")
+O = pd.read_csv("rupi/data/rb_outcomes.csv").drop(columns=["pick"])
 g = F.merge(O, on=["Player", "Year"])
 g = g[(g.has_college == 1) & g.nfl_entry_age.notna() & (g.win3_full == 1)].reset_index(drop=True)
 T = "rb_top34"
@@ -84,7 +84,7 @@ if __name__ == "__main__":
         p, ins, cv = fit(post)
         tag = "POST-DRAFT" if post else "PRE-DRAFT"
         pk = -spearmanr(X.pick, X[T]).correlation
-        print(f"==== RBPI v1 {tag} ====   in-sample {ins:.3f}   LOCO-CV {cv:.3f}"
+        print(f"==== RUPI v1 {tag} ====   in-sample {ins:.3f}   LOCO-CV {cv:.3f}"
               + (f"   (draft pick alone {pk:.3f})" if post else ""))
         print(f"  NFL entry age ............ min({p[1]:.1f}*({p[0]:.1f}-age), {p[2]:.1f})")
         print(f"  Breakout age ............. min({p[4]:.1f}*({p[3]:.1f}-age), {p[5]:.1f})")
@@ -98,5 +98,5 @@ if __name__ == "__main__":
             for pk_ in (1, 5, 10, 20, 32, 50, 75, 100, 150, 220, 260):
                 val = min(p[16] * (pk_ + p[17]) ** (-p[18]), p[19])
                 print(f"        pick {pk_:3d} -> {val:5.1f}")
-        np.save(f"rbpi/data/rbpi_v1_{'post' if post else 'pre'}.npy", p)
+        np.save(f"rupi/data/rupi_v1_{'post' if post else 'pre'}.npy", p)
         print()

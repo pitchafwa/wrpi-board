@@ -6,7 +6,7 @@ import json, os
 import pandas as pd
 
 RAW = "data/cfbd_raw"
-OUT = "rbpi/data"
+OUT = "rupi/data"
 os.makedirs(OUT, exist_ok=True)
 YEARS = range(2011, 2028)
 

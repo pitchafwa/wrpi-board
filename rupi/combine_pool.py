@@ -7,7 +7,7 @@ import re, unicodedata
 import numpy as np, pandas as pd
 from rb_feature_lib import norm, add_athletic_percentiles
 
-RD = "rbpi/data/"
+RD = "rupi/data/"
 WB = "data/"
 
 drafted = pd.read_csv(RD + "features_rb.csv")

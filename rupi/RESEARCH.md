@@ -1,4 +1,4 @@
-# RBPI — research & design (Running Back Prospect Indicator)
+# RUPI — research & design (Running Back Prospect Indicator)
 
 Analog to WRPI. Goal: predict dynasty-fantasy production for RB prospects, pre- and
 post-draft, plus star + diamond flags. This doc = the research phase + the design
@@ -51,7 +51,7 @@ Ranked roughly by consensus strength:
     free at the college level. Backlog.
 13. **Elusiveness — missed tackles forced/att, yards after contact** — strong in
     PFF's model (bottom-15th-pct MTF ⇒ 1 of 56 hit top-12) but **PFF-College
-    only, not free**. This is RBPI's analog to WRPI's "no separation data" gap.
+    only, not free**. This is RUPI's analog to WRPI's "no separation data" gap.
     Proxy pre-draft with PPA-per-play + explosive-run rate if buildable.
 
 ## 2. Dynasty RB valuation — how RBs differ from WRs
@@ -110,14 +110,14 @@ Interpretable additive model: component ramps/bands + a power-law draft-capital
 curve, fit with `differential_evolution`, objective = mean LOCO (leave-one-class-
 out) Spearman. Windows guard (`__main__` + workers=1) — WRPI lesson.
 
-- **Pre-draft RBPI** (talent read, no draft capital): scrimmage dominator,
+- **Pre-draft RUPI** (talent read, no draft capital): scrimmage dominator,
   breakout age, entry age, receiving-role score (rec-yd share / rec share),
   athletic explosion (speed score + burst), production volume (best scrimmage
   yds), competition (SP+/P5). Age penalties steeper than WRPI.
-- **Post-draft RBPI** (topline): draft-capital power-law curve + a small
+- **Post-draft RUPI** (topline): draft-capital power-law curve + a small
   college/receiving efficiency term, tuned to roughly tie draft capital alone —
   same philosophy Tommy chose for WRPI. Report the weights, set as topline.
-- **Star flag** — empirically pick the RBPI percentile where genuine league-winner
+- **Star flag** — empirically pick the RUPI percentile where genuine league-winner
   signal kicks in (WRPI used 95th; will re-derive for RB — likely similar or a
   touch lower given fewer elite RB seasons).
 - **Diamond flag** — heavily-regularized weighted index over indicators for RBs

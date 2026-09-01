@@ -3,7 +3,7 @@
 **Status: IMPLEMENTED 2026-09-01** (below is the plan as built). Files:
 `.github/workflows/update.yml`, `.github/workflows/refit-review.yml`,
 `run_pipeline.sh`, `should_run.py`, `fetch_weekly.py`, `data/draft_dates.json`,
-`refit_compare.py`, and the RB pipeline relocated into `rbpi/`. The board JSON is
+`refit_compare.py`, and the RB pipeline relocated into `rupi/`. The board JSON is
 committed by the scheduled job; `deploy.yml` publishes. Nothing runs on a real
 schedule until the first cron fires — trigger `update.yml` manually
 (`workflow_dispatch`, `force: true`) to smoke-test end to end.
@@ -26,10 +26,10 @@ scheduled job **never touches them**:
 | Model | Frozen params |
 |---|---|
 | WRPI | `data/wrpi_v2_params_{pre,post}.json`, `data/wrpi_tiebreaker.json`, `data/wrpi_diamond.json`, `data/wrpi_reference.json` |
-| RBPI | `data/rbpi_v1_params_{pre,post}.json`, `data/rbpi_diamond.json`, reference distribution baked into `score_rbpi.py` |
+| RUPI | `data/rupi_v1_params_{pre,post}.json`, `data/rupi_diamond.json`, reference distribution baked into `score_rupi.py` |
 
 The job only re-pulls raw feeds → rebuilds feature tables → re-scores with those
-frozen params → regenerates `dashboard/scores.json` + `dashboard/rbpi_scores.json`
+frozen params → regenerates `dashboard/scores.json` + `dashboard/rupi_scores.json`
 → commits. `deploy.yml` (already live) publishes on that push.
 
 Net effect: the board always reflects the newest data available (combine numbers,
@@ -91,7 +91,7 @@ The raw feeds already carry upcoming classes:
    any CFBD-search supplement. After the real draft, some pool members have no
    pick. Instead of dropping them, we mark them `pick = 270`, `is_udfa = 1`,
    `udfa_type = "projected"` and keep them on the board: their pre-draft
-   RBPI/WRPI is intact, and their post-draft score is computed with the pick-270
+   RUPI/WRPI is intact, and their post-draft score is computed with the pick-270
    draft-capital value (≈0) — correctly reflecting "the model liked him, the
    league didn't." This is only 3–5 backs a year (the projected pool is already
    draftable-caliber, not a sleeper dump), so it's low-noise, and the ◆ diamond
@@ -122,7 +122,7 @@ hands you a decision:
 1. Extends the training window to include the newest class that now has a mature
    outcome window (WR/RB both need 3 completed NFL seasons). E.g. mid-Aug 2027 →
    the 2024 class has 3 seasons, so the window goes 2015–2023 → 2015–2024.
-2. Re-runs `fit_wrpi_v2.py`, `fit_rbpi.py`, `fit_rbpi_pre2.py` on that window.
+2. Re-runs `fit_wrpi_v2.py`, `fit_rupi.py`, `fit_rupi_pre2.py` on that window.
 3. Computes the gate:
    - LOCO-CV Spearman within ~0.02 of the frozen model (no degradation), and
    - no weight lurch — no sign flips, no >2× scale change on a major term,
@@ -152,8 +152,8 @@ matter much." It's insurance.
 ## 5. Implementation checklist (my next work session, on your go)
 
 1. **Relocate the RB scripts into the repo.** They currently live in
-   `PSI-reverse-engineering/rbpi/` with absolute paths. Move to
-   `wrpi-board/rbpi/` (or fold into the main dir) and switch to repo-relative paths.
+   `PSI-reverse-engineering/rupi/` with absolute paths. Move to
+   `wrpi-board/rupi/` (or fold into the main dir) and switch to repo-relative paths.
 2. **Rewrite `update.yml`** (currently `update.yml.disabled`; the existing one is a
    stale v1 scaffold). New job:
    - `fetch_sources.py` — nflverse + array-carpenter feeds
@@ -164,8 +164,8 @@ matter much." It's insurance.
      `build_features_rb_udfa.py` + `combine_pool.py` (RB)
    - Outcomes — `build_outcomes.py` (WR), `build_outcomes_rb.py` (RB) for the
      calibration tables
-   - Score — `score_v2.py` → `dashboard/scores.json`; `score_rbpi.py` →
-     `dashboard/rbpi_scores.json` (remove its current dev-only absolute-path copy)
+   - Score — `score_v2.py` → `dashboard/scores.json`; `score_rupi.py` →
+     `dashboard/rupi_scores.json` (remove its current dev-only absolute-path copy)
    - Commit refreshed `dashboard/*.json` + `data/*_database.csv`
    - `deploy.yml` publishes the push
 3. ~~Set the `CFBD_KEY` repo secret~~ — **done (you added it).**
@@ -202,10 +202,10 @@ matter much." It's insurance.
 Each scheduled run regenerates files and commits them back to the repo. What
 should it commit?
 
-- **The board JSON** (`dashboard/scores.json`, `dashboard/rbpi_scores.json`) —
+- **The board JSON** (`dashboard/scores.json`, `dashboard/rupi_scores.json`) —
   the only files the website reads. Must be committed. Small; each diff is
   basically "these players' numbers moved."
-- **The summary tables** (`data/wrpi_database.csv`, `data/rbpi_database.csv`) —
+- **The summary tables** (`data/wrpi_database.csv`, `data/rupi_database.csv`) —
   one row per player: their scores + the key inputs, human-readable. The site
   doesn't use them, but if you ever ask "why did player X's score change between
   April and May," you diff these two files and see exactly which input moved.

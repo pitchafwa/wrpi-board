@@ -1,4 +1,4 @@
-"""Shared per-player feature builder for RBPI, used by both the drafted-pool
+"""Shared per-player feature builder for RUPI, used by both the drafted-pool
 and UDFA-supplement builders so the logic (and any future fixes) lives once."""
 import re, unicodedata
 import numpy as np, pandas as pd

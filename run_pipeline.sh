@@ -2,42 +2,42 @@
 # Full data refresh + score, shared by update.yml and refit-review.yml.
 # Assumes cwd = repo root and CFBD_KEY is set. Does NOT commit anything.
 set -euo pipefail
+step() { echo "::endgroup::"; echo "::group::[$(date -u +%H:%M:%S)] $*"; }
+echo "::group::start"
 
-echo "::group::nflverse feeds"
+step "fetch_sources.py"
 python fetch_sources.py
+step "fetch_weekly.py"
 python fetch_weekly.py
-echo "::endgroup::"
 
-echo "::group::CollegeFootballData feeds"
-# cold-start seed: if the Actions cache missed, unpack the committed raw-JSON
-# snapshot so a CFBD outage can't stop a fresh runner. cfbd_get.cached() then
-# only calls the API for years not already on disk.
+step "seed data/cfbd_raw/ if the Actions cache missed"
 if [ ! -d data/cfbd_raw ] || [ -z "$(ls -A data/cfbd_raw 2>/dev/null)" ]; then
-  echo "seeding data/cfbd_raw/ from committed snapshot"
-  mkdir -p data && tar xzf data/cfbd_raw.tgz -C data
+  mkdir -p data && tar xzf data/cfbd_raw.tgz -C data && echo "unpacked snapshot"
+else
+  echo "cache present"
 fi
-# a live-API hiccup just means we build on the cached raw JSON.
+step "build_cfbd.py"
 python build_cfbd.py        || echo "WARNING: build_cfbd.py failed - using cached raw JSON"
+step "build_cfbd_extra.py"
 python build_cfbd_extra.py  || echo "WARNING: build_cfbd_extra.py failed - using cached raw JSON"
+step "build_cfbd_extra2.py"
 python build_cfbd_extra2.py || echo "WARNING: build_cfbd_extra2.py failed - using cached raw JSON"
-# hard-stop if the core college table is missing entirely (no cache + API down)
 test -s data/cfbd_player_seasons.csv || { echo "FATAL: data/cfbd_player_seasons.csv not produced"; exit 1; }
-echo "::endgroup::"
 
-echo "::group::WRPI build + score"
+step "WRPI: build_pool -> build_features_v3 -> build_outcomes -> score_v2"
 python build_pool.py
 python build_features_v3.py
 python build_outcomes.py
 python score_v2.py
-echo "::endgroup::"
 
-echo "::group::RBPI build + score"
-python rbpi/build_cfbd_rb.py
-python rbpi/rebuild_ppa_usage.py
-python rbpi/build_features_rb2.py
-python rbpi/build_features_rb_udfa.py
-python rbpi/build_features_rb_projected_udfa.py
-python rbpi/build_outcomes_rb.py
-python rbpi/combine_pool.py
-python rbpi/score_rbpi.py
+step "RUPI: cfbd_rb -> ppa_usage -> features -> outcomes -> combine -> score"
+python rupi/build_cfbd_rb.py
+python rupi/rebuild_ppa_usage.py
+python rupi/build_features_rb2.py
+python rupi/build_features_rb_udfa.py
+python rupi/build_features_rb_projected_udfa.py
+python rupi/build_outcomes_rb.py
+python rupi/combine_pool.py
+python rupi/score_rupi.py
 echo "::endgroup::"
+echo "[$(date -u +%H:%M:%S)] pipeline done"

@@ -11,8 +11,8 @@ import json, sys
 import numpy as np, pandas as pd
 from scipy.stats import spearmanr
 
-sys.path.insert(0, "rbpi")
-import rbpi_score_v1 as RB
+sys.path.insert(0, "rupi")
+import rupi_score_v1 as RB
 import wrpi_score_v2 as WR
 
 LINES = ["# Annual refit review\n"]
@@ -54,10 +54,10 @@ def section(name, old, new, dfX, ycol, raw_fn, labels):
 
 all_ok = True
 
-# ---------- RBPI ----------
+# ---------- RUPI ----------
 try:
-    d = pd.read_csv("rbpi/data/features_rb_all.csv").merge(
-        pd.read_csv("rbpi/data/rb_outcomes_all.csv").drop(columns=["pick"]), on=["Player", "Year"])
+    d = pd.read_csv("rupi/data/features_rb_all.csv").merge(
+        pd.read_csv("rupi/data/rb_outcomes_all.csv").drop(columns=["pick"]), on=["Player", "Year"])
     d = d[(d.has_college == 1) & d.nfl_entry_age.notna() & (d.win3_full == 1)].reset_index(drop=True)
     ypc = (d.career_ypc - d.career_ypc.median()) / d.career_ypc.std()
     ppa = (d.avg_ppa - d.avg_ppa.median()) / d.avg_ppa.std()
@@ -74,14 +74,14 @@ try:
              "dom scale", "dom cap", "rec scale", "rec cap", "eff scale", "eff cap",
              "expl scale", "expl cap", "yds scale", "yds cap"]
     POST_L = PRE_L + ["cap A", "cap c", "cap k", "cap max"]
-    o_pre = json.load(open("rbpi/data/rbpi_v1_params_pre.json"))["params"]
-    o_post = json.load(open("rbpi/data/rbpi_v1_params_post.json"))["params"]
-    n_pre = np.load("rbpi/data/rbpi_v1_pre.npy").tolist()
-    n_post = np.load("rbpi/data/rbpi_v1_post.npy").tolist()
-    all_ok &= section("RBPI pre-draft", o_pre, n_pre, X, "rb_top34", RB.raw_pre, PRE_L)
-    all_ok &= section("RBPI post-draft", o_post, n_post, X, "rb_top34", RB.raw_post, POST_L)
+    o_pre = json.load(open("rupi/data/rupi_v1_params_pre.json"))["params"]
+    o_post = json.load(open("rupi/data/rupi_v1_params_post.json"))["params"]
+    n_pre = np.load("rupi/data/rupi_v1_pre.npy").tolist()
+    n_post = np.load("rupi/data/rupi_v1_post.npy").tolist()
+    all_ok &= section("RUPI pre-draft", o_pre, n_pre, X, "rb_top34", RB.raw_pre, PRE_L)
+    all_ok &= section("RUPI post-draft", o_post, n_post, X, "rb_top34", RB.raw_post, POST_L)
 except Exception as e:
-    LINES.append(f"\n## RBPI\n\n_skipped: {e!r}_\n")
+    LINES.append(f"\n## RUPI\n\n_skipped: {e!r}_\n")
 
 # ---------- WRPI ----------
 try:

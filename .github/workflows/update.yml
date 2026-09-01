@@ -20,6 +20,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     env:
       CFBD_KEY: ${{ secrets.CFBD_KEY }}
     steps:
@@ -54,8 +55,8 @@ jobs:
           date -u +%Y-%m-%d > data/.last_pipeline_run
           git config user.name  "board-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add dashboard/scores.json dashboard/rbpi_scores.json \
-                  data/wrpi_database.csv rbpi/out/rbpi_database.csv \
+          git add dashboard/scores.json dashboard/rupi_scores.json \
+                  data/wrpi_database.csv rupi/out/rupi_database.csv \
                   data/pool_2023_2025.csv data/.last_pipeline_run
           git commit -m "chore: refresh board ($(date -u +%Y-%m-%d))" || { echo "no changes"; exit 0; }
           git push

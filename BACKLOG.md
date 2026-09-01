@@ -5,13 +5,13 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
 
 ## Priority
 
-- **CFBD usage / recruiting / PPA data audit (WRPI)** — while building RBPI
+- **CFBD usage / recruiting / PPA data audit (WRPI)** — while building RUPI
   (2026-09-01) found that `data/cfbd_ppa.csv`, `data/cfbd_usage.csv`, and
   `data/cfbd_recruiting.csv` are **silently truncated** — an old build script
   dropped ~40% of rows (Saquon Barkley and most RBs missing entirely; blue-chip
   recruits like Barkley/Bijan/Gurley/Gibbs absent from the recruiting file).
-  RBPI rebuilt clean copies from the cached raw JSON
-  (`PSI-reverse-engineering/rbpi/rebuild_ppa_usage.py` → `cfbd_*_full.csv`).
+  RUPI rebuilt clean copies from the cached raw JSON
+  (`PSI-reverse-engineering/rupi/rebuild_ppa_usage.py` → `cfbd_*_full.csv`).
   WRPI's `build_features_v3.py` reads the degraded originals, so `final_ppa` /
   `avg_ppa` / `best_usage` / `recruit_stars` / `prod_over_recruit` are likely
   blanked for a meaningful share of WRs. **Action:** point WRPI at rebuilt
@@ -26,14 +26,14 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
 
 ## Data / model (bigger swings)
 
-- **PFF College** (~$40/mo) — **for BOTH WRPI and RBPI, grab in one pass.**
+- **PFF College** (~$40/mo) — **for BOTH WRPI and RUPI, grab in one pass.**
   - WR: YPRR, contested-catch %, separation, drop rate, PFF grade, slot rate.
     Highest ceiling for real predictive gain; the CFBD PPA proxy is still a top-3
     signal.
   - RB: missed tackles forced / attempt, yards after contact / attempt, elusive
     rating, PFF rushing/receiving grade, YPRR, performance vs stacked boxes.
     PFF's own RB model leans hardest on MTF/att (bottom-15th-pct MTF → 1 of 56
-    hit top-12). RBPI currently proxies this with CFBD PPA + YPC only.
+    hit top-12). RUPI currently proxies this with CFBD PPA + YPC only.
   - Plan: one subscription month, pull both position histories, re-fit both
     models, ship only the components whose LOCO-CV improves. Held for cost.
 - **Curated "available targets / air yards" opportunity** — the mechanical version
@@ -64,7 +64,7 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
   last resort. Need per-season rushing/receiving + team totals to compute
   dominator; even partial (career totals only) would beat a blank profile.
 
-## RBPI-specific
+## RUPI-specific
 
 - **Head-to-head tiebreaker for RB** — logistic-on-feature-diffs for RBs drafted
   within ~20 picks, same as WRPI's tool. Deferred for now (2026-09-01). Build
@@ -83,14 +83,14 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
 - **Auto-update CI** — rebuild `update.yml` for the v2 pipeline so the board
   refreshes itself. Held until the model/feature set is settled.
 
-## RBPI rollout (in progress 2026-09-01)
+## RUPI rollout (in progress 2026-09-01)
 
-- Model built (`PSI-reverse-engineering/rbpi/`): pre-draft CV 0.43, post-draft
+- Model built (`PSI-reverse-engineering/rupi/`): pre-draft CV 0.43, post-draft
   CV 0.71 (beats pick-alone 0.68), star + diamond + low-conf flags, UDFA
-  supplement. See `rbpi/MODEL.md`.
-- **In progress:** profile-similarity comps for RBPI + a separate **RB tab** on
+  supplement. See `rupi/MODEL.md`.
+- **In progress:** profile-similarity comps for RUPI + a separate **RB tab** on
   this board (built to mirror the WR tab for consistency).
-- Then: wire RBPI into the data/deploy pipeline.
+- Then: wire RUPI into the data/deploy pipeline.
 
 ## Done (recent)
 
