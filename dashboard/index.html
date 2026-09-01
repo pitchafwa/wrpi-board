@@ -8,67 +8,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
 <style>
-  :root{
-    --paper:#f3f5f7;--surface:#fff;--surface-2:#eef1f4;--ink:#171d24;--ink-soft:#55606c;
+  :root{--paper:#f3f5f7;--surface:#fff;--surface-2:#eef1f4;--ink:#171d24;--ink-soft:#55606c;
     --ink-faint:#8a939d;--line:#dde2e8;--line-strong:#c6cdd5;--accent:#a9741f;
-    --good:#2f7d5d;--warn:#b1472f;--t-hi:#2f7d5d;--t-mid:#a9741f;--t-lo:#8a939d;
-  }
+    --good:#2f7d5d;--warn:#b1472f;--t-hi:#2f7d5d;--t-mid:#a9741f;--t-lo:#8a939d;--diamond:#3a86c8;--star:#d9a520}
   @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
     --paper:#0f1318;--surface:#171d24;--surface-2:#1e252d;--ink:#e2e6ea;--ink-soft:#97a2ad;
     --ink-faint:#6c7680;--line:#2a323b;--line-strong:#39434e;--accent:#d69a3f;
-    --good:#4ea883;--warn:#d3694c;--t-hi:#4ea883;--t-mid:#d69a3f;--t-lo:#6c7680;
-  }}
-  :root[data-theme="dark"]{
-    --paper:#0f1318;--surface:#171d24;--surface-2:#1e252d;--ink:#e2e6ea;--ink-soft:#97a2ad;
+    --good:#4ea883;--warn:#d3694c;--t-hi:#4ea883;--t-mid:#d69a3f;--t-lo:#6c7680;--diamond:#5aa0dd;--star:#e8bf4a}}
+  :root[data-theme="dark"]{--paper:#0f1318;--surface:#171d24;--surface-2:#1e252d;--ink:#e2e6ea;--ink-soft:#97a2ad;
     --ink-faint:#6c7680;--line:#2a323b;--line-strong:#39434e;--accent:#d69a3f;
-    --good:#4ea883;--warn:#d3694c;--t-hi:#4ea883;--t-mid:#d69a3f;--t-lo:#6c7680;
-  }
+    --good:#4ea883;--warn:#d3694c;--t-hi:#4ea883;--t-mid:#d69a3f;--t-lo:#6c7680;--diamond:#5aa0dd;--star:#e8bf4a}
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1240px;margin:0 auto;padding:2rem clamp(.7rem,3vw,2rem) 4rem}
+  .wrap{max-width:1260px;margin:0 auto;padding:2rem clamp(.7rem,3vw,2rem) 4rem}
   h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 .15rem}
-  h2{font-family:"Zilla Slab",serif;font-size:1.15rem;margin:2.4rem 0 .6rem}
-  .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:1.3rem;max-width:64ch}
+  .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:1.3rem;max-width:66ch}
   a{color:var(--accent)}
-  .statbar{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;padding:1rem 1.2rem;background:var(--surface);
-    border:1px solid var(--line);border-radius:10px;margin-bottom:1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--ink-soft)}
+  .statbar{display:flex;flex-wrap:wrap;gap:1.1rem 1.9rem;padding:1rem 1.2rem;background:var(--surface);
+    border:1px solid var(--line);border-radius:10px;margin-bottom:1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--ink-soft)}
   .statbar b{display:block;font:600 1.1rem/1 "IBM Plex Sans",sans-serif;color:var(--ink);letter-spacing:-.01em}
 
   .h2h{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin-bottom:1.6rem}
+  .h2h .eye{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
   .h2h .row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
-  .h2h select{flex:1;min-width:180px;padding:.5rem .6rem;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface-2);color:var(--ink);font:inherit;font-size:.86rem}
+  .h2h input{flex:1;min-width:190px;padding:.5rem .6rem;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface-2);color:var(--ink);font:inherit;font-size:.86rem}
   .h2h .vs{font-family:"IBM Plex Mono",monospace;color:var(--ink-faint);font-size:.8rem}
   .h2h .result{margin-top:1rem;display:none}
   .probbar{height:30px;border-radius:8px;overflow:hidden;display:flex;font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500}
-  .probbar .a{background:color-mix(in srgb,var(--good) 30%,transparent);color:var(--ink);display:flex;align-items:center;padding:0 .6rem}
-  .probbar .b{background:color-mix(in srgb,var(--warn) 30%,transparent);color:var(--ink);display:flex;align-items:center;justify-content:flex-end;padding:0 .6rem;margin-left:auto}
-  .edges{display:grid;grid-template-columns:1fr 1fr;gap:.3rem 1.2rem;margin-top:.8rem;font-size:.8rem}
-  .edges .e{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace}
-  .edges .e b{color:var(--accent)}
+  .probbar .a{background:color-mix(in srgb,var(--good) 32%,transparent);color:var(--ink);display:flex;align-items:center;padding:0 .6rem;white-space:nowrap}
+  .probbar .b{background:color-mix(in srgb,var(--warn) 32%,transparent);color:var(--ink);display:flex;align-items:center;justify-content:flex-end;padding:0 .6rem;margin-left:auto;white-space:nowrap}
+  .edges{display:grid;grid-template-columns:1fr 1fr;gap:.25rem 1.4rem;margin-top:.8rem;font-size:.8rem}
+  .edges .e{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;gap:.6rem}
+  .edges .e b{white-space:nowrap}
 
-  .controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.4rem}
+  .controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.4rem;align-items:center}
   .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden}
-  .seg button{border:0;background:var(--surface);color:var(--ink-soft);padding:.42rem .75rem;font:inherit;font-size:.8rem;cursor:pointer}
+  .seg button{border:0;background:var(--surface);color:var(--ink-soft);padding:.42rem .72rem;font:inherit;font-size:.8rem;cursor:pointer}
   .seg button+button{border-left:1px solid var(--line)}
   .seg button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:600}
+  .hint{font-size:.72rem;color:var(--ink-faint);font-family:"IBM Plex Mono",monospace}
   input[type=search]{flex:1;min-width:150px;padding:.42rem .7rem;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:.84rem}
-  .legend{font-size:.78rem;color:var(--ink-faint);margin:.2rem 0 1rem;line-height:1.6}
-  .legend b{color:var(--ink-soft)}
+  .legend{font-size:.78rem;color:var(--ink-faint);margin:.2rem 0 1rem;line-height:1.65}
+  .legend b{color:var(--ink-soft)} .legend .dia{color:var(--diamond)} .legend .st{color:var(--star)}
 
   .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
   table{border-collapse:collapse;width:100%;font-size:.84rem}
-  th,td{padding:.55rem .65rem;text-align:right;white-space:nowrap;border-top:1px solid var(--line)}
+  th,td{padding:.55rem .6rem;text-align:right;white-space:nowrap;border-top:1px solid var(--line)}
   th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}
   thead th{position:sticky;top:0;background:var(--surface-2);border-top:0;font-family:"IBM Plex Mono",monospace;
     font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;cursor:pointer;user-select:none}
   thead th.sorted::after{content:" ▾";color:var(--accent)}
   thead th.sorted.asc::after{content:" ▴"}
-  tbody tr{cursor:pointer}
-  tbody tr:hover{background:var(--surface-2)}
+  tbody tr{cursor:pointer} tbody tr:hover{background:var(--surface-2)}
   td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
   .tier{display:inline-block;min-width:1.5rem;text-align:center;font-family:"IBM Plex Mono",monospace;font-weight:500;padding:.08rem .3rem;border-radius:4px;font-size:.76rem}
-  .bar{position:relative;height:6px;background:var(--surface-2);border-radius:99px;min-width:52px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:.35rem}
-  .bar>span{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--accent)}
+  .wr{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+  .wr .n{font-family:"IBM Plex Mono",monospace;font-weight:500}
+  .wr .b{position:relative;height:4px;width:64px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+  .wr .b>span{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:99px}
+  .wr .p{font-size:.66rem;color:var(--ink-faint);font-family:"IBM Plex Mono",monospace}
+  .ic{margin-left:.3rem;font-size:.85rem}
   .detail td{background:var(--surface-2);border-top:0;white-space:normal}
   .comps{display:flex;flex-wrap:wrap;gap:.4rem;padding:.3rem 0}
   .comp{font-family:"IBM Plex Mono",monospace;font-size:.73rem;padding:.2rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
@@ -81,18 +80,21 @@
 <body>
 <div class="wrap">
   <h1>WRPI Board</h1>
-  <div class="sub">Wide Receiver Prospect Indicator — fitted to actual fantasy production
-    (best 3 of a player's first 5 seasons, PPR points per game). The <b>post-draft</b> score is the
-    topline; it tracks draft capital by design and ties it in accuracy. The <b>pre-draft</b> score is
-    the pre-NFL-draft talent read. The <b>head-to-head</b> tool is where the model has a real edge.</div>
+  <div class="sub">Wide Receiver Prospect Indicator, fitted to actual fantasy production (best 3 of a
+    player's first 5 seasons, PPR points per game). <b>Post-draft</b> is the topline and tracks draft
+    capital by design. <b>Pre-draft</b> is the pre-NFL-draft talent read. <span class="legend"><b class="dia">◆</b> diamond in the rough,
+    <b class="st">★</b> star-potential profile.</span></div>
 
   <div class="statbar" id="statbar"></div>
 
   <div class="h2h">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem">Head-to-head — which rookie WR?</div>
+    <div class="eye">Head-to-head — which rookie WR?</div>
     <div class="row">
-      <select id="pA"></select><span class="vs">vs</span><select id="pB"></select>
+      <input id="pA" list="plist" placeholder="type player A…" autocomplete="off" />
+      <span class="vs">vs</span>
+      <input id="pB" list="plist" placeholder="type player B…" autocomplete="off" />
     </div>
+    <datalist id="plist"></datalist>
     <div class="result" id="h2hResult">
       <div class="probbar"><div class="a" id="barA"></div><div class="b" id="barB"></div></div>
       <div class="note" id="h2hNote"></div>
@@ -102,59 +104,64 @@
 
   <div class="controls">
     <div class="seg" id="segCls">
-      <button data-v="all" aria-pressed="true">All classes</button>
+      <button data-v="all" aria-pressed="true">All</button>
       <button data-v="2026">2026</button><button data-v="2025">2025</button>
       <button data-v="2024">2024</button><button data-v="2023">2023</button>
-      <button data-v="hist">2015–22</button>
+      <button data-v="2022">2022</button><button data-v="2021">2021</button><button data-v="2020">2020</button>
+      <button data-v="2019">2019</button><button data-v="2018">2018</button><button data-v="2017">2017</button>
+      <button data-v="2016">2016</button><button data-v="2015">2015</button>
     </div>
+    <span class="hint">click a year · ctrl/⌘-click to add more</span>
+    <input type="search" id="q" placeholder="filter by name…" />
     <div class="seg" id="segScore">
-      <button data-v="post" aria-pressed="true">Post-draft (topline)</button>
+      <button data-v="post" aria-pressed="true">Post-draft</button>
       <button data-v="pre">Pre-draft</button>
     </div>
-    <input type="search" id="q" placeholder="filter by name…" />
   </div>
   <div class="legend" id="legend"></div>
 
   <div class="tablewrap"><table id="tbl"><thead><tr id="hrow"></tr></thead><tbody id="body"></tbody></table></div>
-
   <footer id="foot"></footer>
 </div>
 
 <script>
-let D=null, cls='all', score='post', q='', sort={k:'_s',asc:false}, open=new Set();
-const sig = x => 1/(1+Math.exp(-x));
-const tierColor = t => t>=8?'var(--t-hi)': t>=5?'var(--t-mid)':'var(--t-lo)';
-const TIPS = {
- Player:'WR prospect. Click a row for the component breakdown.',
+let D=null, cls=new Set(['all']), score='post', q='', sort={k:'_s',asc:false}, open=new Set();
+const sig=x=>1/(1+Math.exp(-x));
+const tierColor=t=>t>=8?'var(--t-hi)':t>=5?'var(--t-mid)':'var(--t-lo)';
+const key=x=>x.Player+'|'+x.Year;
+const TIPS={
+ Player:'WR prospect. ◆ = diamond-in-the-rough flag (drafted after round 2, strong underlying profile). ★ = above the 95th-percentile star-potential line for the score shown.',
  Class:'Draft class.',
  Tier:'Decile of the post-draft WRPI percentile (10 = top).',
- 'WRPI':'Percentile of the selected WRPI raw score vs the 2015–2020 reference class.',
- 'H2H':'Head-to-head tiebreaker score. Higher = the model favors this player in a matchup vs a similarly-drafted WR. P(A beats B) = sigmoid(H2H_A − H2H_B).',
- 'Actual':'For 2015–22: the player’s actual fantasy-production percentile (best 3 of first 5 seasons, PPR PPG). Blank for 2023+.',
+ WRPI:'Raw WRPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
+ H2H:'Head-to-head tiebreaker score. Higher = the model favors this player against a similarly-drafted WR. Also drives the tool above.',
+ Dia:'Diamond index — for WRs drafted after round 2, a weighted blend of the indicators that separate the future assets. Top quartile has hit ~15× the bottom.',
+ Actual:'2015–22 only: actual fantasy-production percentile (best 3 of first 5 seasons, PPR PPG). Blank for 2023+.',
  Pick:'Overall draft slot. UDFA = undrafted.',
- Dom:'Best college season’s share of team receiving (yards + TD).',
- 'Eff':'Final college season efficiency — CFBD PPA (points added per play). The model’s #2 signal.',
- 'Age':'Age on Jan 1 of the draft year. Younger is better.',
- 'Expl':'Athletic explosion percentile (vertical + broad + speed score).',
-};
-function cols(){
- return [
-  {k:'Player',t:'Player',s:'str'},
-  {k:'Year',t:'Class',s:'num'},
-  {k:'tier',t:'Tier',s:'num'},
-  {k:'_s',t:'WRPI',s:'num'},
-  {k:'tb_score',t:'H2H',s:'num',fmt:v=>v.toFixed(2)},
-  {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
-  {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
-  {k:'best_dom',t:'Dom',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)+'%'},
-  {k:'final_ppa',t:'Eff',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
-  {k:'nfl_entry_age',t:'Age',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
-  {k:'explosion_p',t:'Expl',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)},
- ];
-}
-function inCls(d){ if(cls==='all')return true; if(cls==='hist')return d.Year<=2022; return String(d.Year)===cls; }
+ Dom:'Best college season share of team receiving (yards + TD).',
+ Eff:'Final college-season efficiency — CFBD PPA (points added per play).',
+ Age:'Age on Jan 1 of the draft year. Younger is better.',
+ Expl:'Athletic explosion percentile (vertical + broad + speed score).'};
+function cols(){return [
+ {k:'Player',t:'Player',s:'str'},
+ {k:'Year',t:'Class',s:'num'},
+ {k:'tier',t:'Tier',s:'num'},
+ {k:'_s',t:'WRPI',s:'num'},
+ {k:'diamond_score',t:'Dia',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
+ {k:'tb_score',t:'H2H',s:'num',fmt:v=>v.toFixed(2)},
+ {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
+ {k:'pick',t:'Pick',s:'num',fmt:v=>v>=260?'UDFA':v},
+ {k:'best_dom',t:'Dom',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)+'%'},
+ {k:'final_ppa',t:'Eff',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
+ {k:'nfl_entry_age',t:'Age',s:'num',fmt:v=>v==null?'—':v.toFixed(1)},
+ {k:'explosion_p',t:'Expl',s:'num',fmt:v=>v==null?'—':(v*100).toFixed(0)},
+];}
+function inCls(d){ if(cls.has('all'))return true; return cls.has(String(d.Year)); }
 function view(){
- let r=D.scored.filter(inCls).map(d=>({...d,_s: score==='pre'?d.wrpi_pre:d.wrpi_post}));
+ let r=D.scored.filter(inCls).map(d=>({...d,
+   _s: score==='pre'?d.wrpi_pre:d.wrpi_post,
+   _raw: score==='pre'?d.raw_pre:d.raw_post,
+   _star: score==='pre'?d.is_star_pre:d.is_star_post}));
  if(q) r=r.filter(d=>d.Player.toLowerCase().includes(q));
  const C=cols().find(c=>c.k===sort.k)||{s:'num'};
  r.sort((a,b)=>{let x=a[sort.k],y=b[sort.k]; if(x==null)return 1; if(y==null)return -1;
@@ -168,80 +175,104 @@ function render(){
  body.innerHTML='';
  view().forEach(d=>{
   const tr=document.createElement('tr');
+  const rawRef = score==='pre'?D.model.raw_ref:D.model.raw_ref;
   tr.innerHTML=C.map(c=>{
-   if(c.k==='Player') return `<td>${d.Player}</td>`;
+   if(c.k==='Player'){
+     const icons=(d.is_diamond?`<span class="ic" style="color:var(--diamond)" title="diamond in the rough">◆</span>`:'')
+                +(d._star?`<span class="ic" style="color:var(--star)" title="star-potential profile (95th pctl)">★</span>`:'');
+     return `<td>${d.Player}${icons}</td>`;}
    if(c.k==='tier') return `<td class="num"><span class="tier" style="background:color-mix(in srgb,${tierColor(d.tier)} 18%,transparent);color:${tierColor(d.tier)}">${d.tier}</span></td>`;
-   if(c.k==='_s') return `<td class="num">${(d._s*100).toFixed(1)}<span class="bar"><span style="width:${(d._s*100).toFixed(0)}%"></span></span></td>`;
+   if(c.k==='_s') return `<td class="num"><span class="wr"><span class="n">${d._raw.toFixed(1)}</span><span class="b"><span style="width:${(d._s*100).toFixed(0)}%"></span></span><span class="p">${(d._s*100).toFixed(0)}%ile</span></span></td>`;
    const v=d[c.k]; return `<td class="num">${c.fmt?c.fmt(v,d):v}</td>`;
   }).join('');
-  tr.onclick=()=>{const id=d.Player+d.Year; open.has(id)?open.delete(id):open.add(id); render();};
+  tr.onclick=()=>{const id=key(d);open.has(id)?open.delete(id):open.add(id);render();};
   body.appendChild(tr);
-  if(open.has(d.Player+d.Year)){
+  if(open.has(key(d))){
    const dr=document.createElement('tr');dr.className='detail';
    const comps=Object.entries(score==='pre'?d.comp_pre:d.comp_post).map(([k,v])=>`<span class="comp">${k} <b>${v}</b></span>`).join('');
    dr.innerHTML=`<td colspan="${C.length}"><div class="comps">${comps}<span class="comp">= raw <b>${(score==='pre'?d.raw_pre:d.raw_post).toFixed(1)}</b></span></div>
-     <div class="note">post-draft ${(d.wrpi_post*100).toFixed(0)} %ile · pre-draft ${(d.wrpi_pre*100).toFixed(0)} %ile · H2H ${d.tb_score.toFixed(2)}
+     <div class="note">post-draft raw ${d.raw_post.toFixed(1)} (${(d.wrpi_post*100).toFixed(0)} %ile) · pre-draft raw ${d.raw_pre.toFixed(1)} (${(d.wrpi_pre*100).toFixed(0)} %ile) · H2H ${d.tb_score.toFixed(2)}
+     ${d.is_diamond?' · <b style="color:var(--diamond)">diamond in the rough</b>':''}
      ${d.actual_fantasy_pctl!=null?` · actual fantasy ${(d.actual_fantasy_pctl*100).toFixed(0)} %ile`:''}
      ${d.actual_pctl_post!=null?` · original PSI ${(d.actual_pctl_post*100).toFixed(0)}`:''}</div></td>`;
    body.appendChild(dr);
   }
  });
 }
+function findPlayer(txt){
+ txt=(txt||'').trim().toLowerCase(); if(!txt) return null;
+ let m=D.scored.filter(x=>x.Player.toLowerCase()===txt || (x.Player+' ('+x.Year+')').toLowerCase()===txt);
+ if(!m.length) m=D.scored.filter(x=>x.Player.toLowerCase().startsWith(txt));
+ if(!m.length) m=D.scored.filter(x=>x.Player.toLowerCase().includes(txt));
+ m.sort((a,b)=>b.Year-a.Year);
+ return m[0]||null;
+}
 function h2h(){
- const a=D.scored.find(x=>x.Player+'|'+x.Year===pA.value), b=D.scored.find(x=>x.Player+'|'+x.Year===pB.value);
- const R=document.getElementById('h2hResult');
- if(!a||!b||a===b){R.style.display='none';return;}
+ const a=findPlayer(pA.value), b=findPlayer(pB.value), R=document.getElementById('h2hResult');
+ if(!a||!b||key(a)===key(b)){R.style.display='none';return;}
  R.style.display='block';
  const pa=sig(a.tb_score-b.tb_score);
- barA.style.width=(pa*100)+'%'; barA.textContent=a.Player.split(' ').slice(-1)[0]+' '+(pa*100).toFixed(0)+'%';
- barB.textContent=(100-pa*100).toFixed(0)+'% '+b.Player.split(' ').slice(-1)[0];
- const pkgap=Math.abs(a.pick-b.pick);
+ barA.style.width=(pa*100)+'%';
+ barA.textContent=`${a.Player} (${a.Year}) ${(pa*100).toFixed(0)}%`;
+ barB.textContent=`${(100-pa*100).toFixed(0)}% ${b.Player} (${b.Year})`;
+ const g=Math.abs(a.pick-b.pick);
  document.getElementById('h2hNote').textContent =
-   `Model favours ${pa>=.5?a.Player:b.Player} (${(Math.max(pa,1-pa)*100).toFixed(0)}%). `+
-   (pkgap<=20 ? `Drafted ${pkgap} picks apart — this is where the model has been right ~65% of the time.`
-              : `Drafted ${pkgap} picks apart — far enough that draft slot alone already says a lot; treat the lean lightly.`);
- // per-feature edges: model weight * (standardised feature difference)
+  `Model favours ${pa>=.5?a.Player:b.Player} (${(Math.max(pa,1-pa)*100).toFixed(0)}%). `+
+  (g<=20?`Drafted ${g} picks apart — the range where this has been right ~65% of the time.`
+        :`Drafted ${g} picks apart — far enough that draft slot alone already carries a lot; treat the lean lightly.`);
  const W=D.tiebreaker.w;
- const LABEL={best_dom:'college dominator',final_dom:'final-yr dominator',dom_age20:'dominance by age 20',
-   n_seasons_30:'30%+ dominator seasons',best_yds:'best-season yards',career_yds:'career yards',
-   final_ppa:'final-yr efficiency',best_ppa:'peak efficiency',best_usage:'college usage share',
-   nfl_entry_age:'entry age (younger)',breakout_age:'breakout age (younger)',early_declare:'early declare',
-   ras:'athleticism (RAS)',explosion_p:'explosion',speed_score:'speed score',weight:'weight',
-   catch_radius:'catch radius',team_sp_off:'college offense (SP+)',team_sp_overall:'program strength (SP+)',
-   recruit_rating:'recruiting rating',prod_over_recruit:'produced above recruiting',
-   was_returner:'kick/punt returner',ret_td:'return TDs',col_qb_ypa:'college QB quality',
-   final_spike:'final-season spike',dom_growth:'dominator growth'};
+ const LAB={best_dom:'college dominator',final_dom:'final-yr dominator',dom_age20:'dominance by age 20',
+  n_seasons_30:'30%+ dominator seasons',best_yds:'best-season yards',career_yds:'career yards',
+  final_ppa:'final-yr efficiency',best_ppa:'peak efficiency',best_usage:'college usage share',
+  nfl_entry_age:'entry age (younger)',breakout_age:'breakout age (younger)',early_declare:'early declare',
+  ras:'athleticism (RAS)',explosion_p:'explosion',speed_score:'speed score',weight:'weight',
+  catch_radius:'catch radius',team_sp_off:'college offense (SP+)',team_sp_overall:'program strength (SP+)',
+  recruit_rating:'recruiting rating',prod_over_recruit:'produced above recruiting',
+  was_returner:'kick/punt returner',ret_td:'return TDs',col_qb_ypa:'college QB quality',
+  final_spike:'final-season spike',dom_growth:'dominator growth'};
  const contrib=(D.tiebreaker.feats||[]).map(f=>{
-   const za=(a.tbz&&a.tbz[f]!=null)?a.tbz[f]:0, zb=(b.tbz&&b.tbz[f]!=null)?b.tbz[f]:0;
-   const sgn = f.match(/age/) && !f.match(/early_declare/) ? -1 : 1; // younger = better for age fields
-   return {f, d:(W[f]||0)*(za-zb)};
+  const za=(a.tbz&&a.tbz[f]!=null)?a.tbz[f]:0, zb=(b.tbz&&b.tbz[f]!=null)?b.tbz[f]:0;
+  return {f,d:(W[f]||0)*(za-zb)};
  }).filter(x=>Math.abs(x.d)>0.04).sort((x,y)=>Math.abs(y.d)-Math.abs(x.d)).slice(0,8);
  document.getElementById('h2hEdges').innerHTML = contrib.map(x=>{
-   const who = x.d>0 ? a.Player.split(' ').slice(-1)[0] : b.Player.split(' ').slice(-1)[0];
-   return `<div class="e"><span>${LABEL[x.f]||x.f}</span><b style="color:${x.d>0?'var(--good)':'var(--warn)'}">${who}</b></div>`;
+  const who=x.d>0?a.Player:b.Player;
+  return `<div class="e"><span>${LAB[x.f]||x.f}</span><b style="color:${x.d>0?'var(--good)':'var(--warn)'}">${who.split(' ').slice(-1)[0]}</b></div>`;
  }).join('') || '<div class="e" style="color:var(--ink-faint)">profiles look even on the tiebreaker inputs</div>';
 }
 function boot(){
  const m=D.model;
  statbar.innerHTML=`
-  <div><b>${D.scored.length}</b>WR scored · 2015–2026</div>
-  <div><b>${m.post_cv_spearman}</b>post-draft CV Spearman <span style="opacity:.7">(draft pick ${m.pick_alone_spearman})</span></div>
+  <div><b>${D.scored.length}</b>WR · 2015–2026</div>
+  <div><b>${m.post_cv_spearman}</b>post-draft CV Spearman <span style="opacity:.7">(pick ${m.pick_alone_spearman})</span></div>
   <div><b>${m.pre_cv_spearman}</b>pre-draft CV Spearman</div>
-  <div><b>${(m.tiebreaker_loco_acc*100).toFixed(0)}%</b>head-to-head accuracy <span style="opacity:.7">(within ${m.tiebreaker_gap} picks)</span></div>
-  <div><b>${m.reference_n}</b>players in reference</div>`;
- const opts=D.scored.slice().sort((a,b)=>a.Player.localeCompare(b.Player))
-   .map(x=>`<option value="${x.Player}|${x.Year}">${x.Player} (${x.Year})</option>`).join('');
- pA.innerHTML='<option value="">— player A —</option>'+opts;
- pB.innerHTML='<option value="">— player B —</option>'+opts;
- pA.onchange=pB.onchange=h2h;
- ['segCls','segScore'].forEach(id=>document.getElementById(id).querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
-   document.getElementById(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));
-   btn.setAttribute('aria-pressed','true'); if(id==='segCls')cls=btn.dataset.v; else score=btn.dataset.v; render();
- }));
+  <div><b>${(m.tiebreaker_loco_acc*100).toFixed(0)}%</b>head-to-head accuracy <span style="opacity:.7">(≤${m.tiebreaker_gap} picks apart)</span></div>
+  <div><b>${m.diamond.lift5}×</b>diamond-flag hit lift <span style="opacity:.7">(late-round base ${(m.diamond.base_rate*100).toFixed(0)}%)</span></div>`;
+ plist.innerHTML=D.scored.slice().sort((a,b)=>a.Player.localeCompare(b.Player)||b.Year-a.Year)
+   .map(x=>`<option value="${x.Player} (${x.Year})">`).join('');
+ pA.oninput=pB.oninput=h2h;
+ // year multi-select: click sets one; ctrl/meta-click toggles
+ segCls.querySelectorAll('button').forEach(btn=>btn.onclick=e=>{
+  const v=btn.dataset.v;
+  if(v==='all'){ cls=new Set(['all']); }
+  else if(e.ctrlKey||e.metaKey){ cls.delete('all'); cls.has(v)?cls.delete(v):cls.add(v); if(!cls.size)cls.add('all'); }
+  else { cls=new Set([v]); }
+  segCls.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', cls.has(b.dataset.v)?'true':'false'));
+  render();
+ });
+ segScore.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+  segScore.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true'); score=btn.dataset.v; render(); setLegend();
+ });
  document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();render();};
- legend.innerHTML=`Hover any header for its meaning. <b>Post-draft</b> ≈ a proper draft-capital curve + a small final-season-efficiency bump — it ties draft pick in accuracy and is the official WRPI. <b>Pre-draft</b> leans on efficiency, raw production, athleticism and age. <b>H2H</b> is the tiebreaker: use it when choosing between two rookies drafted close together.`;
- foot.innerHTML=`updated ${D.generated.replace('T',' ')} UTC · WRPI v2 fitted to ${m.target} · inputs: nflverse · CollegeFootballData · FantasyPros consensus · <a href="https://github.com/pitchafwa/wrpi-board">source</a>`;
- render();
+ setLegend(); render();
+}
+function setLegend(){
+ legend.innerHTML=`Hover any header for its meaning. <b>WRPI</b> shows the raw score with its percentile.
+ <b class="st">★</b> = ${score==='pre'?'pre':'post'}-draft WRPI at or above the 95th percentile — the line where star signal
+ becomes real (${score==='pre'?'33% of these posted a WR1 season, 67% at least solid':'~64% at least solid'}).
+ <b class="dia">◆</b> = drafted after round 2 but with a diamond-in-the-rough profile (multiple dominant college seasons,
+ big plays, early declare, full athletic workout). <b>H2H</b> is the head-to-head tiebreaker — use it and the tool above
+ when choosing between two rookies drafted close together.`;
 }
 fetch('scores.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;boot();})
  .catch(e=>document.body.innerHTML=`<div class="err">Could not load scores.json — serve over HTTP (python -m http.server), not file://<br><br>${e}</div>`);

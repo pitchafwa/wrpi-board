@@ -30,6 +30,8 @@ for c in ["nfl_age", "ppa", "expl", "yds", "dom"]:
 pp = json.load(open("data/wrpi_v2_params_pre.json"))["params"]
 qq = json.load(open("data/wrpi_v2_params_post.json"))["params"]
 tb = json.load(open("data/wrpi_tiebreaker.json"))
+dm = json.load(open("data/wrpi_diamond.json"))
+STAR_PCTL = 0.95
 
 # reference distribution = the 2015-2020 classes (full 5-yr outcome window used to fit)
 ref_pool = d[d.Year.between(2015, 2020)]
@@ -42,6 +44,21 @@ d["wrpi_pre"]  = W.to_percentile(d["raw_pre"], ref_pre)
 d["wrpi_post"] = W.to_percentile(d["raw_post"], ref_post)
 d["tier"] = np.ceil(d["wrpi_post"] * 10).clip(1, 10).astype(int)
 d["tb_score"] = W.tiebreaker_score(tb, d)
+
+# ---- diamond-in-the-rough index (WRs drafted after ~round 2) ----
+dsc = np.zeros(len(d))
+for f, sgn in dm["ind"].items():
+    v = pd.to_numeric(d.get(f), errors="coerce")
+    v = v.fillna(dm["median"][f]) if f in dm["median"] else v.fillna(0)
+    z = sgn * (v - dm["mean"][f]) / dm["std"][f]
+    dsc = dsc + dm["w"][f] * np.nan_to_num(z, nan=0.0)
+d["diamond_score"] = dsc
+d["is_diamond"] = ((d["pick"] >= dm["cut_pick"]) & (d["pick"] < 260) &
+                   (d["diamond_score"] >= dm["flag_threshold"])).astype(int)
+
+# ---- star flags: 95th percentile of the score currently being viewed ----
+d["is_star_pre"]  = (d["wrpi_pre"]  >= STAR_PCTL).astype(int)
+d["is_star_post"] = (d["wrpi_post"] >= STAR_PCTL).astype(int)
 
 cp = pd.DataFrame({k: np.round(v, 1) for k, v in W.components_post(qq, d).items()}, index=d.index)
 d["comp_post"] = cp.to_dict("records")
@@ -62,10 +79,11 @@ for fcol in tb["feats"]:
         tbz[fcol] = z.fillna(0.0).round(3)
 d["tbz"] = pd.DataFrame(tbz, index=d.index).to_dict("records")
 
-COLS = ["Player", "Year", "era", "tier", "wrpi_post", "wrpi_pre", "tb_score",
+COLS = ["Player", "Year", "era", "tier", "wrpi_post", "wrpi_pre", "raw_post", "raw_pre",
+        "tb_score", "diamond_score", "is_diamond", "is_star_pre", "is_star_post",
         "actual_fantasy_pctl", "actual_pctl_post", "pick", "nfl_entry_age", "breakout_age",
         "best_dom", "final_ppa", "explosion_p", "best_yds", "alpha", "recruit_stars",
-        "n_seasons_30", "comp_post", "comp_pre", "raw_post", "raw_pre", "tbz"]
+        "n_seasons_30", "comp_post", "comp_pre", "tbz"]
 out = {
     "generated": pd.Timestamp.utcnow().isoformat(timespec="minutes"),
     "model": {
@@ -74,6 +92,12 @@ out = {
         "pick_alone_spearman": 0.648,
         "tiebreaker_loco_acc": round(tb["loco_acc"], 3), "tiebreaker_gap": tb["gap"],
         "reference_years": [2015, 2020], "reference_n": int(len(ref_pool)),
+        "star_pctl": STAR_PCTL,
+        "diamond": {"cut_pick": dm["cut_pick"], "lift5": round(dm["lift5"], 1),
+                    "base_rate": round(dm["base_rate"], 3), "prec5": round(dm["loco_prec5"], 3),
+                    "weights": dm["w"]},
+        "raw_ref": {"pre_min": round(float(ref_pre.min()), 1), "pre_max": round(float(ref_pre.max()), 1),
+                    "post_min": round(float(ref_post.min()), 1), "post_max": round(float(ref_post.max()), 1)},
     },
     "tiebreaker": {"feats": tb["feats"], "w": {k: round(v, 3) for k, v in tb["w"].items()}},
     "scored": json.loads(d.sort_values(["Year", "wrpi_post"], ascending=[True, False])[COLS].round(4).to_json(orient="records")),
