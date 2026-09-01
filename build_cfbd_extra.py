@@ -1,24 +1,17 @@
 """Pull the extra CFBD feeds for v2 features: HS recruiting rankings, SP+ team
 ratings, player PPA (efficiency), player usage share. Cached per year."""
 import warnings; warnings.filterwarnings("ignore")
-import os, json, time, datetime, urllib.request
+import os, json, datetime
 import pandas as pd
+from cfbd_get import cached
 
-KEY = os.environ["CFBD_KEY"].strip()
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
 def get(path, cache):
-    fn = f"data/cfbd_raw/{cache}.json"
-    if os.path.exists(fn):
-        return json.load(open(fn))
-    r = urllib.request.Request("https://api.collegefootballdata.com" + path,
-                               headers={"Authorization": "Bearer " + KEY, "User-Agent": "Mozilla/5.0"})
     try:
-        d = json.loads(urllib.request.urlopen(r, timeout=60).read())
+        return cached(path, cache)
     except Exception as e:
-        print("  !", cache, repr(e)[:80]); d = []
-    json.dump(d, open(fn, "w")); time.sleep(0.35)
-    return d
+        print("  !", cache, repr(e)[:80]); return []
 
 recruit, spp, ppa, usage = [], [], [], []
 for yr in range(2011, datetime.date.today().year + 1):

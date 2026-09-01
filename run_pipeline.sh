@@ -9,8 +9,14 @@ python fetch_weekly.py
 echo "::endgroup::"
 
 echo "::group::CollegeFootballData feeds"
-# data/cfbd_raw/ is cached between runs; a live-API hiccup just means we build on
-# the cached raw JSON (the build_cfbd* scripts skip years already cached).
+# cold-start seed: if the Actions cache missed, unpack the committed raw-JSON
+# snapshot so a CFBD outage can't stop a fresh runner. cfbd_get.cached() then
+# only calls the API for years not already on disk.
+if [ ! -d data/cfbd_raw ] || [ -z "$(ls -A data/cfbd_raw 2>/dev/null)" ]; then
+  echo "seeding data/cfbd_raw/ from committed snapshot"
+  mkdir -p data && tar xzf data/cfbd_raw.tgz -C data
+fi
+# a live-API hiccup just means we build on the cached raw JSON.
 python build_cfbd.py        || echo "WARNING: build_cfbd.py failed - using cached raw JSON"
 python build_cfbd_extra.py  || echo "WARNING: build_cfbd_extra.py failed - using cached raw JSON"
 python build_cfbd_extra2.py || echo "WARNING: build_cfbd_extra2.py failed - using cached raw JSON"

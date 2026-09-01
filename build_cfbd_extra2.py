@@ -1,17 +1,14 @@
 """CFBD wave 2: return usage, team recruiting rank, college QB quality, transfer portal."""
 import warnings; warnings.filterwarnings("ignore")
-import os, json, time, datetime, urllib.request
+import os, json, datetime
 import pandas as pd
+from cfbd_get import cached
 
-KEY = os.environ["CFBD_KEY"].strip()
 def get(path, cache):
-    fn = f"data/cfbd_raw/{cache}.json"
-    if os.path.exists(fn): return json.load(open(fn))
-    r = urllib.request.Request("https://api.collegefootballdata.com" + path,
-                               headers={"Authorization": "Bearer " + KEY, "User-Agent": "Mozilla/5.0"})
-    try: d = json.loads(urllib.request.urlopen(r, timeout=60).read())
-    except Exception as e: print("  !", cache, repr(e)[:70]); d = []
-    json.dump(d, open(fn, "w")); time.sleep(0.3); return d
+    try:
+        return cached(path, cache)
+    except Exception as e:
+        print("  !", cache, repr(e)[:70]); return []
 
 def flat_season(rows):
     df = pd.DataFrame(rows)

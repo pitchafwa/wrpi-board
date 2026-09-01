@@ -1,25 +1,15 @@
 """Pull CFBD season player stats, build per-player-season receiving production +
 team totals + College Dominator Rating (yards-share & TD-share).
 Requires env var CFBD_KEY (free key: https://collegefootballdata.com/key)."""
-import urllib.request, json, os, time, datetime
+import json, os, datetime
 import pandas as pd, numpy as np
+from cfbd_get import cached as _cached
 
-KEY = os.environ["CFBD_KEY"].strip()
 LAST_YEAR = datetime.date.today().year
 os.makedirs("data/cfbd_raw", exist_ok=True)
 
-def get(path):
-    req = urllib.request.Request('https://api.collegefootballdata.com'+path,
-                                 headers={'Authorization':'Bearer '+KEY,'User-Agent':'Mozilla/5.0'})
-    return json.loads(urllib.request.urlopen(req, timeout=90).read())
-
 def cached(year, cat):
-    fn = f"data/cfbd_raw/{cat}_{year}.json"
-    if not os.path.exists(fn):
-        d = get(f"/stats/player/season?year={year}&category={cat}")
-        json.dump(d, open(fn,'w'))
-        time.sleep(0.6)
-    return json.load(open(fn))
+    return _cached(f"/stats/player/season?year={year}&category={cat}", f"{cat}_{year}")
 
 def wide(rows, cat):
     df = pd.DataFrame(rows)
@@ -31,18 +21,24 @@ def wide(rows, cat):
     return w
 
 rec_all, rush_all = [], []
+n_fail = 0
 for yr in range(2004, LAST_YEAR + 1):
-    rw = wide(cached(yr,'receiving'), 'receiving')
-    rec_all.append(rw)
     try:
-        uw = wide(cached(yr,'rushing'), 'rushing')
-        rush_all.append(uw)
+        rw = wide(cached(yr, 'receiving'), 'receiving'); rec_all.append(rw)
+        print(yr, 'rec rows', len(rw))
     except Exception as e:
-        print(yr,'rushing err', e)
-    print(yr, 'rec rows', len(rw))
+        n_fail += 1; print(yr, 'receiving FAILED', repr(e)[:80])
+    try:
+        rush_all.append(wide(cached(yr, 'rushing'), 'rushing'))
+    except Exception as e:
+        print(yr, 'rushing err', repr(e)[:80])
 
+if not rec_all:
+    import sys
+    print("build_cfbd: every CFBD receiving pull failed and nothing was cached — "
+          "keeping the committed data/cfbd_player_seasons.csv"); sys.exit(0)
 rec = pd.concat(rec_all, ignore_index=True).rename(columns={'YDS':'rec_yds','TD':'rec_td','REC':'rec'})
-rush = pd.concat(rush_all, ignore_index=True).rename(columns={'YDS':'rush_yds','TD':'rush_td','CAR':'rush_att'})
+rush = pd.concat(rush_all or [rec.iloc[:0]], ignore_index=True).rename(columns={'YDS':'rush_yds','TD':'rush_td','CAR':'rush_att'})
 for c in ['rec_yds','rec_td','rec']:
     rec[c] = pd.to_numeric(rec[c], errors='coerce').fillna(0)
 for c in ['rush_yds','rush_td']:

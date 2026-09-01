@@ -13,6 +13,8 @@ data/dp_*.csv.gz
 data/fp_*.csv
 data/fpecr_wr_dynasty.csv
 data/cfbd_raw/
+data/cfbd_raw.tar.gz
+!data/cfbd_raw.tgz
 data/cfbd_recruiting.csv
 data/cfbd_sp.csv
 data/cfbd_ppa.csv
