@@ -122,8 +122,15 @@
   <div class="sub">Wide Receiver Prospect Indicator, fitted to actual fantasy production (best 3 of a
     player's first 5 seasons, PPR points per game). <b>Post-draft</b> is the topline and tracks draft
     capital by design. <b>Pre-draft</b> is the pre-NFL-draft talent read. <span class="legend"><b class="dia">◆</b> diamond in the rough,
-    <b class="st">★</b> star-potential profile.</span></div>
+    <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span></div>
 
+  <div class="seg" id="segView" style="margin-bottom:1rem">
+    <button data-v="board" aria-pressed="true">Board</button>
+    <button data-v="about">How it works</button>
+  </div>
+
+  <div id="aboutPane" style="display:none"></div>
+  <div id="boardPane">
   <div class="statbar" id="statbar"></div>
 
   <div class="h2h">
@@ -165,11 +172,12 @@
   <div class="legend" id="legend"></div>
 
   <div class="tablewrap"><table id="tbl"><thead><tr id="hrow"></tr></thead><tbody id="body"></tbody></table></div>
+  </div>
   <footer id="foot"></footer>
 </div>
 
 <script>
-let D=null, cls=new Set(['all']), score='post', flag='none', q='', sort={k:'_s',asc:false}, open=new Set();
+let D=null, cls=new Set(['all']), score='post', flag='none', q='', sort={k:'_raw',asc:false}, open=new Set();
 const sig=x=>1/(1+Math.exp(-x));
 const tierColor=t=>t>=8?'var(--t-hi)':t>=5?'var(--t-mid)':'var(--t-lo)';
 const key=x=>x.Player+'|'+x.Year;
@@ -191,7 +199,7 @@ function cols(){return [
  {k:'Player',t:'Player',s:'str'},
  {k:'Year',t:'Class',s:'num'},
  {k:'tier',t:'Tier',s:'num'},
- {k:'_s',t:'WRPI',s:'num'},
+ {k:'_raw',t:'WRPI',s:'num'},
  {k:'diamond_score',t:'Dia',s:'num',fmt:v=>v==null?'—':v.toFixed(2)},
  {k:'tb_score',t:'H2H',s:'num',fmt:v=>v.toFixed(2)},
  {k:'actual_fantasy_pctl',t:'Actual',s:'num',fmt:v=>v==null?'<span style="color:var(--ink-faint)">—</span>':(v*100).toFixed(0)},
@@ -227,10 +235,11 @@ function render(){
    const L=` data-label="${c.t}"`;
    if(c.k==='Player'){
      const icons=(d.is_diamond?`<span class="ic" style="color:var(--diamond)" title="diamond in the rough">◆</span>`:'')
-                +(d._star?`<span class="ic" style="color:var(--star)" title="star-potential profile (95th pctl)">★</span>`:'');
+                +(d._star?`<span class="ic" style="color:var(--star)" title="star-potential profile (95th pctl)">★</span>`:'')
+                +(d.low_conf?`<span class="ic" style="color:var(--warn)" title="low-confidence profile — ${(d.low_conf_reason||'').replace(/"/g,'&quot;')}">⚠</span>`:'');
      return `<td${L}>${d.Player}${icons}</td>`;}
    if(c.k==='tier') return `<td class="num"${L}><span class="tier" style="background:color-mix(in srgb,${tierColor(d.tier)} 18%,transparent);color:${tierColor(d.tier)}">${d.tier}</span></td>`;
-   if(c.k==='_s') return `<td class="num"${L}><span class="wr"><span class="n">${d._raw.toFixed(1)}</span><span class="b"><span style="width:${(d._s*100).toFixed(0)}%"></span></span><span class="p">${(d._s*100).toFixed(0)}</span></span></td>`;
+   if(c.k==='_raw') return `<td class="num"${L}><span class="wr"><span class="n">${d._raw.toFixed(1)}</span><span class="b"><span style="width:${(d._s*100).toFixed(0)}%"></span></span><span class="p">${(d._s*100).toFixed(0)}</span></span></td>`;
    const v=d[c.k]; return `<td class="num"${L}>${c.fmt?c.fmt(v,d):v}</td>`;
   }).join('');
   tr.onclick=()=>{const id=key(d);open.has(id)?open.delete(id):open.add(id);render();};
@@ -307,6 +316,54 @@ function h2h(){
   return `<div class="e"><span>${LAB[x.f]||x.f}</span><b style="color:${x.d>0?'var(--good)':'var(--warn)'}">${lastName(who)}</b></div>`;
  }).join('') || '<div class="e" style="color:var(--ink-faint)">profiles look even on the tiebreaker inputs</div>';
 }
+function renderAbout(){
+ const m=D.model, cal=D.calibration;
+ const tbl=(rows,label)=>`<table style="width:auto;margin:.4rem 0 1rem"><thead><tr>
+   <th style="text-align:left">${label} tier</th><th>became startable</th><th>avg outcome %ile</th><th>n</th></tr></thead><tbody>${
+   rows.slice().reverse().map(r=>`<tr><td style="text-align:left">${r._t}</td><td class="num">${(r.hit_rate*100).toFixed(0)}%</td><td class="num">${(r.avg_outcome_pctl*100).toFixed(0)}</td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table>`;
+ aboutPane.innerHTML=`
+  <div style="max-width:70ch;font-size:.92rem;line-height:1.65;color:var(--ink-soft)">
+   <h2>What WRPI is</h2>
+   <p>A model of wide-receiver <b>fantasy</b> production, fitted to the target
+   <b>best-3-of-first-5-seasons PPR points per game</b> (career-ish dynasty value). Every input is
+   knowable before a prospect plays an NFL snap.</p>
+   <h2>The three numbers</h2>
+   <p><b>Post-draft WRPI</b> (the topline) — a draft-capital curve plus a small college-efficiency
+   term. It tracks the NFL draft by design and matches it in accuracy
+   (cross-validated rank correlation ${m.post_cv_spearman} vs draft pick alone ${m.pick_alone_spearman}).
+   Its job is the honest baseline, not to beat consensus.</p>
+   <p><b>Pre-draft WRPI</b> — production volume + college efficiency + athletic explosion + entry age,
+   no draft capital. The pre-NFL-draft talent read (CV ${m.pre_cv_spearman}).</p>
+   <p><b>H2H tiebreaker</b> — a separate model trained only on pairs of receivers drafted within
+   ${m.tiebreaker_gap} picks of each other. It picks the better one
+   ${(m.tiebreaker_loco_acc*100).toFixed(0)}% of the time (vs 50% = follow draft order). Use it for
+   head-to-head rookie-draft decisions; that's where the model adds value over consensus.</p>
+   <h2>The flags</h2>
+   <p><b class="st">★</b> star-potential — at or above the 95th percentile of the score shown. Historically
+   ${'~a third of 95th-percentile pre-draft prospects posted a genuine WR1 season, two-thirds were at least solid.'}</p>
+   <p><b class="dia">◆</b> diamond in the rough — drafted after round 2 but with a profile that says
+   "should have gone higher": multiple 30%+ college dominator seasons, big plays, an early declare,
+   a full athletic workout. The top quartile of that index has hit ~${m.diamond.lift5}× the
+   late-round base rate (${(m.diamond.base_rate*100).toFixed(0)}%).</p>
+   <p><b style="color:var(--warn)">⚠</b> low-confidence — key inputs came in thin (few athletic tests,
+   no reliable college dominator from partial data, or no verified birth date). Read the score with
+   more salt.</p>
+   <h2>Calibration — how the tiers have actually performed</h2>
+   <p>Historical prospects (2015–2022), by WRPI decile. "Became startable" = posted at least one
+   ~WR2 fantasy season (≥13 PPR PPG) in their first three years.</p>
+   ${tbl(cal.post,'Post-draft')}
+   ${tbl(cal.pre,'Pre-draft')}
+   <p style="color:var(--ink-faint)">Signal concentrates in tiers 8–10; below that the score is
+   roughly flat. That's expected — it means the model isn't pretending to separate the bottom two
+   thirds of a draft class that mostly doesn't produce.</p>
+   <h2>Data</h2>
+   <p>nflverse (draft, combine, weekly fantasy through the ${'2025'} season) · array-carpenter/nfl-draft-data
+   (combine + pro-day, hand size) · CollegeFootballData (college receiving, efficiency/PPA, usage,
+   SP+ ratings, recruiting, returns) · FantasyPros dynasty consensus (2021+). Reference class for
+   percentiles: ${m.reference_n} players, ${m.reference_years[0]}–${m.reference_years[1]}.</p>
+   <p><a href="https://github.com/pitchafwa/wrpi-board">Source & methodology on GitHub</a>.</p>
+  </div>`;
+}
 function boot(){
  const m=D.model;
  statbar.innerHTML=`
@@ -336,6 +393,14 @@ function boot(){
   btn.setAttribute('aria-pressed','true'); flag=btn.dataset.v; render();
  });
  document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();render();};
+ segView.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+  segView.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+  const about=btn.dataset.v==='about';
+  aboutPane.style.display=about?'block':'none';
+  boardPane.style.display=about?'none':'block';
+  if(about) renderAbout();
+ });
  setLegend(); render();
 }
 function setLegend(){

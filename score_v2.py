@@ -60,6 +60,21 @@ d["is_diamond"] = ((d["pick"] >= dm["cut_pick"]) & (d["pick"] < 260) &
 d["is_star_pre"]  = (d["wrpi_pre"]  >= STAR_PCTL).astype(int)
 d["is_star_post"] = (d["wrpi_post"] >= STAR_PCTL).astype(int)
 
+# ---- low-confidence profile: inputs came in thin ----
+_nd  = pd.to_numeric(d.get("n_drills"), errors="coerce").fillna(0)
+_rel = pd.to_numeric(d.get("reliable_dom"), errors="coerce").fillna(0)
+_noage = d["nfl_entry_age"].isna()
+def _lcr(r):
+    x = []
+    if r["_nd"] < 4:  x.append("only %d of 8 athletic tests" % int(r["_nd"]))
+    if r["_rel"] == 0: x.append("no reliable college dominator (thin CFBD team data)")
+    if r["_noage"]:   x.append("no verified birth date")
+    return "; ".join(x)
+d["_nd"], d["_rel"], d["_noage"] = _nd, _rel, _noage
+d["low_conf"] = ((_nd < 4) | (_rel == 0) | _noage).astype(int)
+d["low_conf_reason"] = d.apply(_lcr, axis=1)
+d = d.drop(columns=["_nd", "_rel", "_noage"])
+
 cp = pd.DataFrame({k: np.round(v, 1) for k, v in W.components_post(qq, d).items()}, index=d.index)
 d["comp_post"] = cp.to_dict("records")
 cpre = pd.DataFrame({k: np.round(v, 1) for k, v in W.components_pre(pp, d).items()}, index=d.index)
@@ -71,19 +86,23 @@ h = d[d.era == "historical"].copy()
 h["actual_fantasy_pctl"] = h["top35"].rank(pct=True)
 d = d.merge(h[["Player", "Year", "actual_fantasy_pctl"]], on=["Player", "Year"], how="left")
 
-# ---- profile similarity: nearest neighbours over model inputs + outputs ----
-SIM_IN  = ["best_dom", "breakout_age", "nfl_entry_age", "final_ppa", "explosion_p",
-           "best_yds", "n_seasons_30", "ras", "height", "weight", "recruit_stars"]
-SIM_OUT = ["wrpi_pre", "wrpi_post", "tb_score", "diamond_score"]
+# ---- profile similarity: nearest neighbours over model inputs + body type + outputs ----
+#   WRPI profile dominates; body measurements are a stronger tiebreaker so small
+#   receivers don't get matched to big ones.
+SIM_W = {
+    "best_dom": 1.0, "breakout_age": 1.0, "nfl_entry_age": 1.0, "final_ppa": 1.0,
+    "explosion_p": 1.0, "best_yds": 1.0, "n_seasons_30": 1.0, "ras": 1.0, "recruit_stars": 0.8,
+    "height": 2.2, "weight": 2.2, "bmi": 1.8,
+    "wrpi_pre": 0.6, "wrpi_post": 0.6, "tb_score": 0.6, "diamond_score": 0.6,
+}
 _S = d.copy()
-_S["log_pick"] = np.log(_S["pick"].clip(1, 300))
 _S["breakout_age"] = pd.to_numeric(_S["breakout_age"], errors="coerce").clip(upper=26)
 M = pd.DataFrame(index=_S.index)
-for c in SIM_IN + SIM_OUT:
+for c, wgt in SIM_W.items():
     v = pd.to_numeric(_S[c], errors="coerce")
     v = v.fillna(v.median())
     z = (v - v.mean()) / (v.std() + 1e-9)
-    M[c] = z * (1.0 if c in SIM_IN else 0.6)          # profile-weighted
+    M[c] = z * wgt
 Marr = M.values
 players = _S["Player"].values; years = _S["Year"].values
 fant = _S["actual_fantasy_pctl"].values
@@ -107,7 +126,7 @@ for fcol in tb["feats"]:
 d["tbz"] = pd.DataFrame(tbz, index=d.index).to_dict("records")
 
 COLS = ["Player", "Year", "era", "tier", "wrpi_post", "wrpi_pre", "raw_post", "raw_pre",
-        "tb_score", "diamond_score", "is_diamond", "is_star_pre", "is_star_post",
+        "tb_score", "diamond_score", "is_diamond", "is_star_pre", "is_star_post", "low_conf", "low_conf_reason",
         "actual_fantasy_pctl", "actual_pctl_post", "pick", "nfl_entry_age", "breakout_age",
         "best_dom", "final_ppa", "explosion_p", "best_yds", "alpha", "recruit_stars",
         "n_seasons_30", "comp_post", "comp_pre", "tbz", "similar"]
@@ -129,6 +148,17 @@ out = {
     "tiebreaker": {"feats": tb["feats"], "w": {k: round(v, 3) for k, v in tb["w"].items()}},
     "scored": json.loads(d.sort_values(["Year", "wrpi_post"], ascending=[True, False])[COLS].round(4).to_json(orient="records")),
 }
+
+# ---- calibration: historical hit rate / avg outcome by WRPI tier ----
+hh = d[(d.era == "historical") & d.actual_fantasy_pctl.notna()].copy()
+hh["hit"] = (pd.to_numeric(hh["best3"], errors="coerce") >= 13).astype(int)
+cal = {}
+for which, col in [("post", "wrpi_post"), ("pre", "wrpi_pre")]:
+    hh["_t"] = np.ceil(hh[col] * 10).clip(1, 10).astype(int)
+    g = hh.groupby("_t").agg(n=("hit", "size"), hit_rate=("hit", "mean"),
+                             avg_outcome_pctl=("actual_fantasy_pctl", "mean")).reset_index()
+    cal[which] = json.loads(g.round(3).to_json(orient="records"))
+out["calibration"] = cal
 import os; os.makedirs("dashboard", exist_ok=True)
 json.dump(out, open("dashboard/scores.json", "w"), indent=1)
 d[[c for c in COLS if c not in ("comp_post", "comp_pre")]].to_csv("data/wrpi_database.csv", index=False)
