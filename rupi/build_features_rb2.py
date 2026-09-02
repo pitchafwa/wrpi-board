@@ -2,6 +2,7 @@
 Run from the repo root: `python rupi/build_features_rb2.py`."""
 import warnings; warnings.filterwarnings("ignore")
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import datetime
 import numpy as np, pandas as pd
 from rb_feature_lib import norm, Sources, build_row, add_athletic_percentiles
 
@@ -9,7 +10,7 @@ WB = "data/"
 RD = "rupi/data/"
 
 dr = pd.read_csv(WB + "draft_picks.csv", low_memory=False); dr["key"] = dr.pfr_player_name.map(norm)
-pool = dr[(dr.position == "RB") & dr.season.between(2015, 2026)].copy()
+pool = dr[(dr.position == "RB") & dr.season.between(2015, datetime.date.today().year + 1)].copy()
 pool = pool.rename(columns={"pfr_player_name": "Player", "season": "Year"})
 pl = pd.read_csv(WB + "players.csv", low_memory=False); pl["key"] = pl.display_name.map(norm)
 

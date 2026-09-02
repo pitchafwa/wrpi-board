@@ -3,6 +3,7 @@ first 3 and first 4 seasons (not 3/5 like WRPI). Source: nflverse weekly
 player_stats. Pool = all drafted RBs 2015-2026 (draft_picks.csv)."""
 import warnings; warnings.filterwarnings("ignore")
 import re, unicodedata
+import datetime
 import numpy as np, pandas as pd
 
 def norm(n):
@@ -36,7 +37,7 @@ def block(sub, nyr):
                 touches=int((sub["car"] + sub["rec"]).sum()))
 
 dp = pd.read_csv(WB + "data/draft_picks.csv")
-pool = dp[(dp.position == "RB") & dp.season.between(2015, 2026)][
+pool = dp[(dp.position == "RB") & dp.season.between(2015, datetime.date.today().year + 1)][
     ["pfr_player_name", "season", "pick", "age"]].rename(columns={"pfr_player_name": "Player", "season": "Year"})
 
 rows = []

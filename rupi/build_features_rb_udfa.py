@@ -6,6 +6,7 @@ Joined by gsis_id/player_id (NOT name) to avoid namesake collisions (an early
 pass on this matched "Frank Gore Jr." 2024 UDFA to his father's 16-year, 4220-
 touch career via a Jr./Sr.-stripped name join)."""
 import warnings; warnings.filterwarnings("ignore")
+import datetime
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import re, unicodedata
 import numpy as np, pandas as pd
@@ -15,7 +16,7 @@ WB = "data/"
 RD = "rupi/data/"
 
 pl = pd.read_csv(WB + "players.csv", low_memory=False)
-udfa = pl[(pl.position == "RB") & pl.draft_round.isna() & pl.rookie_season.between(2015, 2026)].copy()
+udfa = pl[(pl.position == "RB") & pl.draft_round.isna() & pl.rookie_season.between(2015, datetime.date.today().year + 1)].copy()
 
 w = pd.read_csv(WB + "nfl_weekly.csv", low_memory=False)
 w = w[(w.position == "RB") & (w.season_type == "REG")]
