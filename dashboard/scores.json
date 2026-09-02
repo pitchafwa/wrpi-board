@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-01T22:43+00:00",
+ "generated": "2026-09-02T09:13+00:00",
  "draft_status": {
   "class": 2026,
   "provisional": false,
@@ -12395,7 +12395,7 @@
     {
      "p": "Chris Bell",
      "y": 2026,
-     "sim": 66.0,
+     "sim": 67.0,
      "fant": null
     },
     {
@@ -31449,8 +31449,8 @@
      "fant": null
     },
     {
-     "p": "Kearis Jackson",
-     "y": 2023,
+     "p": "Harrison Wallace",
+     "y": 2026,
      "sim": 65.0,
      "fant": null
     }
@@ -58027,7 +58027,7 @@
    "wrpi_pre": 0.5523,
    "raw_post": 64.2923,
    "raw_pre": 29.7898,
-   "tb_score": 1.1131,
+   "tb_score": 1.1321,
    "diamond_score": -0.0856,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58089,7 +58089,7 @@
     "prod_over_recruit": -1.432,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.902,
     "final_spike": -0.168,
     "dom_growth": 0.373
    },
@@ -58109,7 +58109,7 @@
     {
      "p": "Malik Knowles",
      "y": 2023,
-     "sim": 61.0,
+     "sim": 60.0,
      "fant": null
     },
     {
@@ -58141,7 +58141,7 @@
    "wrpi_pre": 0.8917,
    "raw_post": 56.7143,
    "raw_pre": 38.2869,
-   "tb_score": 1.0315,
+   "tb_score": 1.0355,
    "diamond_score": 0.6931,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58203,7 +58203,7 @@
     "prod_over_recruit": 1.285,
     "was_returner": 0.674,
     "ret_td": 1.152,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.193,
     "final_spike": -0.199,
     "dom_growth": -2.148
    },
@@ -58255,7 +58255,7 @@
    "wrpi_pre": 0.6787,
    "raw_post": 53.8198,
    "raw_pre": 33.4105,
-   "tb_score": -0.3252,
+   "tb_score": -0.3061,
    "diamond_score": 0.3007,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58317,7 +58317,7 @@
     "prod_over_recruit": -0.377,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.902,
     "final_spike": -0.068,
     "dom_growth": 1.614
    },
@@ -58347,16 +58347,16 @@
      "fant": null
     },
     {
-     "p": "Travis Hunter",
-     "y": 2025,
-     "sim": 61.0,
-     "fant": null
-    },
-    {
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 61.0,
      "fant": 0.851
+    },
+    {
+     "p": "Travis Hunter",
+     "y": 2025,
+     "sim": 61.0,
+     "fant": null
     }
    ]
   },
@@ -58369,7 +58369,7 @@
    "wrpi_pre": 0.6643,
    "raw_post": 48.5511,
    "raw_pre": 32.8569,
-   "tb_score": -0.4885,
+   "tb_score": -0.4676,
    "diamond_score": -0.0984,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58431,7 +58431,7 @@
     "prod_over_recruit": -0.522,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.991,
     "final_spike": -0.035,
     "dom_growth": 0.079
    },
@@ -58457,7 +58457,7 @@
     {
      "p": "Germie Bernard",
      "y": 2026,
-     "sim": 64.0,
+     "sim": 65.0,
      "fant": null
     },
     {
@@ -58597,7 +58597,7 @@
    "wrpi_pre": 0.4513,
    "raw_post": 45.7814,
    "raw_pre": 27.8239,
-   "tb_score": 1.3231,
+   "tb_score": 1.3328,
    "diamond_score": -0.0348,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58659,7 +58659,7 @@
     "prod_over_recruit": 1.006,
     "was_returner": 0.674,
     "ret_td": 0.371,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.459,
     "final_spike": -0.212,
     "dom_growth": 1.59
    },
@@ -58711,7 +58711,7 @@
    "wrpi_pre": 0.4765,
    "raw_post": 43.2233,
    "raw_pre": 28.4426,
-   "tb_score": -0.3645,
+   "tb_score": -0.3772,
    "diamond_score": -0.4299,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58773,7 +58773,7 @@
     "prod_over_recruit": -1.05,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.605,
     "final_spike": -0.202,
     "dom_growth": 0.029
    },
@@ -58785,16 +58785,16 @@
      "fant": 0.209
     },
     {
-     "p": "Jordan Payton",
-     "y": 2016,
-     "sim": 64.0,
-     "fant": 0.209
-    },
-    {
      "p": "Omar Cooper Jr.",
      "y": 2026,
      "sim": 64.0,
      "fant": null
+    },
+    {
+     "p": "Jordan Payton",
+     "y": 2016,
+     "sim": 64.0,
+     "fant": 0.209
     },
     {
      "p": "Puka Nacua",
@@ -58939,7 +58939,7 @@
    "wrpi_pre": 0.6245,
    "raw_post": 37.9178,
    "raw_pre": 31.3195,
-   "tb_score": 0.3417,
+   "tb_score": 0.3289,
    "diamond_score": -0.2362,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59001,7 +59001,7 @@
     "prod_over_recruit": -1.779,
     "was_returner": 0.674,
     "ret_td": 1.152,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.605,
     "final_spike": -0.037,
     "dom_growth": 0.307
    },
@@ -59053,7 +59053,7 @@
    "wrpi_pre": 0.6931,
    "raw_post": 38.0232,
    "raw_pre": 34.0021,
-   "tb_score": 1.23,
+   "tb_score": 1.2041,
    "diamond_score": 0.7607,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -59115,7 +59115,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -1.225,
     "final_spike": -0.215,
     "dom_growth": -1.746
    },
@@ -59509,7 +59509,7 @@
    "wrpi_pre": 0.6606,
    "raw_post": 37.8479,
    "raw_pre": 32.7489,
-   "tb_score": 0.4536,
+   "tb_score": 0.4727,
    "diamond_score": 0.2418,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59571,7 +59571,7 @@
     "prod_over_recruit": -0.236,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.902,
     "final_spike": -0.097,
     "dom_growth": -0.104
    },
@@ -59623,7 +59623,7 @@
    "wrpi_pre": 0.7112,
    "raw_post": 37.3461,
    "raw_pre": 34.3292,
-   "tb_score": -0.493,
+   "tb_score": -0.4815,
    "diamond_score": 0.1067,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59685,7 +59685,7 @@
     "prod_over_recruit": 0.77,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.548,
     "final_spike": -0.094,
     "dom_growth": 1.243
    },
@@ -59737,7 +59737,7 @@
    "wrpi_pre": 0.574,
    "raw_post": 36.6071,
    "raw_pre": 30.3363,
-   "tb_score": 0.833,
+   "tb_score": 0.8127,
    "diamond_score": -0.0435,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59799,7 +59799,7 @@
     "prod_over_recruit": 1.027,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.959,
     "final_spike": -0.152,
     "dom_growth": 1.258
    },
@@ -59965,7 +59965,7 @@
    "wrpi_pre": 0.6498,
    "raw_post": 34.4741,
    "raw_pre": 32.4283,
-   "tb_score": -0.6935,
+   "tb_score": -0.697,
    "diamond_score": -0.1181,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -60027,7 +60027,7 @@
     "prod_over_recruit": -0.437,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.162,
     "final_spike": 0.832,
     "dom_growth": 1.305
    },
@@ -60079,7 +60079,7 @@
    "wrpi_pre": 0.6462,
    "raw_post": 32.5851,
    "raw_pre": 32.0395,
-   "tb_score": -0.2729,
+   "tb_score": -0.2688,
    "diamond_score": 0.5693,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -60141,7 +60141,7 @@
     "prod_over_recruit": 1.431,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.193,
     "final_spike": -0.077,
     "dom_growth": 1.888
    },
@@ -60421,7 +60421,7 @@
    "wrpi_pre": 0.6534,
    "raw_post": 31.6882,
    "raw_pre": 32.522,
-   "tb_score": -0.2,
+   "tb_score": -0.1267,
    "diamond_score": 0.4708,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -60483,7 +60483,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 3.473,
     "final_spike": -0.222,
     "dom_growth": 1.782
    },
@@ -60535,7 +60535,7 @@
    "wrpi_pre": 0.0108,
    "raw_post": 31.0983,
    "raw_pre": 14.7028,
-   "tb_score": -0.3462,
+   "tb_score": -0.3758,
    "diamond_score": -1.4908,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -60597,7 +60597,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": 0.674,
     "ret_td": 4.276,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -1.403,
     "final_spike": 0.489,
     "dom_growth": -0.639
    },
@@ -60649,7 +60649,7 @@
    "wrpi_pre": 0.5126,
    "raw_post": 30.7496,
    "raw_pre": 28.9591,
-   "tb_score": -0.2082,
+   "tb_score": -0.2265,
    "diamond_score": -0.3997,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -60711,7 +60711,7 @@
     "prod_over_recruit": -1.583,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.871,
     "final_spike": 0.715,
     "dom_growth": 0.385
    },
@@ -61333,7 +61333,7 @@
    "wrpi_pre": 0.444,
    "raw_post": 28.6168,
    "raw_pre": 27.7176,
-   "tb_score": -0.7216,
+   "tb_score": -0.7419,
    "diamond_score": -0.1126,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -61395,7 +61395,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.959,
     "final_spike": -0.083,
     "dom_growth": 0.198
    },
@@ -61425,16 +61425,16 @@
      "fant": 0.779
     },
     {
-     "p": "Steven Sims",
-     "y": 2019,
-     "sim": 64.0,
-     "fant": 0.663
-    },
-    {
      "p": "CJ Williams",
      "y": 2026,
      "sim": 64.0,
      "fant": null
+    },
+    {
+     "p": "Steven Sims",
+     "y": 2019,
+     "sim": 64.0,
+     "fant": 0.663
     }
    ]
   },
@@ -61447,7 +61447,7 @@
    "wrpi_pre": 0.2888,
    "raw_post": 28.5377,
    "raw_pre": 25.4184,
-   "tb_score": 0.3461,
+   "tb_score": 0.3296,
    "diamond_score": -0.645,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -61509,7 +61509,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.782,
     "final_spike": -0.18,
     "dom_growth": 0.393
    },
@@ -61561,7 +61561,7 @@
    "wrpi_pre": 0.2635,
    "raw_post": 28.1834,
    "raw_pre": 24.2219,
-   "tb_score": -0.3218,
+   "tb_score": -0.3439,
    "diamond_score": -0.5697,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -61623,7 +61623,7 @@
     "prod_over_recruit": -0.255,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -1.048,
     "final_spike": 0.416,
     "dom_growth": 1.623
    },
@@ -61675,7 +61675,7 @@
    "wrpi_pre": 0.1733,
    "raw_post": 28.1323,
    "raw_pre": 22.0072,
-   "tb_score": -0.7729,
+   "tb_score": -0.78,
    "diamond_score": -0.2104,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -61737,7 +61737,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": 0.674,
     "ret_td": 0.371,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.339,
     "final_spike": 2.395,
     "dom_growth": 0.819
    },
@@ -61789,7 +61789,7 @@
    "wrpi_pre": 0.2347,
    "raw_post": 27.9708,
    "raw_pre": 23.8062,
-   "tb_score": -0.724,
+   "tb_score": -0.7143,
    "diamond_score": -0.622,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -61851,7 +61851,7 @@
     "prod_over_recruit": 0.0,
     "was_returner": 0.674,
     "ret_td": 0.371,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.459,
     "final_spike": 0.183,
     "dom_growth": -0.046
    },
@@ -61903,7 +61903,7 @@
    "wrpi_pre": 0.4838,
    "raw_post": 27.6167,
    "raw_pre": 28.663,
-   "tb_score": 0.0912,
+   "tb_score": 0.0896,
    "diamond_score": -0.142,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -61965,7 +61965,7 @@
     "prod_over_recruit": 0.522,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.073,
     "final_spike": -0.129,
     "dom_growth": 1.009
    },
@@ -62131,7 +62131,7 @@
    "wrpi_pre": 0.6462,
    "raw_post": 27.2309,
    "raw_pre": 31.9684,
-   "tb_score": 0.8976,
+   "tb_score": 0.9017,
    "diamond_score": 0.1104,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -62193,7 +62193,7 @@
     "prod_over_recruit": 0.743,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.193,
     "final_spike": -0.115,
     "dom_growth": 0.211
    },
@@ -62359,7 +62359,7 @@
    "wrpi_pre": 0.2852,
    "raw_post": 26.6651,
    "raw_pre": 24.9358,
-   "tb_score": -0.1817,
+   "tb_score": -0.1851,
    "diamond_score": -0.3286,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -62421,7 +62421,7 @@
     "prod_over_recruit": -1.48,
     "was_returner": -1.481,
     "ret_td": 0.0,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": -0.162,
     "final_spike": 0.023,
     "dom_growth": 0.022
    },
@@ -63043,7 +63043,7 @@
    "wrpi_pre": 0.2671,
    "raw_post": 25.8946,
    "raw_pre": 24.5494,
-   "tb_score": -0.6141,
+   "tb_score": -0.6026,
    "diamond_score": -0.6575,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -63105,7 +63105,7 @@
     "prod_over_recruit": -0.898,
     "was_returner": 0.674,
     "ret_td": -0.411,
-    "col_qb_ypa": 0.0,
+    "col_qb_ypa": 0.548,
     "final_spike": -0.142,
     "dom_growth": -0.252
    },
