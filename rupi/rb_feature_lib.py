@@ -27,10 +27,10 @@ class Sources:
         self.rc = pd.read_csv(WB + "combine_pro_day.csv"); self.rc = self.rc[self.rc.POS_GP == "RB"]
         self.rc["key"] = self.rc.player.map(norm)
         self.cf = pd.read_csv(RD + "cfbd_rb_seasons.csv"); self.cf["key"] = self.cf.player.map(norm)
-        self.ppa = pd.read_csv(RD + "cfbd_ppa_full.csv"); self.ppa["key"] = self.ppa.name.map(norm)
-        self.usg = pd.read_csv(RD + "cfbd_usage_full.csv"); self.usg["key"] = self.usg.name.map(norm)
+        self.ppa = pd.read_csv(WB + "cfbd_ppa_full.csv"); self.ppa["key"] = self.ppa.name.map(norm)
+        self.usg = pd.read_csv(WB + "cfbd_usage_full.csv"); self.usg["key"] = self.usg.name.map(norm)
         self.sp_i = pd.read_csv(WB + "cfbd_sp.csv").set_index(["year", "team"])
-        self.rec = pd.read_csv(RD + "cfbd_recruiting_full.csv")
+        self.rec = pd.read_csv(WB + "cfbd_recruiting_full.csv")
         self.rec = self.rec[self.rec.position.isin(["RB", "ATH"])].copy(); self.rec["key"] = self.rec.name.map(norm)
         self.ret = pd.read_csv(WB + "cfbd_returns.csv"); self.ret["key"] = self.ret.player.map(norm)
         self.rct_i = pd.read_csv(WB + "cfbd_recteam.csv").set_index(["year", "team"])

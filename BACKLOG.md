@@ -5,24 +5,9 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
 
 ## Priority
 
-- **CFBD usage / recruiting / PPA data audit (WRPI)** — while building RUPI
-  (2026-09-01) found that `data/cfbd_ppa.csv`, `data/cfbd_usage.csv`, and
-  `data/cfbd_recruiting.csv` are **silently truncated** — an old build script
-  dropped ~40% of rows (Saquon Barkley and most RBs missing entirely; blue-chip
-  recruits like Barkley/Bijan/Gurley/Gibbs absent from the recruiting file).
-  RUPI rebuilt clean copies from the cached raw JSON
-  (`PSI-reverse-engineering/rupi/rebuild_ppa_usage.py` → `cfbd_*_full.csv`).
-  WRPI's `build_features_v3.py` reads the degraded originals, so `final_ppa` /
-  `avg_ppa` / `best_usage` / `recruit_stars` / `prod_over_recruit` are likely
-  blanked for a meaningful share of WRs. **Action:** point WRPI at rebuilt
-  `cfbd_ppa_full` / `cfbd_usage_full` / `cfbd_recruiting_full`, re-audit fill
-  rates, refit, check whether CV moves. Do this the same pass as the PFF pull.
-- **Compare mode** — select 2–4 players, side-by-side profile table + radar chart.
-  Multi-way extension of the head-to-head tool ("I have picks 1.03 and 1.07, rank
-  these 5"). Bigger UI lift.
 - **Scheme / pace adjustment for college production** — normalise dominator & raw
   yards by team pass volume / pass-rate-over-expected (CFBD). Removes Air-Raid
-  inflation. *Test before implement.*
+  inflation. *Test before implement.* (test in progress 2026-09-02)
 
 ## Data / model (bigger swings)
 
@@ -64,35 +49,36 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
   last resort. Need per-season rushing/receiving + team totals to compute
   dominator; even partial (career totals only) would beat a blank profile.
 
-## RUPI-specific
-
-- **Head-to-head tiebreaker for RB** — logistic-on-feature-diffs for RBs drafted
-  within ~20 picks, same as WRPI's tool. Deferred for now (2026-09-01). Build
-  when the RB board gets its interactive tools pass.
-
 ## Board features
 
+- **Compare mode** — select 2–4 players, side-by-side profile table + radar chart.
+  Replaces the head-to-head tool. (build in progress 2026-09-02)
 - **My board** — drag-reorder, notes, mark players, saved to browser localStorage.
 - **Risers & fallers** — each spring, delta from the previous data scrape
-  ("who moved after the combine"). Depends on auto-update.
+  ("who moved after the combine"). Now buildable (auto-update exists).
 - **Dominator trajectory sparkline** in each card (year-by-year college share).
   Low priority.
 
-## Infrastructure
+## RUPI-specific
 
-- **Auto-update CI** — rebuild `update.yml` for the v2 pipeline so the board
-  refreshes itself. Held until the model/feature set is settled.
-
-## RUPI rollout (in progress 2026-09-01)
-
-- Model built (`PSI-reverse-engineering/rupi/`): pre-draft CV 0.43, post-draft
-  CV 0.71 (beats pick-alone 0.68), star + diamond + low-conf flags, UDFA
-  supplement. See `rupi/MODEL.md`.
-- **In progress:** profile-similarity comps for RUPI + a separate **RB tab** on
-  this board (built to mirror the WR tab for consistency).
-- Then: wire RUPI into the data/deploy pipeline.
+- **Head-to-head tiebreaker for RB** — logistic-on-feature-diffs for RBs drafted
+  within ~20 picks, same as WRPI's tool. If compare mode replaces H2H, this may
+  be moot — revisit after compare mode ships.
 
 ## Done (recent)
+
+- **CFBD data audit (WRPI)** — 2026-09-02. The truncated `cfbd_ppa/usage/
+  recruiting.csv` (PPA/usage -43% of rows, recruiting -75%) were RB-critical
+  (Barkley + most RBs gone) but **negligible for WRPI**: the `athleteId`-scoped
+  joins were mostly intact for WRs; fill rates barely move (final_ppa 98→98%,
+  recruit_stars 83→85% on the mature pool), LOCO-apply CV identical to 3dp,
+  `wrpi_post` byte-identical. Switched WRPI to `data/cfbd_*_full.csv` anyway
+  (strictly more correct, free) — `rebuild_ppa_usage.py` now runs in the shared
+  pipeline section for both models. No refit.
+- **Auto-update CI** — `update.yml` (self-scheduling) + `refit-review.yml` +
+  deploy chain, verified end to end 2026-09-01.
+- **RUPI** — model built, renamed from RBPI, RB tab live, similarity comps,
+  provisional banner, prospective-UDFA, wired into the pipeline.
 
 - 2025 NFL season added; refit on complete outcomes through 2025
 - data audit + fixes (ages, draft picks, dominator artifacts, name-join errors)

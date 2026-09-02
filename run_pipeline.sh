@@ -22,6 +22,8 @@ python build_cfbd_extra.py  || echo "WARNING: build_cfbd_extra.py failed - using
 step "build_cfbd_extra2.py"
 python build_cfbd_extra2.py || echo "WARNING: build_cfbd_extra2.py failed - using cached raw JSON"
 test -s data/cfbd_player_seasons.csv || { echo "FATAL: data/cfbd_player_seasons.csv not produced"; exit 1; }
+step "rebuild_ppa_usage.py (clean PPA/usage/recruiting -> data/cfbd_*_full.csv, used by WRPI + RUPI)"
+python rupi/rebuild_ppa_usage.py
 
 step "WRPI: build_pool -> build_features_v3 -> build_outcomes -> score_v2"
 python build_pool.py
@@ -29,9 +31,8 @@ python build_features_v3.py
 python build_outcomes.py
 python score_v2.py
 
-step "RUPI: cfbd_rb -> ppa_usage -> features -> outcomes -> combine -> score"
+step "RUPI: cfbd_rb -> features -> outcomes -> combine -> score"
 python rupi/build_cfbd_rb.py
-python rupi/rebuild_ppa_usage.py
 python rupi/build_features_rb2.py
 python rupi/build_features_rb_udfa.py
 python rupi/build_features_rb_projected_udfa.py

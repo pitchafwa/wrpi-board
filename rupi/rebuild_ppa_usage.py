@@ -1,12 +1,13 @@
 """Rebuild clean cfbd_ppa / cfbd_usage / cfbd_recruiting from the raw JSON cached
 by build_cfbd_extra.py -- the processed cfbd_*.csv it writes are silently
-truncated (~40% of rows lost, incl. most RBs). Keeps the RUSH split + position.
-Run from the repo root. (WRPI still reads the truncated files -- backlog audit.)"""
+truncated (PPA/usage ~43% of player-seasons lost, recruiting ~75%). Keeps the
+RUSH split + position. Writes data/cfbd_*_full.csv, read by BOTH WRPI
+(build_features_v3.py) and RUPI (rb_feature_lib.py). Run from the repo root."""
 import json, os
 import pandas as pd
 
 RAW = "data/cfbd_raw"
-OUT = "rupi/data"
+OUT = "data"
 os.makedirs(OUT, exist_ok=True)
 YEARS = range(2011, 2028)
 

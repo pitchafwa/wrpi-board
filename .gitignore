@@ -32,6 +32,9 @@ data/scores_2023_2025.csv
 data/features_v2.csv
 data/features_v3.csv
 data/nfl_outcomes.csv
+data/cfbd_ppa_full.csv
+data/cfbd_usage_full.csv
+data/cfbd_recruiting_full.csv
 data/wrpi_v2_pre.npy
 data/wrpi_v2_post.npy
 rupi/data/*.csv
