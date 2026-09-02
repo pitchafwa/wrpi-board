@@ -51,8 +51,14 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
 
 ## Board features
 
-- **Compare mode** — select 2–4 players, side-by-side profile table + radar chart.
-  Replaces the head-to-head tool. (build in progress 2026-09-02)
+- **Ceiling comp** — in each expanded card, headline the highest-fantasy-outcome
+  historical player the prospect is `sim >= 55` similar to (search ALL mature
+  historical players, not just the top-6 neighbour list). Guardrails: need >= 3
+  qualifying comps or show "no close comp"; label "star comp" only if the max
+  outcome pctl >= ~85. **Pair it with the median outcome pctl of the qualifying
+  comps** ("typical outcome of the comps: 61st, n=7") so it's not pure upside.
+  ~15 lines in each score_*.py + one render line; both tabs. (Tommy's idea,
+  2026-09-02.)
 - **My board** — drag-reorder, notes, mark players, saved to browser localStorage.
 - **Risers & fallers** — each spring, delta from the previous data scrape
   ("who moved after the combine"). Now buildable (auto-update exists).
@@ -67,6 +73,10 @@ a branch / offline and only ship if the leave-one-class-out CV improves.
 
 ## Done (recent)
 
+- **Compare mode** — 2026-09-02. Replaced the head-to-head tool: pick 2–4
+  rookies → radar (league-wide percentile axes) + side-by-side table with
+  best-value highlighting, both tabs. For two WRs drafted within 20 picks it
+  still shows the pairwise model lean (old H2H) as a row + note.
 - **CFBD data audit (WRPI)** — 2026-09-02. The truncated `cfbd_ppa/usage/
   recruiting.csv` (PPA/usage -43% of rows, recruiting -75%) were RB-critical
   (Barkley + most RBs gone) but **negligible for WRPI**: the `athleteId`-scoped
