@@ -38,20 +38,23 @@
   .banner b{color:var(--accent)}
   .statbar b{display:block;font:600 1.1rem/1 "IBM Plex Sans",sans-serif;color:var(--ink);letter-spacing:-.01em}
 
-  .h2h{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin-bottom:1.6rem}
-  .h2h .eye{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
-  .h2h .row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
-  .h2h input{flex:1;min-width:190px;padding:.5rem .6rem;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface-2);color:var(--ink);font:inherit;font-size:.86rem}
-  .h2h .vs{font-family:"IBM Plex Mono",monospace;color:var(--ink-faint);font-size:.8rem}
-  .h2h .result{margin-top:1rem;display:none}
-  .probbar{height:30px;border-radius:8px;overflow:hidden;display:flex;font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500}
-  .probbar .a,.probbar .b{color:var(--ink);display:flex;align-items:center;padding:0 .6rem;white-space:nowrap;overflow:hidden;transition:width .25s}
-  .probbar .b{justify-content:flex-end}
-  .probbar .win{background:color-mix(in srgb,var(--good) 34%,transparent)}
-  .probbar .lose{background:color-mix(in srgb,var(--warn) 30%,transparent)}
-  .edges{display:grid;grid-template-columns:1fr 1fr;gap:.25rem 1.4rem;margin-top:.8rem;font-size:.8rem}
-  .edges .e{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;gap:.6rem}
-  .edges .e b{white-space:nowrap}
+  .cmp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin-bottom:1.6rem}
+  .cmp .eye{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
+  .cmp .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.5rem}
+  .cmp input{padding:.5rem .6rem;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface-2);color:var(--ink);font:inherit;font-size:.86rem;min-width:0}
+  .cmpResult{margin-top:1.1rem;display:none}
+  .cmpGrid{display:grid;grid-template-columns:250px 1fr;gap:1.4rem;align-items:start}
+  .radarWrap{text-align:center}
+  #radar{width:230px;height:230px;max-width:100%}
+  .radarKey{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:.4rem;font-family:"IBM Plex Mono",monospace;font-size:.72rem}
+  .radarKey span{display:inline-flex;align-items:center;gap:.3rem}
+  .radarKey i{width:9px;height:9px;border-radius:2px;display:inline-block}
+  #cmpTable{border-collapse:collapse;width:100%;font-size:.82rem}
+  #cmpTable th,#cmpTable td{padding:.4rem .55rem;border-top:1px solid var(--line);text-align:right;white-space:nowrap}
+  #cmpTable th:first-child,#cmpTable td:first-child{text-align:left;color:var(--ink-soft);font-family:"IBM Plex Mono",monospace;font-size:.72rem}
+  #cmpTable thead th{border-top:0;font-family:"Zilla Slab",serif;font-weight:500;font-size:.9rem;text-align:right}
+  #cmpTable td.best{color:var(--accent);font-weight:600}
+  #cmpTable td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 
   .controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.4rem;align-items:center}
   .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden}
@@ -100,8 +103,10 @@
     h1{font-size:1.6rem}
     .sub{font-size:.86rem}
     .statbar{gap:.8rem 1.3rem;font-size:.7rem;padding:.8rem .9rem}
-    .h2h .row{flex-direction:column;align-items:stretch}
-    .h2h .vs{align-self:center}
+    .cmp .row{grid-template-columns:1fr 1fr}
+    .cmpGrid{grid-template-columns:1fr;gap:1rem}
+    #cmpTable{font-size:.78rem}
+    #cmpTable td,#cmpTable th{padding:.35rem .4rem}
     .controls{gap:.4rem} .controls .hint{order:9;flex-basis:100%}
     .seg{flex-wrap:wrap}
     #segCls{display:grid;grid-template-columns:repeat(4,1fr);width:100%}
@@ -152,18 +157,21 @@
   <div class="banner" id="provBanner" style="display:none"></div>
   <div class="statbar" id="statbar"></div>
 
-  <div class="h2h" id="h2hBox">
-    <div class="eye" id="h2hEye">Head-to-head — which rookie WR?</div>
-    <div class="row">
-      <input id="pA" list="plist" placeholder="type player A…" autocomplete="off" />
-      <span class="vs">vs</span>
-      <input id="pB" list="plist" placeholder="type player B…" autocomplete="off" />
+  <div class="cmp" id="cmpBox">
+    <div class="eye" id="cmpEye">Compare — pick 2 to 4 rookies</div>
+    <div class="row" id="cmpInputs">
+      <input list="plist" placeholder="player 1…" autocomplete="off" />
+      <input list="plist" placeholder="player 2…" autocomplete="off" />
+      <input list="plist" placeholder="player 3 (optional)…" autocomplete="off" />
+      <input list="plist" placeholder="player 4 (optional)…" autocomplete="off" />
     </div>
     <datalist id="plist"></datalist>
-    <div class="result" id="h2hResult">
-      <div class="probbar"><div class="a" id="barA"></div><div class="b" id="barB"></div></div>
-      <div class="note" id="h2hNote"></div>
-      <div class="edges" id="h2hEdges"></div>
+    <div class="cmpResult" id="cmpResult">
+      <div class="cmpGrid">
+        <div class="radarWrap"><svg id="radar" viewBox="0 0 240 240" aria-hidden="true"></svg><div class="radarKey" id="radarKey"></div></div>
+        <div style="overflow-x:auto"><table id="cmpTable"></table></div>
+      </div>
+      <div class="note" id="cmpNote" style="margin-top:.7rem"></div>
     </div>
   </div>
 
@@ -206,12 +214,25 @@ const CFG={
  wr:{
   file:'scores.json', name:'WRPI', label:'wide receivers', posN:'WR', hasH2H:true, mkey:'wrpi', starPct:'95th',
   title:'WRPI Board',
+  compareAxes:[
+   {k:'_s',label:'WRPI %ile'},{k:'best_dom',label:'Dominator'},{k:'best_yds',label:'Best yds'},
+   {k:'final_ppa',label:'Efficiency'},{k:'explosion_p',label:'Explosion'},
+   {k:'nfl_entry_age',label:'Youth',inv:true},{k:'diamond_score',label:'Diamond'}],
+  compareRows:d=>[
+   ['Class',d.Year],['Tier',d.tier],['Pick',d.pick>=260?'UDFA':d.pick],
+   ['Dominator',pctF(d.best_dom)],['Best college yds',d.best_yds==null?'—':Math.round(d.best_yds)],
+   ['Efficiency (PPA)',d.final_ppa==null?'—':d.final_ppa.toFixed(2)],
+   ['Explosion %ile',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
+   ['Entry age',d.nfl_entry_age==null?'—':d.nfl_entry_age.toFixed(1)],
+   ['Diamond score',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
+   d.tb_score!=null?['H2H tiebreaker',d.tb_score.toFixed(2)]:null,
+   d.actual_fantasy_pctl!=null?['Actual fantasy %ile',(d.actual_fantasy_pctl*100).toFixed(0)]:null],
   sub:`Wide Receiver Prospect Indicator, fitted to actual fantasy production (best 3 of a player's first 5 seasons, PPR points per game). <b>Post-draft</b> is the topline and tracks draft capital by design. <b>Pre-draft</b> is the pre-NFL-draft talent read. <span class="legend"><b class="dia">◆</b> diamond in the rough, <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span>`,
   tips:{
    Player:'WR prospect. ◆ = diamond-in-the-rough flag (drafted after round 2, strong underlying profile). ★ = above the 95th-percentile star-potential line for the score shown.',
    Class:'Draft class.', Tier:'Decile of the post-draft WRPI percentile (10 = top).',
    WRPI:'Raw WRPI score (the number the percentile is built from). Bar + small % = percentile vs the 2015–2020 reference class.',
-   H2H:'Head-to-head tiebreaker score. Higher = the model favors this player against a similarly-drafted WR. Also drives the tool above.',
+   H2H:'Pairwise model lean — higher = the model favors this player over a similarly-drafted WR. Shown in Compare mode when you pick two WRs drafted close together.',
    Dia:'Diamond index — for WRs drafted after round 2, a weighted blend of the indicators that separate the future assets. Top quartile has hit ~15× the bottom.',
    Actual:'2015–22 only: actual fantasy-production percentile (best 3 of first 5 seasons, PPR PPG). Blank for 2023+.',
    Pick:'Overall draft slot. UDFA = undrafted.', Dom:'Best college season share of team receiving (yards + TD).',
@@ -253,8 +274,8 @@ const CFG={
    <b class="st">★</b> = ${s==='pre'?'pre':'post'}-draft WRPI at or above the 95th percentile — the line where star signal
    becomes real (${s==='pre'?'33% of these posted a WR1 season, 67% at least solid':'~64% at least solid'}).
    <b class="dia">◆</b> = drafted after round 2 but with a diamond-in-the-rough profile (multiple dominant college seasons,
-   big plays, early declare, full athletic workout). <b>H2H</b> is the head-to-head tiebreaker — use it and the tool above
-   when choosing between two rookies drafted close together.`,
+   big plays, early declare, full athletic workout). <b>H2H</b> = the pairwise model lean; it also shows in Compare mode
+   above when you pick two WRs drafted close together.`,
   about:(m,cal)=>`
    <h2>What WRPI is</h2>
    <p>A model of wide-receiver <b>fantasy</b> production, fitted to the target
@@ -267,10 +288,11 @@ const CFG={
    Its job is the honest baseline, not to beat consensus.</p>
    <p><b>Pre-draft WRPI</b> — production volume + college efficiency + athletic explosion + entry age,
    no draft capital. The pre-NFL-draft talent read (CV ${m.pre_cv_spearman}).</p>
-   <p><b>H2H tiebreaker</b> — a separate model trained only on pairs of receivers drafted within
-   ${m.tiebreaker_gap} picks of each other. It picks the better one
-   ${(m.tiebreaker_loco_acc*100).toFixed(0)}% of the time (vs 50% = follow draft order). Use it for
-   head-to-head rookie-draft decisions; that's where the model adds value over consensus.</p>
+   <p><b>Compare mode</b> (above the board) — pick 2–4 rookies for a radar + side-by-side table.
+   For two WRs drafted within ${m.tiebreaker_gap} picks of each other it also shows the
+   <b>pairwise model lean</b> (the <b>H2H</b> column): a separate model trained only on such pairs that
+   picks the better one ${(m.tiebreaker_loco_acc*100).toFixed(0)}% of the time (vs 50% = follow draft
+   order) — the one place the model adds value over consensus.</p>
    <h2>The flags</h2>
    <p><b class="st">★</b> star-potential — at or above the 95th percentile of the score shown. Historically
    ~a third of 95th-percentile pre-draft prospects posted a genuine WR1 season, two-thirds were at least solid.</p>
@@ -296,6 +318,19 @@ const CFG={
  rb:{
   file:'rupi_scores.json', name:'RUPI', label:'running backs', posN:'RB', hasH2H:false, mkey:'rupi', starPct:'90th',
   title:'RUPI Board',
+  compareAxes:[
+   {k:'_s',label:'RUPI %ile'},{k:'best_dom',label:'Scrim dom'},{k:'best_rec_ydshare',label:'Rec share'},
+   {k:'best_rush_share',label:'Carry share'},{k:'career_ypc',label:'YPC'},{k:'explosion_p',label:'Explosion'},
+   {k:'nfl_entry_age',label:'Youth',inv:true}],
+  compareRows:d=>[
+   ['Class',d.Year],['Tier',d.tier],['Pick',d.pick>=260?'UDFA':d.pick],
+   ['Scrim dominator',pctF(d.best_dom)],['Rec-yd share',pctF(d.best_rec_ydshare)],
+   ['Carry share',pctF(d.best_rush_share)],['Career YPC',d.career_ypc==null?'—':d.career_ypc.toFixed(1)],
+   ['College PPA',d.avg_ppa==null?'—':d.avg_ppa.toFixed(2)],
+   ['Explosion %ile',d.explosion_p==null?'—':(d.explosion_p*100).toFixed(0)],
+   ['Entry age',d.nfl_entry_age==null?'—':d.nfl_entry_age.toFixed(1)],
+   ['Diamond score',d.diamond_score==null?'—':d.diamond_score.toFixed(2)],
+   d.actual_fantasy_pctl!=null?['Actual fantasy %ile',(d.actual_fantasy_pctl*100).toFixed(0)]:null],
   sub:`<b>RU</b>nning-back <b>P</b>rospect <b>I</b>ndicator — the sibling to WRPI, fitted to actual fantasy production (best 2 of a player's first 3 seasons, PPR points per game — RBs peak early). <b>Post-draft</b> is the topline; it beats draft capital alone. <b>Pre-draft</b> is the pre-NFL-draft talent read (a coarse tier — RB production is opportunity-gated). <span class="legend"><b class="dia">◆</b> diamond in the rough, <b class="st">★</b> star-potential profile, <b style="color:var(--warn)">⚠</b> low-confidence inputs.</span>`,
   tips:{
    Player:'RB prospect. ◆ = diamond-in-the-rough flag (drafted outside round 1, or undrafted, with a strong profile). ★ = above the 90th-percentile star-potential line for the score shown.',
@@ -363,7 +398,8 @@ const CFG={
    no draft capital. CV <b>${m.pre_cv_spearman}</b> — honestly modest, and that's the right answer for
    RB: production is opportunity-gated, so a pure talent read has a low ceiling. Treat it as a coarse
    tier, not a precise rank.</p>
-   <p>No head-to-head tiebreaker for RB yet — it's on the backlog.</p>
+   <p><b>Compare mode</b> (above the board) works for RB too — pick 2–4 backs for a radar + side-by-side
+   table. There's no pairwise-lean model for RB (the WR-only "H2H" column).</p>
    <h2>The flags</h2>
    <p><b class="st">★</b> star-potential — at or above the <b>90th</b> percentile of the score shown
    (RB has fewer elite fantasy seasons than WR, so the line sits lower than WRPI's 95th). Post-draft:
@@ -461,39 +497,62 @@ function findPlayer(txt){
  m.sort((a,b)=>b.Year-a.Year);
  return m[0]||null;
 }
-function h2h(){
- const a=findPlayer(pA.value), b=findPlayer(pB.value), R=document.getElementById('h2hResult');
- if(!a||!b||key(a)===key(b)||a.tb_score==null){R.style.display='none';return;}
+const CMPCOL=['var(--accent)','var(--diamond)','var(--good)','#8a5cc8'];
+function pctRank(vals,v){ if(v==null||isNaN(v)) return 0; let n=0,d=0; for(const x of vals){ if(x==null||isNaN(x))continue; d++; if(x<=v)n++; } return d?n/d:0; }
+function radarSVG(axes, players){
+ const cx=120,cy=120,R=82,N=axes.length;
+ const ang=i=>-Math.PI/2 + i*2*Math.PI/N;
+ const pt=(i,r)=>[cx+r*Math.cos(ang(i)), cy+r*Math.sin(ang(i))];
+ let g='';
+ for(const f of [0.25,0.5,0.75,1]) g+=`<circle cx="${cx}" cy="${cy}" r="${R*f}" fill="none" stroke="var(--line)" stroke-width="0.6"/>`;
+ for(let i=0;i<N;i++){ const [x,y]=pt(i,R); g+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)" stroke-width="0.6"/>`;
+  const [lx,ly]=pt(i,R+13); g+=`<text x="${lx}" y="${ly}" font-size="8.5" fill="var(--ink-faint)" text-anchor="middle" dominant-baseline="middle" font-family="IBM Plex Mono,monospace">${axes[i].label}</text>`; }
+ players.forEach((p,pi)=>{
+  const pts=p.vals.map((v,i)=>pt(i, R*Math.max(0.02,Math.min(1,v))).join(',')).join(' ');
+  g+=`<polygon points="${pts}" fill="${CMPCOL[pi]}" fill-opacity="0.12" stroke="${CMPCOL[pi]}" stroke-width="1.5"/>`;
+ });
+ return g;
+}
+function compare(){
+ const R=document.getElementById('cmpResult');
+ const seen=new Set(), sel=[];
+ cmpInputs.querySelectorAll('input').forEach(inp=>{ const p=findPlayer(inp.value); if(p && !seen.has(key(p))){ seen.add(key(p)); sel.push(p); } });
+ if(sel.length<2){ R.style.display='none'; return; }
  R.style.display='block';
- const pa=sig(a.tb_score-b.tb_score), pct=Math.round(pa*100);
- barA.style.width=pct+'%'; barB.style.width=(100-pct)+'%';
- barA.className = pa>=0.5 ? 'a win' : 'a lose';
- barB.className = pa>=0.5 ? 'b lose' : 'b win';
- barA.textContent=`${lastName(a.Player)} ${pct}%`;
- barB.textContent=`${100-pct}% ${lastName(b.Player)}`;
- const g=Math.abs(a.pick-b.pick);
- document.getElementById('h2hNote').textContent =
-  `Model favours ${pa>=.5?a.Player:b.Player} (${(Math.max(pa,1-pa)*100).toFixed(0)}%). `+
-  (g<=20?`Drafted ${g} picks apart — the range where this has been right ~65% of the time.`
-        :`Drafted ${g} picks apart — far enough that draft slot alone already carries a lot; treat the lean lightly.`);
- const W=D.tiebreaker.w;
- const LAB={best_dom:'college dominator',final_dom:'final-yr dominator',dom_age20:'dominance by age 20',
-  n_seasons_30:'30%+ dominator seasons',best_yds:'best-season yards',career_yds:'career yards',
-  final_ppa:'final-yr efficiency',best_ppa:'peak efficiency',best_usage:'college usage share',
-  nfl_entry_age:'entry age (younger)',breakout_age:'breakout age (younger)',early_declare:'early declare',
-  ras:'athleticism (RAS)',explosion_p:'explosion',speed_score:'speed score',weight:'weight',
-  catch_radius:'catch radius',team_sp_off:'college offense (SP+)',team_sp_overall:'program strength (SP+)',
-  recruit_rating:'recruiting rating',prod_over_recruit:'produced above recruiting',
-  was_returner:'kick/punt returner',ret_td:'return TDs',col_qb_ypa:'college QB quality',
-  final_spike:'final-season spike',dom_growth:'dominator growth'};
- const contrib=(D.tiebreaker.feats||[]).map(f=>{
-  const za=(a.tbz&&a.tbz[f]!=null)?a.tbz[f]:0, zb=(b.tbz&&b.tbz[f]!=null)?b.tbz[f]:0;
-  return {f,d:(W[f]||0)*(za-zb)};
- }).filter(x=>Math.abs(x.d)>0.04).sort((x,y)=>Math.abs(y.d)-Math.abs(x.d)).slice(0,8);
- document.getElementById('h2hEdges').innerHTML = contrib.map(x=>{
-  const who=x.d>0?a.Player:b.Player;
-  return `<div class="e"><span>${LAB[x.f]||x.f}</span><b style="color:${x.d>0?'var(--good)':'var(--warn)'}">${lastName(who)}</b></div>`;
- }).join('') || '<div class="e" style="color:var(--ink-faint)">profiles look even on the tiebreaker inputs</div>';
+ const mk=C().mkey, axes=C().compareAxes;
+ // per-axis value pools for percentile ranking
+ const pools=axes.map(a=> a.k==='_s' ? null : D.scored.map(x=>+x[a.k]));
+ const players=sel.map((p,pi)=>({
+  name:p.Player, color:CMPCOL[pi],
+  vals:axes.map((a,i)=>{ let v = a.k==='_s' ? (p[mk+'_'+score]??0) : pctRank(pools[i], +p[a.k]); return a.inv?1-v:v; })
+ }));
+ document.getElementById('radar').innerHTML=radarSVG(axes,players);
+ document.getElementById('radarKey').innerHTML=sel.map((p,pi)=>`<span><i style="background:${CMPCOL[pi]}"></i>${lastName(p.Player)} '${String(p.Year).slice(2)}</span>`).join('');
+ // table
+ const rows0=C().compareRows(sel[0]).filter(Boolean).map(r=>r[0]);
+ const perP=sel.map(p=>Object.fromEntries(C().compareRows(p).filter(Boolean)));
+ const numish=s=>{ const m=String(s).match(/-?\d+(\.\d+)?/); return m?+m[0]:null; };
+ const lowerBetter=new Set(['Pick','Entry age']);
+ const noBest=new Set(['Class']);
+ let html=`<thead><tr><th></th>${sel.map(p=>`<th>${lastName(p.Player)} <span style="color:var(--ink-faint);font-weight:400">'${String(p.Year).slice(2)}</span></th>`).join('')}</tr></thead><tbody>`;
+ for(const lab of rows0){
+  const vals=perP.map(o=>o[lab]);
+  const nums=vals.map(numish);
+  const valid=nums.filter(n=>n!=null);
+  let best=null;
+  if(valid.length>1 && !noBest.has(lab)){ best = lowerBetter.has(lab)?Math.min(...valid):Math.max(...valid); }
+  html+=`<tr><td>${lab}</td>${vals.map((v,i)=>`<td class="num${best!=null&&nums[i]===best?' best':''}">${v==null?'—':v}</td>`).join('')}</tr>`;
+ }
+ html+='</tbody>';
+ document.getElementById('cmpTable').innerHTML=html;
+ // note
+ let note='Radar axes are league-wide percentiles (bigger = better; "Youth" inverts age).';
+ if(C().hasH2H && sel.length===2 && sel[0].tb_score!=null && sel[1].tb_score!=null){
+  const pa=sig(sel[0].tb_score-sel[1].tb_score), fav=pa>=.5?sel[0]:sel[1], g=Math.abs(sel[0].pick-sel[1].pick);
+  note+=` The pairwise model leans <b>${lastName(fav.Player)}</b> (${(Math.max(pa,1-pa)*100).toFixed(0)}%)`
+   +(g<=20?` — drafted ${g} picks apart, the range where that lean has been right ~58–65%.`:` — but drafted ${g} picks apart, so treat it lightly.`);
+ }
+ document.getElementById('cmpNote').innerHTML=note;
 }
 function renderAbout(){
  aboutPane.innerHTML=`<div style="max-width:70ch;font-size:.92rem;line-height:1.65;color:var(--ink-soft)">${C().about(D.model,D.calibration)}</div>`;
@@ -510,11 +569,11 @@ function boot(){
    +(dt?` (${dt})`:'')+`, so the <b>post-draft</b> ${C().name} for ${ds.class} prospects is running on mock draft position and will change once real picks land. The <b>pre-draft</b> score is complete.`;
  } else { provBanner.style.display='none'; }
  statbar.innerHTML=C().statbar(m);
- h2hBox.style.display=C().hasH2H?'block':'none';
- h2hEye.textContent=`Head-to-head — which rookie ${C().posN}?`;
+ cmpEye.textContent=`Compare — pick 2 to 4 rookie ${C().label}`;
  plist.innerHTML=D.scored.slice().sort((a,b)=>a.Player.localeCompare(b.Player)||b.Year-a.Year)
    .map(x=>`<option value="${x.Player} (${x.Year})">`).join('');
- pA.oninput=pB.oninput=h2h;
+ cmpInputs.querySelectorAll('input').forEach(inp=>{ inp.value=''; inp.oninput=compare; });
+ document.getElementById('cmpResult').style.display='none';
  segCls.querySelectorAll('button').forEach(btn=>btn.onclick=e=>{
   const v=btn.dataset.v;
   if(v==='all'){ cls=new Set(['all']); }
@@ -525,7 +584,7 @@ function boot(){
  });
  segScore.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
   segScore.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true'); score=btn.dataset.v; render(); setLegend();
+  btn.setAttribute('aria-pressed','true'); score=btn.dataset.v; render(); setLegend(); compare();
  });
  segFlag.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
   segFlag.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
