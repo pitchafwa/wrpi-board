@@ -164,7 +164,7 @@ _g,key,Year,Player,draft_pick,college,nfl_team,athlete_id,src_draft,src_combine,
 2026|georgia|hurst,ted hurst,2026,Ted Hurst,84.0,Georgia St.,TAM,5220680.0,1,1,1,True
 2026|georgia|young,colbie young,2026,Colbie Young,140.0,Georgia,CIN,5092508.0,1,1,1,True
 2026|incarnateword|walthall,jalen walthall,2026,Jalen Walthall,,Incarnate Word,,4875788.0,0,1,1,False
-2026|indiana|cooper,omar cooper,2026,Omar Cooper Jr.,30.0,Indiana,NYJ,4723820.0,1,1,1,True
+2026|indiana|cooper,omar cooper,2026,Omar Cooper,30.0,Indiana,NYJ,4723820.0,1,1,1,True
 2026|indiana|sarratt,elijah sarratt,2026,Elijah Sarratt,115.0,Indiana,BAL,5088338.0,1,1,1,True
 2026|iowa|wetjen,kaden wetjen,2026,Kaden Wetjen,121.0,Iowa,PIT,5081338.0,1,1,1,True
 2026|johncarroll|montgomery,tyren montgomery,2026,Tyren Montgomery,,John Carroll University,,,0,0,1,False
@@ -181,7 +181,7 @@ _g,key,Year,Player,draft_pick,college,nfl_team,athlete_id,src_draft,src_combine,
 2026|mississippi|stribling,dezhaun stribling,2026,De'Zhaun Stribling,33.0,Mississippi,SFO,4710714.0,1,1,1,True
 2026|mississippi|thompson,brenen thompson,2026,Brenen Thompson,105.0,Mississippi St.,LAC,4685553.0,1,1,1,True
 2026|mississippi|wallace,harrison wallace,2026,Harrison Wallace,,Mississippi,,4699354.0,0,1,1,False
-2026|missouri|coleman,kevin coleman,2026,Kevin Coleman Jr.,177.0,Missouri,MIA,4685307.0,1,1,1,True
+2026|missouri|coleman,kevin coleman,2026,Kevin Coleman,177.0,Missouri,MIA,4685307.0,1,1,1,True
 2026|nebraska|key,dane key,2026,Dane Key,,Nebraska,,,0,0,1,False
 2026|northdakota|lance,bryce lance,2026,Bryce Lance,136.0,North Dakota St.,NOR,4879276.0,1,1,1,True
 2026|notredame|fields,malachi fields,2026,Malachi Fields,74.0,Notre Dame,NYG,4682648.0,1,1,1,True
