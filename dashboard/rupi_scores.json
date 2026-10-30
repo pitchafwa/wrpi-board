@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T15:28+00:00",
+ "generated": "2026-10-30T15:38+00:00",
  "draft_status": {
   "class": 2026,
   "provisional": false,
@@ -468,7 +468,7 @@
      "p": "Daniel Lasco",
      "y": 2016,
      "sim": 47.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jordan Wilkins",
@@ -543,7 +543,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Roman Hemby",
@@ -816,7 +816,7 @@
      "p": "Lew Nichols",
      "y": 2023,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.179
     },
     {
      "p": "Jaleel McLaughlin",
@@ -879,13 +879,13 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Qadree Ollison",
@@ -1257,7 +1257,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 48.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -1452,7 +1452,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 230.0,
    "nfl_entry_age": 23.2471,
    "breakout_age": 23.0335,
@@ -1575,7 +1575,7 @@
      "p": "Jake Funk",
      "y": 2021,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Keilan Robinson",
@@ -1593,7 +1593,7 @@
      "p": "Raymond Calais",
      "y": 2020,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "T.J. Logan",
@@ -1755,7 +1755,7 @@
      "p": "Zac Brooks",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "T.J. Logan",
@@ -1836,7 +1836,7 @@
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 87.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kene Nwangwu",
@@ -1860,13 +1860,13 @@
      "p": "Nick Bawden",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -1974,7 +1974,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 235.0,
    "nfl_entry_age": 23.2471,
    "breakout_age": 99.0,
@@ -2034,7 +2034,7 @@
      "p": "David Williams",
      "y": 2018,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Rhamondre Stevenson",
@@ -2382,7 +2382,7 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 52.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Tony Pollard",
@@ -2496,7 +2496,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 119.0,
    "nfl_entry_age": 22.2341,
    "breakout_age": 21.0212,
@@ -2631,7 +2631,7 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jarquez Hunter",
@@ -2643,7 +2643,7 @@
      "p": "Lew Nichols",
      "y": 2023,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.179
     },
     {
      "p": "Kenneth Dixon",
@@ -2805,7 +2805,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Corey Kiner",
@@ -3153,7 +3153,7 @@
      "p": "Elijah Hood",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Alexander Mattison",
@@ -3246,7 +3246,7 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Bo Scarbrough",
@@ -3279,7 +3279,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 237.0,
    "nfl_entry_age": 23.2279,
    "breakout_age": 22.0151,
@@ -3339,7 +3339,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Chris Evans",
@@ -3366,7 +3366,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 182.0,
    "nfl_entry_age": 22.0507,
    "breakout_age": 18.8392,
@@ -3453,7 +3453,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 216.0,
    "nfl_entry_age": 22.0835,
    "breakout_age": 21.87,
@@ -3627,7 +3627,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 242.0,
    "nfl_entry_age": 21.8727,
    "breakout_age": 18.6612,
@@ -3801,7 +3801,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 211.0,
    "nfl_entry_age": 22.2587,
    "breakout_age": 20.0465,
@@ -3837,7 +3837,7 @@
      "p": "Jordan Scarlett",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Larry Rountree",
@@ -3855,13 +3855,13 @@
      "p": "Mark Walton",
      "y": 2018,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jermar Jefferson",
@@ -3975,7 +3975,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 247.0,
    "nfl_entry_age": 22.9131,
    "breakout_age": 99.0,
@@ -4551,7 +4551,7 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 53.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Dameon Pierce",
@@ -4887,7 +4887,7 @@
      "p": "Elijah Hood",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ezekiel Elliott",
@@ -5019,7 +5019,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 132.0,
    "nfl_entry_age": 22.0726,
    "breakout_age": 18.8583,
@@ -5142,19 +5142,19 @@
      "p": "Khalfani Muhammad",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Raymond Calais",
      "y": 2020,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "T.J. Logan",
@@ -5229,7 +5229,7 @@
      "p": "Elijah Hood",
      "y": 2017,
      "sim": 69.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Benny Snell Jr.",
@@ -5628,7 +5628,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 121.0,
    "nfl_entry_age": 23.3265,
    "breakout_age": 23.1129,
@@ -5664,7 +5664,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Boston Scott",
@@ -5976,7 +5976,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no verified birth date",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 252.0,
    "nfl_entry_age": 23.0,
    "breakout_age": null,
@@ -6024,7 +6024,7 @@
      "p": "Travis Dye",
      "y": 2023,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Myles Gaskin",
@@ -6129,7 +6129,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -6150,7 +6150,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 242.0,
    "nfl_entry_age": 20.6954,
    "breakout_age": 19.4798,
@@ -6216,7 +6216,7 @@
      "p": "Tavion Thomas",
      "y": 2023,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -6237,7 +6237,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 241.0,
    "nfl_entry_age": 22.2669,
    "breakout_age": 99.0,
@@ -6285,7 +6285,7 @@
      "p": "Raymond Calais",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Raheem Mostert",
@@ -6447,7 +6447,7 @@
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 79.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Roschon Johnson",
@@ -6498,7 +6498,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 238.0,
    "nfl_entry_age": 22.6037,
    "breakout_age": 21.3881,
@@ -6534,13 +6534,13 @@
      "p": "Tiyon Evans",
      "y": 2023,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jase McClellan",
@@ -6585,7 +6585,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 207.0,
    "nfl_entry_age": 22.4339,
    "breakout_age": 99.0,
@@ -6633,7 +6633,7 @@
      "p": "Nick Bawden",
      "y": 2018,
      "sim": 70.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Emari Demercado",
@@ -6645,7 +6645,7 @@
      "p": "Chandler Cox",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Malik Davis",
@@ -7062,7 +7062,7 @@
      "p": "Mark Walton",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Tank Bigsby",
@@ -7368,7 +7368,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 112.0,
    "nfl_entry_age": 20.7611,
    "breakout_age": 18.5462,
@@ -7665,7 +7665,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 52.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Gus Edwards",
@@ -7845,7 +7845,7 @@
      "p": "Tyler Ervin",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Rasheen Ali",
@@ -7944,7 +7944,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Isaiah Davis",
@@ -7956,7 +7956,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -8031,7 +8031,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kylin Hill",
@@ -8064,7 +8064,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 176.0,
    "nfl_entry_age": 21.243,
    "breakout_age": 21.0294,
@@ -8100,7 +8100,7 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "David Montgomery",
@@ -8373,7 +8373,7 @@
      "p": "David Williams",
      "y": 2018,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Karlos Williams",
@@ -8385,7 +8385,7 @@
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 54.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jonathan Williams",
@@ -8499,7 +8499,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 237.0,
    "nfl_entry_age": 21.5277,
    "breakout_age": 99.0,
@@ -8535,13 +8535,13 @@
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Chandler Cox",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Rod Smith",
@@ -8565,7 +8565,7 @@
      "p": "Cullen Gillaspia",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -8646,7 +8646,7 @@
      "p": "Tyler Ervin",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "J'Mari Taylor",
@@ -8721,7 +8721,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 70.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jordan Mason",
@@ -8760,7 +8760,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no verified birth date",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 226.0,
    "nfl_entry_age": 24.0,
    "breakout_age": null,
@@ -8814,7 +8814,7 @@
      "p": "Brittain Brown",
      "y": 2022,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Dare Ogunbowale",
@@ -9057,7 +9057,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Zamir White",
@@ -9087,7 +9087,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -9369,7 +9369,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 112.0,
    "nfl_entry_age": 21.4839,
    "breakout_age": 20.271,
@@ -9504,7 +9504,7 @@
      "p": "Mike Weber",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jase McClellan",
@@ -10044,7 +10044,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -10413,7 +10413,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 211.0,
    "nfl_entry_age": 22.3025,
    "breakout_age": 21.0897,
@@ -10479,7 +10479,7 @@
      "p": "Keith Marshall",
      "y": 2016,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -10500,7 +10500,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 194.0,
    "nfl_entry_age": 21.9849,
    "breakout_age": 21.7714,
@@ -10554,7 +10554,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Boston Scott",
@@ -10641,7 +10641,7 @@
      "p": "Keith Marshall",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Keaontay Ingram",
@@ -10761,7 +10761,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 154.0,
    "nfl_entry_age": 23.4853,
    "breakout_age": 21.2731,
@@ -10797,7 +10797,7 @@
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jordan Mason",
@@ -10809,7 +10809,7 @@
      "p": "Kelvin Taylor",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ulysses Bentley IV",
@@ -10896,7 +10896,7 @@
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Le'Veon Moss",
@@ -10935,7 +10935,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 218.0,
    "nfl_entry_age": 21.347,
    "breakout_age": 19.1348,
@@ -11076,7 +11076,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Gus Edwards",
@@ -11109,7 +11109,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 220.0,
    "nfl_entry_age": 23.6413,
    "breakout_age": 99.0,
@@ -11145,7 +11145,7 @@
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Rod Smith",
@@ -11163,7 +11163,7 @@
      "p": "Nick Bawden",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ray Davis",
@@ -11196,7 +11196,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 233.0,
    "nfl_entry_age": 22.4257,
    "breakout_age": 99.0,
@@ -11232,13 +11232,13 @@
      "p": "Nick Bawden",
      "y": 2018,
      "sim": 72.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Rod Smith",
@@ -12189,7 +12189,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jerome Ford",
@@ -12219,7 +12219,7 @@
      "p": "Lew Nichols",
      "y": 2023,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.179
     }
    ]
   },
@@ -12300,7 +12300,7 @@
      "p": "Mike Weber",
      "y": 2019,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Dameon Pierce",
@@ -12414,7 +12414,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 172.0,
    "nfl_entry_age": 21.7002,
    "breakout_age": 20.4873,
@@ -12537,7 +12537,7 @@
      "p": "Donnel Pumphrey",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Demetric Felton",
@@ -12642,7 +12642,7 @@
      "p": "Mike Weber",
      "y": 2019,
      "sim": 67.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jase McClellan",
@@ -12723,7 +12723,7 @@
      "p": "Keith Marshall",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Keaontay Ingram",
@@ -12810,7 +12810,7 @@
      "p": "Lew Nichols",
      "y": 2023,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.179
     },
     {
      "p": "Jeremy McNichols",
@@ -12849,7 +12849,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 245.0,
    "nfl_entry_age": 21.7495,
    "breakout_age": 99.0,
@@ -12909,7 +12909,7 @@
      "p": "Jake Funk",
      "y": 2021,
      "sim": 54.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Robert Henry Jr.",
@@ -12984,7 +12984,7 @@
      "p": "Mark Walton",
      "y": 2018,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ronald Jones II",
@@ -13065,7 +13065,7 @@
      "p": "Camerun Peoples",
      "y": 2023,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Wayne Gallman",
@@ -13263,7 +13263,7 @@
      "p": "Kenny Hilliard",
      "y": 2015,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -13761,7 +13761,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jordan Wilkins",
@@ -13866,7 +13866,7 @@
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Karlos Williams",
@@ -14364,7 +14364,7 @@
      "p": "Mark Walton",
      "y": 2018,
      "sim": 67.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Myles Gaskin",
@@ -14451,7 +14451,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Montrell Johnson Jr.",
@@ -14463,13 +14463,13 @@
      "p": "Brittain Brown",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Joe Williams",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Mike Boone",
@@ -14556,7 +14556,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Michael Wiley",
@@ -14643,7 +14643,7 @@
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ronnie Rivers",
@@ -14676,7 +14676,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 244.0,
    "nfl_entry_age": 22.5654,
    "breakout_age": 22.3518,
@@ -14736,7 +14736,7 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 55.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Deon Jackson",
@@ -14805,7 +14805,7 @@
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 83.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Emari Demercado",
@@ -14823,7 +14823,7 @@
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Chris Carson",
@@ -14850,7 +14850,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 233.0,
    "nfl_entry_age": 22.9733,
    "breakout_age": 99.0,
@@ -14898,13 +14898,13 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Joe Williams",
      "y": 2017,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Pierre Strong",
@@ -15072,7 +15072,7 @@
      "p": "Kelvin Taylor",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Corey Clement",
@@ -15153,7 +15153,7 @@
      "p": "Jordan Scarlett",
      "y": 2019,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kene Nwangwu",
@@ -15165,7 +15165,7 @@
      "p": "Kenny Hilliard",
      "y": 2015,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Emari Demercado",
@@ -15333,7 +15333,7 @@
      "p": "DeWayne McBride",
      "y": 2023,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "J.K. Dobbins",
@@ -15675,13 +15675,13 @@
      "p": "Jake Funk",
      "y": 2021,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 54.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Boston Scott",
@@ -16029,7 +16029,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Joshua Kelley",
@@ -16104,7 +16104,7 @@
      "p": "Mark Walton",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Brashard Smith",
@@ -16308,7 +16308,7 @@
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 54.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -16389,7 +16389,7 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ja'Quinden Jackson",
@@ -16464,7 +16464,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Sean Tucker",
@@ -16476,7 +16476,7 @@
      "p": "Bryce Love",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jarquez Hunter",
@@ -16539,7 +16539,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Trey Sermon",
@@ -16644,7 +16644,7 @@
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jeremy Langford",
@@ -16806,7 +16806,7 @@
      "p": "Keith Marshall",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ryquell Armstead",
@@ -16893,7 +16893,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ito Smith",
@@ -16980,7 +16980,7 @@
      "p": "Tiyon Evans",
      "y": 2023,
      "sim": 67.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Dameon Pierce",
@@ -17199,7 +17199,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 250.0,
    "nfl_entry_age": 24.2272,
    "breakout_age": 20.0137,
@@ -17421,7 +17421,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ryquell Armstead",
@@ -17949,7 +17949,7 @@
      "p": "Bryce Love",
      "y": 2019,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "J.K. Dobbins",
@@ -18042,7 +18042,7 @@
      "p": "Bryce Love",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Tyjae Spears",
@@ -18111,7 +18111,7 @@
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kendall Milton",
@@ -18123,13 +18123,13 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Karlos Williams",
@@ -18222,7 +18222,7 @@
      "p": "DeWayne McBride",
      "y": 2023,
      "sim": 55.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -18297,7 +18297,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Michael Wiley",
@@ -18309,7 +18309,7 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -18378,7 +18378,7 @@
      "p": "Donnel Pumphrey",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jaret Patterson",
@@ -18459,7 +18459,7 @@
      "p": "Lew Nichols",
      "y": 2023,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.179
     },
     {
      "p": "Bhayshul Tuten",
@@ -18483,7 +18483,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 55.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -18540,7 +18540,7 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Dylan Laube",
@@ -18627,13 +18627,13 @@
      "p": "Jason Huntley",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Lew Nichols",
      "y": 2023,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.179
     },
     {
      "p": "Emmett Johnson",
@@ -18819,13 +18819,13 @@
      "p": "Tyler Ervin",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Keenan Reynolds",
      "y": 2016,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Tyler Goodson",
@@ -18894,7 +18894,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "James Cook",
@@ -18939,7 +18939,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.179,
    "pick": 235.0,
    "nfl_entry_age": 21.3771,
    "breakout_age": 20.1643,
@@ -18987,7 +18987,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Paul Perkins",
@@ -19155,7 +19155,7 @@
      "p": "DeWayne McBride",
      "y": 2023,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Isaiah Davis",
@@ -19200,7 +19200,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no verified birth date",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": null,
    "breakout_age": null,
@@ -19236,7 +19236,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Michael Wiley",
@@ -19287,7 +19287,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 222.0,
    "nfl_entry_age": 21.4839,
    "breakout_age": 20.271,
@@ -19374,7 +19374,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": 23.3155,
    "breakout_age": 19.102,
@@ -19461,7 +19461,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no verified birth date",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": null,
    "breakout_age": null,
@@ -19548,7 +19548,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no verified birth date",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": null,
    "breakout_age": null,
@@ -19635,7 +19635,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": 23.2526,
    "breakout_age": 20.0383,
@@ -19671,7 +19671,7 @@
      "p": "Jordan Scarlett",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ty Chandler",
@@ -19776,7 +19776,7 @@
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Mike Boone",
@@ -19788,7 +19788,7 @@
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -19809,7 +19809,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": 22.7242,
    "breakout_age": 99.0,
@@ -19863,7 +19863,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Emari Demercado",
@@ -19896,7 +19896,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no verified birth date",
-   "actual_fantasy_pctl": 0.0917,
+   "actual_fantasy_pctl": 0.0895,
    "pick": 270.0,
    "nfl_entry_age": null,
    "breakout_age": null,
@@ -19932,7 +19932,7 @@
      "p": "Elijah Hood",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jordan Howard",
@@ -20136,7 +20136,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -20367,7 +20367,7 @@
      "p": "Elijah Hood",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Qadree Ollison",
@@ -20541,13 +20541,13 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Chris Carson",
@@ -20559,7 +20559,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Mike Boone",
@@ -20802,7 +20802,7 @@
      "p": "Deneric Prince",
      "y": 2023,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Chris Evans",
@@ -20820,7 +20820,7 @@
      "p": "Joe Williams",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Chris Carson",
@@ -20988,7 +20988,7 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kendre Miller",
@@ -21075,7 +21075,7 @@
      "p": "Raymond Calais",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jawhar Jordan",
@@ -21093,7 +21093,7 @@
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -21261,13 +21261,13 @@
      "p": "Keith Marshall",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -21330,7 +21330,7 @@
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "T.J. Logan",
@@ -21423,7 +21423,7 @@
      "p": "Brandon Wilson",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kaelon Black",
@@ -21441,7 +21441,7 @@
      "p": "Cullen Gillaspia",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -21597,13 +21597,13 @@
      "p": "Bryce Love",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Keenan Reynolds",
      "y": 2016,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Brashard Smith",
@@ -21777,7 +21777,7 @@
      "p": "Darius Jackson",
      "y": 2016,
      "sim": 56.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Kylin Hill",
@@ -21933,7 +21933,7 @@
      "p": "Brittain Brown",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jordan Mason",
@@ -22020,7 +22020,7 @@
      "p": "Tiyon Evans",
      "y": 2023,
      "sim": 72.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "MarShawn Lloyd",
@@ -22032,7 +22032,7 @@
      "p": "Devante Mays",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Peyton Barber",
@@ -22125,7 +22125,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Cameron Artis-Payne",
@@ -22224,7 +22224,7 @@
      "p": "Camerun Peoples",
      "y": 2023,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -22908,7 +22908,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ameer Abdullah",
@@ -23076,7 +23076,7 @@
      "p": "Bryce Love",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Devin Singletary",
@@ -23325,7 +23325,7 @@
      "p": "Mark Walton",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jermar Jefferson",
@@ -23355,7 +23355,7 @@
      "p": "Mike Weber",
      "y": 2019,
      "sim": 53.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -24312,7 +24312,7 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -24393,13 +24393,13 @@
      "p": "Rodney Anderson",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "David Williams",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -24456,13 +24456,13 @@
      "p": "Jordan Scarlett",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 61.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Robert Henry Jr.",
@@ -24474,7 +24474,7 @@
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 60.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Jawhar Jordan",
@@ -24648,7 +24648,7 @@
      "p": "Gerrid Doaks",
      "y": 2021,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Qadree Ollison",
@@ -24735,7 +24735,7 @@
      "p": "Jordan Scarlett",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "DeAndre Washington",
@@ -24891,7 +24891,7 @@
      "p": "Dexter Williams",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Zach Evans",
@@ -25500,7 +25500,7 @@
      "p": "Donnel Pumphrey",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Demetric Felton",
@@ -25761,13 +25761,13 @@
      "p": "Tyler Ervin",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Keenan Reynolds",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Tyler Goodson",
@@ -25854,7 +25854,7 @@
      "p": "Matthew Dayes",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ulysses Bentley IV",
@@ -25959,13 +25959,13 @@
      "p": "Daniel Lasco",
      "y": 2016,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 58.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -26139,7 +26139,7 @@
      "p": "Marcus Murphy",
      "y": 2015,
      "sim": 55.0,
-     "fant": 0.092
+     "fant": 0.09
     }
    ]
   },
@@ -26208,7 +26208,7 @@
      "p": "SaRodorick Thompson",
      "y": 2023,
      "sim": 59.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "Ty Chandler",
@@ -26220,7 +26220,7 @@
      "p": "Jordan Scarlett",
      "y": 2019,
      "sim": 57.0,
-     "fant": 0.092
+     "fant": 0.09
     },
     {
      "p": "T.J. Logan",
@@ -26411,25 +26411,25 @@
     "_t": 1,
     "n": 26,
     "hit_rate": 0.038,
-    "avg_outcome_pctl": 0.332
+    "avg_outcome_pctl": 0.331
    },
    {
     "_t": 2,
     "n": 21,
     "hit_rate": 0.095,
-    "avg_outcome_pctl": 0.37
+    "avg_outcome_pctl": 0.369
    },
    {
     "_t": 3,
     "n": 22,
     "hit_rate": 0.0,
-    "avg_outcome_pctl": 0.269
+    "avg_outcome_pctl": 0.268
    },
    {
     "_t": 4,
     "n": 26,
     "hit_rate": 0.038,
-    "avg_outcome_pctl": 0.333
+    "avg_outcome_pctl": 0.336
    },
    {
     "_t": 5,
@@ -26473,13 +26473,13 @@
     "_t": 1,
     "n": 25,
     "hit_rate": 0.04,
-    "avg_outcome_pctl": 0.239
+    "avg_outcome_pctl": 0.237
    },
    {
     "_t": 2,
     "n": 27,
     "hit_rate": 0.111,
-    "avg_outcome_pctl": 0.402
+    "avg_outcome_pctl": 0.401
    },
    {
     "_t": 3,
@@ -26491,13 +26491,13 @@
     "_t": 4,
     "n": 19,
     "hit_rate": 0.211,
-    "avg_outcome_pctl": 0.418
+    "avg_outcome_pctl": 0.417
    },
    {
     "_t": 5,
     "n": 25,
     "hit_rate": 0.04,
-    "avg_outcome_pctl": 0.384
+    "avg_outcome_pctl": 0.387
    },
    {
     "_t": 6,

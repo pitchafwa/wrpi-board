@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T15:28+00:00",
+ "generated": "2026-10-30T15:38+00:00",
  "draft_status": {
   "class": 2026,
   "provisional": false,
@@ -122,7 +122,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9475,
+   "actual_fantasy_pctl": 0.9448,
    "actual_pctl_post": 0.9883,
    "pick": 4.0,
    "nfl_entry_age": 20.5421,
@@ -186,7 +186,7 @@
      "p": "Juju Smith-Schuster",
      "y": 2017,
      "sim": 68.0,
-     "fant": 0.97
+     "fant": 0.964
     },
     {
      "p": "Chris Godwin",
@@ -204,7 +204,7 @@
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "Luther Burden",
@@ -216,7 +216,7 @@
      "p": "Leonte Carroo",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.503
+     "fant": 0.5
     }
    ]
   },
@@ -350,7 +350,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9006,
+   "actual_fantasy_pctl": 0.8978,
    "actual_pctl_post": 0.9765,
    "pick": 14.0,
    "nfl_entry_age": 21.9466,
@@ -444,7 +444,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.856
+     "fant": 0.854
     }
    ]
   },
@@ -464,7 +464,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8536,
+   "actual_fantasy_pctl": 0.8508,
    "actual_pctl_post": 0.9178,
    "pick": 20.0,
    "nfl_entry_age": 21.6071,
@@ -540,7 +540,7 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Dillon Mitchell",
@@ -558,7 +558,7 @@
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.851
+     "fant": 0.867
     }
    ]
   },
@@ -571,14 +571,14 @@
    "wrpi_pre": 0.8195,
    "raw_post": 51.4056,
    "raw_pre": 36.2094,
-   "tb_score": -0.714,
+   "tb_score": -0.7152,
    "diamond_score": 0.2861,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.768,
+   "actual_fantasy_pctl": 0.7624,
    "actual_pctl_post": 0.9715,
    "pick": 29.0,
    "nfl_entry_age": 21.9877,
@@ -630,7 +630,7 @@
     "team_sp_off": -0.025,
     "team_sp_overall": 0.184,
     "recruit_rating": -0.192,
-    "prod_over_recruit": 0.717,
+    "prod_over_recruit": 0.712,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.282,
@@ -672,7 +672,7 @@
      "p": "John Ross",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.762
+     "fant": 0.757
     }
    ]
   },
@@ -692,7 +692,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8011,
+   "actual_fantasy_pctl": 0.7983,
    "actual_pctl_post": 0.9228,
    "pick": 26.0,
    "nfl_entry_age": 21.3087,
@@ -756,13 +756,13 @@
      "p": "Jaelen Strong",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.599
+     "fant": 0.597
     },
     {
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 64.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Gabriel Davis",
@@ -786,7 +786,7 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 60.0,
-     "fant": 0.901
+     "fant": 0.898
     }
    ]
   },
@@ -870,31 +870,31 @@
      "p": "Dorial Green-Beckham",
      "y": 2015,
      "sim": 74.0,
-     "fant": 0.735
+     "fant": 0.732
     },
     {
      "p": "N'Keal Harry",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.649
+     "fant": 0.644
     },
     {
      "p": "Chase Claypool",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.865
+     "fant": 0.862
     },
     {
      "p": "Drake London",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.945
+     "fant": 0.967
     },
     {
      "p": "Auden Tate",
      "y": 2018,
      "sim": 64.0,
-     "fant": 0.635
+     "fant": 0.63
     },
     {
      "p": "Antonio Gandy-Golden",
@@ -920,7 +920,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7348,
+   "actual_fantasy_pctl": 0.732,
    "actual_pctl_post": 0.6795,
    "pick": 40.0,
    "nfl_entry_age": 21.7221,
@@ -990,25 +990,25 @@
      "p": "Chase Claypool",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.865
+     "fant": 0.862
     },
     {
      "p": "Auden Tate",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.635
+     "fant": 0.63
     },
     {
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Allen Lazard",
      "y": 2018,
      "sim": 64.0,
-     "fant": 0.867
+     "fant": 0.865
     },
     {
      "p": "Jalen Hurd",
@@ -1148,7 +1148,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5994,
+   "actual_fantasy_pctl": 0.5967,
    "actual_pctl_post": 0.896,
    "pick": 70.0,
    "nfl_entry_age": 20.9336,
@@ -1212,13 +1212,13 @@
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Breshad Perriman",
      "y": 2015,
      "sim": 68.0,
-     "fant": 0.801
+     "fant": 0.798
     },
     {
      "p": "Robert Davis",
@@ -1262,7 +1262,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8867,
+   "actual_fantasy_pctl": 0.884,
    "actual_pctl_post": 0.75,
    "pick": 105.0,
    "nfl_entry_age": 21.5414,
@@ -1350,13 +1350,13 @@
      "p": "Trent Taylor",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.588
+     "fant": 0.586
     },
     {
      "p": "Penny Hart",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.431
+     "fant": 0.434
     }
    ]
   },
@@ -1376,7 +1376,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9144,
+   "actual_fantasy_pctl": 0.9116,
    "actual_pctl_post": 0.9128,
    "pick": 69.0,
    "nfl_entry_age": 22.2587,
@@ -1446,7 +1446,7 @@
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 69.0,
-     "fant": 0.738
+     "fant": 0.807
     },
     {
      "p": "Elijah Moore",
@@ -1464,7 +1464,7 @@
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Keke Coutee",
@@ -1490,7 +1490,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7459,
+   "actual_fantasy_pctl": 0.7403,
    "actual_pctl_post": 0.5285,
    "pick": 76.0,
    "nfl_entry_age": 22.1848,
@@ -1554,7 +1554,7 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 70.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Jonathan Mingo",
@@ -1566,7 +1566,7 @@
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Erik Ezukanma",
@@ -1604,7 +1604,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9641,
+   "actual_fantasy_pctl": 0.9586,
    "actual_pctl_post": 0.8641,
    "pick": 146.0,
    "nfl_entry_age": 21.0897,
@@ -1674,7 +1674,7 @@
      "p": "Demarcus Robinson",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.699
+     "fant": 0.693
     },
     {
      "p": "Trishton Jackson",
@@ -1686,7 +1686,7 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Dillon Mitchell",
@@ -1711,14 +1711,14 @@
    "wrpi_pre": 0.657,
    "raw_post": 37.2801,
    "raw_pre": 32.6352,
-   "tb_score": 0.089,
+   "tb_score": 0.0879,
    "diamond_score": 0.7184,
    "is_diamond": 1,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6077,
+   "actual_fantasy_pctl": 0.605,
    "actual_pctl_post": 0.9144,
    "pick": 87.0,
    "nfl_entry_age": 21.755,
@@ -1770,7 +1770,7 @@
     "team_sp_off": 1.72,
     "team_sp_overall": 1.169,
     "recruit_rating": -0.09,
-    "prod_over_recruit": 0.513,
+    "prod_over_recruit": 0.508,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.104,
@@ -1782,25 +1782,25 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 71.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Jaelen Strong",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.599
+     "fant": 0.597
     },
     {
      "p": "Breshad Perriman",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.801
+     "fant": 0.798
     },
     {
      "p": "Chris Conley",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Erik Ezukanma",
@@ -1832,7 +1832,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6657,
+   "actual_fantasy_pctl": 0.6602,
    "actual_pctl_post": 0.6862,
    "pick": 107.0,
    "nfl_entry_age": 23.039,
@@ -1902,7 +1902,7 @@
      "p": "Sterling Shepard",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.92
+     "fant": 0.917
     },
     {
      "p": "Efton Chism III",
@@ -1920,7 +1920,7 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 64.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Keevan Lucas",
@@ -1946,7 +1946,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7431,
+   "actual_fantasy_pctl": 0.7376,
    "actual_pctl_post": 0.2181,
    "pick": 159.0,
    "nfl_entry_age": 22.6886,
@@ -2238,7 +2238,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Geremy Davis",
@@ -2349,14 +2349,14 @@
    },
    "similar": [
     {
-     "p": "Bub Means",
-     "y": 2024,
+     "p": "CJ Johnson",
+     "y": 2023,
      "sim": 73.0,
      "fant": null
     },
     {
-     "p": "CJ Johnson",
-     "y": 2023,
+     "p": "Bub Means",
+     "y": 2024,
      "sim": 73.0,
      "fant": null
     },
@@ -2472,25 +2472,25 @@
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.934
+     "fant": 0.928
     },
     {
      "p": "Tyler Johnson",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.61
+     "fant": 0.608
     },
     {
      "p": "Rashard Higgins",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.785
+     "fant": 0.782
     },
     {
      "p": "Tajae Sharpe",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.685
+     "fant": 0.68
     },
     {
      "p": "KC Concepcion",
@@ -2851,7 +2851,7 @@
    "wrpi_pre": 0.5884,
    "raw_post": 27.7067,
    "raw_pre": 30.5124,
-   "tb_score": -1.8544,
+   "tb_score": -1.8555,
    "diamond_score": 0.1975,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -2910,7 +2910,7 @@
     "team_sp_off": -1.237,
     "team_sp_overall": -1.908,
     "recruit_rating": -1.123,
-    "prod_over_recruit": 1.874,
+    "prod_over_recruit": 1.869,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -1.314,
@@ -2934,13 +2934,13 @@
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "Kenny Golladay",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.931
+     "fant": 0.925
     },
     {
      "p": "Kevin White",
@@ -3168,7 +3168,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 64.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Ryan Davis",
@@ -3264,7 +3264,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 72.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Ryan Switzer",
@@ -3402,7 +3402,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Cody Thompson",
@@ -3421,7 +3421,7 @@
    "wrpi_pre": 0.2238,
    "raw_post": 26.4303,
    "raw_pre": 23.3228,
-   "tb_score": -0.4516,
+   "tb_score": -0.4527,
    "diamond_score": -1.2283,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -3480,7 +3480,7 @@
     "team_sp_off": 1.069,
     "team_sp_overall": 1.108,
     "recruit_rating": -1.291,
-    "prod_over_recruit": -0.465,
+    "prod_over_recruit": -0.47,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.991,
@@ -3612,7 +3612,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Riley Ridley",
@@ -3840,7 +3840,7 @@
      "p": "Bo Melton",
      "y": 2022,
      "sim": 59.0,
-     "fant": 0.641
+     "fant": 0.635
     },
     {
      "p": "Lewis Bond",
@@ -3852,7 +3852,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 58.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Frank Darby",
@@ -4068,7 +4068,7 @@
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 69.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Rico Bussey",
@@ -4080,7 +4080,7 @@
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 64.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Jordan Hudson",
@@ -4428,7 +4428,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 58.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Kalija Lipscomb",
@@ -4548,7 +4548,7 @@
      "p": "Travis Rudolph",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.508
+     "fant": 0.506
     }
    ]
   },
@@ -4568,7 +4568,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6906,
+   "actual_fantasy_pctl": 0.6851,
    "actual_pctl_post": 0.8842,
    "pick": 15.0,
    "nfl_entry_age": 21.4894,
@@ -4632,7 +4632,7 @@
      "p": "John Ross",
      "y": 2017,
      "sim": 72.0,
-     "fant": 0.762
+     "fant": 0.757
     },
     {
      "p": "Carlos Henderson",
@@ -4650,19 +4650,19 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.674
+     "fant": 0.669
     }
    ]
   },
@@ -4682,7 +4682,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7569,
+   "actual_fantasy_pctl": 0.7514,
    "actual_pctl_post": 0.7919,
    "pick": 22.0,
    "nfl_entry_age": 23.0773,
@@ -4752,7 +4752,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 67.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Elijah Sarratt",
@@ -4796,7 +4796,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6022,
+   "actual_fantasy_pctl": 0.5994,
    "actual_pctl_post": 0.8339,
    "pick": 23.0,
    "nfl_entry_age": 20.5503,
@@ -4860,7 +4860,7 @@
      "p": "Juju Smith-Schuster",
      "y": 2017,
      "sim": 69.0,
-     "fant": 0.97
+     "fant": 0.964
     },
     {
      "p": "Jack Bech",
@@ -4872,7 +4872,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Puka Nacua",
@@ -4910,7 +4910,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9337,
+   "actual_fantasy_pctl": 0.9282,
    "actual_pctl_post": 0.948,
    "pick": 55.0,
    "nfl_entry_age": 21.128,
@@ -4974,7 +4974,7 @@
      "p": "Tajae Sharpe",
      "y": 2016,
      "sim": 72.0,
-     "fant": 0.685
+     "fant": 0.68
     },
     {
      "p": "Jordyn Tyson",
@@ -4986,7 +4986,7 @@
      "p": "Rashard Higgins",
      "y": 2016,
      "sim": 67.0,
-     "fant": 0.785
+     "fant": 0.782
     },
     {
      "p": "KeeSean Johnson",
@@ -5004,7 +5004,7 @@
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.66
+     "fant": 0.655
     }
    ]
   },
@@ -5024,7 +5024,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9199,
+   "actual_fantasy_pctl": 0.9171,
    "actual_pctl_post": 0.7131,
    "pick": 40.0,
    "nfl_entry_age": 22.8884,
@@ -5088,13 +5088,13 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 70.0,
-     "fant": 0.674
+     "fant": 0.669
     },
     {
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Jaylin Noel",
@@ -5112,7 +5112,7 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Jayden Reed",
@@ -5252,7 +5252,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5028,
+   "actual_fantasy_pctl": 0.5,
    "actual_pctl_post": 0.906,
    "pick": 86.0,
    "nfl_entry_age": 21.9357,
@@ -5322,13 +5322,13 @@
      "p": "James Washington",
      "y": 2018,
      "sim": 64.0,
-     "fant": 0.702
+     "fant": 0.696
     },
     {
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.657
+     "fant": 0.704
     },
     {
      "p": "Jalen Royals",
@@ -5359,7 +5359,7 @@
    "wrpi_pre": 0.6354,
    "raw_post": 37.0073,
    "raw_pre": 31.654,
-   "tb_score": 0.263,
+   "tb_score": 0.2618,
    "diamond_score": 0.747,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -5418,7 +5418,7 @@
     "team_sp_off": 1.247,
     "team_sp_overall": 0.489,
     "recruit_rating": -0.197,
-    "prod_over_recruit": 1.124,
+    "prod_over_recruit": 1.119,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.25,
@@ -5430,7 +5430,7 @@
      "p": "Christian Kirk",
      "y": 2018,
      "sim": 70.0,
-     "fant": 0.917
+     "fant": 0.914
     },
     {
      "p": "Hunter Sharp",
@@ -5480,7 +5480,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6851,
+   "actual_fantasy_pctl": 0.6796,
    "actual_pctl_post": 0.854,
    "pick": 140.0,
    "nfl_entry_age": 21.024,
@@ -5544,13 +5544,13 @@
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 71.0,
-     "fant": 0.934
+     "fant": 0.928
     },
     {
      "p": "Rashard Higgins",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.785
+     "fant": 0.782
     },
     {
      "p": "Jordyn Tyson",
@@ -5568,7 +5568,7 @@
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.66
+     "fant": 0.655
     },
     {
      "p": "Jalen Walthall",
@@ -5658,7 +5658,7 @@
      "p": "Robert Foster",
      "y": 2018,
      "sim": 66.0,
-     "fant": 0.638
+     "fant": 0.633
     },
     {
      "p": "Jordan Whittington",
@@ -5670,7 +5670,7 @@
      "p": "Van Jefferson",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.749
+     "fant": 0.743
     },
     {
      "p": "Charone Peake",
@@ -5708,7 +5708,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6298,
+   "actual_fantasy_pctl": 0.6271,
    "actual_pctl_post": 0.7299,
    "pick": 114.0,
    "nfl_entry_age": 21.7769,
@@ -5772,7 +5772,7 @@
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 72.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Amara Darboh",
@@ -5784,7 +5784,7 @@
      "p": "Chris Conley",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Erik Ezukanma",
@@ -5822,7 +5822,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6989,
+   "actual_fantasy_pctl": 0.6934,
    "actual_pctl_post": 0.7097,
    "pick": 126.0,
    "nfl_entry_age": 21.2786,
@@ -5892,7 +5892,7 @@
      "p": "Steven Sims",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.663
+     "fant": 0.657
     },
     {
      "p": "Dillon Mitchell",
@@ -5904,7 +5904,7 @@
      "p": "Stefon Diggs",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.964
+     "fant": 0.959
     },
     {
      "p": "Deon Cain",
@@ -5916,7 +5916,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.688
+     "fant": 0.682
     }
    ]
   },
@@ -5936,7 +5936,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7845,
+   "actual_fantasy_pctl": 0.7818,
    "actual_pctl_post": 0.849,
    "pick": 172.0,
    "nfl_entry_age": 21.2348,
@@ -6000,25 +6000,25 @@
      "p": "Tajae Sharpe",
      "y": 2016,
      "sim": 67.0,
-     "fant": 0.685
+     "fant": 0.68
     },
     {
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.934
+     "fant": 0.928
     },
     {
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.66
+     "fant": 0.655
     },
     {
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "KeeSean Johnson",
@@ -6050,7 +6050,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6547,
+   "actual_fantasy_pctl": 0.6519,
    "actual_pctl_post": 0.2936,
    "pick": 107.0,
    "nfl_entry_age": 22.5435,
@@ -6164,7 +6164,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7818,
+   "actual_fantasy_pctl": 0.779,
    "actual_pctl_post": 0.505,
    "pick": 112.0,
    "nfl_entry_age": 23.4497,
@@ -6392,7 +6392,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.511,
+   "actual_fantasy_pctl": 0.5083,
    "actual_pctl_post": 0.3272,
    "pick": 163.0,
    "nfl_entry_age": 22.4942,
@@ -6468,7 +6468,7 @@
      "p": "John Hightower",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.497
+     "fant": 0.494
     },
     {
      "p": "Danny Gray",
@@ -6506,7 +6506,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6243,
+   "actual_fantasy_pctl": 0.6215,
    "actual_pctl_post": 0.3221,
    "pick": 199.0,
    "nfl_entry_age": 21.7084,
@@ -6570,7 +6570,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 70.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Mekale McKay",
@@ -6613,7 +6613,7 @@
    "wrpi_pre": 0.5379,
    "raw_post": 28.6793,
    "raw_pre": 29.6079,
-   "tb_score": -0.7513,
+   "tb_score": -0.7524,
    "diamond_score": -0.5826,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -6672,7 +6672,7 @@
     "team_sp_off": 0.611,
     "team_sp_overall": 1.003,
     "recruit_rating": -0.19,
-    "prod_over_recruit": -0.96,
+    "prod_over_recruit": -0.965,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.25,
@@ -6734,7 +6734,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7265,
+   "actual_fantasy_pctl": 0.7238,
    "actual_pctl_post": 0.2903,
    "pick": 270.0,
    "nfl_entry_age": 20.449,
@@ -6798,13 +6798,13 @@
      "p": "Antonio Callaway",
      "y": 2018,
      "sim": 71.0,
-     "fant": 0.693
+     "fant": 0.688
     },
     {
      "p": "Curtis Samuel",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.895
+     "fant": 0.892
     },
     {
      "p": "Kendrick Law",
@@ -6936,7 +6936,7 @@
      "p": "Noah Brown",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.622
+     "fant": 0.619
     },
     {
      "p": "Dillon Bell",
@@ -7170,7 +7170,7 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.605
+     "fant": 0.602
     }
    ]
   },
@@ -7266,7 +7266,7 @@
      "p": "Tyquan Thornton",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.633
+     "fant": 0.771
     },
     {
      "p": "Rodney Adams",
@@ -7278,7 +7278,7 @@
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 61.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Chris Brazzell II",
@@ -7304,7 +7304,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7762,
+   "actual_fantasy_pctl": 0.7735,
    "actual_pctl_post": 0.443,
    "pick": 270.0,
    "nfl_entry_age": 21.9521,
@@ -7500,7 +7500,7 @@
      "p": "Kenny Golladay",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.931
+     "fant": 0.925
     },
     {
      "p": "Courtland Sutton",
@@ -7596,7 +7596,7 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 67.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "Xavier Hutchinson",
@@ -7639,14 +7639,14 @@
    "wrpi_pre": 0.5957,
    "raw_post": 26.3311,
    "raw_pre": 30.6634,
-   "tb_score": 0.6891,
+   "tb_score": 0.688,
    "diamond_score": 0.1075,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.605,
+   "actual_fantasy_pctl": 0.6022,
    "actual_pctl_post": 0.453,
    "pick": 270.0,
    "nfl_entry_age": 22.0945,
@@ -7698,7 +7698,7 @@
     "team_sp_off": 0.626,
     "team_sp_overall": -0.374,
     "recruit_rating": -0.153,
-    "prod_over_recruit": 0.928,
+    "prod_over_recruit": 0.923,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.459,
@@ -7722,7 +7722,7 @@
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "Aaron Burbridge",
@@ -7842,7 +7842,7 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "Noel Thomas",
@@ -7950,7 +7950,7 @@
      "p": "Van Jefferson",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.749
+     "fant": 0.743
     },
     {
      "p": "Antoine Green",
@@ -8058,7 +8058,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 71.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "Caleb Douglas",
@@ -8178,7 +8178,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 67.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "Deon Cain",
@@ -8196,7 +8196,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.912
+     "fant": 0.909
     }
    ]
   },
@@ -8646,7 +8646,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Theo Wease",
@@ -8970,7 +8970,7 @@
      "p": "Auden Tate",
      "y": 2018,
      "sim": 66.0,
-     "fant": 0.635
+     "fant": 0.63
     },
     {
      "p": "Jamarius Way",
@@ -8988,7 +8988,7 @@
      "p": "Javon Wims",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.5
+     "fant": 0.497
     },
     {
      "p": "Trevon Grimes",
@@ -9014,7 +9014,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8978,
+   "actual_fantasy_pctl": 0.895,
    "actual_pctl_post": 0.8607,
    "pick": 5.0,
    "nfl_entry_age": 21.974,
@@ -9078,7 +9078,7 @@
      "p": "Tre'Quan Smith",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.793
+     "fant": 0.79
     },
     {
      "p": "Courtland Sutton",
@@ -9090,7 +9090,7 @@
      "p": "Tyler Johnson",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.61
+     "fant": 0.608
     },
     {
      "p": "Jordyn Tyson",
@@ -9102,7 +9102,7 @@
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.934
+     "fant": 0.928
     },
     {
      "p": "Elic Ayomanor",
@@ -9128,7 +9128,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9061,
+   "actual_fantasy_pctl": 0.9033,
    "actual_pctl_post": 0.8054,
    "pick": 7.0,
    "nfl_entry_age": 22.245,
@@ -9192,7 +9192,7 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Jaleel Scott",
@@ -9216,7 +9216,7 @@
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Geremy Davis",
@@ -9242,7 +9242,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7624,
+   "actual_fantasy_pctl": 0.7569,
    "actual_pctl_post": 0.9883,
    "pick": 9.0,
    "nfl_entry_age": 21.0979,
@@ -9306,7 +9306,7 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 72.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Marvin Mims",
@@ -9330,7 +9330,7 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Makai Lemon",
@@ -9356,7 +9356,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9696,
+   "actual_fantasy_pctl": 0.9641,
    "actual_pctl_post": 0.948,
    "pick": 62.0,
    "nfl_entry_age": 20.1095,
@@ -9420,7 +9420,7 @@
      "p": "Laquon Treadwell",
      "y": 2016,
      "sim": 69.0,
-     "fant": 0.602
+     "fant": 0.599
     },
     {
      "p": "David Bell",
@@ -9432,7 +9432,7 @@
      "p": "Amari Cooper",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.948
+     "fant": 0.945
     },
     {
      "p": "Chris Godwin",
@@ -9470,7 +9470,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.895,
+   "actual_fantasy_pctl": 0.8923,
    "actual_pctl_post": 0.7768,
    "pick": 40.0,
    "nfl_entry_age": 20.3915,
@@ -9534,7 +9534,7 @@
      "p": "Antonio Callaway",
      "y": 2018,
      "sim": 67.0,
-     "fant": 0.693
+     "fant": 0.688
     },
     {
      "p": "Amon-Ra St. Brown",
@@ -9558,13 +9558,13 @@
      "p": "Jalin Marshall",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.727
+     "fant": 0.724
     },
     {
      "p": "John Ross",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.762
+     "fant": 0.757
     }
    ]
   },
@@ -9584,7 +9584,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7541,
+   "actual_fantasy_pctl": 0.7486,
    "actual_pctl_post": 0.9195,
    "pick": 37.0,
    "nfl_entry_age": 21.7604,
@@ -9654,13 +9654,13 @@
      "p": "Josh Doctson",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.757
+     "fant": 0.751
     },
     {
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Dillon Mitchell",
@@ -9672,7 +9672,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "Denzel Mims",
@@ -9768,19 +9768,19 @@
      "p": "Jaelen Strong",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.599
+     "fant": 0.597
     },
     {
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.71
+     "fant": 0.707
     },
     {
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Elic Ayomanor",
@@ -9792,7 +9792,7 @@
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.95
+     "fant": 0.948
     }
    ]
   },
@@ -9812,7 +9812,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6188,
+   "actual_fantasy_pctl": 0.616,
    "actual_pctl_post": 0.8926,
    "pick": 72.0,
    "nfl_entry_age": 21.8371,
@@ -9882,31 +9882,31 @@
      "p": "Anthony Miller",
      "y": 2018,
      "sim": 71.0,
-     "fant": 0.773
+     "fant": 0.768
     },
     {
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "James Washington",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.702
+     "fant": 0.696
     }
    ]
   },
@@ -9926,7 +9926,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8039,
+   "actual_fantasy_pctl": 0.8011,
    "actual_pctl_post": 0.8272,
    "pick": 117.0,
    "nfl_entry_age": 21.8754,
@@ -10002,7 +10002,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Chris Brazzell II",
@@ -10033,7 +10033,7 @@
    "wrpi_pre": 0.8953,
    "raw_post": 37.4272,
    "raw_pre": 38.3329,
-   "tb_score": -0.5222,
+   "tb_score": -0.5234,
    "diamond_score": 0.4712,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -10092,7 +10092,7 @@
     "team_sp_off": 0.685,
     "team_sp_overall": -0.758,
     "recruit_rating": -1.047,
-    "prod_over_recruit": 1.498,
+    "prod_over_recruit": 1.492,
     "was_returner": 0.674,
     "ret_td": 1.933,
     "col_qb_ypa": 0.991,
@@ -10104,13 +10104,13 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 76.0,
-     "fant": 0.674
+     "fant": 0.669
     },
     {
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 70.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Jaylin Noel",
@@ -10122,19 +10122,19 @@
      "p": "Taywan Taylor",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.619
+     "fant": 0.616
     },
     {
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.95
+     "fant": 0.948
     }
    ]
   },
@@ -10382,7 +10382,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9309,
+   "actual_fantasy_pctl": 0.9254,
    "actual_pctl_post": 0.8138,
    "pick": 96.0,
    "nfl_entry_age": 23.1622,
@@ -10560,7 +10560,7 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Erik Ezukanma",
@@ -10572,13 +10572,13 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "CeeDee Lamb",
@@ -10590,7 +10590,7 @@
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.71
+     "fant": 0.707
     }
    ]
   },
@@ -10603,14 +10603,14 @@
    "wrpi_pre": 0.9495,
    "raw_post": 34.1139,
    "raw_pre": 41.0498,
-   "tb_score": 0.8816,
+   "tb_score": 0.8805,
    "diamond_score": 0.7743,
    "is_diamond": 1,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6602,
+   "actual_fantasy_pctl": 0.6547,
    "actual_pctl_post": 0.7735,
    "pick": 237.0,
    "nfl_entry_age": 20.8953,
@@ -10662,7 +10662,7 @@
     "team_sp_off": -0.646,
     "team_sp_overall": -0.034,
     "recruit_rating": -0.049,
-    "prod_over_recruit": 1.016,
+    "prod_over_recruit": 1.011,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.25,
@@ -10680,7 +10680,7 @@
      "p": "Chris Olave",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Rashod Bateman",
@@ -10724,7 +10724,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8619,
+   "actual_fantasy_pctl": 0.8591,
    "actual_pctl_post": 0.2232,
    "pick": 110.0,
    "nfl_entry_age": 23.1129,
@@ -10902,7 +10902,7 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 69.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Erik Ezukanma",
@@ -11016,13 +11016,13 @@
      "p": "Jaelen Strong",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.599
+     "fant": 0.597
     },
     {
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 68.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Kevin White",
@@ -11034,13 +11034,13 @@
      "p": "Breshad Perriman",
      "y": 2015,
      "sim": 62.0,
-     "fant": 0.801
+     "fant": 0.798
     },
     {
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "Jonathan Adams",
@@ -11148,7 +11148,7 @@
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.804
+     "fant": 0.801
     },
     {
      "p": "Luke McCaffrey",
@@ -11244,13 +11244,13 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 71.0,
-     "fant": 0.925
+     "fant": 0.931
     },
     {
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 68.0,
-     "fant": 0.738
+     "fant": 0.807
     },
     {
      "p": "Travis Hunter",
@@ -11262,7 +11262,7 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 64.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Marvin Mims",
@@ -11294,7 +11294,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6823,
+   "actual_fantasy_pctl": 0.6768,
    "actual_pctl_post": 0.2416,
    "pick": 118.0,
    "nfl_entry_age": 23.2936,
@@ -11408,7 +11408,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6878,
+   "actual_fantasy_pctl": 0.6823,
    "actual_pctl_post": 0.7265,
    "pick": 141.0,
    "nfl_entry_age": 21.9548,
@@ -11490,7 +11490,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Luke McCaffrey",
@@ -11750,7 +11750,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.732,
+   "actual_fantasy_pctl": 0.7293,
    "actual_pctl_post": 0.4195,
    "pick": 172.0,
    "nfl_entry_age": 21.7331,
@@ -11838,7 +11838,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 67.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Shi Smith",
@@ -11857,7 +11857,7 @@
    "wrpi_pre": 0.1986,
    "raw_post": 30.268,
    "raw_pre": 22.5971,
-   "tb_score": 0.2918,
+   "tb_score": 0.2907,
    "diamond_score": 0.0054,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -11916,7 +11916,7 @@
     "team_sp_off": 0.493,
     "team_sp_overall": 0.358,
     "recruit_rating": -0.233,
-    "prod_over_recruit": -0.44,
+    "prod_over_recruit": -0.446,
     "was_returner": 0.674,
     "ret_td": 5.057,
     "col_qb_ypa": 0.193,
@@ -11928,7 +11928,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 76.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Victor Bolden",
@@ -11971,7 +11971,7 @@
    "wrpi_pre": 0.2671,
    "raw_post": 30.2425,
    "raw_pre": 24.4431,
-   "tb_score": -0.588,
+   "tb_score": -0.5891,
    "diamond_score": 0.0599,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -12030,7 +12030,7 @@
     "team_sp_off": -0.749,
     "team_sp_overall": -0.714,
     "recruit_rating": -0.034,
-    "prod_over_recruit": 0.346,
+    "prod_over_recruit": 0.34,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.104,
@@ -12048,7 +12048,7 @@
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 75.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Rico Bussey",
@@ -12072,7 +12072,7 @@
      "p": "Chris Olave",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.953
+     "fant": 0.97
     }
    ]
   },
@@ -12206,7 +12206,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5083,
+   "actual_fantasy_pctl": 0.5055,
    "actual_pctl_post": 0.4815,
    "pick": 270.0,
    "nfl_entry_age": 21.2977,
@@ -12320,7 +12320,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7901,
+   "actual_fantasy_pctl": 0.7873,
    "actual_pctl_post": 0.6628,
    "pick": 270.0,
    "nfl_entry_age": 22.0397,
@@ -12408,13 +12408,13 @@
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.63
+     "fant": 0.627
     }
    ]
   },
@@ -12434,7 +12434,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6215,
+   "actual_fantasy_pctl": 0.6188,
    "actual_pctl_post": 0.3356,
    "pick": 239.0,
    "nfl_entry_age": 20.9884,
@@ -12528,7 +12528,7 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 58.0,
-     "fant": 0.63
+     "fant": 0.627
     }
    ]
   },
@@ -12662,7 +12662,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5884,
+   "actual_fantasy_pctl": 0.5856,
    "actual_pctl_post": 0.6946,
    "pick": 177.0,
    "nfl_entry_age": 22.6749,
@@ -12726,7 +12726,7 @@
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "Keevan Lucas",
@@ -12756,7 +12756,7 @@
      "p": "Penny Hart",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.431
+     "fant": 0.434
     }
    ]
   },
@@ -12858,7 +12858,7 @@
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "DeAndre Smelter",
@@ -12870,7 +12870,7 @@
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 68.0,
-     "fant": 0.657
+     "fant": 0.704
     }
    ]
   },
@@ -12960,7 +12960,7 @@
      "p": "Corey Davis",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.898
+     "fant": 0.895
     },
     {
      "p": "Courtland Sutton",
@@ -12972,13 +12972,13 @@
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 58.0,
-     "fant": 0.657
+     "fant": 0.704
     },
     {
      "p": "Tyler Johnson",
      "y": 2020,
      "sim": 58.0,
-     "fant": 0.61
+     "fant": 0.608
     },
     {
      "p": "Dontay Demus Jr.",
@@ -13111,7 +13111,7 @@
    "wrpi_pre": 0.6679,
    "raw_post": 26.8267,
    "raw_pre": 32.9922,
-   "tb_score": -1.481,
+   "tb_score": -1.4821,
    "diamond_score": 0.3565,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -13170,7 +13170,7 @@
     "team_sp_off": -0.882,
     "team_sp_overall": -1.263,
     "recruit_rating": -0.97,
-    "prod_over_recruit": 1.911,
+    "prod_over_recruit": 1.905,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.605,
@@ -13225,7 +13225,7 @@
    "wrpi_pre": 0.3213,
    "raw_post": 26.648,
    "raw_pre": 25.8892,
-   "tb_score": -0.1492,
+   "tb_score": -0.1503,
    "diamond_score": -0.6229,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -13284,7 +13284,7 @@
     "team_sp_off": 1.173,
     "team_sp_overall": 1.326,
     "recruit_rating": -0.251,
-    "prod_over_recruit": -0.949,
+    "prod_over_recruit": -0.954,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.548,
@@ -13308,7 +13308,7 @@
      "p": "Geronimo Allison",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.776
+     "fant": 0.773
     },
     {
      "p": "Adam Humphries",
@@ -13428,7 +13428,7 @@
      "p": "Geronimo Allison",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.776
+     "fant": 0.773
     },
     {
      "p": "Michael Jefferson",
@@ -13453,7 +13453,7 @@
    "wrpi_pre": 0.5126,
    "raw_post": 26.3655,
    "raw_pre": 28.9451,
-   "tb_score": 0.0176,
+   "tb_score": 0.0165,
    "diamond_score": -0.2422,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -13512,7 +13512,7 @@
     "team_sp_off": 0.493,
     "team_sp_overall": 0.358,
     "recruit_rating": -0.151,
-    "prod_over_recruit": -0.578,
+    "prod_over_recruit": -0.583,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.193,
@@ -13542,7 +13542,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "Jaleel Scott",
@@ -13650,13 +13650,13 @@
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Caullin Lacy",
@@ -13681,7 +13681,7 @@
    "wrpi_pre": 0.3466,
    "raw_post": 26.2261,
    "raw_pre": 26.3785,
-   "tb_score": -0.3065,
+   "tb_score": -0.3076,
    "diamond_score": -0.4852,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -13740,7 +13740,7 @@
     "team_sp_off": 1.38,
     "team_sp_overall": 0.96,
     "recruit_rating": -0.996,
-    "prod_over_recruit": -0.121,
+    "prod_over_recruit": -0.126,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 1.08,
@@ -13986,7 +13986,7 @@
      "p": "Parris Campbell",
      "y": 2019,
      "sim": 58.0,
-     "fant": 0.707
+     "fant": 0.702
     },
     {
      "p": "Cornell Powell",
@@ -13998,7 +13998,7 @@
      "p": "Jalin Marshall",
      "y": 2016,
      "sim": 58.0,
-     "fant": 0.727
+     "fant": 0.724
     },
     {
      "p": "Michael Rector",
@@ -14220,7 +14220,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 73.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Caullin Lacy",
@@ -14334,7 +14334,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 72.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Ryan Davis",
@@ -14486,7 +14486,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7707,
+   "actual_fantasy_pctl": 0.7652,
    "actual_pctl_post": 0.1191,
    "pick": 270.0,
    "nfl_entry_age": 21.4757,
@@ -14707,7 +14707,7 @@
    "wrpi_pre": 0.0289,
    "raw_post": 24.4516,
    "raw_pre": 16.1608,
-   "tb_score": -0.9741,
+   "tb_score": -0.9752,
    "diamond_score": -0.1006,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -14766,7 +14766,7 @@
     "team_sp_off": -0.143,
     "team_sp_overall": 0.846,
     "recruit_rating": 0.072,
-    "prod_over_recruit": 0.798,
+    "prod_over_recruit": 0.793,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.959,
@@ -15126,7 +15126,7 @@
      "p": "Austin Mack",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.514
+     "fant": 0.511
     },
     {
      "p": "Jordan Whittington",
@@ -15163,7 +15163,7 @@
    "wrpi_pre": 0.9711,
    "raw_post": 57.742,
    "raw_pre": 42.6809,
-   "tb_score": 0.3457,
+   "tb_score": 0.3445,
    "diamond_score": 1.4549,
    "is_diamond": 0,
    "is_star_pre": 1,
@@ -15222,7 +15222,7 @@
     "team_sp_off": -1.252,
     "team_sp_overall": -1.42,
     "recruit_rating": 0.034,
-    "prod_over_recruit": 1.195,
+    "prod_over_recruit": 1.189,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -2.289,
@@ -15234,19 +15234,19 @@
      "p": "Jalen Reagor",
      "y": 2020,
      "sim": 68.0,
-     "fant": 0.652
+     "fant": 0.646
     },
     {
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.608
+     "fant": 0.605
     },
     {
      "p": "Chris Godwin",
@@ -15264,7 +15264,7 @@
      "p": "Amari Cooper",
      "y": 2015,
      "sim": 58.0,
-     "fant": 0.948
+     "fant": 0.945
     }
    ]
   },
@@ -15284,7 +15284,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9171,
+   "actual_fantasy_pctl": 0.9144,
    "actual_pctl_post": 0.943,
    "pick": 47.0,
    "nfl_entry_age": 21.1198,
@@ -15366,7 +15366,7 @@
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Kalija Lipscomb",
@@ -15378,7 +15378,7 @@
      "p": "James Washington",
      "y": 2018,
      "sim": 59.0,
-     "fant": 0.702
+     "fant": 0.696
     }
    ]
   },
@@ -15398,7 +15398,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9669,
+   "actual_fantasy_pctl": 0.9613,
    "actual_pctl_post": 0.9044,
    "pick": 26.0,
    "nfl_entry_age": 23.0335,
@@ -15512,7 +15512,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7017,
+   "actual_fantasy_pctl": 0.6961,
    "actual_pctl_post": 0.948,
    "pick": 60.0,
    "nfl_entry_age": 21.7495,
@@ -15576,19 +15576,19 @@
      "p": "Leonte Carroo",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.503
+     "fant": 0.5
     },
     {
      "p": "Taywan Taylor",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.619
+     "fant": 0.616
     },
     {
      "p": "Christian Kirk",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.917
+     "fant": 0.914
     },
     {
      "p": "A.J. Brown",
@@ -15606,7 +15606,7 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.674
+     "fant": 0.669
     }
    ]
   },
@@ -15696,7 +15696,7 @@
      "p": "Kenny Golladay",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.931
+     "fant": 0.925
     },
     {
      "p": "Keyarris Garrett",
@@ -15708,7 +15708,7 @@
      "p": "Allen Lazard",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.867
+     "fant": 0.865
     },
     {
      "p": "Denzel Boston",
@@ -15740,7 +15740,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7182,
+   "actual_fantasy_pctl": 0.7155,
    "actual_pctl_post": 0.8389,
    "pick": 44.0,
    "nfl_entry_age": 22.193,
@@ -15810,13 +15810,13 @@
      "p": "Chris Olave",
      "y": 2022,
      "sim": 70.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 70.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Dres Anderson",
@@ -15834,7 +15834,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.704
+     "fant": 0.699
     }
    ]
   },
@@ -15854,7 +15854,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7735,
+   "actual_fantasy_pctl": 0.768,
    "actual_pctl_post": 0.6359,
    "pick": 51.0,
    "nfl_entry_age": 23.2307,
@@ -15918,7 +15918,7 @@
      "p": "Taywan Taylor",
      "y": 2017,
      "sim": 69.0,
-     "fant": 0.619
+     "fant": 0.616
     },
     {
      "p": "Carlos Henderson",
@@ -15936,7 +15936,7 @@
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Rashee Rice",
@@ -15961,14 +15961,14 @@
    "wrpi_pre": 0.7906,
    "raw_post": 41.3618,
    "raw_pre": 35.5433,
-   "tb_score": 0.1811,
+   "tb_score": 0.18,
    "diamond_score": 0.5649,
    "is_diamond": 1,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8895,
+   "actual_fantasy_pctl": 0.8867,
    "actual_pctl_post": 0.7802,
    "pick": 61.0,
    "nfl_entry_age": 21.2731,
@@ -16020,7 +16020,7 @@
     "team_sp_off": 0.064,
     "team_sp_overall": 0.812,
     "recruit_rating": -0.207,
-    "prod_over_recruit": -0.388,
+    "prod_over_recruit": -0.393,
     "was_returner": 0.674,
     "ret_td": 1.152,
     "col_qb_ypa": 0.725,
@@ -16032,7 +16032,7 @@
      "p": "Kevin Austin",
      "y": 2022,
      "sim": 69.0,
-     "fant": 0.627
+     "fant": 0.624
     },
     {
      "p": "Ja'Kobi Lane",
@@ -16075,14 +16075,14 @@
    "wrpi_pre": 0.8375,
    "raw_post": 40.0998,
    "raw_pre": 36.5673,
-   "tb_score": 0.2572,
+   "tb_score": 0.2561,
    "diamond_score": 0.1684,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6934,
+   "actual_fantasy_pctl": 0.6878,
    "actual_pctl_post": 0.7315,
    "pick": 105.0,
    "nfl_entry_age": 20.9774,
@@ -16134,7 +16134,7 @@
     "team_sp_off": -1.267,
     "team_sp_overall": 0.315,
     "recruit_rating": 0.036,
-    "prod_over_recruit": -0.858,
+    "prod_over_recruit": -0.863,
     "was_returner": 0.674,
     "ret_td": 1.933,
     "col_qb_ypa": -1.137,
@@ -16146,13 +16146,13 @@
      "p": "Jalin Marshall",
      "y": 2016,
      "sim": 69.0,
-     "fant": 0.727
+     "fant": 0.724
     },
     {
      "p": "Curtis Samuel",
      "y": 2017,
      "sim": 69.0,
-     "fant": 0.895
+     "fant": 0.892
     },
     {
      "p": "Parker Washington",
@@ -16196,7 +16196,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7928,
+   "actual_fantasy_pctl": 0.7901,
    "actual_pctl_post": 0.9547,
    "pick": 91.0,
    "nfl_entry_age": 21.9849,
@@ -16278,7 +16278,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Elijhah Badger",
@@ -16310,7 +16310,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8923,
+   "actual_fantasy_pctl": 0.8895,
    "actual_pctl_post": 0.8305,
    "pick": 81.0,
    "nfl_entry_age": 21.8289,
@@ -16380,7 +16380,7 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "Tamorrion Terry",
@@ -16392,13 +16392,13 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Jordan Payton",
@@ -16417,14 +16417,14 @@
    "wrpi_pre": 0.5451,
    "raw_post": 36.8035,
    "raw_pre": 29.6361,
-   "tb_score": -0.0337,
+   "tb_score": -0.0348,
    "diamond_score": 0.0094,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6961,
+   "actual_fantasy_pctl": 0.6906,
    "actual_pctl_post": 0.557,
    "pick": 113.0,
    "nfl_entry_age": 22.8145,
@@ -16476,7 +16476,7 @@
     "team_sp_off": -2.154,
     "team_sp_overall": -0.226,
     "recruit_rating": -0.179,
-    "prod_over_recruit": -0.439,
+    "prod_over_recruit": -0.445,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -1.757,
@@ -16494,7 +16494,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Antwane Wells Jr.",
@@ -16506,7 +16506,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "DaVaris Daniels",
@@ -16531,7 +16531,7 @@
    "wrpi_pre": 0.7112,
    "raw_post": 35.7267,
    "raw_pre": 34.2372,
-   "tb_score": -0.1327,
+   "tb_score": -0.1338,
    "diamond_score": 0.4444,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -16590,7 +16590,7 @@
     "team_sp_off": -0.114,
     "team_sp_overall": -0.609,
     "recruit_rating": -0.287,
-    "prod_over_recruit": 0.209,
+    "prod_over_recruit": 0.204,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": -0.162,
@@ -16614,7 +16614,7 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Wan'Dale Robinson",
@@ -16632,7 +16632,7 @@
      "p": "Deontay Burnett",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.616
+     "fant": 0.613
     }
    ]
   },
@@ -16645,7 +16645,7 @@
    "wrpi_pre": 0.7292,
    "raw_post": 32.7177,
    "raw_pre": 34.5697,
-   "tb_score": -0.4439,
+   "tb_score": -0.445,
    "diamond_score": 0.3832,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -16704,7 +16704,7 @@
     "team_sp_off": 0.611,
     "team_sp_overall": -0.601,
     "recruit_rating": -0.287,
-    "prod_over_recruit": 0.017,
+    "prod_over_recruit": 0.012,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.016,
@@ -16722,7 +16722,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "Jackson Meeks",
@@ -16734,7 +16734,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Puka Nacua",
@@ -16746,7 +16746,7 @@
      "p": "Daesean Hamilton",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.696
+     "fant": 0.691
     }
    ]
   },
@@ -16759,7 +16759,7 @@
    "wrpi_pre": 0.4838,
    "raw_post": 31.9895,
    "raw_pre": 28.6263,
-   "tb_score": 0.453,
+   "tb_score": 0.4519,
    "diamond_score": 0.2487,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -16818,7 +16818,7 @@
     "team_sp_off": 0.049,
     "team_sp_overall": -0.06,
     "recruit_rating": -0.327,
-    "prod_over_recruit": 0.176,
+    "prod_over_recruit": 0.171,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 1.168,
@@ -16854,7 +16854,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 68.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "Cedric Tillman",
@@ -16950,7 +16950,7 @@
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 73.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Malachi Fields",
@@ -16962,7 +16962,7 @@
      "p": "Marcell Ateman",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.613
+     "fant": 0.61
     },
     {
      "p": "Bug Howard",
@@ -17076,7 +17076,7 @@
      "p": "Demarcus Robinson",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.699
+     "fant": 0.693
     },
     {
      "p": "DaVaris Daniels",
@@ -17178,7 +17178,7 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 67.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Felton Davis",
@@ -17222,7 +17222,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.616,
+   "actual_fantasy_pctl": 0.6133,
    "actual_pctl_post": 0.5923,
    "pick": 270.0,
    "nfl_entry_age": 20.2437,
@@ -17286,7 +17286,7 @@
      "p": "Chris Olave",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Junior Bergen",
@@ -17298,13 +17298,13 @@
      "p": "Anthony Schwartz",
      "y": 2021,
      "sim": 62.0,
-     "fant": 0.506
+     "fant": 0.503
     },
     {
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 61.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Makai Lemon",
@@ -17450,7 +17450,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7514,
+   "actual_fantasy_pctl": 0.7459,
    "actual_pctl_post": 0.6007,
    "pick": 208.0,
    "nfl_entry_age": 22.1164,
@@ -17514,7 +17514,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "Xavier Hutchinson",
@@ -17526,7 +17526,7 @@
      "p": "Jalen Tolbert",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.677
+     "fant": 0.671
     },
     {
      "p": "Dillon Mitchell",
@@ -17564,7 +17564,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8674,
+   "actual_fantasy_pctl": 0.8646,
    "actual_pctl_post": 0.651,
    "pick": 270.0,
    "nfl_entry_age": 22.0589,
@@ -17640,13 +17640,13 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "N'Keal Harry",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.649
+     "fant": 0.644
     },
     {
      "p": "Keyarris Garrett",
@@ -17763,16 +17763,16 @@
      "fant": 0.831
     },
     {
-     "p": "Zavion Thomas",
-     "y": 2026,
-     "sim": 62.0,
-     "fant": null
-    },
-    {
      "p": "Byron Marshall",
      "y": 2016,
      "sim": 62.0,
      "fant": 0.452
+    },
+    {
+     "p": "Zavion Thomas",
+     "y": 2026,
+     "sim": 62.0,
+     "fant": null
     }
    ]
   },
@@ -17785,14 +17785,14 @@
    "wrpi_pre": 0.1949,
    "raw_post": 28.2738,
    "raw_pre": 22.4638,
-   "tb_score": -0.4515,
+   "tb_score": -0.4527,
    "diamond_score": -0.4839,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7238,
+   "actual_fantasy_pctl": 0.721,
    "actual_pctl_post": 0.349,
    "pick": 210.0,
    "nfl_entry_age": 22.2396,
@@ -17844,7 +17844,7 @@
     "team_sp_off": 0.019,
     "team_sp_overall": 0.489,
     "recruit_rating": -0.059,
-    "prod_over_recruit": -0.249,
+    "prod_over_recruit": -0.254,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": -0.605,
@@ -17906,7 +17906,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7956,
+   "actual_fantasy_pctl": 0.7928,
    "actual_pctl_post": 0.4597,
    "pick": 240.0,
    "nfl_entry_age": 22.3244,
@@ -17988,13 +17988,13 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 62.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Keke Coutee",
@@ -18013,7 +18013,7 @@
    "wrpi_pre": 0.3285,
    "raw_post": 27.7664,
    "raw_pre": 26.0918,
-   "tb_score": -0.9842,
+   "tb_score": -0.9853,
    "diamond_score": -0.4001,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -18072,7 +18072,7 @@
     "team_sp_off": -0.114,
     "team_sp_overall": -0.609,
     "recruit_rating": -0.215,
-    "prod_over_recruit": -0.868,
+    "prod_over_recruit": -0.873,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.162,
@@ -18084,7 +18084,7 @@
      "p": "Juwan Johnson",
      "y": 2020,
      "sim": 70.0,
-     "fant": 0.787
+     "fant": 0.785
     },
     {
      "p": "Savion Williams",
@@ -18248,7 +18248,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5,
+   "actual_fantasy_pctl": 0.4972,
    "actual_pctl_post": 0.146,
    "pick": 224.0,
    "nfl_entry_age": 23.3073,
@@ -18456,7 +18456,7 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.674
+     "fant": 0.669
     }
    ]
   },
@@ -18558,7 +18558,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "DaVaris Daniels",
@@ -18590,7 +18590,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6354,
+   "actual_fantasy_pctl": 0.6298,
    "actual_pctl_post": 0.4883,
    "pick": 253.0,
    "nfl_entry_age": 20.909,
@@ -18672,7 +18672,7 @@
      "p": "Dorial Green-Beckham",
      "y": 2015,
      "sim": 62.0,
-     "fant": 0.735
+     "fant": 0.732
     },
     {
      "p": "Trevon Grimes",
@@ -18704,7 +18704,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6133,
+   "actual_fantasy_pctl": 0.6105,
    "actual_pctl_post": 0.146,
    "pick": 228.0,
    "nfl_entry_age": 23.2936,
@@ -18798,7 +18798,7 @@
      "p": "Javon Wims",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.5
+     "fant": 0.497
     }
    ]
   },
@@ -18882,13 +18882,13 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 71.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Daesean Hamilton",
      "y": 2018,
      "sim": 67.0,
-     "fant": 0.696
+     "fant": 0.691
     },
     {
      "p": "Keon Hatcher",
@@ -18932,7 +18932,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7293,
+   "actual_fantasy_pctl": 0.7265,
    "actual_pctl_post": 0.1594,
    "pick": 270.0,
    "nfl_entry_age": 24.1232,
@@ -19039,7 +19039,7 @@
    "wrpi_pre": 0.4729,
    "raw_post": 26.1224,
    "raw_pre": 28.244,
-   "tb_score": -0.9211,
+   "tb_score": -0.9222,
    "diamond_score": 0.0794,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -19098,7 +19098,7 @@
     "team_sp_off": 1.158,
     "team_sp_overall": 0.114,
     "recruit_rating": -1.078,
-    "prod_over_recruit": 1.092,
+    "prod_over_recruit": 1.087,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.991,
@@ -19236,7 +19236,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Antwane Wells Jr.",
@@ -19482,7 +19482,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.724
+     "fant": 0.721
     }
    ]
   },
@@ -19584,7 +19584,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 68.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Kyren Lacy",
@@ -19616,7 +19616,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6381,
+   "actual_fantasy_pctl": 0.6326,
    "actual_pctl_post": 0.0017,
    "pick": 270.0,
    "nfl_entry_age": 23.655,
@@ -19723,7 +19723,7 @@
    "wrpi_pre": 0.0939,
    "raw_post": 23.9496,
    "raw_pre": 19.8876,
-   "tb_score": -0.3721,
+   "tb_score": -0.3733,
    "diamond_score": -0.3442,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -19782,7 +19782,7 @@
     "team_sp_off": -0.099,
     "team_sp_overall": 0.297,
     "recruit_rating": -0.156,
-    "prod_over_recruit": 0.248,
+    "prod_over_recruit": 0.243,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.193,
@@ -19938,7 +19938,7 @@
      "p": "K.J. Hill",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.494
+     "fant": 0.492
     }
    ]
   },
@@ -19951,7 +19951,7 @@
    "wrpi_pre": 0.0686,
    "raw_post": 23.6171,
    "raw_pre": 18.8579,
-   "tb_score": 0.0013,
+   "tb_score": 0.0002,
    "diamond_score": -0.6482,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -20010,7 +20010,7 @@
     "team_sp_off": -0.631,
     "team_sp_overall": -0.278,
     "recruit_rating": -0.278,
-    "prod_over_recruit": -0.668,
+    "prod_over_recruit": -0.673,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -1.314,
@@ -20186,7 +20186,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6492,
+   "actual_fantasy_pctl": 0.6436,
    "actual_pctl_post": 0.9799,
    "pick": 32.0,
    "nfl_entry_age": 21.0404,
@@ -20250,7 +20250,7 @@
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 72.0,
-     "fant": 0.657
+     "fant": 0.704
     },
     {
      "p": "J.J. Arcega-Whiteside",
@@ -20268,7 +20268,7 @@
      "p": "Jaelen Strong",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.599
+     "fant": 0.597
     },
     {
      "p": "Jerome Lane",
@@ -20280,7 +20280,7 @@
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.79
+     "fant": 0.787
     }
    ]
   },
@@ -20300,7 +20300,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9088,
+   "actual_fantasy_pctl": 0.9061,
    "actual_pctl_post": 0.5201,
    "pick": 25.0,
    "nfl_entry_age": 21.577,
@@ -20521,7 +20521,7 @@
    "wrpi_pre": 0.7798,
    "raw_post": 43.7089,
    "raw_pre": 35.316,
-   "tb_score": 0.4122,
+   "tb_score": 0.411,
    "diamond_score": 0.7486,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -20580,7 +20580,7 @@
     "team_sp_off": 0.034,
     "team_sp_overall": 0.105,
     "recruit_rating": -0.368,
-    "prod_over_recruit": 1.099,
+    "prod_over_recruit": 1.094,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.37,
@@ -20592,7 +20592,7 @@
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 81.0,
-     "fant": 0.657
+     "fant": 0.704
     },
     {
      "p": "Jerome Lane",
@@ -20604,13 +20604,13 @@
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "N'Keal Harry",
      "y": 2019,
      "sim": 68.0,
-     "fant": 0.649
+     "fant": 0.644
     },
     {
      "p": "CJ Johnson",
@@ -20706,7 +20706,7 @@
      "p": "Laviska Shenault",
      "y": 2020,
      "sim": 79.0,
-     "fant": 0.798
+     "fant": 0.796
     },
     {
      "p": "Jerome Lane",
@@ -20718,7 +20718,7 @@
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 67.0,
-     "fant": 0.657
+     "fant": 0.704
     },
     {
      "p": "Xavier Legette",
@@ -20838,7 +20838,7 @@
      "p": "John Metchie",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.583
+     "fant": 0.649
     },
     {
      "p": "Ray-Ray McCloud",
@@ -20870,7 +20870,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5856,
+   "actual_fantasy_pctl": 0.5829,
    "actual_pctl_post": 0.8221,
    "pick": 62.0,
    "nfl_entry_age": 22.1191,
@@ -20940,19 +20940,19 @@
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 68.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Zay Flowers",
@@ -20984,7 +20984,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9613,
+   "actual_fantasy_pctl": 0.9558,
    "actual_pctl_post": 0.6309,
    "pick": 64.0,
    "nfl_entry_age": 21.0486,
@@ -21060,13 +21060,13 @@
      "p": "Chase Claypool",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.865
+     "fant": 0.862
     },
     {
      "p": "Chris Conley",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Miles Boykin",
@@ -21078,7 +21078,7 @@
      "p": "Noah Brown",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.622
+     "fant": 0.619
     }
    ]
   },
@@ -21098,7 +21098,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7072,
+   "actual_fantasy_pctl": 0.7017,
    "actual_pctl_post": 0.802,
    "pick": 59.0,
    "nfl_entry_age": 21.462,
@@ -21168,7 +21168,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Omar Cooper",
@@ -21180,13 +21180,13 @@
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Chris Conley",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Donovan Peoples-Jones",
@@ -21288,7 +21288,7 @@
      "p": "Richie James",
      "y": 2018,
      "sim": 66.0,
-     "fant": 0.796
+     "fant": 0.793
     },
     {
      "p": "Keke Coutee",
@@ -21306,7 +21306,7 @@
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.738
+     "fant": 0.807
     }
    ]
   },
@@ -21390,7 +21390,7 @@
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Bug Howard",
@@ -21402,7 +21402,7 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 67.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Jaleel Scott",
@@ -21440,7 +21440,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9282,
+   "actual_fantasy_pctl": 0.9227,
    "actual_pctl_post": 0.2785,
    "pick": 76.0,
    "nfl_entry_age": 23.2964,
@@ -21618,13 +21618,13 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Chris Conley",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Cedric Tillman",
@@ -21642,7 +21642,7 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Alec Pierce",
@@ -21738,7 +21738,7 @@
      "p": "Kenny Golladay",
      "y": 2017,
      "sim": 64.0,
-     "fant": 0.931
+     "fant": 0.925
     },
     {
      "p": "Jeff Caldwell",
@@ -21750,7 +21750,7 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Jayden Higgins",
@@ -21858,7 +21858,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Jalen Royals",
@@ -21896,7 +21896,7 @@
    "is_star_post": 0,
    "low_conf": 1,
    "low_conf_reason": "no athletic testing at all",
-   "actual_fantasy_pctl": 0.663,
+   "actual_fantasy_pctl": 0.6575,
    "actual_pctl_post": 0.6376,
    "pick": 270.0,
    "nfl_entry_age": 21.755,
@@ -21966,7 +21966,7 @@
      "p": "Demarcus Robinson",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.699
+     "fant": 0.693
     },
     {
      "p": "Tamorrion Terry",
@@ -21978,7 +21978,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "Stanley Morgan Jr.",
@@ -22124,7 +22124,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7597,
+   "actual_fantasy_pctl": 0.7541,
    "actual_pctl_post": 0.5386,
    "pick": 270.0,
    "nfl_entry_age": 20.5941,
@@ -22200,19 +22200,19 @@
      "p": "Penny Hart",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.431
+     "fant": 0.434
     },
     {
      "p": "K.J. Hamler",
      "y": 2020,
      "sim": 67.0,
-     "fant": 0.68
+     "fant": 0.674
     },
     {
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "Ryan Switzer",
@@ -22238,7 +22238,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8591,
+   "actual_fantasy_pctl": 0.8564,
    "actual_pctl_post": 0.7248,
    "pick": 171.0,
    "nfl_entry_age": 21.9685,
@@ -22308,7 +22308,7 @@
      "p": "Kevin Austin",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.627
+     "fant": 0.624
     },
     {
      "p": "Chimere Dike",
@@ -22466,7 +22466,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.4309,
+   "actual_fantasy_pctl": 0.4337,
    "actual_pctl_post": 0.5151,
    "pick": 270.0,
    "nfl_entry_age": 22.4914,
@@ -22542,7 +22542,7 @@
      "p": "Jaelon Darden",
      "y": 2021,
      "sim": 67.0,
-     "fant": 0.434
+     "fant": 0.436
     },
     {
      "p": "Demarcus Ayers",
@@ -22554,7 +22554,7 @@
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "Victor Bolden",
@@ -22656,7 +22656,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 64.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "Jalen McMillan",
@@ -22668,7 +22668,7 @@
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.66
+     "fant": 0.655
     },
     {
      "p": "Xavier Hutchinson",
@@ -22687,14 +22687,14 @@
    "wrpi_pre": 0.4368,
    "raw_post": 28.5837,
    "raw_pre": 27.6004,
-   "tb_score": -0.8107,
+   "tb_score": -0.8118,
    "diamond_score": -0.0274,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6464,
+   "actual_fantasy_pctl": 0.6409,
    "actual_pctl_post": 0.6695,
    "pick": 206.0,
    "nfl_entry_age": 22.0452,
@@ -22746,7 +22746,7 @@
     "team_sp_off": -0.01,
     "team_sp_overall": -0.208,
     "recruit_rating": -0.319,
-    "prod_over_recruit": 0.078,
+    "prod_over_recruit": 0.073,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.073,
@@ -22878,7 +22878,7 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "Titus Davis",
@@ -22896,13 +22896,13 @@
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.934
+     "fant": 0.928
     },
     {
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.892
+     "fant": 0.89
     }
    ]
   },
@@ -22998,7 +22998,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Lewis Bond",
@@ -23036,7 +23036,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7403,
+   "actual_fantasy_pctl": 0.7348,
    "actual_pctl_post": 0.5302,
    "pick": 270.0,
    "nfl_entry_age": 21.1937,
@@ -23100,25 +23100,25 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 73.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 67.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Preston Williams",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.765
+     "fant": 0.76
     },
     {
      "p": "Cedrick Wilson",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.751
+     "fant": 0.746
     },
     {
      "p": "Eric McAlister",
@@ -23371,7 +23371,7 @@
    "wrpi_pre": 0.4693,
    "raw_post": 27.428,
    "raw_pre": 28.2246,
-   "tb_score": 1.3135,
+   "tb_score": 1.3123,
    "diamond_score": -0.4171,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -23430,7 +23430,7 @@
     "team_sp_off": -1.104,
     "team_sp_overall": 0.175,
     "recruit_rating": -0.22,
-    "prod_over_recruit": 0.786,
+    "prod_over_recruit": 0.781,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -1.314,
@@ -23562,13 +23562,13 @@
      "p": "Kevin Austin",
      "y": 2022,
      "sim": 73.0,
-     "fant": 0.627
+     "fant": 0.624
     },
     {
      "p": "D.J. Chark",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.89
+     "fant": 0.887
     },
     {
      "p": "Ja'Lynn Polk",
@@ -23599,14 +23599,14 @@
    "wrpi_pre": 0.6173,
    "raw_post": 27.2908,
    "raw_pre": 31.0366,
-   "tb_score": 1.0148,
+   "tb_score": 1.0137,
    "diamond_score": 0.1872,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6713,
+   "actual_fantasy_pctl": 0.6657,
    "actual_pctl_post": 0.5973,
    "pick": 270.0,
    "nfl_entry_age": 20.7036,
@@ -23658,7 +23658,7 @@
     "team_sp_off": 0.019,
     "team_sp_overall": -0.043,
     "recruit_rating": -0.068,
-    "prod_over_recruit": 0.195,
+    "prod_over_recruit": 0.19,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.339,
@@ -23670,7 +23670,7 @@
      "p": "Antoine Wesley",
      "y": 2019,
      "sim": 72.0,
-     "fant": 0.74
+     "fant": 0.735
     },
     {
      "p": "Cody White",
@@ -23688,13 +23688,13 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Preston Williams",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.765
+     "fant": 0.76
     },
     {
      "p": "Chase Roberts",
@@ -23713,7 +23713,7 @@
    "wrpi_pre": 0.6245,
    "raw_post": 26.9574,
    "raw_pre": 31.3171,
-   "tb_score": 0.8063,
+   "tb_score": 0.8052,
    "diamond_score": 0.3021,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -23772,7 +23772,7 @@
     "team_sp_off": -0.365,
     "team_sp_overall": -0.557,
     "recruit_rating": -0.119,
-    "prod_over_recruit": 0.683,
+    "prod_over_recruit": 0.677,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.605,
@@ -23790,7 +23790,7 @@
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "Jordan Payton",
@@ -23802,7 +23802,7 @@
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Elijhah Badger",
@@ -23922,7 +23922,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 70.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Isaiah Williams",
@@ -24062,7 +24062,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7652,
+   "actual_fantasy_pctl": 0.7597,
    "actual_pctl_post": 0.4966,
    "pick": 270.0,
    "nfl_entry_age": 21.7659,
@@ -24126,19 +24126,19 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "Antoine Wesley",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.74
+     "fant": 0.735
     },
     {
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Tyre Brady",
@@ -24176,7 +24176,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9116,
+   "actual_fantasy_pctl": 0.9088,
    "actual_pctl_post": 0.2332,
    "pick": 270.0,
    "nfl_entry_age": 22.1437,
@@ -24252,7 +24252,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "DaVaris Daniels",
@@ -24480,7 +24480,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 71.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Deon Cain",
@@ -24834,7 +24834,7 @@
      "p": "Juwan Johnson",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.787
+     "fant": 0.785
     },
     {
      "p": "Isaac TeSlaa",
@@ -24853,7 +24853,7 @@
    "wrpi_pre": 0.3141,
    "raw_post": 25.8625,
    "raw_pre": 25.6857,
-   "tb_score": -0.5004,
+   "tb_score": -0.5015,
    "diamond_score": 0.0172,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -24912,7 +24912,7 @@
     "team_sp_off": -0.232,
     "team_sp_overall": -0.54,
     "recruit_rating": -0.223,
-    "prod_over_recruit": 0.801,
+    "prod_over_recruit": 0.796,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.725,
@@ -25164,7 +25164,7 @@
      "p": "Javon Wims",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.5
+     "fant": 0.497
     },
     {
      "p": "Jaray Jenkins",
@@ -25494,7 +25494,7 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 70.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Xavier Weaver",
@@ -25658,7 +25658,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9033,
+   "actual_fantasy_pctl": 0.9006,
    "actual_pctl_post": 0.8423,
    "pick": 15.0,
    "nfl_entry_age": 20.6899,
@@ -25722,7 +25722,7 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 68.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "CeeDee Lamb",
@@ -25740,7 +25740,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.925
+     "fant": 0.931
     },
     {
      "p": "Jalen McMillan",
@@ -25836,7 +25836,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Dillon Mitchell",
@@ -25848,7 +25848,7 @@
      "p": "Jerry Jeudy",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.903
+     "fant": 0.901
     },
     {
      "p": "Josh Malone",
@@ -25860,7 +25860,7 @@
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.804
+     "fant": 0.801
     },
     {
      "p": "Justin Jefferson",
@@ -25886,7 +25886,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6519,
+   "actual_fantasy_pctl": 0.6464,
    "actual_pctl_post": 0.9732,
    "pick": 21.0,
    "nfl_entry_age": 20.9966,
@@ -25956,13 +25956,13 @@
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Christian Kirk",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.917
+     "fant": 0.914
     },
     {
      "p": "Luther Burden",
@@ -25974,7 +25974,7 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Lynn Bowden",
@@ -26076,7 +26076,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "CeeDee Lamb",
@@ -26088,7 +26088,7 @@
      "p": "Zay Jones",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.754
+     "fant": 0.749
     },
     {
      "p": "Ja'Lynn Polk",
@@ -26196,7 +26196,7 @@
      "p": "Kadarius Toney",
      "y": 2021,
      "sim": 63.0,
-     "fant": 0.715
+     "fant": 0.713
     },
     {
      "p": "Freddie Swain",
@@ -26228,7 +26228,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9503,
+   "actual_fantasy_pctl": 0.9475,
    "actual_pctl_post": 0.8507,
    "pick": 25.0,
    "nfl_entry_age": 21.7933,
@@ -26310,7 +26310,7 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.674
+     "fant": 0.669
     },
     {
      "p": "Stanley Morgan Jr.",
@@ -26322,7 +26322,7 @@
      "p": "Sammie Coates",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.608
+     "fant": 0.605
     }
    ]
   },
@@ -26342,7 +26342,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6796,
+   "actual_fantasy_pctl": 0.674,
    "actual_pctl_post": 0.8255,
    "pick": 46.0,
    "nfl_entry_age": 20.4846,
@@ -26424,7 +26424,7 @@
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 64.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "Zachariah Branch",
@@ -26526,7 +26526,7 @@
      "p": "Mike Williams",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.906
+     "fant": 0.903
     },
     {
      "p": "Jauan Jennings",
@@ -26538,7 +26538,7 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "Puka Nacua",
@@ -26550,7 +26550,7 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 59.0,
-     "fant": 0.721
+     "fant": 0.718
     }
    ]
   },
@@ -26570,7 +26570,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9365,
+   "actual_fantasy_pctl": 0.9337,
    "actual_pctl_post": 0.7903,
    "pick": 34.0,
    "nfl_entry_age": 22.2396,
@@ -26634,7 +26634,7 @@
      "p": "Mike Williams",
      "y": 2017,
      "sim": 71.0,
-     "fant": 0.906
+     "fant": 0.903
     },
     {
      "p": "Antonio Gandy-Golden",
@@ -26677,14 +26677,14 @@
    "wrpi_pre": 0.8556,
    "raw_post": 45.9236,
    "raw_pre": 37.0235,
-   "tb_score": -0.3712,
+   "tb_score": -0.3724,
    "diamond_score": 0.9128,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7983,
+   "actual_fantasy_pctl": 0.7956,
    "actual_pctl_post": 0.7433,
    "pick": 42.0,
    "nfl_entry_age": 21.2402,
@@ -26736,7 +26736,7 @@
     "team_sp_off": -1.208,
     "team_sp_overall": -1.089,
     "recruit_rating": -0.241,
-    "prod_over_recruit": 0.44,
+    "prod_over_recruit": 0.435,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": -0.871,
@@ -26766,7 +26766,7 @@
      "p": "Treylon Burks",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.657
+     "fant": 0.704
     },
     {
      "p": "Xavier Legette",
@@ -26798,7 +26798,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8646,
+   "actual_fantasy_pctl": 0.8619,
    "actual_pctl_post": 0.8356,
    "pick": 49.0,
    "nfl_entry_age": 21.4867,
@@ -26862,7 +26862,7 @@
      "p": "D.K. Metcalf",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.961
+     "fant": 0.956
     },
     {
      "p": "Devin Funchess",
@@ -26874,19 +26874,19 @@
      "p": "Dorial Green-Beckham",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.735
+     "fant": 0.732
     },
     {
      "p": "N'Keal Harry",
      "y": 2019,
      "sim": 67.0,
-     "fant": 0.649
+     "fant": 0.644
     },
     {
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Elijah Higgins",
@@ -26988,13 +26988,13 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Drake London",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.945
+     "fant": 0.967
     },
     {
      "p": "Elijah Sarratt",
@@ -27019,7 +27019,7 @@
    "wrpi_pre": 0.7148,
    "raw_post": 41.0956,
    "raw_pre": 34.4525,
-   "tb_score": 0.072,
+   "tb_score": 0.0709,
    "diamond_score": 0.552,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -27078,7 +27078,7 @@
     "team_sp_off": -1.222,
     "team_sp_overall": -1.15,
     "recruit_rating": -0.142,
-    "prod_over_recruit": 0.934,
+    "prod_over_recruit": 0.929,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.427,
@@ -27140,7 +27140,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7486,
+   "actual_fantasy_pctl": 0.7431,
    "actual_pctl_post": 0.297,
    "pick": 57.0,
    "nfl_entry_age": 23.4333,
@@ -27336,7 +27336,7 @@
      "p": "Christian Kirk",
      "y": 2018,
      "sim": 59.0,
-     "fant": 0.917
+     "fant": 0.914
     },
     {
      "p": "Aaron Burbridge",
@@ -27361,14 +27361,14 @@
    "wrpi_pre": 0.9856,
    "raw_post": 37.0789,
    "raw_pre": 43.8213,
-   "tb_score": -0.1998,
+   "tb_score": -0.2009,
    "diamond_score": 0.9236,
    "is_diamond": 1,
    "is_star_pre": 1,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6105,
+   "actual_fantasy_pctl": 0.6077,
    "actual_pctl_post": 0.7936,
    "pick": 161.0,
    "nfl_entry_age": 21.3525,
@@ -27420,7 +27420,7 @@
     "team_sp_off": 0.685,
     "team_sp_overall": 0.663,
     "recruit_rating": -0.342,
-    "prod_over_recruit": 1.493,
+    "prod_over_recruit": 1.487,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 1.789,
@@ -27432,13 +27432,13 @@
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 66.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Elic Ayomanor",
@@ -27456,13 +27456,13 @@
      "p": "Corey Davis",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.898
+     "fant": 0.895
     },
     {
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.934
+     "fant": 0.928
     }
    ]
   },
@@ -27482,7 +27482,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.674,
+   "actual_fantasy_pctl": 0.6685,
    "actual_pctl_post": 0.396,
    "pick": 92.0,
    "nfl_entry_age": 22.3025,
@@ -27552,7 +27552,7 @@
      "p": "Sterling Shepard",
      "y": 2016,
      "sim": 69.0,
-     "fant": 0.92
+     "fant": 0.917
     },
     {
      "p": "Jaylin Noel",
@@ -27564,19 +27564,19 @@
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.691
+     "fant": 0.685
     }
    ]
   },
@@ -27596,7 +27596,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.779,
+   "actual_fantasy_pctl": 0.7762,
    "actual_pctl_post": 0.7718,
    "pick": 166.0,
    "nfl_entry_age": 21.7522,
@@ -27678,7 +27678,7 @@
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.71
+     "fant": 0.707
     },
     {
      "p": "Jordan Payton",
@@ -27690,7 +27690,7 @@
      "p": "Daesean Hamilton",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.696
+     "fant": 0.691
     }
    ]
   },
@@ -27710,7 +27710,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.884,
+   "actual_fantasy_pctl": 0.8812,
    "actual_pctl_post": 0.7383,
    "pick": 173.0,
    "nfl_entry_age": 22.1739,
@@ -27780,19 +27780,19 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Quez Watkins",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.713
+     "fant": 0.71
     },
     {
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.738
+     "fant": 0.807
     },
     {
      "p": "Jacob Cowing",
@@ -27888,13 +27888,13 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Chris Conley",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Jonathan Mingo",
@@ -27912,7 +27912,7 @@
      "p": "Parris Campbell",
      "y": 2019,
      "sim": 62.0,
-     "fant": 0.707
+     "fant": 0.702
     },
     {
      "p": "Quentin Johnston",
@@ -28014,13 +28014,13 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Allen Lazard",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.867
+     "fant": 0.865
     },
     {
      "p": "Kevin White",
@@ -28032,7 +28032,7 @@
      "p": "Kenny Golladay",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.931
+     "fant": 0.925
     }
    ]
   },
@@ -28052,7 +28052,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7099,
+   "actual_fantasy_pctl": 0.7072,
    "actual_pctl_post": 0.6611,
    "pick": 270.0,
    "nfl_entry_age": 21.7659,
@@ -28128,7 +28128,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "Jordan Payton",
@@ -28146,7 +28146,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.856
+     "fant": 0.854
     }
    ]
   },
@@ -28350,7 +28350,7 @@
      "p": "Laviska Shenault",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.798
+     "fant": 0.796
     },
     {
      "p": "Josh Cameron",
@@ -28394,7 +28394,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.721,
+   "actual_fantasy_pctl": 0.7182,
    "actual_pctl_post": 0.6342,
    "pick": 207.0,
    "nfl_entry_age": 21.1964,
@@ -28464,7 +28464,7 @@
      "p": "Antoine Wesley",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.74
+     "fant": 0.735
     },
     {
      "p": "Bryan Edwards",
@@ -28482,7 +28482,7 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "Seth Williams",
@@ -28622,7 +28622,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5912,
+   "actual_fantasy_pctl": 0.5884,
    "actual_pctl_post": 0.4413,
    "pick": 165.0,
    "nfl_entry_age": 22.2724,
@@ -28698,7 +28698,7 @@
      "p": "Lawrence Cager",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.644
+     "fant": 0.638
     },
     {
      "p": "Malachi Fields",
@@ -28736,7 +28736,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7127,
+   "actual_fantasy_pctl": 0.7099,
    "actual_pctl_post": 0.6728,
    "pick": 200.0,
    "nfl_entry_age": 21.5633,
@@ -28800,7 +28800,7 @@
      "p": "Chris Olave",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Tai Felton",
@@ -28830,7 +28830,7 @@
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.66
+     "fant": 0.655
     }
    ]
   },
@@ -28938,7 +28938,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Ty Fryfogle",
@@ -28964,7 +28964,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.4972,
+   "actual_fantasy_pctl": 0.4945,
    "actual_pctl_post": 0.198,
    "pick": 168.0,
    "nfl_entry_age": 23.5866,
@@ -29185,7 +29185,7 @@
    "wrpi_pre": 0.3863,
    "raw_post": 28.5645,
    "raw_pre": 26.8266,
-   "tb_score": -0.6365,
+   "tb_score": -0.6376,
    "diamond_score": 0.4388,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -29244,7 +29244,7 @@
     "team_sp_off": -0.084,
     "team_sp_overall": -0.644,
     "recruit_rating": -0.287,
-    "prod_over_recruit": 1.111,
+    "prod_over_recruit": 1.106,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.162,
@@ -29262,7 +29262,7 @@
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Trey Quinn",
@@ -29413,7 +29413,7 @@
    "wrpi_pre": 0.5415,
    "raw_post": 28.2665,
    "raw_pre": 29.6151,
-   "tb_score": 0.8649,
+   "tb_score": 0.8638,
    "diamond_score": 0.0288,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -29472,7 +29472,7 @@
     "team_sp_off": -1.592,
     "team_sp_overall": -0.4,
     "recruit_rating": -0.002,
-    "prod_over_recruit": 0.16,
+    "prod_over_recruit": 0.155,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.959,
@@ -29484,7 +29484,7 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "Chase Roberts",
@@ -29622,7 +29622,7 @@
      "p": "Demarcus Robinson",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.699
+     "fant": 0.693
     },
     {
      "p": "Elijhah Badger",
@@ -29724,13 +29724,13 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "Korey Robertson",
@@ -30186,7 +30186,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Javon McKinley",
@@ -30439,7 +30439,7 @@
    "wrpi_pre": 0.2274,
    "raw_post": 25.9625,
    "raw_pre": 23.467,
-   "tb_score": -0.3467,
+   "tb_score": -0.3479,
    "diamond_score": -0.9728,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -30498,7 +30498,7 @@
     "team_sp_off": -0.173,
     "team_sp_overall": 0.28,
     "recruit_rating": -0.192,
-    "prod_over_recruit": -1.047,
+    "prod_over_recruit": -1.052,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -1.137,
@@ -30667,14 +30667,14 @@
    "wrpi_pre": 0.2816,
    "raw_post": 25.9075,
    "raw_pre": 24.8278,
-   "tb_score": 0.4706,
+   "tb_score": 0.4694,
    "diamond_score": -0.5591,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6436,
+   "actual_fantasy_pctl": 0.6381,
    "actual_pctl_post": 0.0017,
    "pick": 270.0,
    "nfl_entry_age": 22.3655,
@@ -30726,7 +30726,7 @@
     "team_sp_off": -0.143,
     "team_sp_overall": 1.308,
     "recruit_rating": 0.077,
-    "prod_over_recruit": -0.673,
+    "prod_over_recruit": -0.679,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.693,
@@ -30744,7 +30744,7 @@
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 68.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Bug Howard",
@@ -30768,7 +30768,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.682
+     "fant": 0.677
     }
    ]
   },
@@ -31016,7 +31016,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.4945,
+   "actual_fantasy_pctl": 0.4917,
    "actual_pctl_post": 0.1611,
    "pick": 220.0,
    "nfl_entry_age": 22.2943,
@@ -31123,7 +31123,7 @@
    "wrpi_pre": 0.1552,
    "raw_post": 25.18,
    "raw_pre": 21.499,
-   "tb_score": -1.2212,
+   "tb_score": -1.2224,
    "diamond_score": -0.6596,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -31182,7 +31182,7 @@
     "team_sp_off": -0.099,
     "team_sp_overall": 0.707,
     "recruit_rating": -0.879,
-    "prod_over_recruit": 0.074,
+    "prod_over_recruit": 0.069,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.016,
@@ -31244,7 +31244,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7873,
+   "actual_fantasy_pctl": 0.7845,
    "actual_pctl_post": 0.0017,
    "pick": 270.0,
    "nfl_entry_age": 23.2991,
@@ -31586,7 +31586,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5138,
+   "actual_fantasy_pctl": 0.511,
    "actual_pctl_post": 0.0017,
    "pick": 270.0,
    "nfl_entry_age": 22.3354,
@@ -31776,7 +31776,7 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 64.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Chris Godwin",
@@ -31814,7 +31814,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9586,
+   "actual_fantasy_pctl": 0.953,
    "actual_pctl_post": 0.3104,
    "pick": 6.0,
    "nfl_entry_age": 22.1027,
@@ -31902,7 +31902,7 @@
      "p": "John Metchie",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.583
+     "fant": 0.649
     },
     {
      "p": "Tahj Washington",
@@ -31928,7 +31928,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9558,
+   "actual_fantasy_pctl": 0.9503,
    "actual_pctl_post": 0.7836,
    "pick": 10.0,
    "nfl_entry_age": 22.1328,
@@ -31992,7 +31992,7 @@
      "p": "Jameson Williams",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.881
+     "fant": 0.92
     },
     {
      "p": "Tai Felton",
@@ -32016,7 +32016,7 @@
      "p": "Dede Westbrook",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.862
+     "fant": 0.859
     },
     {
      "p": "Jalin Hyatt",
@@ -32035,7 +32035,7 @@
    "wrpi_pre": 0.9819,
    "raw_post": 55.5658,
    "raw_pre": 43.1652,
-   "tb_score": 1.8052,
+   "tb_score": 1.804,
    "diamond_score": 0.9385,
    "is_diamond": 0,
    "is_star_pre": 1,
@@ -32094,7 +32094,7 @@
     "team_sp_off": 0.685,
     "team_sp_overall": 0.663,
     "recruit_rating": 0.057,
-    "prod_over_recruit": 0.585,
+    "prod_over_recruit": 0.579,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 1.789,
@@ -32106,13 +32106,13 @@
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.66
+     "fant": 0.655
     },
     {
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.925
+     "fant": 0.931
     },
     {
      "p": "Dillon Mitchell",
@@ -32130,7 +32130,7 @@
      "p": "Chris Olave",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "KD Cannon",
@@ -32226,13 +32226,13 @@
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 71.0,
-     "fant": 0.738
+     "fant": 0.807
     },
     {
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 70.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Tyler Scott",
@@ -32263,14 +32263,14 @@
    "wrpi_pre": 0.6787,
    "raw_post": 52.8898,
    "raw_pre": 33.3364,
-   "tb_score": -0.0607,
+   "tb_score": -0.0618,
    "diamond_score": -0.0474,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7155,
+   "actual_fantasy_pctl": 0.7127,
    "actual_pctl_post": 0.5604,
    "pick": 20.0,
    "nfl_entry_age": 21.9302,
@@ -32322,7 +32322,7 @@
     "team_sp_off": 1.202,
     "team_sp_overall": 0.698,
     "recruit_rating": -0.093,
-    "prod_over_recruit": -0.757,
+    "prod_over_recruit": -0.762,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 1.434,
@@ -32384,7 +32384,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8066,
+   "actual_fantasy_pctl": 0.8039,
    "actual_pctl_post": 0.8121,
    "pick": 49.0,
    "nfl_entry_age": 20.564,
@@ -32454,25 +32454,25 @@
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "K.J. Hamler",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.68
+     "fant": 0.674
     },
     {
      "p": "Andy Isabella",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.586
+     "fant": 0.583
     },
     {
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.732
+     "fant": 0.729
     },
     {
      "p": "DT Sheffield",
@@ -32676,7 +32676,7 @@
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 67.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Malik Washington",
@@ -32688,7 +32688,7 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.768
+     "fant": 0.762
     },
     {
      "p": "Jaylin Noel",
@@ -32796,7 +32796,7 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.901
+     "fant": 0.898
     },
     {
      "p": "Jayden Higgins",
@@ -32904,19 +32904,19 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 74.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Stefon Diggs",
      "y": 2015,
      "sim": 71.0,
-     "fant": 0.964
+     "fant": 0.959
     },
     {
      "p": "Curtis Samuel",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.895
+     "fant": 0.892
     },
     {
      "p": "Makai Lemon",
@@ -32928,13 +32928,13 @@
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.691
+     "fant": 0.685
     }
    ]
   },
@@ -32954,7 +32954,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5939,
+   "actual_fantasy_pctl": 0.5912,
    "actual_pctl_post": 0.8926,
    "pick": 82.0,
    "nfl_entry_age": 21.1691,
@@ -33030,13 +33030,13 @@
      "p": "Jerry Jeudy",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.903
+     "fant": 0.901
     },
     {
      "p": "Chris Olave",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Rakim Jarrett",
@@ -33048,7 +33048,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.925
+     "fant": 0.931
     }
    ]
   },
@@ -33296,7 +33296,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5055,
+   "actual_fantasy_pctl": 0.5028,
    "actual_pctl_post": 0.4866,
    "pick": 91.0,
    "nfl_entry_age": 20.3231,
@@ -33372,19 +33372,19 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 64.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Chris Olave",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Deontay Burnett",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.616
+     "fant": 0.613
     },
     {
      "p": "Marvin Mims",
@@ -33474,13 +33474,13 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Jayden Reed",
@@ -33498,7 +33498,7 @@
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Kyle Williams",
@@ -33600,7 +33600,7 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Terrace Marshall Jr.",
@@ -33612,7 +33612,7 @@
      "p": "Drake London",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.945
+     "fant": 0.967
     },
     {
      "p": "Ted Hurst",
@@ -33638,7 +33638,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.4337,
+   "actual_fantasy_pctl": 0.4365,
    "actual_pctl_post": 0.7047,
    "pick": 129.0,
    "nfl_entry_age": 21.9658,
@@ -33702,7 +33702,7 @@
      "p": "Penny Hart",
      "y": 2019,
      "sim": 68.0,
-     "fant": 0.431
+     "fant": 0.434
     },
     {
      "p": "Wan'Dale Robinson",
@@ -33714,7 +33714,7 @@
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.732
+     "fant": 0.729
     },
     {
      "p": "Marquez Stevenson",
@@ -33752,7 +33752,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5967,
+   "actual_fantasy_pctl": 0.5939,
    "actual_pctl_post": 0.7634,
    "pick": 157.0,
    "nfl_entry_age": 21.3443,
@@ -33816,13 +33816,13 @@
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 73.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Chris Olave",
      "y": 2022,
      "sim": 70.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Reggie Virgil",
@@ -33866,7 +33866,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.4365,
+   "actual_fantasy_pctl": 0.4309,
    "actual_pctl_post": 0.3389,
    "pick": 179.0,
    "nfl_entry_age": 23.1567,
@@ -34044,7 +34044,7 @@
      "p": "Bo Melton",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.641
+     "fant": 0.635
     },
     {
      "p": "Dominic Lovett",
@@ -34062,7 +34062,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Ryan Davis",
@@ -34074,7 +34074,7 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 60.0,
-     "fant": 0.768
+     "fant": 0.762
     }
    ]
   },
@@ -34176,7 +34176,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Omar Cooper",
@@ -34272,7 +34272,7 @@
      "p": "Tajae Sharpe",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.685
+     "fant": 0.68
     },
     {
      "p": "Darren Carrington",
@@ -34302,7 +34302,7 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 58.0,
-     "fant": 0.671
+     "fant": 0.666
     }
    ]
   },
@@ -34315,7 +34315,7 @@
    "wrpi_pre": 0.3863,
    "raw_post": 28.1773,
    "raw_pre": 26.8672,
-   "tb_score": -0.7091,
+   "tb_score": -0.7102,
    "diamond_score": -0.5298,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -34374,7 +34374,7 @@
     "team_sp_off": 2.03,
     "team_sp_overall": 1.858,
     "recruit_rating": -0.391,
-    "prod_over_recruit": -1.026,
+    "prod_over_recruit": -1.032,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 2.321,
@@ -34416,7 +34416,7 @@
      "p": "Austin Mack",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.514
+     "fant": 0.511
     }
    ]
   },
@@ -34512,7 +34512,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Eric Rivers",
@@ -34728,7 +34728,7 @@
      "p": "Preston Williams",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.765
+     "fant": 0.76
     },
     {
      "p": "Malachi Fields",
@@ -34740,19 +34740,19 @@
      "p": "Lil'Jordan Humphrey",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.671
+     "fant": 0.666
     },
     {
      "p": "Antoine Wesley",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.74
+     "fant": 0.735
     },
     {
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Jaleel Scott",
@@ -34771,7 +34771,7 @@
    "wrpi_pre": 0.6462,
    "raw_post": 27.3337,
    "raw_pre": 32.0718,
-   "tb_score": 0.261,
+   "tb_score": 0.2599,
    "diamond_score": 0.2116,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -34830,7 +34830,7 @@
     "team_sp_off": -0.734,
     "team_sp_overall": -0.871,
     "recruit_rating": 0.057,
-    "prod_over_recruit": 0.515,
+    "prod_over_recruit": 0.509,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.162,
@@ -34842,7 +34842,7 @@
      "p": "Steven Sims",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.663
+     "fant": 0.657
     },
     {
      "p": "Jordan Payton",
@@ -34854,19 +34854,19 @@
      "p": "Demarcus Robinson",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.699
+     "fant": 0.693
     },
     {
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "Lewis Bond",
@@ -35088,7 +35088,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "De'Zhaun Stribling",
@@ -35208,7 +35208,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "DeAndre Smelter",
@@ -35418,7 +35418,7 @@
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Dres Anderson",
@@ -35436,13 +35436,13 @@
      "p": "John Hightower",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.497
+     "fant": 0.494
     },
     {
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.704
+     "fant": 0.699
     }
    ]
   },
@@ -35526,7 +35526,7 @@
      "p": "Lawrence Cager",
      "y": 2020,
      "sim": 73.0,
-     "fant": 0.644
+     "fant": 0.638
     },
     {
      "p": "Bug Howard",
@@ -35550,7 +35550,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 64.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "Cornelius Johnson",
@@ -35651,7 +35651,7 @@
     {
      "p": "Braylon Sanders",
      "y": 2022,
-     "sim": 68.0,
+     "sim": 67.0,
      "fant": 0.209
     },
     {
@@ -35778,7 +35778,7 @@
      "p": "Noah Brown",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.622
+     "fant": 0.619
     },
     {
      "p": "Darrell Stewart",
@@ -35988,7 +35988,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "CJ Williams",
@@ -36210,7 +36210,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 71.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Austin Watkins",
@@ -36354,7 +36354,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.646
+     "fant": 0.641
     }
    ]
   },
@@ -36595,7 +36595,7 @@
    "wrpi_pre": 0.0686,
    "raw_post": 24.502,
    "raw_pre": 19.0716,
-   "tb_score": -1.0385,
+   "tb_score": -1.0396,
    "diamond_score": -0.5035,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -36654,7 +36654,7 @@
     "team_sp_off": 0.064,
     "team_sp_overall": 0.088,
     "recruit_rating": -0.925,
-    "prod_over_recruit": 0.13,
+    "prod_over_recruit": 0.125,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.016,
@@ -36830,7 +36830,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9448,
+   "actual_fantasy_pctl": 0.9669,
    "actual_pctl_post": 0.9027,
    "pick": 8.0,
    "nfl_entry_age": 20.4408,
@@ -36912,19 +36912,19 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.936
+     "fant": 0.934
     },
     {
      "p": "Jaelen Strong",
      "y": 2015,
      "sim": 64.0,
-     "fant": 0.599
+     "fant": 0.597
     }
    ]
   },
@@ -36937,14 +36937,14 @@
    "wrpi_pre": 0.852,
    "raw_post": 63.4343,
    "raw_pre": 36.7557,
-   "tb_score": -0.1567,
+   "tb_score": -0.1579,
    "diamond_score": 0.2206,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.953,
+   "actual_fantasy_pctl": 0.9696,
    "actual_pctl_post": 0.7953,
    "pick": 11.0,
    "nfl_entry_age": 21.514,
@@ -36996,7 +36996,7 @@
     "team_sp_off": 1.779,
     "team_sp_overall": 1.526,
     "recruit_rating": -0.007,
-    "prod_over_recruit": 0.365,
+    "prod_over_recruit": 0.36,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 1.7,
@@ -37008,13 +37008,13 @@
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 70.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 67.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Rodney Adams",
@@ -37026,19 +37026,19 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 64.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Isaiah Ford",
      "y": 2017,
      "sim": 64.0,
-     "fant": 0.66
+     "fant": 0.655
     },
     {
      "p": "Quez Watkins",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.713
+     "fant": 0.71
     }
    ]
   },
@@ -37058,7 +37058,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8812,
+   "actual_fantasy_pctl": 0.9199,
    "actual_pctl_post": 0.8238,
    "pick": 12.0,
    "nfl_entry_age": 20.7693,
@@ -37140,7 +37140,7 @@
      "p": "Tyquan Thornton",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.633
+     "fant": 0.771
     },
     {
      "p": "Tai Felton",
@@ -37152,7 +37152,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.925
+     "fant": 0.931
     }
    ]
   },
@@ -37172,7 +37172,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9254,
+   "actual_fantasy_pctl": 0.9309,
    "actual_pctl_post": 0.7349,
    "pick": 10.0,
    "nfl_entry_age": 21.4456,
@@ -37248,7 +37248,7 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 66.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Rashod Bateman",
@@ -37286,7 +37286,7 @@
    "is_star_post": 1,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7376,
+   "actual_fantasy_pctl": 0.8066,
    "actual_pctl_post": 0.8775,
    "pick": 16.0,
    "nfl_entry_age": 21.7796,
@@ -37362,7 +37362,7 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 68.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Diontae Johnson",
@@ -37380,7 +37380,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.925
+     "fant": 0.931
     }
    ]
   },
@@ -37400,7 +37400,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6575,
+   "actual_fantasy_pctl": 0.7044,
    "actual_pctl_post": 0.8893,
    "pick": 18.0,
    "nfl_entry_age": 21.7769,
@@ -37470,7 +37470,7 @@
      "p": "N'Keal Harry",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.649
+     "fant": 0.644
     },
     {
      "p": "Jerome Lane",
@@ -37482,13 +37482,13 @@
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "Leonte Carroo",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.503
+     "fant": 0.5
     },
     {
      "p": "A.J. Brown",
@@ -37514,7 +37514,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6326,
+   "actual_fantasy_pctl": 0.7707,
    "actual_pctl_post": 0.9094,
    "pick": 50.0,
    "nfl_entry_age": 21.4018,
@@ -37596,13 +37596,13 @@
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 64.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.804
+     "fant": 0.801
     },
     {
      "p": "Troy Franklin",
@@ -37628,7 +37628,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.9227,
+   "actual_fantasy_pctl": 0.9365,
    "actual_pctl_post": 0.7651,
    "pick": 52.0,
    "nfl_entry_age": 20.8296,
@@ -37806,13 +37806,13 @@
      "p": "K.J. Hamler",
      "y": 2020,
      "sim": 76.0,
-     "fant": 0.68
+     "fant": 0.674
     },
     {
      "p": "Jamison Crowder",
      "y": 2015,
      "sim": 72.0,
-     "fant": 0.887
+     "fant": 0.884
     },
     {
      "p": "Demarcus Ayers",
@@ -37830,13 +37830,13 @@
      "p": "Greg Dortch",
      "y": 2019,
      "sim": 69.0,
-     "fant": 0.76
+     "fant": 0.754
     },
     {
      "p": "Jaelon Darden",
      "y": 2021,
      "sim": 66.0,
-     "fant": 0.434
+     "fant": 0.436
     }
    ]
   },
@@ -37856,7 +37856,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.5829,
+   "actual_fantasy_pctl": 0.6492,
    "actual_pctl_post": 0.297,
    "pick": 44.0,
    "nfl_entry_age": 21.4565,
@@ -37970,7 +37970,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.4917,
+   "actual_fantasy_pctl": 0.5138,
    "actual_pctl_post": 0.9581,
    "pick": 54.0,
    "nfl_entry_age": 21.3087,
@@ -38040,7 +38040,7 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.674
+     "fant": 0.669
     },
     {
      "p": "Jaylin Noel",
@@ -38052,7 +38052,7 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 67.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "D'Wayne Eskridge",
@@ -38064,7 +38064,7 @@
      "p": "Andy Isabella",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.586
+     "fant": 0.583
     }
    ]
   },
@@ -38148,7 +38148,7 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 68.0,
-     "fant": 0.901
+     "fant": 0.898
     },
     {
      "p": "Nico Collins",
@@ -38262,13 +38262,13 @@
      "p": "Juju Smith-Schuster",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.97
+     "fant": 0.964
     },
     {
      "p": "Leonte Carroo",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.503
+     "fant": 0.5
     },
     {
      "p": "Fred Ross",
@@ -38286,7 +38286,7 @@
      "p": "Amari Cooper",
      "y": 2015,
      "sim": 60.0,
-     "fant": 0.948
+     "fant": 0.945
     },
     {
      "p": "Aaron Burbridge",
@@ -38305,14 +38305,14 @@
    "wrpi_pre": 0.9097,
    "raw_post": 37.5184,
    "raw_pre": 38.9142,
-   "tb_score": 0.7875,
+   "tb_score": 0.7863,
    "diamond_score": 0.3008,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8564,
+   "actual_fantasy_pctl": 0.8536,
    "actual_pctl_post": 0.8456,
    "pick": 132.0,
    "nfl_entry_age": 21.7194,
@@ -38364,7 +38364,7 @@
     "team_sp_off": -0.72,
     "team_sp_overall": -0.714,
     "recruit_rating": -0.754,
-    "prod_over_recruit": 0.983,
+    "prod_over_recruit": 0.978,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": -0.162,
@@ -38394,7 +38394,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 64.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "Grant Dubose",
@@ -38406,7 +38406,7 @@
      "p": "Josh Doctson",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.757
+     "fant": 0.751
     }
    ]
   },
@@ -38419,7 +38419,7 @@
    "wrpi_pre": 0.3177,
    "raw_post": 37.236,
    "raw_pre": 25.7651,
-   "tb_score": -1.7789,
+   "tb_score": -1.7801,
    "diamond_score": -0.3752,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -38478,7 +38478,7 @@
     "team_sp_off": 0.626,
     "team_sp_overall": 0.498,
     "recruit_rating": -0.197,
-    "prod_over_recruit": -0.621,
+    "prod_over_recruit": -0.626,
     "was_returner": 0.674,
     "ret_td": 1.152,
     "col_qb_ypa": 1.434,
@@ -38540,7 +38540,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6768,
+   "actual_fantasy_pctl": 0.6713,
    "actual_pctl_post": 0.7869,
    "pick": 88.0,
    "nfl_entry_age": 22.8446,
@@ -38604,7 +38604,7 @@
      "p": "Cedrick Wilson",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.751
+     "fant": 0.746
     },
     {
      "p": "Ricky White",
@@ -38622,7 +38622,7 @@
      "p": "Quez Watkins",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.713
+     "fant": 0.71
     },
     {
      "p": "Jason Brownlee",
@@ -38647,14 +38647,14 @@
    "wrpi_pre": 0.8917,
    "raw_post": 35.2445,
    "raw_pre": 38.2547,
-   "tb_score": 0.0611,
+   "tb_score": 0.0599,
    "diamond_score": 0.689,
    "is_diamond": 1,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.8508,
+   "actual_fantasy_pctl": 0.8674,
    "actual_pctl_post": 0.854,
    "pick": 148.0,
    "nfl_entry_age": 21.911,
@@ -38706,7 +38706,7 @@
     "team_sp_off": -1.001,
     "team_sp_overall": -0.208,
     "recruit_rating": 0.063,
-    "prod_over_recruit": 1.092,
+    "prod_over_recruit": 1.087,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.427,
@@ -38717,7 +38717,7 @@
     {
      "p": "Daniel Jackson",
      "y": 2025,
-     "sim": 71.0,
+     "sim": 67.0,
      "fant": null
     },
     {
@@ -38761,7 +38761,7 @@
    "wrpi_pre": 0.5812,
    "raw_post": 33.7127,
    "raw_pre": 30.4095,
-   "tb_score": -0.6943,
+   "tb_score": -0.6954,
    "diamond_score": -0.1983,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -38820,7 +38820,7 @@
     "team_sp_off": 0.226,
     "team_sp_overall": -0.252,
     "recruit_rating": -0.168,
-    "prod_over_recruit": -0.552,
+    "prod_over_recruit": -0.557,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.162,
@@ -38850,7 +38850,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Ronnie Bell",
@@ -38946,7 +38946,7 @@
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 73.0,
-     "fant": 0.71
+     "fant": 0.707
     },
     {
      "p": "Jordan Payton",
@@ -38976,7 +38976,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.655
+     "fant": 0.652
     }
    ]
   },
@@ -38989,14 +38989,14 @@
    "wrpi_pre": 0.6643,
    "raw_post": 31.5773,
    "raw_pre": 32.8178,
-   "tb_score": 0.4033,
+   "tb_score": 0.4022,
    "diamond_score": 0.3301,
    "is_diamond": 0,
    "is_star_pre": 0,
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6685,
+   "actual_fantasy_pctl": 0.663,
    "actual_pctl_post": 0.6577,
    "pick": 138.0,
    "nfl_entry_age": 22.7762,
@@ -39048,7 +39048,7 @@
     "team_sp_off": -0.823,
     "team_sp_overall": -0.941,
     "recruit_rating": -0.889,
-    "prod_over_recruit": 1.091,
+    "prod_over_recruit": 1.086,
     "was_returner": 0.674,
     "ret_td": 1.152,
     "col_qb_ypa": 0.282,
@@ -39078,7 +39078,7 @@
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.732
+     "fant": 0.729
     },
     {
      "p": "Jacob Cowing",
@@ -39338,7 +39338,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.7044,
+   "actual_fantasy_pctl": 0.6989,
    "actual_pctl_post": 0.6158,
    "pick": 191.0,
    "nfl_entry_age": 22.8364,
@@ -39414,13 +39414,13 @@
      "p": "Bo Melton",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.641
+     "fant": 0.635
     },
     {
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Kevin Coleman",
@@ -39452,7 +39452,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6409,
+   "actual_fantasy_pctl": 0.6354,
    "actual_pctl_post": 0.7148,
    "pick": 229.0,
    "nfl_entry_age": 22.6256,
@@ -39516,7 +39516,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Shi Smith",
@@ -39525,15 +39525,15 @@
      "fant": 0.541
     },
     {
-     "p": "Daniel Jackson",
-     "y": 2025,
-     "sim": 61.0,
-     "fant": null
-    },
-    {
      "p": "Deion Burks",
      "y": 2026,
      "sim": 60.0,
+     "fant": null
+    },
+    {
+     "p": "Daniel Jackson",
+     "y": 2025,
+     "sim": 59.0,
      "fant": null
     },
     {
@@ -39648,7 +39648,7 @@
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 61.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Jester Weah",
@@ -39660,7 +39660,7 @@
      "p": "Steven Sims",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.663
+     "fant": 0.657
     }
    ]
   },
@@ -39680,7 +39680,7 @@
    "is_star_post": 0,
    "low_conf": 0,
    "low_conf_reason": "",
-   "actual_fantasy_pctl": 0.6271,
+   "actual_fantasy_pctl": 0.6243,
    "actual_pctl_post": 0.2953,
    "pick": 270.0,
    "nfl_entry_age": 21.7577,
@@ -39756,7 +39756,7 @@
      "p": "D.J. Chark",
      "y": 2018,
      "sim": 67.0,
-     "fant": 0.89
+     "fant": 0.887
     },
     {
      "p": "Beaux Collins",
@@ -39768,7 +39768,7 @@
      "p": "Darius Slayton",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.859
+     "fant": 0.856
     },
     {
      "p": "Adonai Mitchell",
@@ -39787,7 +39787,7 @@
    "wrpi_pre": 0.444,
    "raw_post": 27.006,
    "raw_pre": 27.7461,
-   "tb_score": 0.4724,
+   "tb_score": 0.4713,
    "diamond_score": -0.2005,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -39846,7 +39846,7 @@
     "team_sp_off": -0.084,
     "team_sp_overall": -0.112,
     "recruit_rating": -0.671,
-    "prod_over_recruit": 0.015,
+    "prod_over_recruit": 0.01,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -1.137,
@@ -39858,7 +39858,7 @@
      "p": "Geronimo Allison",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.776
+     "fant": 0.773
     },
     {
      "p": "Carnell Tate",
@@ -39882,7 +39882,7 @@
      "p": "George Pickens",
      "y": 2022,
      "sim": 59.0,
-     "fant": 0.923
+     "fant": 0.936
     },
     {
      "p": "Malik Knowles",
@@ -40092,7 +40092,7 @@
      "p": "Byron Pringle",
      "y": 2018,
      "sim": 69.0,
-     "fant": 0.729
+     "fant": 0.727
     },
     {
      "p": "Cyrus Allen",
@@ -40471,7 +40471,7 @@
    "wrpi_pre": 0.0686,
    "raw_post": 25.1033,
    "raw_pre": 19.0318,
-   "tb_score": -0.7139,
+   "tb_score": -0.715,
    "diamond_score": -0.6132,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -40530,7 +40530,7 @@
     "team_sp_off": 0.241,
     "team_sp_overall": 0.262,
     "recruit_rating": -0.238,
-    "prod_over_recruit": -0.935,
+    "prod_over_recruit": -0.94,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.459,
@@ -41041,7 +41041,7 @@
    "wrpi_pre": 0.1155,
    "raw_post": 23.6197,
    "raw_pre": 20.5349,
-   "tb_score": 0.3279,
+   "tb_score": 0.3268,
    "diamond_score": -0.2462,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -41100,7 +41100,7 @@
     "team_sp_off": -0.956,
     "team_sp_overall": -0.522,
     "recruit_rating": -0.282,
-    "prod_over_recruit": 0.593,
+    "prod_over_recruit": 0.588,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.25,
@@ -41269,7 +41269,7 @@
    "wrpi_pre": 0.0036,
    "raw_post": 22.2856,
    "raw_pre": 11.3323,
-   "tb_score": -0.4619,
+   "tb_score": -0.463,
    "diamond_score": -1.5197,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -41328,7 +41328,7 @@
     "team_sp_off": 0.847,
     "team_sp_overall": 1.239,
     "recruit_rating": -0.135,
-    "prod_over_recruit": -1.096,
+    "prod_over_recruit": -1.101,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.636,
@@ -41352,7 +41352,7 @@
      "p": "K.J. Hill",
      "y": 2020,
      "sim": 67.0,
-     "fant": 0.494
+     "fant": 0.492
     },
     {
      "p": "Chris Finke",
@@ -41460,7 +41460,7 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.901
+     "fant": 0.898
     },
     {
      "p": "Terrace Marshall Jr.",
@@ -41568,7 +41568,7 @@
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 68.0,
-     "fant": 0.738
+     "fant": 0.807
     },
     {
      "p": "KD Cannon",
@@ -41580,13 +41580,13 @@
      "p": "Jameson Williams",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.881
+     "fant": 0.92
     },
     {
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.925
+     "fant": 0.931
     },
     {
      "p": "Josh Downs",
@@ -41682,7 +41682,7 @@
      "p": "Jerry Jeudy",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.903
+     "fant": 0.901
     },
     {
      "p": "Dontayvion Wicks",
@@ -41694,7 +41694,7 @@
      "p": "Stefon Diggs",
      "y": 2015,
      "sim": 56.0,
-     "fant": 0.964
+     "fant": 0.959
     },
     {
      "p": "Jalen McMillan",
@@ -41712,7 +41712,7 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 55.0,
-     "fant": 0.854
+     "fant": 0.851
     }
    ]
   },
@@ -41796,7 +41796,7 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 74.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Elijah Moore",
@@ -41808,7 +41808,7 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.768
+     "fant": 0.762
     },
     {
      "p": "Jayden Reed",
@@ -41817,16 +41817,16 @@
      "fant": null
     },
     {
+     "p": "Daniel Jackson",
+     "y": 2025,
+     "sim": 64.0,
+     "fant": null
+    },
+    {
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.738
-    },
-    {
-     "p": "Darnell Mooney",
-     "y": 2020,
-     "sim": 63.0,
-     "fant": 0.884
+     "fant": 0.807
     }
    ]
   },
@@ -41910,7 +41910,7 @@
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "KC Concepcion",
@@ -41937,10 +41937,10 @@
      "fant": 0.209
     },
     {
-     "p": "Tylan Wallace",
-     "y": 2021,
+     "p": "Daniel Jackson",
+     "y": 2025,
      "sim": 61.0,
-     "fant": 0.478
+     "fant": null
     }
    ]
   },
@@ -42030,13 +42030,13 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 72.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "John Ross",
      "y": 2017,
      "sim": 69.0,
-     "fant": 0.762
+     "fant": 0.757
     },
     {
      "p": "Jalin Hyatt",
@@ -42054,7 +42054,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.925
+     "fant": 0.931
     }
    ]
   },
@@ -42138,13 +42138,13 @@
      "p": "Chris Conley",
      "y": 2015,
      "sim": 71.0,
-     "fant": 0.746
+     "fant": 0.74
     },
     {
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Gary Jennings",
@@ -42156,7 +42156,7 @@
      "p": "D.K. Metcalf",
      "y": 2019,
      "sim": 66.0,
-     "fant": 0.961
+     "fant": 0.956
     },
     {
      "p": "Jack Bech",
@@ -42270,13 +42270,13 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Jordan Payton",
@@ -42366,7 +42366,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 72.0,
-     "fant": 0.925
+     "fant": 0.931
     },
     {
      "p": "Tai Felton",
@@ -42378,7 +42378,7 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 66.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Rashod Bateman",
@@ -42396,7 +42396,7 @@
      "p": "John Ross",
      "y": 2017,
      "sim": 62.0,
-     "fant": 0.762
+     "fant": 0.757
     }
    ]
   },
@@ -42492,13 +42492,13 @@
      "p": "Calvin Austin ",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.669
+     "fant": 0.663
     },
     {
      "p": "Jahan Dotson",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.738
+     "fant": 0.807
     },
     {
      "p": "Keke Coutee",
@@ -42618,7 +42618,7 @@
      "p": "Roger Lewis",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.605
+     "fant": 0.602
     },
     {
      "p": "Lewis Bond",
@@ -42714,7 +42714,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Erik Ezukanma",
@@ -42936,7 +42936,7 @@
      "p": "Antonio Callaway",
      "y": 2018,
      "sim": 72.0,
-     "fant": 0.693
+     "fant": 0.688
     },
     {
      "p": "Amari Rodgers",
@@ -42948,7 +42948,7 @@
      "p": "Jalin Marshall",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.727
+     "fant": 0.724
     },
     {
      "p": "Malachi Corley",
@@ -42966,7 +42966,7 @@
      "p": "Christian Kirk",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.917
+     "fant": 0.914
     }
    ]
   },
@@ -43093,7 +43093,7 @@
    "wrpi_pre": 0.5596,
    "raw_post": 34.7093,
    "raw_pre": 29.9576,
-   "tb_score": -0.5811,
+   "tb_score": -0.5822,
    "diamond_score": -0.4181,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -43152,7 +43152,7 @@
     "team_sp_off": -1.119,
     "team_sp_overall": 0.114,
     "recruit_rating": -0.708,
-    "prod_over_recruit": -0.279,
+    "prod_over_recruit": -0.284,
     "was_returner": 0.674,
     "ret_td": 1.152,
     "col_qb_ypa": -0.339,
@@ -43170,7 +43170,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Zavion Thomas",
@@ -43278,7 +43278,7 @@
      "p": "Antonio Callaway",
      "y": 2018,
      "sim": 64.0,
-     "fant": 0.693
+     "fant": 0.688
     },
     {
      "p": "Rakim Jarrett",
@@ -43290,7 +43290,7 @@
      "p": "Stefon Diggs",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.964
+     "fant": 0.959
     },
     {
      "p": "Shelton Gibson",
@@ -43302,7 +43302,7 @@
      "p": "Travis Rudolph",
      "y": 2017,
      "sim": 60.0,
-     "fant": 0.508
+     "fant": 0.506
     },
     {
      "p": "Stacy Coley",
@@ -43321,7 +43321,7 @@
    "wrpi_pre": 0.8267,
    "raw_post": 33.7317,
    "raw_pre": 36.377,
-   "tb_score": 0.5954,
+   "tb_score": 0.5943,
    "diamond_score": 0.6112,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -43380,7 +43380,7 @@
     "team_sp_off": -1.119,
     "team_sp_overall": 0.114,
     "recruit_rating": -0.086,
-    "prod_over_recruit": 0.694,
+    "prod_over_recruit": 0.688,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.339,
@@ -43392,7 +43392,7 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.768
+     "fant": 0.762
     },
     {
      "p": "Josh Downs",
@@ -43506,7 +43506,7 @@
      "p": "Dede Westbrook",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.862
+     "fant": 0.859
     },
     {
      "p": "Eric Rivers",
@@ -43650,7 +43650,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 58.0,
-     "fant": 0.912
+     "fant": 0.909
     }
    ]
   },
@@ -43974,7 +43974,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "Michael Jefferson",
@@ -44088,7 +44088,7 @@
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Shelton Gibson",
@@ -44103,9 +44103,9 @@
      "fant": null
     },
     {
-     "p": "Daniel Jackson",
+     "p": "Kobe Hudson",
      "y": 2025,
-     "sim": 61.0,
+     "sim": 60.0,
      "fant": null
     }
    ]
@@ -44190,7 +44190,7 @@
      "p": "Juwan Johnson",
      "y": 2020,
      "sim": 75.0,
-     "fant": 0.787
+     "fant": 0.785
     },
     {
      "p": "Savion Williams",
@@ -44322,7 +44322,7 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 62.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Omar Cooper",
@@ -44418,13 +44418,13 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 71.0,
-     "fant": 0.768
+     "fant": 0.762
     },
     {
      "p": "Calvin Austin ",
      "y": 2022,
      "sim": 68.0,
-     "fant": 0.669
+     "fant": 0.663
     },
     {
      "p": "DT Sheffield",
@@ -44448,7 +44448,7 @@
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.732
+     "fant": 0.729
     }
    ]
   },
@@ -44544,13 +44544,13 @@
      "p": "Chase Claypool",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.865
+     "fant": 0.862
     },
     {
      "p": "D.K. Metcalf",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.961
+     "fant": 0.956
     },
     {
      "p": "Jerome Lane",
@@ -44575,7 +44575,7 @@
    "wrpi_pre": 0.6498,
    "raw_post": 28.6575,
    "raw_pre": 32.4081,
-   "tb_score": -0.4744,
+   "tb_score": -0.4755,
    "diamond_score": -0.0357,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -44634,7 +44634,7 @@
     "team_sp_off": 0.419,
     "team_sp_overall": -0.147,
     "recruit_rating": -0.827,
-    "prod_over_recruit": 1.248,
+    "prod_over_recruit": 1.242,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.104,
@@ -44760,7 +44760,7 @@
      "p": "Chad Hansen",
      "y": 2017,
      "sim": 70.0,
-     "fant": 0.688
+     "fant": 0.682
     },
     {
      "p": "J'Mon Moore",
@@ -44994,7 +44994,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "DaVaris Daniels",
@@ -45006,7 +45006,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "Sam Brown Jr.",
@@ -45108,7 +45108,7 @@
      "p": "Byron Pringle",
      "y": 2018,
      "sim": 70.0,
-     "fant": 0.729
+     "fant": 0.727
     },
     {
      "p": "Cyrus Allen",
@@ -45145,7 +45145,7 @@
    "wrpi_pre": 0.6462,
    "raw_post": 27.1286,
    "raw_pre": 32.1767,
-   "tb_score": 0.9102,
+   "tb_score": 0.8725,
    "diamond_score": 0.0048,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -45203,8 +45203,8 @@
     "catch_radius": 1.031,
     "team_sp_off": -0.542,
     "team_sp_overall": -0.932,
-    "recruit_rating": -0.635,
-    "prod_over_recruit": 0.759,
+    "recruit_rating": -0.78,
+    "prod_over_recruit": 0.874,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.25,
@@ -45373,7 +45373,7 @@
    "wrpi_pre": 0.2671,
    "raw_post": 26.7064,
    "raw_pre": 24.5963,
-   "tb_score": -1.1629,
+   "tb_score": -1.164,
    "diamond_score": -0.2171,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -45432,7 +45432,7 @@
     "team_sp_off": 0.966,
     "team_sp_overall": -0.348,
     "recruit_rating": 0.091,
-    "prod_over_recruit": -1.054,
+    "prod_over_recruit": -1.06,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.193,
@@ -45444,7 +45444,7 @@
      "p": "Van Jefferson",
      "y": 2020,
      "sim": 73.0,
-     "fant": 0.749
+     "fant": 0.743
     },
     {
      "p": "Casey Washington",
@@ -45570,7 +45570,7 @@
      "p": "Jalen Tolbert",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.677
+     "fant": 0.671
     },
     {
      "p": "Bryce Lance",
@@ -45684,7 +45684,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Braylon Sanders",
@@ -45906,7 +45906,7 @@
      "p": "Javon Wims",
      "y": 2018,
      "sim": 67.0,
-     "fant": 0.5
+     "fant": 0.497
     },
     {
      "p": "Kyren Lacy",
@@ -46044,7 +46044,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 59.0,
-     "fant": 0.912
+     "fant": 0.909
     }
    ]
   },
@@ -46254,7 +46254,7 @@
      "p": "Juwan Johnson",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.787
+     "fant": 0.785
     },
     {
      "p": "Dylan Cantrell",
@@ -46380,7 +46380,7 @@
      "p": "Austin Mack",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.514
+     "fant": 0.511
     },
     {
      "p": "Kearis Jackson",
@@ -46399,7 +46399,7 @@
    "wrpi_pre": 0.3466,
    "raw_post": 25.825,
    "raw_pre": 26.4836,
-   "tb_score": 0.0872,
+   "tb_score": 0.0861,
    "diamond_score": -0.5141,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -46458,7 +46458,7 @@
     "team_sp_off": 1.557,
     "team_sp_overall": 0.28,
     "recruit_rating": -0.729,
-    "prod_over_recruit": 0.083,
+    "prod_over_recruit": 0.077,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.104,
@@ -46500,7 +46500,7 @@
      "p": "Marcell Ateman",
      "y": 2018,
      "sim": 59.0,
-     "fant": 0.613
+     "fant": 0.61
     }
    ]
   },
@@ -46824,7 +46824,7 @@
      "p": "Javon Wims",
      "y": 2018,
      "sim": 65.0,
-     "fant": 0.5
+     "fant": 0.497
     },
     {
      "p": "Travis Fulgham",
@@ -46855,7 +46855,7 @@
    "wrpi_pre": 0.0542,
    "raw_post": 23.1101,
    "raw_pre": 18.0992,
-   "tb_score": -0.5561,
+   "tb_score": -0.5573,
    "diamond_score": -0.5808,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -46914,7 +46914,7 @@
     "team_sp_off": -1.06,
     "team_sp_overall": -0.67,
     "recruit_rating": -0.083,
-    "prod_over_recruit": -0.92,
+    "prod_over_recruit": -0.925,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.605,
@@ -47052,13 +47052,13 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Luther Burden",
@@ -47154,7 +47154,7 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Brian Thomas",
@@ -47382,13 +47382,13 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Tyquan Thornton",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.633
+     "fant": 0.771
     },
     {
      "p": "Jordan Addison",
@@ -47400,13 +47400,13 @@
      "p": "Devonta Smith",
      "y": 2021,
      "sim": 61.0,
-     "fant": 0.956
+     "fant": 0.95
     },
     {
      "p": "Jameson Williams",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.881
+     "fant": 0.92
     },
     {
      "p": "Jalin Hyatt",
@@ -47425,7 +47425,7 @@
    "wrpi_pre": 0.935,
    "raw_post": 53.5807,
    "raw_pre": 40.4401,
-   "tb_score": 0.4034,
+   "tb_score": 0.4022,
    "diamond_score": 0.25,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -47484,7 +47484,7 @@
     "team_sp_off": -0.483,
     "team_sp_overall": -0.923,
     "recruit_rating": 0.077,
-    "prod_over_recruit": 0.058,
+    "prod_over_recruit": 0.052,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -1.137,
@@ -47508,13 +47508,13 @@
      "p": "Drake London",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.945
+     "fant": 0.967
     },
     {
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Terrace Marshall Jr.",
@@ -47640,7 +47640,7 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 62.0,
-     "fant": 0.901
+     "fant": 0.898
     }
    ]
   },
@@ -47653,7 +47653,7 @@
    "wrpi_pre": 0.5957,
    "raw_post": 47.2392,
    "raw_pre": 30.6777,
-   "tb_score": -0.9572,
+   "tb_score": -0.9583,
    "diamond_score": 0.0197,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -47712,7 +47712,7 @@
     "team_sp_off": -0.601,
     "team_sp_overall": -0.435,
     "recruit_rating": -0.653,
-    "prod_over_recruit": 0.461,
+    "prod_over_recruit": 0.455,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.073,
@@ -47742,13 +47742,13 @@
      "p": "John Hightower",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.497
+     "fant": 0.494
     },
     {
      "p": "Darius Slayton",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.859
+     "fant": 0.856
     },
     {
      "p": "Tai Felton",
@@ -47847,16 +47847,16 @@
      "fant": 0.209
     },
     {
-     "p": "Jerome Lane",
-     "y": 2017,
-     "sim": 67.0,
-     "fant": 0.209
-    },
-    {
      "p": "CJ Johnson",
      "y": 2023,
      "sim": 67.0,
      "fant": null
+    },
+    {
+     "p": "Jerome Lane",
+     "y": 2017,
+     "sim": 67.0,
+     "fant": 0.209
     },
     {
      "p": "Gary Jennings",
@@ -47976,7 +47976,7 @@
      "p": "Trevor Davis",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.511
+     "fant": 0.508
     },
     {
      "p": "Henry Ruggs",
@@ -47995,7 +47995,7 @@
    "wrpi_pre": 0.8159,
    "raw_post": 46.1319,
    "raw_pre": 36.148,
-   "tb_score": 0.1279,
+   "tb_score": 0.1268,
    "diamond_score": 0.0934,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -48054,7 +48054,7 @@
     "team_sp_off": 0.759,
     "team_sp_overall": 0.402,
     "recruit_rating": -0.05,
-    "prod_over_recruit": -0.569,
+    "prod_over_recruit": -0.574,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.548,
@@ -48066,7 +48066,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Jalen McMillan",
@@ -48084,7 +48084,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Rashee Rice",
@@ -48109,7 +48109,7 @@
    "wrpi_pre": 0.7112,
    "raw_post": 43.005,
    "raw_pre": 34.4311,
-   "tb_score": 0.332,
+   "tb_score": 0.3308,
    "diamond_score": 0.1859,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -48168,7 +48168,7 @@
     "team_sp_off": 0.611,
     "team_sp_overall": 0.995,
     "recruit_rating": 0.07,
-    "prod_over_recruit": 0.218,
+    "prod_over_recruit": 0.213,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.548,
@@ -48408,13 +48408,13 @@
      "p": "Jameson Williams",
      "y": 2022,
      "sim": 77.0,
-     "fant": 0.881
+     "fant": 0.92
     },
     {
      "p": "Tyquan Thornton",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.633
+     "fant": 0.771
     },
     {
      "p": "Tai Felton",
@@ -48426,7 +48426,7 @@
      "p": "Devonta Smith",
      "y": 2021,
      "sim": 61.0,
-     "fant": 0.956
+     "fant": 0.95
     },
     {
      "p": "Jalin Hyatt",
@@ -48534,7 +48534,7 @@
      "p": "Malcolm Mitchell",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.782
+     "fant": 0.779
     },
     {
      "p": "Devin Smith",
@@ -48552,7 +48552,7 @@
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 59.0,
-     "fant": 0.71
+     "fant": 0.707
     }
    ]
   },
@@ -48565,7 +48565,7 @@
    "wrpi_pre": 0.657,
    "raw_post": 36.6982,
    "raw_pre": 32.692,
-   "tb_score": 0.2072,
+   "tb_score": 0.2061,
    "diamond_score": 0.1795,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -48624,7 +48624,7 @@
     "team_sp_off": 0.212,
     "team_sp_overall": 1.701,
     "recruit_rating": 0.143,
-    "prod_over_recruit": 0.655,
+    "prod_over_recruit": 0.65,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.725,
@@ -48648,13 +48648,13 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.768
+     "fant": 0.762
     },
     {
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Danny Gray",
@@ -48750,7 +48750,7 @@
      "p": "Darnell Mooney",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.884
+     "fant": 0.881
     },
     {
      "p": "Devonte Ross",
@@ -48762,19 +48762,19 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 67.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Jaelon Darden",
      "y": 2021,
      "sim": 66.0,
-     "fant": 0.434
+     "fant": 0.436
     },
     {
      "p": "Calvin Austin ",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.669
+     "fant": 0.663
     },
     {
      "p": "Marquez Stevenson",
@@ -49008,7 +49008,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.856
+     "fant": 0.854
     }
    ]
   },
@@ -49344,7 +49344,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 69.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Jaylin Lane",
@@ -49452,13 +49452,13 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.901
+     "fant": 0.898
     },
     {
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.71
+     "fant": 0.707
     },
     {
      "p": "Josh Malone",
@@ -49548,7 +49548,7 @@
      "p": "Marquise Brown",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.909
+     "fant": 0.906
     },
     {
      "p": "Konata Mumpfield",
@@ -49680,13 +49680,13 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 59.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Dede Westbrook",
      "y": 2017,
      "sim": 59.0,
-     "fant": 0.862
+     "fant": 0.859
     },
     {
      "p": "Konata Mumpfield",
@@ -49800,7 +49800,7 @@
      "p": "Jaylen Waddle",
      "y": 2021,
      "sim": 64.0,
-     "fant": 0.959
+     "fant": 0.953
     },
     {
      "p": "Zachariah Branch",
@@ -49890,7 +49890,7 @@
      "p": "Andy Isabella",
      "y": 2019,
      "sim": 71.0,
-     "fant": 0.586
+     "fant": 0.583
     },
     {
      "p": "D'Wayne Eskridge",
@@ -49908,7 +49908,7 @@
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Carlos Henderson",
@@ -49920,7 +49920,7 @@
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 62.0,
-     "fant": 0.674
+     "fant": 0.669
     }
    ]
   },
@@ -50028,7 +50028,7 @@
      "p": "Laviska Shenault",
      "y": 2020,
      "sim": 63.0,
-     "fant": 0.798
+     "fant": 0.796
     },
     {
      "p": "Deebo Samuel",
@@ -50118,7 +50118,7 @@
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 72.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Jalen Hurd",
@@ -50130,7 +50130,7 @@
      "p": "Lawrence Cager",
      "y": 2020,
      "sim": 67.0,
-     "fant": 0.644
+     "fant": 0.638
     },
     {
      "p": "Colbie Young",
@@ -50142,7 +50142,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "Jaleel Scott",
@@ -50352,7 +50352,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 61.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "DaVaris Daniels",
@@ -50466,7 +50466,7 @@
      "p": "Van Jefferson",
      "y": 2020,
      "sim": 70.0,
-     "fant": 0.749
+     "fant": 0.743
     },
     {
      "p": "Jalen Brooks",
@@ -50574,7 +50574,7 @@
      "p": "Malcolm Mitchell",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.782
+     "fant": 0.779
     },
     {
      "p": "Austin Watkins",
@@ -50604,7 +50604,7 @@
      "p": "Byron Pringle",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.729
+     "fant": 0.727
     }
    ]
   },
@@ -50617,7 +50617,7 @@
    "wrpi_pre": 0.0614,
    "raw_post": 27.8639,
    "raw_pre": 18.3056,
-   "tb_score": -2.0492,
+   "tb_score": -2.0503,
    "diamond_score": -0.1071,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -50676,7 +50676,7 @@
     "team_sp_off": -0.468,
     "team_sp_overall": 0.053,
     "recruit_rating": -0.671,
-    "prod_over_recruit": 0.63,
+    "prod_over_recruit": 0.625,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.636,
@@ -50694,7 +50694,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 70.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Ryan Davis",
@@ -50814,7 +50814,7 @@
      "p": "Tre'Quan Smith",
      "y": 2018,
      "sim": 59.0,
-     "fant": 0.793
+     "fant": 0.79
     },
     {
      "p": "Pat Bryant",
@@ -51162,7 +51162,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 71.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Keon Hatcher",
@@ -51402,7 +51402,7 @@
      "p": "Austin Mack",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.514
+     "fant": 0.511
     }
    ]
   },
@@ -51492,12 +51492,12 @@
      "p": "Justin Hardy",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.666
+     "fant": 0.66
     },
     {
      "p": "Daniel Jackson",
      "y": 2025,
-     "sim": 64.0,
+     "sim": 66.0,
      "fant": null
     },
     {
@@ -51516,7 +51516,7 @@
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.914
+     "fant": 0.912
     }
    ]
   },
@@ -51612,13 +51612,13 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 63.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Charleston Rambo",
@@ -51744,7 +51744,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.724
+     "fant": 0.721
     }
    ]
   },
@@ -51985,7 +51985,7 @@
    "wrpi_pre": 0.0686,
    "raw_post": 24.3293,
    "raw_pre": 19.0201,
-   "tb_score": -0.7543,
+   "tb_score": -0.7554,
    "diamond_score": -0.3017,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -52044,7 +52044,7 @@
     "team_sp_off": 0.419,
     "team_sp_overall": 0.166,
     "recruit_rating": 0.158,
-    "prod_over_recruit": -0.441,
+    "prod_over_recruit": -0.446,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.725,
@@ -52200,7 +52200,7 @@
      "p": "Michael Pittman Jr.",
      "y": 2020,
      "sim": 61.0,
-     "fant": 0.936
+     "fant": 0.934
     }
    ]
   },
@@ -52284,7 +52284,7 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 65.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Makai Lemon",
@@ -52302,7 +52302,7 @@
      "p": "Garrett Wilson",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.925
+     "fant": 0.931
     },
     {
      "p": "KD Cannon",
@@ -52410,7 +52410,7 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Jordan Payton",
@@ -52524,7 +52524,7 @@
      "p": "Nelson Agholor",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.854
+     "fant": 0.851
     },
     {
      "p": "Malik Nabers",
@@ -52536,13 +52536,13 @@
      "p": "Leonte Carroo",
      "y": 2016,
      "sim": 64.0,
-     "fant": 0.503
+     "fant": 0.5
     },
     {
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.95
+     "fant": 0.948
     }
    ]
   },
@@ -52626,7 +52626,7 @@
      "p": "Kadarius Toney",
      "y": 2021,
      "sim": 73.0,
-     "fant": 0.715
+     "fant": 0.713
     },
     {
      "p": "Omar Cooper",
@@ -52638,13 +52638,13 @@
      "p": "John Ross",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.762
+     "fant": 0.757
     },
     {
      "p": "Curtis Samuel",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.895
+     "fant": 0.892
     },
     {
      "p": "Henry Ruggs",
@@ -52752,7 +52752,7 @@
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.901
+     "fant": 0.898
     },
     {
      "p": "Denzel Mims",
@@ -52860,7 +52860,7 @@
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 67.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Jayden Reed",
@@ -52869,22 +52869,22 @@
      "fant": null
     },
     {
+     "p": "Daniel Jackson",
+     "y": 2025,
+     "sim": 64.0,
+     "fant": null
+    },
+    {
      "p": "Tyler Lockett",
      "y": 2015,
      "sim": 63.0,
-     "fant": 0.914
+     "fant": 0.912
     },
     {
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 62.0,
-     "fant": 0.768
-    },
-    {
-     "p": "Daniel Jackson",
-     "y": 2025,
-     "sim": 62.0,
-     "fant": null
+     "fant": 0.762
     }
    ]
   },
@@ -52897,7 +52897,7 @@
    "wrpi_pre": 0.6534,
    "raw_post": 41.1526,
    "raw_pre": 32.5617,
-   "tb_score": -0.4472,
+   "tb_score": -0.4483,
    "diamond_score": -0.2662,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -52956,7 +52956,7 @@
     "team_sp_off": -0.084,
     "team_sp_overall": -0.086,
     "recruit_rating": 0.143,
-    "prod_over_recruit": -0.294,
+    "prod_over_recruit": -0.3,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.193,
@@ -52967,7 +52967,7 @@
     {
      "p": "Gary Jennings",
      "y": 2019,
-     "sim": 67.0,
+     "sim": 68.0,
      "fant": 0.209
     },
     {
@@ -52986,7 +52986,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Keon Hatcher",
@@ -53106,7 +53106,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Michael Thomas",
@@ -53214,7 +53214,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Josh Malone",
@@ -53226,7 +53226,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 59.0,
-     "fant": 0.779
+     "fant": 0.776
     }
    ]
   },
@@ -53316,31 +53316,31 @@
      "p": "Corey Coleman",
      "y": 2016,
      "sim": 68.0,
-     "fant": 0.691
+     "fant": 0.685
     },
     {
      "p": "Devin Duvernay",
      "y": 2020,
      "sim": 68.0,
-     "fant": 0.674
+     "fant": 0.669
     },
     {
      "p": "Skyy Moore",
      "y": 2022,
      "sim": 67.0,
-     "fant": 0.492
+     "fant": 0.514
     },
     {
      "p": "Sterling Shepard",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.92
+     "fant": 0.917
     },
     {
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 64.0,
-     "fant": 0.768
+     "fant": 0.762
     }
    ]
   },
@@ -53430,7 +53430,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 61.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "Jake Bobo",
@@ -53442,7 +53442,7 @@
      "p": "Lawrence Cager",
      "y": 2020,
      "sim": 57.0,
-     "fant": 0.644
+     "fant": 0.638
     },
     {
      "p": "Jazz Ferguson",
@@ -53544,31 +53544,31 @@
      "p": "Quez Watkins",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.713
+     "fant": 0.71
     },
     {
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 65.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Tyquan Thornton",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.633
+     "fant": 0.771
     },
     {
      "p": "Chris Olave",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.953
+     "fant": 0.97
     },
     {
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 63.0,
-     "fant": 0.804
+     "fant": 0.801
     }
    ]
   },
@@ -53581,7 +53581,7 @@
    "wrpi_pre": 0.2888,
    "raw_post": 35.2574,
    "raw_pre": 25.3975,
-   "tb_score": -0.3291,
+   "tb_score": -0.3302,
    "diamond_score": -0.2325,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -53640,7 +53640,7 @@
     "team_sp_off": -0.084,
     "team_sp_overall": -0.086,
     "recruit_rating": -0.016,
-    "prod_over_recruit": -0.968,
+    "prod_over_recruit": -0.974,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.193,
@@ -53670,7 +53670,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 65.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "Joseph Ngata",
@@ -53796,7 +53796,7 @@
      "p": "Kevin Austin",
      "y": 2022,
      "sim": 58.0,
-     "fant": 0.627
+     "fant": 0.624
     }
    ]
   },
@@ -53809,7 +53809,7 @@
    "wrpi_pre": 0.4729,
    "raw_post": 33.94,
    "raw_pre": 28.3775,
-   "tb_score": -0.8242,
+   "tb_score": -0.8253,
    "diamond_score": 0.0388,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -53868,7 +53868,7 @@
     "team_sp_off": -0.513,
     "team_sp_overall": 0.175,
     "recruit_rating": -0.189,
-    "prod_over_recruit": 0.071,
+    "prod_over_recruit": 0.066,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 1.611,
@@ -53994,7 +53994,7 @@
      "p": "Tre'Quan Smith",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.793
+     "fant": 0.79
     },
     {
      "p": "Denzel Mims",
@@ -54012,7 +54012,7 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "Marvin Harrison Jr.",
@@ -54024,7 +54024,7 @@
      "p": "Breshad Perriman",
      "y": 2015,
      "sim": 61.0,
-     "fant": 0.801
+     "fant": 0.798
     }
    ]
   },
@@ -54126,7 +54126,7 @@
      "p": "Trevor Davis",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.511
+     "fant": 0.508
     },
     {
      "p": "Malik Benson",
@@ -54138,7 +54138,7 @@
      "p": "John Hightower",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.497
+     "fant": 0.494
     }
    ]
   },
@@ -54222,7 +54222,7 @@
      "p": "Brandon Aiyuk",
      "y": 2020,
      "sim": 68.0,
-     "fant": 0.95
+     "fant": 0.948
     },
     {
      "p": "Rashee Rice",
@@ -54252,7 +54252,7 @@
      "p": "Leonte Carroo",
      "y": 2016,
      "sim": 59.0,
-     "fant": 0.503
+     "fant": 0.5
     }
    ]
   },
@@ -54336,7 +54336,7 @@
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.804
+     "fant": 0.801
     },
     {
      "p": "Devontez Walker",
@@ -54348,7 +54348,7 @@
      "p": "Jalen Tolbert",
      "y": 2022,
      "sim": 60.0,
-     "fant": 0.677
+     "fant": 0.671
     },
     {
      "p": "Elic Ayomanor",
@@ -54474,7 +54474,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Dazz Newsome",
@@ -54576,13 +54576,13 @@
      "p": "Phillip Dorsett",
      "y": 2015,
      "sim": 62.0,
-     "fant": 0.768
+     "fant": 0.762
     },
     {
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 62.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Shelton Gibson",
@@ -54678,7 +54678,7 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 81.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Brenen Thompson",
@@ -54708,7 +54708,7 @@
      "p": "Marquise Brown",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.909
+     "fant": 0.906
     }
    ]
   },
@@ -54810,19 +54810,19 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 69.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Marquise Brown",
      "y": 2019,
      "sim": 68.0,
-     "fant": 0.909
+     "fant": 0.906
     },
     {
      "p": "Dede Westbrook",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.862
+     "fant": 0.859
     }
    ]
   },
@@ -55044,7 +55044,7 @@
      "p": "Kevin Austin",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.627
+     "fant": 0.624
     },
     {
      "p": "Sam Brown Jr.",
@@ -55488,7 +55488,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 69.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "DeMario Douglas",
@@ -55500,7 +55500,7 @@
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.732
+     "fant": 0.729
     },
     {
      "p": "Isaiah Williams",
@@ -55596,13 +55596,13 @@
      "p": "John Metchie",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.583
+     "fant": 0.649
     },
     {
      "p": "Jaylen Waddle",
      "y": 2021,
      "sim": 62.0,
-     "fant": 0.959
+     "fant": 0.953
     },
     {
      "p": "Terry Godwin",
@@ -55633,7 +55633,7 @@
    "wrpi_pre": 0.5993,
    "raw_post": 27.5589,
    "raw_pre": 30.7062,
-   "tb_score": -0.2967,
+   "tb_score": -0.3915,
    "diamond_score": 0.2738,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -55650,7 +55650,7 @@
    "explosion_p": null,
    "best_yds": 863.0,
    "alpha": 1.0,
-   "recruit_stars": 4.0,
+   "recruit_stars": 3.0,
    "n_seasons_30": 2.0,
    "comp_post": {
     "Draft capital": 10.8,
@@ -55691,8 +55691,8 @@
     "catch_radius": -1.52,
     "team_sp_off": -1.415,
     "team_sp_overall": -0.121,
-    "recruit_rating": 0.168,
-    "prod_over_recruit": 1.082,
+    "recruit_rating": -0.225,
+    "prod_over_recruit": 1.427,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -1.048,
@@ -55703,38 +55703,38 @@
     {
      "p": "Khalil Shakir",
      "y": 2022,
-     "sim": 72.0,
-     "fant": 0.851
+     "sim": 68.0,
+     "fant": 0.867
+    },
+    {
+     "p": "Efton Chism III",
+     "y": 2024,
+     "sim": 61.0,
+     "fant": null
+    },
+    {
+     "p": "Kyle Williams",
+     "y": 2025,
+     "sim": 61.0,
+     "fant": null
     },
     {
      "p": "Trey Palmer",
      "y": 2023,
-     "sim": 64.0,
-     "fant": null
-    },
-    {
-     "p": "Bo Melton",
-     "y": 2022,
-     "sim": 61.0,
-     "fant": 0.641
-    },
-    {
-     "p": "Makai Lemon",
-     "y": 2026,
      "sim": 61.0,
      "fant": null
     },
     {
-     "p": "Shelton Gibson",
-     "y": 2017,
-     "sim": 60.0,
-     "fant": 0.209
+     "p": "Jayden Reed",
+     "y": 2023,
+     "sim": 61.0,
+     "fant": null
     },
     {
-     "p": "Elijhah Badger",
-     "y": 2025,
+     "p": "Phillip Dorsett",
+     "y": 2015,
      "sim": 60.0,
-     "fant": null
+     "fant": 0.762
     }
    ]
   },
@@ -55747,7 +55747,7 @@
    "wrpi_pre": 0.639,
    "raw_post": 27.6101,
    "raw_pre": 31.6854,
-   "tb_score": 0.3271,
+   "tb_score": 0.326,
    "diamond_score": 0.465,
    "is_diamond": 1,
    "is_star_pre": 0,
@@ -55806,7 +55806,7 @@
     "team_sp_off": -0.454,
     "team_sp_overall": -0.906,
     "recruit_rating": 0.029,
-    "prod_over_recruit": 1.163,
+    "prod_over_recruit": 1.157,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": 0.459,
@@ -55818,13 +55818,13 @@
      "p": "Dede Westbrook",
      "y": 2017,
      "sim": 68.0,
-     "fant": 0.862
+     "fant": 0.859
     },
     {
      "p": "Jalen Tolbert",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.677
+     "fant": 0.671
     },
     {
      "p": "Dres Anderson",
@@ -55836,7 +55836,7 @@
      "p": "Quez Watkins",
      "y": 2020,
      "sim": 60.0,
-     "fant": 0.713
+     "fant": 0.71
     },
     {
      "p": "Tai Felton",
@@ -55932,7 +55932,7 @@
      "p": "Marquez Callaway",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.71
+     "fant": 0.707
     },
     {
      "p": "Luke McCaffrey",
@@ -56317,7 +56317,7 @@
    "wrpi_pre": 0.6173,
    "raw_post": 26.7973,
    "raw_pre": 31.1433,
-   "tb_score": -1.3219,
+   "tb_score": -1.323,
    "diamond_score": -0.0685,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -56376,7 +56376,7 @@
     "team_sp_off": 0.286,
     "team_sp_overall": -0.723,
     "recruit_rating": -0.02,
-    "prod_over_recruit": -0.87,
+    "prod_over_recruit": -0.876,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.016,
@@ -56406,7 +56406,7 @@
      "p": "Kelvin Harmon",
      "y": 2019,
      "sim": 65.0,
-     "fant": 0.646
+     "fant": 0.641
     },
     {
      "p": "Jaylen Smith",
@@ -56545,7 +56545,7 @@
    "wrpi_pre": 0.6462,
    "raw_post": 26.7141,
    "raw_pre": 32.0017,
-   "tb_score": -0.7633,
+   "tb_score": -0.7644,
    "diamond_score": 0.0336,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -56604,7 +56604,7 @@
     "team_sp_off": -1.415,
     "team_sp_overall": -1.708,
     "recruit_rating": -0.033,
-    "prod_over_recruit": -0.827,
+    "prod_over_recruit": -0.832,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": -0.959,
@@ -56628,7 +56628,7 @@
      "p": "Kevin Austin",
      "y": 2022,
      "sim": 67.0,
-     "fant": 0.627
+     "fant": 0.624
     },
     {
      "p": "Ja'Lynn Polk",
@@ -56646,7 +56646,7 @@
      "p": "D.J. Chark",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.89
+     "fant": 0.887
     }
    ]
   },
@@ -56742,7 +56742,7 @@
      "p": "Byron Pringle",
      "y": 2018,
      "sim": 57.0,
-     "fant": 0.729
+     "fant": 0.727
     },
     {
      "p": "Tank Dell",
@@ -56850,7 +56850,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 71.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "Kenny Lawler",
@@ -57318,7 +57318,7 @@
      "p": "Daesean Hamilton",
      "y": 2018,
      "sim": 64.0,
-     "fant": 0.696
+     "fant": 0.691
     },
     {
      "p": "Johnny Johnson II",
@@ -57546,7 +57546,7 @@
      "p": "Van Jefferson",
      "y": 2020,
      "sim": 66.0,
-     "fant": 0.749
+     "fant": 0.743
     },
     {
      "p": "Dai'Jean Dixon",
@@ -57984,19 +57984,19 @@
      "p": "Tyler Boyd",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.934
+     "fant": 0.928
     },
     {
      "p": "Tajae Sharpe",
      "y": 2016,
      "sim": 63.0,
-     "fant": 0.685
+     "fant": 0.68
     },
     {
      "p": "Tre'Quan Smith",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.793
+     "fant": 0.79
     },
     {
      "p": "Seth Williams",
@@ -58008,13 +58008,13 @@
      "p": "Cedrick Wilson",
      "y": 2018,
      "sim": 60.0,
-     "fant": 0.751
+     "fant": 0.746
     },
     {
      "p": "Steven Sims",
      "y": 2019,
      "sim": 60.0,
-     "fant": 0.663
+     "fant": 0.657
     }
    ]
   },
@@ -58141,7 +58141,7 @@
    "wrpi_pre": 0.8917,
    "raw_post": 56.7143,
    "raw_pre": 38.2869,
-   "tb_score": 1.0327,
+   "tb_score": 1.0316,
    "diamond_score": 0.6931,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -58200,7 +58200,7 @@
     "team_sp_off": 0.419,
     "team_sp_overall": 0.777,
     "recruit_rating": -0.088,
-    "prod_over_recruit": 1.271,
+    "prod_over_recruit": 1.266,
     "was_returner": 0.674,
     "ret_td": 1.152,
     "col_qb_ypa": 0.193,
@@ -58212,7 +58212,7 @@
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.851
+     "fant": 0.867
     },
     {
      "p": "Jayden Reed",
@@ -58224,7 +58224,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "Makai Lemon",
@@ -58236,13 +58236,13 @@
      "p": "Michael Gallup",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.892
+     "fant": 0.89
     },
     {
      "p": "Christian Kirk",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.917
+     "fant": 0.914
     }
    ]
   },
@@ -58356,7 +58356,7 @@
      "p": "Khalil Shakir",
      "y": 2022,
      "sim": 61.0,
-     "fant": 0.851
+     "fant": 0.867
     }
    ]
   },
@@ -58446,7 +58446,7 @@
      "p": "Kadarius Toney",
      "y": 2021,
      "sim": 66.0,
-     "fant": 0.715
+     "fant": 0.713
     },
     {
      "p": "Emeka Egbuka",
@@ -58554,7 +58554,7 @@
      "p": "Chris Moore",
      "y": 2016,
      "sim": 69.0,
-     "fant": 0.655
+     "fant": 0.652
     },
     {
      "p": "Alec Pierce",
@@ -58800,7 +58800,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Puka Nacua",
@@ -58908,13 +58908,13 @@
      "p": "Dyami Brown",
      "y": 2021,
      "sim": 68.0,
-     "fant": 0.594
+     "fant": 0.591
     },
     {
      "p": "Anthony Schwartz",
      "y": 2021,
      "sim": 67.0,
-     "fant": 0.506
+     "fant": 0.503
     },
     {
      "p": "Kevin Coleman",
@@ -59022,7 +59022,7 @@
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.732
+     "fant": 0.729
     },
     {
      "p": "Jeff Thomas",
@@ -59142,7 +59142,7 @@
      "p": "Isaiah Hodgins",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.721
+     "fant": 0.718
     },
     {
      "p": "Seth Williams",
@@ -59262,7 +59262,7 @@
      "p": "Collin Johnson",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.591
+     "fant": 0.588
     },
     {
      "p": "Colbie Young",
@@ -59370,13 +59370,13 @@
      "p": "Romeo Doubs",
      "y": 2022,
      "sim": 66.0,
-     "fant": 0.856
+     "fant": 0.854
     },
     {
      "p": "DeVante Parker",
      "y": 2015,
      "sim": 65.0,
-     "fant": 0.901
+     "fant": 0.898
     },
     {
      "p": "Cedric Tillman",
@@ -59395,7 +59395,7 @@
    "wrpi_pre": 0.4801,
    "raw_post": 37.7156,
    "raw_pre": 28.6086,
-   "tb_score": -0.8506,
+   "tb_score": -0.8517,
    "diamond_score": -0.4744,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59454,7 +59454,7 @@
     "team_sp_off": -0.247,
     "team_sp_overall": -0.653,
     "recruit_rating": -0.033,
-    "prod_over_recruit": -0.711,
+    "prod_over_recruit": -0.716,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.959,
@@ -59472,7 +59472,7 @@
      "p": "Cody Core",
      "y": 2016,
      "sim": 67.0,
-     "fant": 0.624
+     "fant": 0.622
     },
     {
      "p": "Mekale McKay",
@@ -59509,7 +59509,7 @@
    "wrpi_pre": 0.6606,
    "raw_post": 37.8479,
    "raw_pre": 32.7489,
-   "tb_score": 0.4715,
+   "tb_score": 0.4704,
    "diamond_score": 0.2418,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59568,7 +59568,7 @@
     "team_sp_off": 0.552,
     "team_sp_overall": 0.445,
     "recruit_rating": 0.101,
-    "prod_over_recruit": -0.242,
+    "prod_over_recruit": -0.247,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.902,
@@ -59592,7 +59592,7 @@
      "p": "D.J. Chark",
      "y": 2018,
      "sim": 71.0,
-     "fant": 0.89
+     "fant": 0.887
     },
     {
      "p": "Beaux Collins",
@@ -59623,7 +59623,7 @@
    "wrpi_pre": 0.7112,
    "raw_post": 37.3461,
    "raw_pre": 34.3292,
-   "tb_score": -0.4828,
+   "tb_score": -0.4839,
    "diamond_score": 0.1067,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59682,7 +59682,7 @@
     "team_sp_off": 0.611,
     "team_sp_overall": 0.28,
     "recruit_rating": -0.628,
-    "prod_over_recruit": 0.764,
+    "prod_over_recruit": 0.759,
     "was_returner": -1.481,
     "ret_td": 0.0,
     "col_qb_ypa": 0.548,
@@ -59718,13 +59718,13 @@
      "p": "D.J. Chark",
      "y": 2018,
      "sim": 68.0,
-     "fant": 0.89
+     "fant": 0.887
     },
     {
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 66.0,
-     "fant": 0.804
+     "fant": 0.801
     }
    ]
   },
@@ -59737,7 +59737,7 @@
    "wrpi_pre": 0.5776,
    "raw_post": 36.6071,
    "raw_pre": 30.3363,
-   "tb_score": 0.8114,
+   "tb_score": 0.8103,
    "diamond_score": -0.0435,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59796,7 +59796,7 @@
     "team_sp_off": -0.528,
     "team_sp_overall": 0.053,
     "recruit_rating": -0.628,
-    "prod_over_recruit": 1.021,
+    "prod_over_recruit": 1.016,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.959,
@@ -59826,13 +59826,13 @@
      "p": "Zach Pascal",
      "y": 2017,
      "sim": 67.0,
-     "fant": 0.79
+     "fant": 0.787
     },
     {
      "p": "Ricardo Louis",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.63
+     "fant": 0.627
     },
     {
      "p": "Amara Darboh",
@@ -59851,7 +59851,7 @@
    "wrpi_pre": 0.3646,
    "raw_post": 35.7756,
    "raw_pre": 26.6381,
-   "tb_score": -1.2863,
+   "tb_score": -1.2875,
    "diamond_score": -0.378,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -59910,7 +59910,7 @@
     "team_sp_off": -1.548,
     "team_sp_overall": -0.984,
     "recruit_rating": 0.077,
-    "prod_over_recruit": -1.012,
+    "prod_over_recruit": -1.017,
     "was_returner": 0.674,
     "ret_td": 1.933,
     "col_qb_ypa": -1.137,
@@ -60042,7 +60042,7 @@
      "p": "Marquise Brown",
      "y": 2019,
      "sim": 71.0,
-     "fant": 0.909
+     "fant": 0.906
     },
     {
      "p": "Jacolby George",
@@ -60060,7 +60060,7 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 66.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Jeff Thomas",
@@ -60156,7 +60156,7 @@
      "p": "Malcolm Mitchell",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.782
+     "fant": 0.779
     },
     {
      "p": "Rashee Rice",
@@ -60390,7 +60390,7 @@
      "p": "Ihmir Smith-Marsette",
      "y": 2021,
      "sim": 69.0,
-     "fant": 0.597
+     "fant": 0.594
     },
     {
      "p": "Dres Anderson",
@@ -60402,13 +60402,13 @@
      "p": "Geronimo Allison",
      "y": 2016,
      "sim": 65.0,
-     "fant": 0.776
+     "fant": 0.773
     },
     {
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 63.0,
-     "fant": 0.718
+     "fant": 0.715
     }
    ]
   },
@@ -60516,7 +60516,7 @@
      "p": "Josh Doctson",
      "y": 2016,
      "sim": 62.0,
-     "fant": 0.757
+     "fant": 0.751
     },
     {
      "p": "A.T. Perry",
@@ -60726,7 +60726,7 @@
      "p": "Parris Campbell",
      "y": 2019,
      "sim": 68.0,
-     "fant": 0.707
+     "fant": 0.702
     },
     {
      "p": "Omar Cooper",
@@ -60738,13 +60738,13 @@
      "p": "Antonio Callaway",
      "y": 2018,
      "sim": 61.0,
-     "fant": 0.693
+     "fant": 0.688
     },
     {
      "p": "Jalin Marshall",
      "y": 2016,
      "sim": 60.0,
-     "fant": 0.727
+     "fant": 0.724
     },
     {
      "p": "ArDarius Stewart",
@@ -60972,7 +60972,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "DaVaris Daniels",
@@ -61062,7 +61062,7 @@
      "p": "Mack Hollins",
      "y": 2017,
      "sim": 69.0,
-     "fant": 0.682
+     "fant": 0.677
     },
     {
      "p": "Jamal Custis",
@@ -61092,7 +61092,7 @@
      "p": "Lawrence Cager",
      "y": 2020,
      "sim": 65.0,
-     "fant": 0.644
+     "fant": 0.638
     }
    ]
   },
@@ -61314,7 +61314,7 @@
      "p": "Jakobi Meyers",
      "y": 2019,
      "sim": 63.0,
-     "fant": 0.912
+     "fant": 0.909
     },
     {
      "p": "Luke McCaffrey",
@@ -61422,7 +61422,7 @@
      "p": "Quintez Cephus",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.779
+     "fant": 0.776
     },
     {
      "p": "CJ Williams",
@@ -61434,7 +61434,7 @@
      "p": "Steven Sims",
      "y": 2019,
      "sim": 64.0,
-     "fant": 0.663
+     "fant": 0.657
     }
    ]
   },
@@ -61974,7 +61974,7 @@
      "p": "Malcolm Mitchell",
      "y": 2016,
      "sim": 66.0,
-     "fant": 0.782
+     "fant": 0.779
     },
     {
      "p": "CJ Williams",
@@ -61998,7 +61998,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 59.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Stacy Coley",
@@ -62100,7 +62100,7 @@
      "p": "J.J. Nelson",
      "y": 2015,
      "sim": 70.0,
-     "fant": 0.743
+     "fant": 0.738
     },
     {
      "p": "Jacob Cowing",
@@ -62208,7 +62208,7 @@
      "p": "Dante Pettis",
      "y": 2018,
      "sim": 62.0,
-     "fant": 0.718
+     "fant": 0.715
     },
     {
      "p": "Dillon Mitchell",
@@ -62328,7 +62328,7 @@
      "p": "Josh Reynolds",
      "y": 2017,
      "sim": 68.0,
-     "fant": 0.804
+     "fant": 0.801
     },
     {
      "p": "Michael Jefferson",
@@ -62359,7 +62359,7 @@
    "wrpi_pre": 0.5054,
    "raw_post": 27.0961,
    "raw_pre": 28.8872,
-   "tb_score": 0.1611,
+   "tb_score": 0.16,
    "diamond_score": -0.0081,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -62418,7 +62418,7 @@
     "team_sp_off": -0.468,
     "team_sp_overall": 0.306,
     "recruit_rating": -0.695,
-    "prod_over_recruit": 1.071,
+    "prod_over_recruit": 1.066,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.25,
@@ -62664,7 +62664,7 @@
      "p": "Isaiah McKenzie",
      "y": 2017,
      "sim": 71.0,
-     "fant": 0.732
+     "fant": 0.729
     },
     {
      "p": "DeMario Douglas",
@@ -62676,7 +62676,7 @@
      "p": "Braxton Berrios",
      "y": 2018,
      "sim": 71.0,
-     "fant": 0.724
+     "fant": 0.721
     },
     {
      "p": "Mario Alford",
@@ -62929,7 +62929,7 @@
    "wrpi_pre": 0.5921,
    "raw_post": 26.6485,
    "raw_pre": 30.6311,
-   "tb_score": -1.4037,
+   "tb_score": -1.4048,
    "diamond_score": -0.0424,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -62988,7 +62988,7 @@
     "team_sp_off": -2.168,
     "team_sp_overall": -2.082,
     "recruit_rating": -0.671,
-    "prod_over_recruit": 1.886,
+    "prod_over_recruit": 1.881,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.193,
@@ -63012,7 +63012,7 @@
      "p": "Darnell Mooney",
      "y": 2020,
      "sim": 64.0,
-     "fant": 0.884
+     "fant": 0.881
     },
     {
      "p": "Charlie Jones",
@@ -63030,7 +63030,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 63.0,
-     "fant": 0.704
+     "fant": 0.699
     }
    ]
   },
@@ -63114,7 +63114,7 @@
      "p": "Bo Melton",
      "y": 2022,
      "sim": 65.0,
-     "fant": 0.641
+     "fant": 0.635
     },
     {
      "p": "Eric Rivers",
@@ -63126,7 +63126,7 @@
      "p": "Jalen Nailor",
      "y": 2022,
      "sim": 64.0,
-     "fant": 0.704
+     "fant": 0.699
     },
     {
      "p": "Kevin Coleman",
@@ -63157,7 +63157,7 @@
    "wrpi_pre": 0.2671,
    "raw_post": 25.8946,
    "raw_pre": 24.5494,
-   "tb_score": -0.6058,
+   "tb_score": -0.6069,
    "diamond_score": -0.6575,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -63216,7 +63216,7 @@
     "team_sp_off": 0.773,
     "team_sp_overall": 1.064,
     "recruit_rating": -0.062,
-    "prod_over_recruit": -0.913,
+    "prod_over_recruit": -0.918,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": 0.548,
@@ -63246,7 +63246,7 @@
      "p": "K.J. Hill",
      "y": 2020,
      "sim": 69.0,
-     "fant": 0.494
+     "fant": 0.492
     },
     {
      "p": "Tre Nixon",
@@ -63271,7 +63271,7 @@
    "wrpi_pre": 0.2022,
    "raw_post": 25.8455,
    "raw_pre": 22.8592,
-   "tb_score": -1.079,
+   "tb_score": -1.0801,
    "diamond_score": -0.4769,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -63330,7 +63330,7 @@
     "team_sp_off": 0.093,
     "team_sp_overall": -0.548,
     "recruit_rating": -0.738,
-    "prod_over_recruit": 0.112,
+    "prod_over_recruit": 0.107,
     "was_returner": 0.674,
     "ret_td": 0.371,
     "col_qb_ypa": -0.073,
@@ -63385,7 +63385,7 @@
    "wrpi_pre": 0.2635,
    "raw_post": 25.8034,
    "raw_pre": 24.3667,
-   "tb_score": -0.2997,
+   "tb_score": -0.3008,
    "diamond_score": -0.6805,
    "is_diamond": 0,
    "is_star_pre": 0,
@@ -63444,7 +63444,7 @@
     "team_sp_off": 0.315,
     "team_sp_overall": 1.09,
     "recruit_rating": -0.015,
-    "prod_over_recruit": -1.12,
+    "prod_over_recruit": -1.125,
     "was_returner": 0.674,
     "ret_td": -0.411,
     "col_qb_ypa": -0.339,
@@ -63924,7 +63924,7 @@
      "p": "Robert Foster",
      "y": 2018,
      "sim": 69.0,
-     "fant": 0.638
+     "fant": 0.633
     },
     {
      "p": "Tre Nixon",
@@ -64085,31 +64085,31 @@
     "_t": 4,
     "n": 36,
     "hit_rate": 0.0,
-    "avg_outcome_pctl": 0.334
+    "avg_outcome_pctl": 0.333
    },
    {
     "_t": 5,
     "n": 33,
     "hit_rate": 0.03,
-    "avg_outcome_pctl": 0.457
+    "avg_outcome_pctl": 0.456
    },
    {
     "_t": 6,
     "n": 33,
     "hit_rate": 0.0,
-    "avg_outcome_pctl": 0.532
+    "avg_outcome_pctl": 0.53
    },
    {
     "_t": 7,
     "n": 32,
     "hit_rate": 0.0,
-    "avg_outcome_pctl": 0.459
+    "avg_outcome_pctl": 0.458
    },
    {
     "_t": 8,
     "n": 38,
     "hit_rate": 0.184,
-    "avg_outcome_pctl": 0.693
+    "avg_outcome_pctl": 0.691
    },
    {
     "_t": 9,
@@ -64121,7 +64121,7 @@
     "_t": 10,
     "n": 43,
     "hit_rate": 0.372,
-    "avg_outcome_pctl": 0.836
+    "avg_outcome_pctl": 0.842
    }
   ],
   "pre": [
@@ -64129,7 +64129,7 @@
     "_t": 1,
     "n": 37,
     "hit_rate": 0.054,
-    "avg_outcome_pctl": 0.337
+    "avg_outcome_pctl": 0.336
    },
    {
     "_t": 2,
@@ -64153,37 +64153,37 @@
     "_t": 5,
     "n": 34,
     "hit_rate": 0.059,
-    "avg_outcome_pctl": 0.461
+    "avg_outcome_pctl": 0.46
    },
    {
     "_t": 6,
     "n": 35,
     "hit_rate": 0.029,
-    "avg_outcome_pctl": 0.45
+    "avg_outcome_pctl": 0.449
    },
    {
     "_t": 7,
     "n": 40,
     "hit_rate": 0.05,
-    "avg_outcome_pctl": 0.543
+    "avg_outcome_pctl": 0.546
    },
    {
     "_t": 8,
     "n": 33,
     "hit_rate": 0.303,
-    "avg_outcome_pctl": 0.671
+    "avg_outcome_pctl": 0.669
    },
    {
     "_t": 9,
     "n": 35,
     "hit_rate": 0.171,
-    "avg_outcome_pctl": 0.737
+    "avg_outcome_pctl": 0.736
    },
    {
     "_t": 10,
     "n": 40,
     "hit_rate": 0.3,
-    "avg_outcome_pctl": 0.737
+    "avg_outcome_pctl": 0.74
    }
   ]
  }
